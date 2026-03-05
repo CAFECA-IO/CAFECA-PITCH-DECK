@@ -1,0 +1,84 @@
+import { MonthEnum } from "@/constants/month";
+
+export function randomPassword(length: number = 32): string {
+  const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+
+// Info: (20260206 - Julian) 將時間戳轉換為日期/時間字串的工具
+export function timestampToString(timestamp: number | undefined) {
+  if (timestamp === 0 || timestamp === undefined || timestamp === null) {
+    return {
+      year:"-",
+      monthName:"-",
+      dateWithSlash: "-",
+      dateWithDash: "-",
+      dateAndTime: "-",
+    };
+  }
+
+  const dateObj = new Date(timestamp * 1000);
+
+  // Info: (20260206 - Julian) 取出年份
+  const year = dateObj.getFullYear().toString();
+
+  // Info: (20260206 - Julian) 取出月份
+  const month = dateObj.getMonth() + 1;
+  const monthWithPad = month.toString().padStart(2, "0"); // Info: (20260206 - Julian) 二位數月份
+  const monthName = Object.values(MonthEnum)[month];
+
+  // Info: (20260206 - Julian) 取出日期
+  const day = dateObj.getDate();
+  const dayWithPad = day.toString().padStart(2, "0"); // Info: (20260206 - Julian) 二位數日期
+
+  // Info: (20260206 - Julian) 取出時間
+  const hours = dateObj.getHours();
+  const hoursWithPad = hours.toString().padStart(2, "0"); // Info: (20260206 - Julian) 二位數小時
+  const minutes = dateObj.getMinutes();
+  const minutesWithPad = minutes.toString().padStart(2, "0"); // Info: (20260206 - Julian) 二位數分鐘
+
+  // Info: (20260206 - Julian) Formatting
+  const dateWithSlash = `${year}/${monthWithPad}/${dayWithPad}`;
+  const dateWithDash = `${year}-${monthWithPad}-${dayWithPad}`;
+  const dateAndTime = `${year}-${monthWithPad}-${dayWithPad} ${hoursWithPad}:${minutesWithPad}`;
+
+  return {
+    year, // Info: (20260224 - Julian) e.g., "2026"
+    monthName, // Info: (20260224 - Julian) e.g., "January"
+    dateWithSlash, // Info: (20260206 - Julian) e.g., "2026/01/01"
+    dateWithDash, // Info: (20260206 - Julian) e.g., "2026-01-01"
+    dateAndTime, // Info: (20260206 - Julian) e.g., "2026-01-01 12:34"
+  };
+}
+
+// Info: (20260209 - Julian) 轉換時間戳為相對時間的工具
+export function formatTime(timestamp: number, now: number) {
+  const diff = now - timestamp;
+
+  if (diff < 60) {
+    return "Just now";
+  } else if (diff < 3600) {
+    const minutes = Math.floor(diff / 60);
+    return `${minutes} minutes ago`;
+  } else if (diff < 86400) {
+    const hours = Math.floor(diff / 3600);
+    return `${hours} hours ago`;
+  } else if (diff < 604800) {
+    const days = Math.floor(diff / 86400);
+    return `${days} days ago`;
+  } else {
+    return timestampToString(timestamp).dateWithDash;
+  }
+}
+
+// Info: (20260224 - Julian) 千分位符號、括號
+export function numberWithCommas(number: number | string) {
+  const num = typeof number === 'string' ? parseFloat(number) : number;
+  const formattedNumber = new Intl.NumberFormat().format(Math.abs(num));
+  return num < 0 ? `(${formattedNumber})` : formattedNumber;
+};
