@@ -1,9 +1,9 @@
 
 import { Calendar, Database, Zap, Target, Banknote, Coins } from 'lucide-react';
 
-export default function CafecaFintechSlide2() {
+export default function CafecaFintechSlide3() {
   return (
-    <div className="h-full w-full bg-slate-50 relative flex overflow-hidden">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex overflow-hidden">
 
       {/* Info: (20260122 - Luphia) Left Sidebar - Summary */}
       <div className="w-[35%] h-full bg-white border-r border-slate-200 p-10 flex flex-col relative z-10 shadow-lg">
