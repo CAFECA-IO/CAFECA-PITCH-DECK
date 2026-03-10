@@ -76,10 +76,10 @@ export default function CafecaFintechSlide6() {
             <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600 mb-4 group-hover:scale-110 transition-transform">
               <FileDigit size={24} />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">智能會計審計與核銷</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">智能碳會計</h3>
             <div className="text-xs font-bold text-slate-400 mb-3 uppercase tracking-wider">Intelligent Audit</div>
             <p className="text-slate-600 text-xs leading-relaxed text-justify">
-              運用人工智能會計審計技術，即時追蹤並自動化核銷企業之專案執行進度與資金用途，大幅提升投後管理效率，防範資金濫用。
+              運用人工智能綠色會計審計技術，即時追蹤並自動化核銷企業之專案執行進度與資金用途，分析工程產線流程並制定減碳策略。
             </p>
           </div>
 

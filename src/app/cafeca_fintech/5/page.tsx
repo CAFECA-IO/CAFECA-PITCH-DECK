@@ -24,14 +24,14 @@ export default function CafecaFintechSlide5() {
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-16 pb-12 gap-8">
 
         {/* Info: (20260123) Top Card - The Surface */}
-        <div className="w-full max-w-4xl bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex items-center gap-8 relative z-20 transform translate-y-4 hover:-translate-y-1 transition-transform duration-500">
+        <div className="w-full max-w-4xl bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex items-center gap-8 relative z-20 transform hover:-translate-y-1 transition-transform duration-500">
           <div className="w-20 h-20 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 shrink-0">
             <Sparkles size={40} />
           </div>
           <div className="flex-1">
             <div className="text-sm font-bold text-sky-600 uppercase tracking-widest mb-1">表面價值</div>
-            <h2 className="text-3xl font-bold text-slate-800 mb-2">AI 智能會計軟體</h2>
-            <p className="text-slate-500 text-lg leading-relaxed">由先進人工智能模型驅動的出納、自動化記帳、稅務合規與財務分析系統。</p>
+            <h2 className="text-3xl font-bold text-slate-800 mb-2">人工智能碳會計軟體</h2>
+            <p className="text-slate-500 text-lg leading-relaxed">由先進人工智能模型驅動的自動化會計審計、碳盤查、製程優化系統。</p>
           </div>
           <div className="text-right shrink-0">
             <span className="block text-4xl font-extrabold text-slate-200">10%</span>
@@ -40,7 +40,7 @@ export default function CafecaFintechSlide5() {
         </div>
 
         {/* Info: (20260123) Connector */}
-        <div className="relative z-30 flex flex-col items-center justify-center text-white/80 animate-bounce">
+        <div className="relative z-30 flex flex-col items-center justify-center text-white/80">
           <span className="text-xs font-mono font-bold tracking-widest mb-1 opacity-80">底層核心</span>
           <ArrowDown size={24} />
         </div>
@@ -57,7 +57,7 @@ export default function CafecaFintechSlide5() {
             </div>
             <h2 className="text-4xl font-bold text-white mb-3">銀行核心融資與放款系統</h2>
             <p className="text-slate-300 text-lg font-light leading-relaxed">
-              透過財務分析技術實現<span className="text-white font-medium">銀行核心系統</span>，即時捕捉財務健康狀況，實現大規模融資與放款審核。
+              透過財務分析技術實現<span className="text-white font-medium">銀行核心系統</span>，即時捕捉財務健康狀況，實現大規模融資與放款審核，推動企業綠色製程更新。
             </p>
           </div>
           <div className="text-right shrink-0">

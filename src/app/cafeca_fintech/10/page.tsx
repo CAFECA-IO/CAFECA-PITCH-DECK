@@ -1,36 +1,103 @@
-import { Sparkles } from 'lucide-react';
+'use client';
 
 export default function CafecaFintechSlide7() {
   return (
     <div className="h-full w-full bg-slate-900 text-white relative flex items-center justify-center overflow-hidden">
 
-      {/* Info: (20260122 - Luphia) Background Animation / Effect */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-500/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[100px]"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-sky-600/10 rounded-full blur-[100px]"></div>
-      </div>
+      {/* Info: (20260123 - Luphia) CAFECA Philosophy */}
+      <div className="relative w-full py-16 px-6 md:py-33 md:px-10 overflow-hidden bg-gradient-to-br from-[#040d0a] via-[#081510] to-[#020504] border border-emerald-900/30 group">
 
-      <div className="relative z-10 text-center space-y-8">
-
-        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-sky-500 to-sky-700 shadow-[0_0_40px_rgba(14,165,233,0.4)] mb-8">
-          <Sparkles className="text-white" size={40} />
+        {/* Info: (20260310 - Luphia) 背景：動態流動的積分曲線預覽 (SVG Overlay) */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="w-full h-full" viewBox="0 0 1000 400" preserveAspectRatio="none">
+            <path d="M0,400 Q250,350 500,200 T1000,50" fill="none" stroke="#10b981" strokeWidth="2" className="animate-[dash_10s_linear_infinite]" />
+          </svg>
         </div>
 
-        <h2 className="text-7xl font-extrabold tracking-tight text-white pb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-          Thank You
-        </h2>
+        <div className="relative z-10 flex flex-col items-center w-full">
 
-        <div className="h-1 w-24 bg-gradient-to-r from-sky-500 to-orange-500 rounded-full mx-auto"></div>
+          {/* Info: (20260310 - Luphia) 核心標籤 */}
+          <div className="flex items-center justify-center w-full gap-2 sm:gap-4 mb-10 md:mb-14">
+            <div className="h-px flex-1 max-w-12 bg-gradient-to-r from-transparent to-emerald-500/50"></div>
+            <span className="text-[9px] sm:text-[11px] font-black tracking-[0.3em] sm:tracking-[0.6em] text-emerald-500 uppercase text-center block max-w-full">
+              The Negentropy Law
+            </span>
+            <div className="h-px flex-1 max-w-12 bg-gradient-to-l from-transparent to-emerald-500/50"></div>
+          </div>
 
-        <p className="text-2xl text-slate-100 font-light tracking-wide max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-          Leading the future of fintech with security, intelligence, and innovation.
-        </p>
+          {/* Info: (20260310 - Luphia) 積分公式主體 */}
+          <div className="flex flex-wrap items-center justify-center gap-x-2 sm:gap-x-6 gap-y-6 md:gap-y-10 font-serif text-2xl sm:text-3xl md:text-5xl text-white w-full">
 
-        <div className="pt-12">
-          <div className="text-sky-400 font-bold text-lg tracking-[0.2em] uppercase">CAFECA Fintech</div>
-          <div className="text-slate-400 text-sm mt-2 font-mono">2026 iSunFA Corp.</div>
+            {/* Info: (20260310 - Luphia) 結果變數 */}
+            <div className="flex flex-col items-center">
+              <span className="text-emerald-400 font-bold drop-shadow-[0_0_25px_rgba(16,185,129,0.4)]">Ω</span>
+              <span className="text-[8px] sm:text-[9px] font-mono text-slate-500 mt-2 tracking-tighter uppercase font-normal text-center hidden sm:block">Total Net-Zero Value</span>
+              <span className="text-[8px] font-mono text-slate-500 mt-1 tracking-tighter uppercase font-normal text-center sm:hidden">Net-Zero</span>
+            </div>
+
+            <span className="text-slate-700 not-italic font-light text-xl sm:text-3xl md:text-5xl">=</span>
+
+            {/* Info: (20260310 - Luphia) 積分符號系統 */}
+            <div className="flex items-center shrink-0 max-w-full overflow-x-auto pb-4 sm:pb-0 hide-scrollbar">
+              <div className="relative flex flex-col items-center ml-2 sm:ml-0 shrink-0">
+                <span className="text-[10px] sm:text-sm font-mono text-emerald-600 absolute -top-4 sm:-top-8 italic">t_future</span>
+                <span className="text-5xl sm:text-6xl md:text-8xl font-light text-emerald-500/80 leading-none">∫</span>
+                <span className="text-[10px] sm:text-sm font-mono text-emerald-900 absolute -bottom-4 sm:-bottom-6 italic">t_0</span>
+              </div>
+
+              {/* Info: (20260310 - Luphia) 積分函數內容 */}
+              <div className="flex flex-col items-center mx-2 sm:mx-6 shrink-0">
+                <div className="flex items-center gap-1.5 sm:gap-3 px-2 sm:px-8 pb-2 sm:pb-4 border-b border-white/10 shrink-0">
+                  <span className="text-white text-base sm:text-3xl md:text-5xl">Tech(t)</span>
+                  <span className="text-emerald-500/50 not-italic">·</span>
+                  <span className="text-emerald-400 text-base sm:text-3xl md:text-5xl">η</span>
+                  <span className="text-[9px] sm:text-sm text-emerald-700 italic translate-y-1 sm:translate-y-2">green</span>
+                </div>
+                <div className="pt-2 sm:pt-4 text-xs sm:text-xl md:text-2xl text-slate-500 font-mono italic shrink-0">
+                  <span className="hidden sm:inline">ln( Energy Consumption )</span>
+                  <span className="sm:hidden">ln(Energy)</span>
+                </div>
+              </div>
+
+              <span className="text-emerald-500 font-bold ml-1 sm:ml-2 text-base sm:text-3xl md:text-5xl shrink-0">dt</span>
+            </div>
+          </div>
+
+          {/* Info: (20260310 - Luphia) 願景宣言 */}
+          <div className="mt-12 sm:mt-20 max-w-2xl text-center px-4 w-full">
+            <p className="text-sm sm:text-lg md:text-xl text-slate-300 font-light leading-relaxed">
+              「用科技為地球創造
+              <span className="block sm:inline mt-1 sm:mt-0">
+                <span className="text-emerald-400 font-semibold mx-1 sm:mx-2 italic">秩序的累積</span>
+                」
+              </span>
+            </p>
+            <p className="mt-4 sm:mt-6 text-[9px] sm:text-xs text-slate-500 font-mono tracking-[0.1em] sm:tracking-widest uppercase opacity-60 leading-relaxed px-2">
+              Reversing climate entropy through time-weighted intelligence.
+            </p>
+          </div>
+
+          {/* Info: (20260310 - Luphia) 底部數據點 */}
+          <div className="mt-10 sm:mt-12 flex flex-wrap justify-center gap-x-6 gap-y-6 sm:gap-x-16 border-t border-white/5 pt-6 sm:pt-8 w-full px-4">
+            <div className="text-center group/stat shrink-0 w-[40%] sm:w-auto">
+              <p className="text-emerald-500 font-mono text-[10px] sm:text-xs group-hover:scale-110 transition-transform">dE/dt ↓</p>
+              <p className="text-[8px] sm:text-[9px] text-slate-600 uppercase mt-1">Entropy Rate</p>
+            </div>
+            <div className="text-center group/stat shrink-0 w-[40%] sm:w-auto">
+              <p className="text-emerald-500 font-mono text-[10px] sm:text-xs group-hover:scale-110 transition-transform">Σ Intelligence ↑</p>
+              <p className="text-[8px] sm:text-[9px] text-slate-600 uppercase mt-1">Tech Accumulation</p>
+            </div>
+            <div className="text-center group/stat shrink-0 w-full sm:w-auto mt-2 sm:mt-0">
+              <p className="text-emerald-500 font-mono text-[10px] sm:text-xs group-hover:scale-110 transition-transform">100% Green</p>
+              <p className="text-[8px] sm:text-[9px] text-slate-600 uppercase mt-1">Energy Source</p>
+            </div>
+          </div>
+
         </div>
+
+        {/* Info: (20260310 - Luphia) 四角裝飾 */}
+        <div className="absolute top-4 sm:top-8 left-4 sm:left-8 w-2 sm:w-4 h-2 sm:h-4 border-t border-l border-emerald-500/30"></div>
+        <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 w-2 sm:w-4 h-2 sm:h-4 border-b border-r border-emerald-500/30"></div>
       </div>
 
     </div>

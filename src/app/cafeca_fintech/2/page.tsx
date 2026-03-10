@@ -21,7 +21,7 @@ export default function CafecaFintechSlide2() {
         <div className="px-16 pt-12">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-1 bg-sky-500 rounded-full"></div>
-            <span className="text-sky-600 font-bold tracking-[0.2em] uppercase text-sm">企業願景</span>
+            <span className="text-sky-600 font-bold tracking-[0.2em] uppercase text-sm">三年期企業目標</span>
           </div>
           <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
             打造 <span className="text-sky-600">MIT</span> 銀行核心系統

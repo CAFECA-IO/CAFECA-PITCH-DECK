@@ -48,10 +48,10 @@ export default function CafecaFintechSlide8() {
                 <Target size={24} />
               </div>
               <h2 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
-                獲取企業融資系統<br />合規營運資格
+                TWD 800 萬：推動八家企業綠色融資
               </h2>
               <p className="text-slate-500 text-sm leading-relaxed text-justify">
-                不僅是軟體銷售，我們的目標是成為合規的金融基礎設施提供商，為企業提供直接、高效的融資運營服務。
+                獲取金融監理沙盒許可，成為合規的金融基礎設施提供商，為企業提供直接、高效的融資運營服務，催化企業導入綠色製程。收集環境工程、化學工程、土木工程、水利工程、材料科學等關鍵數據，建立 Green AI 完善訓練資料庫。
               </p>
             </div>
           </div>
@@ -64,10 +64,10 @@ export default function CafecaFintechSlide8() {
                 <Cpu size={24} />
               </div>
               <h2 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
-                500 萬模型訓練算力租賃
+                TWD 800 萬：模型訓練算力租賃與伺服器採購
               </h2>
               <p className="text-slate-500 text-sm leading-relaxed text-justify">
-                確保 AI 模型持續演進的核心動力，建立自主且強大的運算基礎設施，支持未來金融模型的深度訓練與優化。
+                確保 AI 模型持續演進的核心動力，建立自主且強大的運算基礎設施，支持未來 Green AI 模型的深度訓練與優化。
               </p>
             </div>
           </div>
