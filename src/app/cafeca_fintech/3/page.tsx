@@ -36,7 +36,7 @@ export default function CafecaFintechSlide2() {
               </div>
               <div>
                 <div className="text-sm text-slate-500 font-medium uppercase tracking-wide mb-1">核心聚焦</div>
-                <div className="text-xl font-bold text-slate-900">金融科技技術</div>
+                <div className="text-xl font-bold text-slate-900">綠色金融科技</div>
               </div>
             </div>
 
