@@ -50,7 +50,7 @@ export default function CafecaFintechSlide1() {
 
         {/* Info: (20260122 - Luphia) Subtitle */}
         <p className="text-2xl text-gray-600 font-light tracking-wide mt-6 border-t border-sky-100 pt-8 inline-block">
-          Next Generation Financial Solutions
+          The Green Financial Solution
         </p>
 
       </div>

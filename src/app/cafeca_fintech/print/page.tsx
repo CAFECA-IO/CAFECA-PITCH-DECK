@@ -13,6 +13,9 @@ import CafecaFintechSlide10 from '@/app/cafeca_fintech/10/page';
 import CafecaFintechSlide11 from '@/app/cafeca_fintech/11/page';
 import CafecaFintechSlide12 from '@/app/cafeca_fintech/12/page';
 import CafecaFintechSlide13 from '@/app/cafeca_fintech/13/page';
+import CafecaFintechSlide14 from '@/app/cafeca_fintech/14/page';
+import CafecaFintechSlide15 from '@/app/cafeca_fintech/15/page';
+import CafecaFintechSlide16 from '@/app/cafeca_fintech/16/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -248,6 +251,9 @@ export default function CafecaFintechPrint() {
       <div className="slide-page"><CafecaFintechSlide11 /></div>
       <div className="slide-page"><CafecaFintechSlide12 /></div>
       <div className="slide-page"><CafecaFintechSlide13 /></div>
+      <div className="slide-page"><CafecaFintechSlide14 /></div>
+      <div className="slide-page"><CafecaFintechSlide15 /></div>
+      <div className="slide-page"><CafecaFintechSlide16 /></div>
     </div>
   );
 }

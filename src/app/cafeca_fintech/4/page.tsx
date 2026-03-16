@@ -1,106 +1,96 @@
-import { Recycle, Cpu, TestTube, Gem, Factory } from 'lucide-react';
-
 export default function CafecaFintechSlide4() {
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex overflow-hidden">
-      {/* Background */}
-      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-gray-200">
 
-      {/* Left Column / Title */}
-      <div className="w-[35%] h-full bg-slate-900 p-12 flex flex-col justify-center relative shadow-2xl z-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-20 mix-blend-overlay"></div>
+      {/* Info: (20260315 - Luphia) Background Gradients - Keeping consistent with Slide 1 & 2 */}
+      <div
+        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl pointer-events-none"
+        aria-hidden="true"
+      >
+        <div
+          className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[70rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#10b981] to-[#34d399] opacity-20"
+          style={{
+            clipPath:
+              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+          }}
+        />
+      </div>
 
-        <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/50 border border-emerald-700/50 text-emerald-400 text-xs font-bold tracking-wider mb-8">
-            <Recycle size={14} />
-            URBAN MINING
+      <div className="px-16 pt-12 relative z-10">
+        <div className="flex items-center gap-4 mb-6">
+          <div className="w-12 h-1 bg-emerald-500 rounded-full"></div>
+          <span className="text-emerald-600 font-bold tracking-[0.2em] uppercase text-sm">Core Principles</span>
+        </div>
+        <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
+          碳會計人工智能核心原則
+        </h1>
+      </div>
+
+      <div className="flex-1 px-16 flex flex-col items-center justify-center relative z-10">
+        <div className="w-full max-w-5xl bg-slate-50/80 backdrop-blur-sm rounded-2xl p-12 border border-slate-100 shadow-lg text-center relative overflow-hidden group hover:shadow-xl transition-all">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-100 rounded-bl-[100px] -mr-8 -mt-8 opacity-50 transition-transform group-hover:scale-110 duration-500"></div>
+          <div className="absolute bottom-0 left-0 w-40 h-40 bg-sky-50 rounded-tr-[120px] -ml-10 -mb-10 opacity-50 transition-transform group-hover:scale-110 duration-500"></div>
+
+          <div className="flex flex-col items-center justify-center gap-6 text-slate-600 relative z-10 font-serif">
+
+            {/* Info: (20260315 - Luphia) Main Equation */}
+            <div className="flex items-center gap-4 text-3xl md:text-4xl text-slate-700">
+              <span className="font-bold text-emerald-700 italic border-b-4 border-emerald-500 pb-1">P</span>
+              <span className="text-slate-400">=</span>
+              <span className="italic">C<sub>Econ</sub></span>
+              <span className="text-slate-400">+</span>
+              <span className="italic font-bold text-emerald-600">C<sub>Eco</sub></span>
+              <span className="text-slate-400">+</span>
+              <span className="italic">C<sub>Soc</sub></span>
+              <span className="text-slate-400">+</span>
+              <span className="italic">V<sub>Brand</sub></span>
+              <span className="text-slate-400">+</span>
+              <span className="italic">&pi;</span>
+            </div>
+
+            {/* Info: (20260315 - Luphia) Legend / Breakdown */}
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-4 text-sm md:text-base font-sans w-full max-w-4xl">
+              <div className="bg-white px-4 py-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+                <span className="font-serif italic text-slate-500 mb-1">C<sub>Econ</sub></span>
+                <span className="font-medium">經濟成本</span>
+              </div>
+
+              <div className="relative group/eco">
+                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-green-500 rounded-xl blur opacity-25 group-hover/eco:opacity-50 transition duration-500"></div>
+                <div className="relative bg-emerald-50 text-emerald-800 border-emerald-300 border-2 px-4 py-3 rounded-xl shadow-md flex flex-col items-center transform scale-110">
+                  <span className="font-serif italic font-bold mb-1">C<sub>Eco</sub></span>
+                  <span className="font-bold">生態成本</span>
+                </div>
+              </div>
+
+              <div className="bg-white px-4 py-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+                <span className="font-serif italic text-slate-500 mb-1">C<sub>Soc</sub></span>
+                <span className="font-medium">社會成本</span>
+              </div>
+
+              <div className="bg-white px-4 py-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+                <span className="font-serif italic text-slate-500 mb-1">V<sub>Brand</sub></span>
+                <span className="font-medium">品牌價值</span>
+              </div>
+
+              <div className="bg-white px-4 py-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+                <span className="font-serif italic text-slate-500 mb-1">&pi;</span>
+                <span className="font-medium">利潤</span>
+              </div>
+            </div>
+
           </div>
-
-          <h2 className="text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white min-w-max">
-            城市<span className="text-emerald-400">採礦</span>
-          </h2>
-          <p className="text-slate-400 leading-relaxed text-lg">
-            深挖工業製造副產品的殘餘價值。<br /><br />透過先進技術重新精煉，將企業廢棄物轉化為高價值的「綠色礦脈」。
-          </p>
         </div>
       </div>
 
-      {/* Right Column / Content */}
-      <div className="flex-1 h-full p-12 bg-white flex flex-col justify-center relative">
-
-        <div className="max-w-3xl mx-auto w-full">
-          <div className="flex items-center gap-4 mb-10 border-b border-slate-100 pb-6">
-            <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm border border-emerald-100/50">
-              <Factory size={28} />
-            </div>
-            <div>
-              <h3 className="text-3xl font-extrabold text-slate-800">以台積電為例</h3>
-              <p className="text-slate-500 text-base mt-1 font-medium">TSMC - 隱藏在製程背後的巨額循環經濟產值</p>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            {/* Card 1: Wafers */}
-            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center gap-8 group hover:shadow-xl hover:border-sky-200 transition-all duration-500 relative overflow-hidden hover:-translate-y-1 bg-gradient-to-br hover:from-white hover:to-sky-50/50">
-              <div className="absolute right-0 top-0 bottom-0 w-2 bg-sky-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-
-              <div className="w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0 border border-slate-100 text-slate-600 group-hover:scale-110 transition-transform duration-500">
-                <Cpu size={36} className="group-hover:text-sky-500 transition-colors duration-500" />
-              </div>
-
-              <div className="flex-1">
-                <h4 className="text-2xl font-bold text-slate-800 mb-2">廢棄晶圓</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">報廢矽晶圓、切割廢料回收再製，提煉出高純度材料，重返高價值供應鏈，顯著降低原物料採購成本與碳排放。</p>
-              </div>
-
-              <div className="text-right pl-6 border-l border-slate-200/60">
-                <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">潛在產值</div>
-                <div className="text-4xl font-black text-sky-600 flex items-baseline gap-1" style={{ textShadow: '0 2px 10px rgba(14,165,233,0.2)' }}>
-                  35 <span className="text-xl font-bold text-slate-500">億 TWD</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Sludge */}
-            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center gap-8 group hover:shadow-xl hover:border-emerald-200 transition-all duration-500 relative overflow-hidden hover:-translate-y-1 bg-gradient-to-br hover:from-white hover:to-emerald-50/50">
-              <div className="absolute right-0 top-0 bottom-0 w-2 bg-emerald-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-
-              <div className="w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0 border border-slate-100 text-slate-600 group-hover:scale-110 transition-transform duration-500">
-                <TestTube size={36} className="group-hover:text-emerald-500 transition-colors duration-500" />
-              </div>
-
-              <div className="flex-1">
-                <h4 className="text-2xl font-bold text-slate-800 mb-2">廢棄污泥</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">含銅、鈷、鎢金屬離子之製程廢液與污泥，透過化學還原技術回收稀有金屬與工業酸鹼，徹底解決有害廢棄物處理難題。</p>
-              </div>
-
-              <div className="text-right pl-6 border-l border-slate-200/60">
-                <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">潛在產值</div>
-                <div className="text-4xl font-black text-emerald-600 flex items-baseline gap-1" style={{ textShadow: '0 2px 10px rgba(16,185,129,0.2)' }}>
-                  15 <span className="text-xl font-bold text-slate-500">億 TWD</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="mt-12 bg-gradient-to-r from-emerald-50 to-sky-50 rounded-2xl p-6 lg:p-8 border border-emerald-100/60 flex items-center justify-between shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-white rounded-xl shadow-sm border border-emerald-100/50">
-                <Gem className="text-emerald-600" size={28} />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Total Valuation</span>
-                <span className="font-extrabold text-slate-800 text-xl">年度單兵循環經濟總產值</span>
-              </div>
-            </div>
-            <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-600 drop-shadow-sm">
-              50 <span className="text-2xl font-bold text-slate-500 mix-blend-multiply">億+ TWD</span>
-            </div>
-          </div>
-
+      <div className="absolute bottom-4 w-full px-16 flex justify-between text-gray-400 text-xs tracking-widest uppercase font-medium z-10">
+        <div>Pricing Model</div>
+        <div className="flex gap-2 items-center">
+          <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+          2026 CAFECA FINTECH
         </div>
       </div>
     </div>
   );
 }
+

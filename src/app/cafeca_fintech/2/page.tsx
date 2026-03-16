@@ -2,7 +2,7 @@ export default function CafecaFintechSlide2() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-gray-200">
 
-      {/* Info: (20260123) Background Gradients - Keeping consistent with Slide 1 but slightly varied */}
+      {/* Info: (20260123 - Luphia) Background Gradients - Keeping consistent with Slide 1 but slightly varied */}
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl pointer-events-none"
         aria-hidden="true"
@@ -16,23 +16,23 @@ export default function CafecaFintechSlide2() {
         />
       </div>
 
-      {/* Info: (20260123) Header Area */}
+      {/* Info: (20260123 - Luphia) Header Area */}
       <div className="px-16 pt-12">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-12 h-1 bg-sky-500 rounded-full"></div>
           <span className="text-sky-600 font-bold tracking-[0.2em] uppercase text-sm">三年期企業目標</span>
         </div>
         <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
-          打造 <span className="text-sky-600">MIT</span> 銀行核心系統
+          打造 <span className="text-sky-600">MIT</span> 綠色金融核心系統
           <br />
           <span className="text-3xl text-slate-400 font-light mt-2 block">對標全球標準</span>
         </h1>
       </div>
 
-      {/* Info: (20260123) Main Content - 3 Pillars */}
+      {/* Info: (20260123 - Luphia) Main Content - 3 Pillars */}
       <div className="flex-1 px-16 flex items-center justify-between gap-8 h-full">
 
-        {/* Info: (20260123) Card 1: Benchmark */}
+        {/* Info: (20260123 - Luphia) Card 1: Benchmark */}
         <div className="flex-1 h-80 bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
           <div className="absolute top-0 right-0 w-32 h-32 bg-sky-100 rounded-bl-[100px] -mr-8 -mt-8 opacity-50"></div>
 
@@ -50,7 +50,7 @@ export default function CafecaFintechSlide2() {
           </div>
         </div>
 
-        {/* Info: (20260123) Card 2: MIT Core */}
+        {/* Info: (20260123 - Luphia) Card 2: MIT Core */}
         <div className="flex-1 h-96 bg-gradient-to-br from-sky-600 to-blue-700 rounded-2xl p-8 shadow-xl text-white relative overflow-hidden transform scale-105 z-10">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
@@ -60,7 +60,7 @@ export default function CafecaFintechSlide2() {
 
           <h2 className="text-4xl font-bold mb-6">
             MIT <br />
-            <span className="text-2xl font-normal opacity-90">銀行系統</span>
+            <span className="text-2xl font-normal opacity-90">綠色金融核心系統</span>
           </h2>
 
           <p className="text-blue-100 leading-relaxed text-lg mb-8">
@@ -73,7 +73,7 @@ export default function CafecaFintechSlide2() {
           </div>
         </div>
 
-        {/* Info: (20260123) Card 3: Global Market */}
+        {/* Info: (20260123 - Luphia) Card 3: Global Market */}
         <div className="flex-1 h-80 bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
           <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-100 rounded-bl-[100px] -mr-8 -mt-8 opacity-50"></div>
 
@@ -95,7 +95,7 @@ export default function CafecaFintechSlide2() {
 
       </div>
 
-      {/* Info: (20260123) Footer */}
+      {/* Info: (20260123 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-gray-400 text-xs tracking-widest uppercase font-medium">
         <div>企業戰略</div>
         <div className="flex gap-2 items-center">

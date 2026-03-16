@@ -1,99 +1,106 @@
-import { Sparkles, Building2, ArrowDown, Cpu } from 'lucide-react';
+import { Recycle, Cpu, TestTube, Gem, Factory } from 'lucide-react';
 
-export default function CafecaFintechSlide7() {
+export default function CafecaFintechSlide4() {
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex flex-col overflow-hidden">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex overflow-hidden">
+      {/* Info: (20260315 - Luphia) Background */}
+      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-      {/* Info: (20260123) Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 w-full h-1/2 bg-sky-50"></div>
-        <div className="absolute bottom-0 w-full h-1/2 bg-slate-900"></div>
+      {/* Info: (20260315 - Luphia) Left Column / Title */}
+      <div className="w-[35%] h-full bg-slate-900 p-12 flex flex-col justify-center relative shadow-2xl z-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-20 mix-blend-overlay"></div>
+
+        <div className="relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/50 border border-emerald-700/50 text-emerald-400 text-xs font-bold tracking-wider mb-8">
+            <Recycle size={14} />
+            URBAN MINING
+          </div>
+
+          <h2 className="text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white min-w-max">
+            城市<span className="text-emerald-400">採礦</span>
+          </h2>
+          <p className="text-slate-400 leading-relaxed text-lg">
+            深挖工業製造副產品的殘餘價值。<br /><br />透過先進技術重新精煉，將企業廢棄物轉化為高價值的「綠色礦脈」。
+          </p>
+        </div>
       </div>
 
-      {/* Info: (20260123) Header */}
-      <div className="relative z-10 w-full px-16 pt-12 mb-8">
-        <div className="flex items-center gap-4 mb-2">
-          <div className="w-12 h-1 bg-sky-600 rounded-full"></div>
-          <span className="text-sky-700 font-bold tracking-[0.2em] uppercase text-sm">核心產品</span>
-        </div>
-        <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
-          iSunFA
-        </h1>
-      </div>
+      {/* Info: (20260315 - Luphia) Right Column / Content */}
+      <div className="flex-1 h-full p-12 bg-white flex flex-col justify-center relative">
 
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-16 pb-12 gap-8">
-
-        {/* Info: (20260123) Top Card - The Surface */}
-        <div className="w-full max-w-4xl bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex items-center gap-8 relative z-20 transform hover:-translate-y-1 transition-transform duration-500">
-          <div className="w-20 h-20 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 shrink-0">
-            <Sparkles size={40} />
-          </div>
-          <div className="flex-1">
-            <div className="text-sm font-bold text-sky-600 uppercase tracking-widest mb-1">表面價值</div>
-            <h2 className="text-3xl font-bold text-slate-800 mb-2">人工智能碳會計軟體</h2>
-            <p className="text-slate-500 text-lg leading-relaxed">由先進人工智能模型驅動的自動化會計審計、碳盤查、製程優化系統。</p>
-          </div>
-          <div className="text-right shrink-0">
-            <span className="block text-4xl font-extrabold text-slate-200">10%</span>
-            <span className="text-xs text-slate-400 font-medium uppercase tracking-wider">可見效用</span>
-          </div>
-        </div>
-
-        {/* Info: (20260123) Connector */}
-        <div className="relative z-30 flex flex-col items-center justify-center text-white/80">
-          <span className="text-xs font-mono font-bold tracking-widest mb-1 opacity-80">底層核心</span>
-          <ArrowDown size={24} />
-        </div>
-
-        {/* Info: (20260310) Bottom Card - The Core Reality (Divided) */}
-        <div className="w-full max-w-5xl bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 rounded-3xl p-8 shadow-2xl border border-white/10 flex flex-col relative z-20 hover:scale-[1.01] transition-transform duration-500 ring-1 ring-white/10">
-
-          <div className="absolute top-6 right-8 text-right shrink-0 opacity-40 z-0">
-            <span className="block text-4xl font-extrabold text-white">90%</span>
-            <span className="text-[10px] text-white font-medium uppercase tracking-wider">真實價值</span>
-          </div>
-
-          <div className="grid grid-cols-2 gap-8 relative z-10 pt-4">
-
-            {/* Card 1: Green Tech */}
-            <div className="flex items-start gap-5 pl-2">
-              <div className="w-16 h-16 bg-emerald-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-emerald-400 shrink-0 border border-emerald-500/30">
-                <Cpu size={32} />
-              </div>
-              <div className="pr-4">
-                <h2 className="text-2xl font-bold text-white mb-3 leading-tight tracking-wide">先進綠色科技<br />推動引擎</h2>
-                <p className="text-slate-300 text-sm font-light leading-relaxed">
-                  透過<span className="text-white font-medium">Green AI 智能引擎</span>，為企業持續評估技術更新可行性與潛在收益，為企業提供精準的減碳路徑與永續發展技術支撐同時建立牢不可破的技術護城河。
-                </p>
-              </div>
+        <div className="max-w-3xl mx-auto w-full">
+          <div className="flex items-center gap-4 mb-10 border-b border-slate-100 pb-6">
+            <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm border border-emerald-100/50">
+              <Factory size={28} />
             </div>
+            <div>
+              <h3 className="text-3xl font-extrabold text-slate-800">以台積電為例</h3>
+              <p className="text-slate-500 text-base mt-1 font-medium">TSMC - 隱藏在製程背後的巨額循環經濟產值</p>
+            </div>
+          </div>
 
-            {/* Card 2: Bank Core */}
-            <div className="flex items-start gap-5 relative border-l border-white/10 pl-6">
-              <div className="w-16 h-16 bg-sky-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-sky-400 shrink-0 border border-sky-500/30">
-                <Building2 size={32} />
+          <div className="space-y-6">
+            {/* Info: (20260315 - Luphia) Card 1: Wafers */}
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center gap-8 group hover:shadow-xl hover:border-sky-200 transition-all duration-500 relative overflow-hidden hover:-translate-y-1 bg-gradient-to-br hover:from-white hover:to-sky-50/50">
+              <div className="absolute right-0 top-0 bottom-0 w-2 bg-sky-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+
+              <div className="w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0 border border-slate-100 text-slate-600 group-hover:scale-110 transition-transform duration-500">
+                <Cpu size={36} className="group-hover:text-sky-500 transition-colors duration-500" />
               </div>
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="px-1.5 py-0.5 rounded bg-sky-500/80 text-white text-[9px] font-bold uppercase tracking-wider">金融牌照賦能</div>
-                  <div className="text-[10px] font-bold text-sky-400 uppercase tracking-widest opacity-80">合規後上線</div>
+
+              <div className="flex-1">
+                <h4 className="text-2xl font-bold text-slate-800 mb-2">廢棄晶圓</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">報廢矽晶圓、切割廢料回收再製，提煉出高純度材料，重返高價值供應鏈，顯著降低原物料採購成本與碳排放。</p>
+              </div>
+
+              <div className="text-right pl-6 border-l border-slate-200/60">
+                <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">潛在產值</div>
+                <div className="text-4xl font-black text-sky-600 flex items-baseline gap-1" style={{ textShadow: '0 2px 10px rgba(14,165,233,0.2)' }}>
+                  35 <span className="text-xl font-bold text-slate-500">億 TWD</span>
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-2 leading-tight tracking-wide">銀行核心融資與<br />放款系統</h2>
-                <p className="text-slate-300 text-sm font-light leading-relaxed">
-                  透過財務分析技術實現<span className="text-white font-medium">銀行核心系統</span>，即時捕捉財務健康狀況，實現大規模放款審核，推動企業<span className="text-white font-medium">綠色製程更新</span>。
-                </p>
+              </div>
+            </div>
+
+            {/* Info: (20260315 - Luphia) Card 2: Sludge */}
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center gap-8 group hover:shadow-xl hover:border-emerald-200 transition-all duration-500 relative overflow-hidden hover:-translate-y-1 bg-gradient-to-br hover:from-white hover:to-emerald-50/50">
+              <div className="absolute right-0 top-0 bottom-0 w-2 bg-emerald-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+
+              <div className="w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0 border border-slate-100 text-slate-600 group-hover:scale-110 transition-transform duration-500">
+                <TestTube size={36} className="group-hover:text-emerald-500 transition-colors duration-500" />
+              </div>
+
+              <div className="flex-1">
+                <h4 className="text-2xl font-bold text-slate-800 mb-2">廢棄污泥</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">含銅、鈷、鎢金屬離子之製程廢液與污泥，透過化學還原技術回收稀有金屬與工業酸鹼，徹底解決有害廢棄物處理難題。</p>
+              </div>
+
+              <div className="text-right pl-6 border-l border-slate-200/60">
+                <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">潛在產值</div>
+                <div className="text-4xl font-black text-emerald-600 flex items-baseline gap-1" style={{ textShadow: '0 2px 10px rgba(16,185,129,0.2)' }}>
+                  15 <span className="text-xl font-bold text-slate-500">億 TWD</span>
+                </div>
               </div>
             </div>
 
           </div>
+
+          <div className="mt-12 bg-gradient-to-r from-emerald-50 to-sky-50 rounded-2xl p-6 lg:p-8 border border-emerald-100/60 flex items-center justify-between shadow-sm">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-white rounded-xl shadow-sm border border-emerald-100/50">
+                <Gem className="text-emerald-600" size={28} />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Total Valuation</span>
+                <span className="font-extrabold text-slate-800 text-xl">年度單兵循環經濟總產值</span>
+              </div>
+            </div>
+            <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-600 drop-shadow-sm">
+              50 <span className="text-2xl font-bold text-slate-500 mix-blend-multiply">億+ TWD</span>
+            </div>
+          </div>
+
         </div>
-
       </div>
-
-      <div className="absolute bottom-6 right-12 text-white/20 text-[10px] font-mono z-10">
-        CAFECA FINTECH • CORE PRODUCT
-      </div>
-
     </div>
   );
 }

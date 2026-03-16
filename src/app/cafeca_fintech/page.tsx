@@ -16,10 +16,13 @@ import CafecaFintechSlide10 from '@/app/cafeca_fintech/10/page';
 import CafecaFintechSlide11 from '@/app/cafeca_fintech/11/page';
 import CafecaFintechSlide12 from '@/app/cafeca_fintech/12/page';
 import CafecaFintechSlide13 from '@/app/cafeca_fintech/13/page';
+import CafecaFintechSlide14 from '@/app/cafeca_fintech/14/page';
+import CafecaFintechSlide15 from '@/app/cafeca_fintech/15/page';
+import CafecaFintechSlide16 from '@/app/cafeca_fintech/16/page';
 
 export default function CafecaFintechSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 13;
+  const totalSlides = 16;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
@@ -67,6 +70,9 @@ export default function CafecaFintechSlideBrowser() {
     11: CafecaFintechSlide11,
     12: CafecaFintechSlide12,
     13: CafecaFintechSlide13,
+    14: CafecaFintechSlide14,
+    15: CafecaFintechSlide15,
+    16: CafecaFintechSlide16,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
@@ -75,16 +81,19 @@ export default function CafecaFintechSlideBrowser() {
     1: 'Cover: CAFECA Fintech',
     2: 'Corporate Vision',
     3: 'Company Profile',
-    4: 'Urban Mining (TSMC & Kinik)',
-    5: 'iSunFA: Value Creation',
-    6: 'Core Product: iSunFA',
-    7: 'Core Technology',
-    8: 'Revenue Model',
-    9: 'R&D Investment',
-    10: 'Equity Structure',
-    11: 'Fundraising Goals',
-    12: 'Regulatory Sandbox',
-    13: 'The Negentropy Law',
+    4: 'Carbon vs Accounting AI',
+    5: 'Net Zero Carbon Solution',
+    6: '80% Carbon Reduction Solution',
+    7: 'Urban Mining (TSMC & Kinik)',
+    8: 'iSunFA: Value Creation',
+    9: 'Core Product: iSunFA',
+    10: 'Core Technology',
+    11: 'Revenue Model',
+    12: 'R&D Investment',
+    13: 'Equity Structure',
+    14: 'Fundraising Goals',
+    15: 'Regulatory Sandbox',
+    16: 'The Negentropy Law',
   };
 
   const nextSlide = useCallback(() => {

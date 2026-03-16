@@ -1,103 +1,96 @@
-'use client';
+import { PieChart, Users, ArrowRightLeft, ScrollText } from 'lucide-react';
 
-export default function CafecaFintechSlide13() {
+export default function CafecaFintechSlide10() {
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-900 text-white relative flex items-center justify-center overflow-hidden">
+    <div className="w-[1280px] h-[720px] bg-slate-50 flex overflow-hidden relative">
 
-      {/* Info: (20260123 - Luphia) CAFECA Philosophy */}
-      <div className="relative w-full py-16 px-6 md:py-33 md:px-10 overflow-hidden bg-gradient-to-br from-[#040d0a] via-[#081510] to-[#020504] border border-emerald-900/30 group">
+      <div className="absolute top-0 right-0 w-[400px] h-full bg-sky-50 -skew-x-12 translate-x-1/2 transform origin-top"></div>
 
-        {/* Info: (20260310 - Luphia) 背景：動態流動的積分曲線預覽 (SVG Overlay) */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" viewBox="0 0 1000 400" preserveAspectRatio="none">
-            <path d="M0,400 Q250,350 500,200 T1000,50" fill="none" stroke="#10b981" strokeWidth="2" className="animate-[dash_10s_linear_infinite]" />
-          </svg>
+      {/* Info: (20260122 - Luphia) Left Content */}
+      <div className="flex-1 p-16 flex flex-col justify-center relative z-10">
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wider mb-6">
+            <PieChart size={14} />
+            EQUITY STRUCTURE
+          </div>
+          <h2 className="text-5xl font-extrabold text-slate-900 mb-6">股權結構</h2>
+          <p className="text-slate-600 text-lg max-w-xl leading-relaxed">
+            穩健的股權架構與創新的研發成果交換機制，奠定公司長遠發展的基石。
+          </p>
         </div>
 
-        <div className="relative z-10 flex flex-col items-center w-full">
+        <div className="grid grid-cols-1 gap-8 max-w-2xl">
 
-          {/* Info: (20260310 - Luphia) 核心標籤 */}
-          <div className="flex items-center justify-center w-full gap-2 sm:gap-4 mb-10 md:mb-14">
-            <div className="h-px flex-1 max-w-12 bg-gradient-to-r from-transparent to-emerald-500/50"></div>
-            <span className="text-[9px] sm:text-[11px] font-black tracking-[0.3em] sm:tracking-[0.6em] text-emerald-500 uppercase text-center block max-w-full">
-              The Negentropy Law
-            </span>
-            <div className="h-px flex-1 max-w-12 bg-gradient-to-l from-transparent to-emerald-500/50"></div>
-          </div>
-
-          {/* Info: (20260310 - Luphia) 積分公式主體 */}
-          <div className="flex flex-wrap items-center justify-center gap-x-2 sm:gap-x-6 gap-y-6 md:gap-y-10 font-serif text-2xl sm:text-3xl md:text-5xl text-white w-full">
-
-            {/* Info: (20260310 - Luphia) 結果變數 */}
-            <div className="flex flex-col items-center">
-              <span className="text-emerald-400 font-bold drop-shadow-[0_0_25px_rgba(16,185,129,0.4)]">Ω</span>
-              <span className="text-[8px] sm:text-[9px] font-mono text-slate-500 mt-2 tracking-tighter uppercase font-normal text-center hidden sm:block">Total Net-Zero Value</span>
-              <span className="text-[8px] font-mono text-slate-500 mt-1 tracking-tighter uppercase font-normal text-center sm:hidden">Net-Zero</span>
+          {/* Info: (20260122 - Luphia) Block 1: Issued Shares */}
+          <div className="flex items-start gap-6 bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 shrink-0">
+              <Users size={24} />
             </div>
-
-            <span className="text-slate-700 not-italic font-light text-xl sm:text-3xl md:text-5xl">=</span>
-
-            {/* Info: (20260310 - Luphia) 積分符號系統 */}
-            <div className="flex items-center shrink-0 max-w-full overflow-x-auto pb-4 sm:pb-0 hide-scrollbar">
-              <div className="relative flex flex-col items-center ml-2 sm:ml-0 shrink-0">
-                <span className="text-[10px] sm:text-sm font-mono text-emerald-600 absolute -top-4 sm:-top-8 italic">t_future</span>
-                <span className="text-5xl sm:text-6xl md:text-8xl font-light text-emerald-500/80 leading-none">∫</span>
-                <span className="text-[10px] sm:text-sm font-mono text-emerald-900 absolute -bottom-4 sm:-bottom-6 italic">t_0</span>
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">已發行股份</h3>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-4xl font-bold text-sky-600 font-mono">30</span>
+                <span className="text-sm text-slate-500 font-medium">萬股</span>
               </div>
+              <p className="text-slate-600 text-sm">由自身與家人持有</p>
+            </div>
+          </div>
 
-              {/* Info: (20260310 - Luphia) 積分函數內容 */}
-              <div className="flex flex-col items-center mx-2 sm:mx-6 shrink-0">
-                <div className="flex items-center gap-1.5 sm:gap-3 px-2 sm:px-8 pb-2 sm:pb-4 border-b border-white/10 shrink-0">
-                  <span className="text-white text-base sm:text-3xl md:text-5xl">Tech(t)</span>
-                  <span className="text-emerald-500/50 not-italic">·</span>
-                  <span className="text-emerald-400 text-base sm:text-3xl md:text-5xl">η</span>
-                  <span className="text-[9px] sm:text-sm text-emerald-700 italic translate-y-1 sm:translate-y-2">green</span>
-                </div>
-                <div className="pt-2 sm:pt-4 text-xs sm:text-xl md:text-2xl text-slate-500 font-mono italic shrink-0">
-                  <span className="hidden sm:inline">ln( Energy Consumption )</span>
-                  <span className="sm:hidden">ln(Energy)</span>
-                </div>
+          {/* Info: (20260122 - Luphia) Block 2: Stock Options */}
+          <div className="flex items-start gap-6 bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-[100px] z-0"></div>
+            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 shrink-0 z-10">
+              <ArrowRightLeft size={24} />
+            </div>
+            <div className="z-10">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">研發成果交換選擇權</h3>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-4xl font-bold text-orange-600 font-mono">100</span>
+                <span className="text-sm text-slate-500 font-medium">萬股</span>
+                <span className="text-xs text-slate-400 ml-2 bg-slate-100 px-2 py-1 rounded">@ 20 元 / 股</span>
               </div>
+              <p className="text-slate-600 text-sm mb-4">透過選擇權交換研發成果</p>
 
-              <span className="text-emerald-500 font-bold ml-1 sm:ml-2 text-base sm:text-3xl md:text-5xl shrink-0">dt</span>
-            </div>
-          </div>
-
-          {/* Info: (20260310 - Luphia) 願景宣言 */}
-          <div className="mt-12 sm:mt-20 max-w-2xl text-center px-4 w-full">
-            <p className="text-sm sm:text-lg md:text-xl text-slate-300 font-light leading-relaxed">
-              「讓科技與環境共同創造
-              <span className="block sm:inline mt-1 sm:mt-0">
-                <span className="text-emerald-400 font-semibold mx-1 sm:mx-2 italic">秩序的累積</span>
-                」
-              </span>
-            </p>
-            <p className="mt-4 sm:mt-6 text-[9px] sm:text-xs text-slate-500 font-mono tracking-[0.1em] sm:tracking-widest uppercase opacity-60 leading-relaxed px-2">
-              Reversing climate entropy through time-weighted intelligence.
-            </p>
-          </div>
-
-          {/* Info: (20260310 - Luphia) 底部數據點 */}
-          <div className="mt-10 sm:mt-12 flex flex-wrap justify-center gap-x-6 gap-y-6 sm:gap-x-16 border-t border-white/5 pt-6 sm:pt-8 w-full px-4">
-            <div className="text-center group/stat shrink-0 w-[40%] sm:w-auto">
-              <p className="text-emerald-500 font-mono text-[10px] sm:text-xs group-hover:scale-110 transition-transform">dE/dt ↓</p>
-              <p className="text-[8px] sm:text-[9px] text-slate-600 uppercase mt-1">Entropy Rate</p>
-            </div>
-            <div className="text-center group/stat shrink-0 w-[40%] sm:w-auto">
-              <p className="text-emerald-500 font-mono text-[10px] sm:text-xs group-hover:scale-110 transition-transform">Σ Intelligence ↑</p>
-              <p className="text-[8px] sm:text-[9px] text-slate-600 uppercase mt-1">Tech Accumulation</p>
-            </div>
-            <div className="text-center group/stat shrink-0 w-full sm:w-auto mt-2 sm:mt-0">
-              <p className="text-emerald-500 font-mono text-[10px] sm:text-xs group-hover:scale-110 transition-transform">100% Green</p>
-              <p className="text-[8px] sm:text-[9px] text-slate-600 uppercase mt-1">Energy Source</p>
+              <div className="flex items-center gap-2 text-xs font-bold text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 w-fit">
+                <ScrollText size={14} />
+                持有者：台灣陽光雲有限公司
+              </div>
             </div>
           </div>
 
         </div>
+      </div>
 
-        {/* Info: (20260310 - Luphia) 四角裝飾 */}
-        <div className="absolute top-4 sm:top-8 left-4 sm:left-8 w-2 sm:w-4 h-2 sm:h-4 border-t border-l border-emerald-500/30"></div>
-        <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 w-2 sm:w-4 h-2 sm:h-4 border-b border-r border-emerald-500/30"></div>
+      {/* Info: (20260122 - Luphia) Right Graphic Area */}
+      <div className="w-[45%] bg-slate-900 relative flex items-center justify-center p-12 overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-500 via-slate-900 to-slate-900"></div>
+
+        {/* Info: (20260122 - Luphia) Visualization Diagram */}
+        <div className="relative w-full max-w-md aspect-square">
+          {/* Info: (20260315 - Luphia) Center Circle */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-slate-800 rounded-full border-4 border-sky-500/30 flex items-center justify-center z-10 shadow-[0_0_50px_rgba(14,165,233,0.2)]">
+            <div className="text-center">
+              <div className="text-sky-400 font-bold text-xl tracking-wider">CAFECA</div>
+              <div className="text-slate-500 text-[10px]">EQUITY</div>
+            </div>
+          </div>
+
+          {/* Info: (20260315 - Luphia) Orbit Item 1 */}
+          <div className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 animate-[spin_10s_linear_infinite]">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <Users size={24} className="text-sky-600" />
+            </div>
+          </div>
+
+          {/* Info: (20260315 - Luphia) Orbit Item 2 */}
+          <div className="absolute top-1/2 left-1/2 w-80 h-80 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-slate-700 animate-[spin_15s_linear_infinite_reverse]">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-6 w-20 h-20 bg-orange-500 rounded-full flex flex-col items-center justify-center shadow-lg text-white text-[10px] font-bold">
+              <div>Option</div>
+              <div className="text-lg">100萬</div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
