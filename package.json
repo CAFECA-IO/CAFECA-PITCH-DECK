@@ -9,7 +9,7 @@
     "lint": "eslint",
     "test": "npm run lint && jest --passWithNoTests",
     "update-version": "npm run lint && echo 'Updating version...'",
-    "swarm": "npm run build && next start -p 10020",
+    "swarm": "npm run build && next start -p 10022",
     "worker": "npx tsx scripts/workers.run.ts",
     "prettier": "prettier --write .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
