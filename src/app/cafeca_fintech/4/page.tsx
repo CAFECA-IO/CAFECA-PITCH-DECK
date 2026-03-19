@@ -1,96 +1,157 @@
+import { Activity, Leaf, ShieldCheck, Wind } from 'lucide-react';
+
 export default function CafecaFintechSlide4() {
+  const companies = [
+    { rank: 1, name: '中華電信', grade: 'B', score: 68 },
+    { rank: 2, name: '東和鋼鐵', grade: 'C', score: 55 },
+    { rank: 3, name: '台灣積體電路製造', grade: 'D', score: 45 },
+    { rank: 4, name: '統一超商', grade: 'E', score: 38 },
+    { rank: 5, name: '遠東新世紀', grade: 'E', score: 32 },
+    { rank: 6, name: '亞洲水泥', grade: 'E', score: 30 },
+    { rank: 7, name: '中國鋼鐵', grade: 'F', score: 20 },
+    { rank: 8, name: '台灣電力公司', grade: 'F', score: 18.5 },
+    { rank: 9, name: '台塑石化', grade: 'F', score: 10 },
+    { rank: 10, name: '麥寮汽電', grade: 'F', score: 10 },
+  ];
+
+  const getRankColor = (grade: string) => {
+    switch (grade) {
+      case 'A':
+      case 'B':
+        return 'text-emerald-600 bg-emerald-50 border-emerald-200';
+      case 'C':
+        return 'text-sky-600 bg-sky-50 border-sky-200';
+      case 'D':
+        return 'text-amber-500 bg-amber-50 border-amber-200';
+      case 'E':
+        return 'text-orange-500 bg-orange-50 border-orange-200';
+      case 'F':
+        return 'text-rose-500 bg-rose-50 border-rose-200';
+      default:
+        return 'text-slate-400 bg-slate-50 border-slate-200';
+    }
+  };
+
+  const getScoreColor = (score: number) => {
+    if (score >= 60) return 'text-emerald-600 font-bold';
+    if (score >= 50) return 'text-sky-600 font-bold';
+    if (score >= 40) return 'text-amber-500 font-bold';
+    if (score >= 30) return 'text-orange-500 font-bold';
+    return 'text-rose-500 font-bold';
+  };
+
   return (
-    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-gray-200">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex overflow-hidden">
+      {/* Info: (20260318 - Luphia) Left Sidebar - Summary */}
+      <div className="w-[35%] h-full bg-white border-r border-emerald-100 p-10 flex flex-col relative z-10 shadow-lg">
+        <div className="flex-1">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-wider mb-8 border border-emerald-200">
+            <Leaf size={14} />
+            CARBON HEALTH CHECK
+          </div>
 
-      {/* Info: (20260315 - Luphia) Background Gradients - Keeping consistent with Slide 1 & 2 */}
-      <div
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl pointer-events-none"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[70rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#10b981] to-[#34d399] opacity-20"
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-        />
-      </div>
+          <h2 className="text-4xl font-extrabold text-slate-900 leading-tight mb-8">
+            <span className="text-emerald-600">IRSC:</span>
+            <br />
+            Carbon Footprint <br />
+            Check
+          </h2>
 
-      <div className="px-16 pt-12 relative z-10">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-12 h-1 bg-emerald-500 rounded-full"></div>
-          <span className="text-emerald-600 font-bold tracking-[0.2em] uppercase text-sm">Core Principles</span>
-        </div>
-        <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
-          碳會計人工智能核心原則
-        </h1>
-      </div>
+          <div className="space-y-6">
 
-      <div className="flex-1 px-16 flex flex-col items-center justify-center relative z-10">
-        <div className="w-full max-w-5xl bg-slate-50/80 backdrop-blur-sm rounded-2xl p-12 border border-slate-100 shadow-lg text-center relative overflow-hidden group hover:shadow-xl transition-all">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-100 rounded-bl-[100px] -mr-8 -mt-8 opacity-50 transition-transform group-hover:scale-110 duration-500"></div>
-          <div className="absolute bottom-0 left-0 w-40 h-40 bg-sky-50 rounded-tr-[120px] -ml-10 -mb-10 opacity-50 transition-transform group-hover:scale-110 duration-500"></div>
-
-          <div className="flex flex-col items-center justify-center gap-6 text-slate-600 relative z-10 font-serif">
-
-            {/* Info: (20260315 - Luphia) Main Equation */}
-            <div className="flex items-center gap-4 text-3xl md:text-4xl text-slate-700">
-              <span className="font-bold text-emerald-700 italic border-b-4 border-emerald-500 pb-1">P</span>
-              <span className="text-slate-400">=</span>
-              <span className="italic">C<sub>Econ</sub></span>
-              <span className="text-slate-400">+</span>
-              <span className="italic font-bold text-emerald-600">C<sub>Eco</sub></span>
-              <span className="text-slate-400">+</span>
-              <span className="italic">C<sub>Soc</sub></span>
-              <span className="text-slate-400">+</span>
-              <span className="italic">V<sub>Brand</sub></span>
-              <span className="text-slate-400">+</span>
-              <span className="italic">&pi;</span>
+            <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 flex flex-col gap-4">
+              <div className="font-bold text-emerald-800 text-lg flex items-center gap-2">
+                <Activity size={20} />
+                健檢指標說明
+              </div>
+              <ul className="text-sm text-emerald-700 space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-emerald-600">&ge;80</span>
+                  <span>(S) 投入研發大量未來淨零減碳科技。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-emerald-600">70-79</span>
+                  <span>(A) 導入跨界技術實現大量減碳。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-emerald-600">60-69</span>
+                  <span>(B) 完成所有減碳基礎措施。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-sky-600">50-59</span>
+                  <span>(C) 具備基礎減碳作為，仍有部分遺漏。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-amber-500">40-49</span>
+                  <span>(D) 減碳基礎措施落實度不足。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-orange-500">30-39</span>
+                  <span>(E) 缺乏有效減碳作為。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-rose-500">&lt;30</span>
+                  <span>(F) 幾乎無實質減碳措施。</span>
+                </li>
+              </ul>
             </div>
-
-            {/* Info: (20260315 - Luphia) Legend / Breakdown */}
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-4 text-sm md:text-base font-sans w-full max-w-4xl">
-              <div className="bg-white px-4 py-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
-                <span className="font-serif italic text-slate-500 mb-1">C<sub>Econ</sub></span>
-                <span className="font-medium">經濟成本</span>
-              </div>
-
-              <div className="relative group/eco">
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-green-500 rounded-xl blur opacity-25 group-hover/eco:opacity-50 transition duration-500"></div>
-                <div className="relative bg-emerald-50 text-emerald-800 border-emerald-300 border-2 px-4 py-3 rounded-xl shadow-md flex flex-col items-center transform scale-110">
-                  <span className="font-serif italic font-bold mb-1">C<sub>Eco</sub></span>
-                  <span className="font-bold">生態成本</span>
-                </div>
-              </div>
-
-              <div className="bg-white px-4 py-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
-                <span className="font-serif italic text-slate-500 mb-1">C<sub>Soc</sub></span>
-                <span className="font-medium">社會成本</span>
-              </div>
-
-              <div className="bg-white px-4 py-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
-                <span className="font-serif italic text-slate-500 mb-1">V<sub>Brand</sub></span>
-                <span className="font-medium">品牌價值</span>
-              </div>
-
-              <div className="bg-white px-4 py-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
-                <span className="font-serif italic text-slate-500 mb-1">&pi;</span>
-                <span className="font-medium">利潤</span>
-              </div>
-            </div>
-
           </div>
         </div>
+
+        <div className="text-slate-400 text-[10px] font-mono border-t border-slate-100 pt-6 flex items-center gap-2">
+          <ShieldCheck size={12} className="text-emerald-500" />
+          CAFECA FINTECH • CARBON FOOTPRINT CHECK
+        </div>
       </div>
 
-      <div className="absolute bottom-4 w-full px-16 flex justify-between text-gray-400 text-xs tracking-widest uppercase font-medium z-10">
-        <div>Pricing Model</div>
-        <div className="flex gap-2 items-center">
-          <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-          2026 CAFECA FINTECH
+      {/* Info: (20260318 - Luphia) Right Content - Ranking Table */}
+      <div className="flex-1 h-full bg-gradient-to-br from-emerald-50/50 to-slate-100 p-10 flex flex-col justify-center relative overflow-hidden">
+        <div className="absolute -top-10 -right-10 p-12 opacity-[0.03] pointer-events-none text-emerald-900">
+          <Wind size={450} />
+        </div>
+
+        <div className="relative z-10 bg-white shadow-xl shadow-emerald-900/5 rounded-2xl border border-emerald-100 overflow-hidden flex flex-col h-[600px]">
+          {/* Info: (20260318 - Luphia) Table Header */}
+          <div className="grid grid-cols-12 gap-4 px-8 py-5 bg-emerald-950 text-emerald-50 font-semibold text-sm tracking-wide">
+            <div className="col-span-2 text-center">Rank</div>
+            <div className="col-span-5">Company</div>
+            <div className="col-span-2 text-center">Grade</div>
+            <div className="col-span-3 text-right">Score</div>
+          </div>
+
+          {/* Info: (20260318 - Luphia) Table Body */}
+          <div className="flex-1 flex flex-col divide-y divide-emerald-50">
+            {companies.map((company, index) => (
+              <div
+                key={company.name}
+                className="flex-1 grid grid-cols-12 gap-4 px-8 items-center bg-white hover:bg-emerald-50/50 transition-colors"
+              >
+                {/* Info: (20260318 - Luphia) Rank */}
+                <div className="col-span-2 text-center font-bold text-slate-400 text-lg font-mono">
+                  #{company.rank.toString().padStart(2, '0')}
+                </div>
+
+                {/* Info: (20260318 - Luphia) Company Name */}
+                <div className="col-span-5 font-bold text-slate-800 text-xl tracking-wide">
+                  {company.name}
+                </div>
+
+                {/* Info: (20260318 - Luphia) Grade */}
+                <div className="col-span-2 flex justify-center">
+                  <span className={`px-4 py-1 rounded-lg text-lg font-black border ${getRankColor(company.grade)}`}>
+                    {company.grade}
+                  </span>
+                </div>
+
+                {/* Info: (20260318 - Luphia) Score */}
+                <div className={`col-span-3 text-right text-2xl font-mono tracking-tight ${getScoreColor(company.score)}`}>
+                  {company.score}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 }
-

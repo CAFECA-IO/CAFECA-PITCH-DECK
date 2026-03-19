@@ -1,118 +1,202 @@
-export default function CafecaFintechSlide5() {
+
+import { Calendar, Database, Zap, Target, Banknote, Coins } from 'lucide-react';
+
+export default function CafecaFintechSlide3() {
   return (
-    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-gray-200">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex overflow-hidden">
 
-      {/* Info: (20260315 - Luphia) Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 transform -skew-x-12 translate-x-32" />
-
-      {/* Info: (20260315 - Luphia) Main Content Area */}
-      <div className="flex-1 w-full h-full pt-12 px-16 pb-16 flex flex-col relative z-10">
-
-        {/* Info: (20260315 - Luphia) Header */}
-        <div className="mb-10">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="w-12 h-1 bg-sky-500 rounded-full"></div>
-            <span className="text-sky-600 font-bold tracking-[0.2em] uppercase text-sm">Use Case: Tung Ho Steel</span>
+      {/* Info: (20260122 - Luphia) Left Sidebar - Summary */}
+      <div className="w-[35%] h-full bg-white border-r border-slate-200 p-10 flex flex-col relative z-10 shadow-lg">
+        <div className="flex-1">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wider mb-8">
+            <Zap size={14} />
+            COMPANY PROFILE
           </div>
-          <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
-            淨零碳排的關鍵輔助
-            <span className="block text-3xl text-slate-500 font-light mt-2">東和鋼鐵減碳分析案例</span>
-          </h1>
+
+          <h2 className="text-4xl font-extrabold text-slate-900 leading-tight mb-8">
+            <span className="text-sky-600">CAFECA</span>
+            <br />
+            Fintech
+          </h2>
+
+          <div className="space-y-8">
+            <div className="flex items-start gap-4">
+              <div className="bg-sky-50 p-3 rounded-xl shrink-0">
+                <Calendar className="text-sky-600" size={24} />
+              </div>
+              <div>
+                <div className="text-sm text-slate-500 font-medium uppercase tracking-wide mb-1">成立時間</div>
+                <div className="text-xl font-bold text-slate-900 font-mono">2017.04.18</div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-sky-50 p-3 rounded-xl shrink-0">
+                <Target className="text-sky-600" size={24} />
+              </div>
+              <div>
+                <div className="text-sm text-slate-500 font-medium uppercase tracking-wide mb-1">核心聚焦</div>
+                <div className="text-xl font-bold text-slate-900">綠色金融科技</div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-sky-50 p-3 rounded-xl shrink-0">
+                <Banknote className="text-sky-600" size={24} />
+              </div>
+              <div>
+                <div className="text-sm text-slate-500 font-medium uppercase tracking-wide mb-1">額定股份</div>
+                <div className="text-xl font-bold text-slate-900 font-mono">5,000,000 股</div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-sky-50 p-3 rounded-xl shrink-0">
+                <Coins className="text-sky-600" size={24} />
+              </div>
+              <div>
+                <div className="text-sm text-slate-500 font-medium uppercase tracking-wide mb-1">已發行股份</div>
+                <div className="text-xl font-bold text-slate-900 font-mono">300,000 股</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Info: (20260315 - Luphia) Dashboard/Data Area */}
-        <div className="flex-1 flex gap-8">
-
-          {/* Info: (20260315 - Luphia) Left Column: Scope Breakdown */}
-          <div className="flex-1 flex flex-col gap-3">
-            <h3 className="text-lg font-bold text-slate-600 mb-1 border-b-2 border-slate-200 pb-2">碳排放範疇 (噸 CO₂e)</h3>
-
-            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between group hover:border-sky-300 transition-colors">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500 text-base group-hover:bg-sky-100 group-hover:text-sky-600 transition-colors">1</div>
-                <div>
-                  <div className="text-sm text-slate-500 font-bold tracking-wider">範疇一</div>
-                  <div className="text-xs text-slate-400">直接溫室氣體排放</div>
-                </div>
-              </div>
-              <div className="text-2xl font-bold text-slate-800 font-mono tracking-tight">336,000</div>
-            </div>
-
-            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between group hover:border-sky-300 transition-colors">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500 text-base group-hover:bg-sky-100 group-hover:text-sky-600 transition-colors">2</div>
-                <div>
-                  <div className="text-sm text-slate-500 font-bold tracking-wider">範疇二</div>
-                  <div className="text-xs text-slate-400">能源間接排放</div>
-                </div>
-              </div>
-              <div className="text-2xl font-bold text-slate-800 font-mono tracking-tight">1,176,000</div>
-            </div>
-
-            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between group hover:border-sky-300 transition-colors">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500 text-base group-hover:bg-sky-100 group-hover:text-sky-600 transition-colors">3</div>
-                <div>
-                  <div className="text-sm text-slate-500 font-bold tracking-wider">範疇三</div>
-                  <div className="text-xs text-slate-400">其他間接排放</div>
-                </div>
-              </div>
-              <div className="text-2xl font-bold text-slate-800 font-mono tracking-tight">84,000</div>
-            </div>
-          </div>
-
-          {/* Info: (20260315 - Luphia) Right Column: Totals & Ranking */}
-          <div className="flex-[1.2] flex flex-col gap-4">
-
-            {/* Info: (20260315 - Luphia) Total Emissions */}
-            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -mr-10 -mt-10"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-sky-500/20 rounded-full -ml-10 -mb-10 blur-xl"></div>
-
-              <div className="relative z-10">
-                <div className="text-sky-400 font-bold tracking-widest text-sm mb-1 uppercase">總排放量</div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-extrabold font-mono tracking-tighter">1,596,000</span>
-                  <span className="text-lg text-slate-400 font-light">噸</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Info: (20260315 - Luphia) Total Carbon Fee */}
-            <div className="bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden flex-1 flex flex-col justify-center">
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-
-              <div className="relative z-10 flex items-center justify-between">
-                <div>
-                  <div className="text-emerald-200 font-bold tracking-widest text-sm mb-1 uppercase">預估總碳費</div>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-xl text-emerald-400 mr-1">$NTD</span>
-                    <span className="text-4xl font-extrabold font-mono tracking-tighter shadow-sm">478,800,000</span>
-                  </div>
-                </div>
-
-                {/* Info: (20260315 - Luphia) Ranking Badge */}
-                <div className="bg-white text-emerald-800 px-5 py-3 rounded-xl shadow-lg border-2 border-emerald-400/30 transform rotate-3 flex flex-col items-center">
-                  <span className="text-xs font-bold opacity-80 mb-1">排放規模</span>
-                  <div className="text-2xl font-black">全臺第 3</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Info: (20260315 - Luphia) Footer */}
-      <div className="absolute bottom-4 w-full px-16 flex justify-between text-gray-400 text-xs tracking-widest uppercase font-medium z-10">
-        <div>CONFIDENTIAL • Carbon Management</div>
-        <div className="flex gap-2 items-center">
-          <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-          2026 CAFECA FINTECH
+        <div className="text-slate-400 text-[10px] font-mono border-t border-slate-100 pt-6">
+          CAFECA FINTECH • PROPRIETARY & CONFIDENTIAL
         </div>
       </div>
+
+      {/* Info: (20260122 - Luphia) Right Content - Compact Timeline */}
+      <div className="flex-1 h-full bg-slate-50/50 p-10 flex flex-col justify-center relative overflow-hidden">
+        <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+          <Database size={400} />
+        </div>
+
+        <div className="space-y-5 relative z-10">
+
+          {/* Info: (20260310 - Luphia) Timeline Item */}
+          <div className="flex gap-4 group">
+            <div className="flex flex-col items-center">
+              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
+            </div>
+            <div className="pb-2">
+              <div className="flex items-baseline gap-3 mb-1">
+                <span className="text-lg font-bold text-sky-600 font-mono">2017 - 2020</span>
+                <h3 className="text-base font-bold text-slate-800">賦能新北市政府溫室氣體追蹤</h3>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                透過 10000+ 低功耗邊緣運算裝置，實現全市溫室氣體追蹤系統，並提供即時數據分析與預測。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260122 - Luphia) Timeline Item 1 */}
+          <div className="flex gap-4 group">
+            <div className="flex flex-col items-center">
+              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
+            </div>
+            <div className="pb-2">
+              <div className="flex items-baseline gap-3 mb-1">
+                <span className="text-lg font-bold text-sky-600 font-mono">2018 - 2021</span>
+                <h3 className="text-base font-bold text-slate-800">賦能好好證券</h3>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                加速金融監理沙盒實證流程，厚植創新金融業務之領照競爭力。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260122 - Luphia) Timeline Item 2 */}
+          <div className="flex gap-4 group">
+            <div className="flex flex-col items-center">
+              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
+            </div>
+            <div className="pb-2">
+              <div className="flex items-baseline gap-3 mb-1">
+                <span className="text-lg font-bold text-sky-600 font-mono">2019</span>
+                <h3 className="text-base font-bold text-slate-800">賦能金管會檢查局</h3>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                建構數位孿生實驗環境，強化金融政策之情境模擬與回測驗證。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260122 - Luphia) Timeline Item 3 */}
+          <div className="flex gap-4 group">
+            <div className="flex flex-col items-center">
+              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
+            </div>
+            <div className="pb-2">
+              <div className="flex items-baseline gap-3 mb-1">
+                <span className="text-lg font-bold text-sky-600 font-mono">2020 - 2021</span>
+                <h3 className="text-base font-bold text-slate-800">參與國家高速網路中心</h3>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                建構國家級人工智能大數據算力平台。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260310 - Luphia) Timeline Item */}
+          <div className="flex gap-4 group">
+            <div className="flex flex-col items-center">
+              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
+            </div>
+            <div className="pb-2">
+              <div className="flex items-baseline gap-3 mb-1">
+                <span className="text-lg font-bold text-sky-600 font-mono">2020 - 2022</span>
+                <h3 className="text-base font-bold text-slate-800">參與台灣積體電路製造股份有限公司碳盤查</h3>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                透過自動化工具將企業會計憑證轉換為碳盤查資料，並提供即時數據分析與預測。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260310 - Luphia) Timeline Item */}
+          <div className="flex gap-4 group">
+            <div className="flex flex-col items-center">
+              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
+            </div>
+            <div className="pb-2">
+              <div className="flex items-baseline gap-3 mb-1">
+                <span className="text-lg font-bold text-sky-600 font-mono">2025 - 2026</span>
+                <h3 className="text-base font-bold text-slate-800">參與中國砂輪企業股份有限公司碳盤查</h3>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                透過 Green AI 技術，實現自動化碳盤查，並持續追蹤製程與廢棄物處理狀態，發掘企業礦脈。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260122 - Luphia) Timeline Item 4 */}
+          <div className="flex gap-4 group">
+            <div className="flex flex-col items-center">
+              <div className="w-3 h-3 rounded-full bg-orange-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
+            </div>
+            <div className="pb-2">
+              <div className="flex items-baseline gap-3 mb-1">
+                <span className="text-lg font-bold text-orange-600 font-mono">2022 - Now</span>
+                <h3 className="text-base font-bold text-slate-800">FAITH 核心引擎</h3>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                憑藉深厚的行業實務底蘊，開創以 <span className="font-bold text-orange-600">FAITH</span> (Financial Accounting Insight Trusted Heuristics) 為核心引擎的全方位金融科技生態，賦能多元化產品矩陣。
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   );
 }
