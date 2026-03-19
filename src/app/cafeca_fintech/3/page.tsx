@@ -91,8 +91,8 @@ export default function CafecaFintechSlide3() {
           </div>
 
           {/* Info: (20260318 - Luphia) Table Body */}
-          <div className="flex-1 flex flex-col divide-y divide-slate-100">
-            {companies.map((company, index) => (
+          <div className="flex-1 flex flex-col divide-y divide-slate-50">
+            {companies.map((company) => (
               <div
                 key={company.name}
                 className="flex-1 grid grid-cols-12 gap-4 px-8 items-center bg-white hover:bg-slate-50/80 transition-colors"

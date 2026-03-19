@@ -121,7 +121,7 @@ export default function CafecaFintechSlide4() {
 
           {/* Info: (20260318 - Luphia) Table Body */}
           <div className="flex-1 flex flex-col divide-y divide-emerald-50">
-            {companies.map((company, index) => (
+            {companies.map((company) => (
               <div
                 key={company.name}
                 className="flex-1 grid grid-cols-12 gap-4 px-8 items-center bg-white hover:bg-emerald-50/50 transition-colors"
