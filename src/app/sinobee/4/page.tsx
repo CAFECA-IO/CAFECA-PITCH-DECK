@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Network } from 'lucide-react';
 
 export default function CAFECASlide4() {
   return (
