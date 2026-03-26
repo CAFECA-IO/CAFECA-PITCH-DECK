@@ -1,95 +1,100 @@
-import { ArrowRight, Globe2, Network, Target, Handshake } from 'lucide-react';
+import { Briefcase, CreditCard, Cpu, ShieldCheck, PieChart, Activity } from 'lucide-react';
 
-export default function SinoBeeSlide10() {
+export default function CAFECASlide10() {
   return (
-    <div className="w-[1280px] h-[720px] bg-neutral-900 relative overflow-hidden flex flex-col justify-center border border-neutral-800 text-white">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden flex flex-col justify-center border border-slate-200">
 
-      {/* Info: (20260319 - Luphia) Dynamic Background */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/hexellence.png')] opacity-5 mix-blend-overlay"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-to-tr from-cyan-500/10 to-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-
-      <div className="relative z-10 px-24 h-full flex flex-col justify-center">
-
+      {/* Info: (20260319 - Luphia) Header */}
+      <div className="absolute top-16 left-24">
         <div className="flex items-center gap-4 mb-4">
           <div className="w-12 h-1 bg-amber-500 rounded-full"></div>
-          <span className="text-amber-400 font-bold tracking-[0.2em] uppercase text-sm">Vision & Next Steps</span>
+          <span className="text-amber-600 font-bold tracking-[0.2em] uppercase text-sm">Business Model</span>
         </div>
 
-        <h2 className="text-6xl font-black text-white leading-tight mb-4">
-          驅動未來的 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">群集智能</span>
+        <h2 className="text-5xl font-extrabold text-slate-800 leading-tight">
+          HaaS <span className="text-3xl text-slate-400 font-light ml-3">Hive-as-a-Service 分級定價</span>
         </h2>
-        <p className="text-2xl text-slate-300 font-light mb-16 max-w-4xl border-l-4 border-cyan-500/50 pl-6 shadow-[-10px_0_20px_-10px_rgba(6,182,212,0.2)]">
-          我們致力於讓 AI 算力如同水電般普及，打造一個由無數專業「數位蜜蜂」共同構建的無限智能力量。
-        </p>
+      </div>
 
-        <div className="grid grid-cols-12 gap-8 h-[280px]">
+      <div className="px-24 mt-24 grid grid-cols-12 gap-8">
 
-          {/* Info: (20260319 - Luphia) Roadmap */}
-          <div className="col-span-12 md:col-span-7 flex flex-col">
-            <h3 className="text-xl font-bold flex items-center gap-2 mb-6 text-slate-200">
-              <Network size={20} className="text-cyan-400" /> Roadmap 發展路線 (12-18 Months)
-            </h3>
+        {/* Info: (20260319 - Luphia) Left Column - Compute Leasing Concept */}
+        <div className="col-span-4 flex flex-col gap-6">
+          <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-lg flex-1 flex flex-col relative overflow-hidden group">
+            <div className="absolute -top-10 -right-10 opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
+              <Briefcase size={300} />
+            </div>
+            <div className="relative z-10 w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-5 border border-amber-100">
+              <Briefcase size={32} className="text-amber-500" />
+            </div>
+            <h3 className="relative z-10 text-2xl font-bold text-slate-800 mb-2">算力租賃 (Compute Leasing)</h3>
+            <p className="relative z-10 text-slate-600 leading-relaxed text-sm mb-5">
+              企業不需自建高昂的 GPU 機房與伺服器，直接向 CAFECA 網絡按「任務數量」或「算力時數」租用動態運算資源，實現 OPEX 取代 CAPEX 的輕資產轉型。
+            </p>
 
-            <div className="flex-1 bg-neutral-800/50 rounded-3xl p-8 border border-neutral-700 relative overflow-hidden flex flex-col justify-center">
-              <div className="absolute top-0 right-0 p-6 opacity-5">
-                <Target size={150} />
+            <div className="relative z-10 mt-auto bg-slate-50 rounded-2xl p-4 border border-slate-200 flex items-start gap-4">
+              <div className="bg-emerald-100 p-2 rounded-xl mt-0.5"><PieChart size={24} className="text-emerald-600" /></div>
+              <div>
+                <h4 className="font-bold text-slate-700 text-[15px] mb-1">Broker Nodes (交易蜂)</h4>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  內建的 FinOps 智控機制，將自動為客戶精算最佳的「邊緣/雲端」成本池組合，保障企業最大化資金投報率。
+                </p>
               </div>
-
-              <div className="space-y-6 relative z-10">
-                <div className="flex items-center gap-4 group">
-                  <div className="w-16 text-right font-mono font-bold text-amber-500">2026 Q1</div>
-                  <div className="w-3 h-3 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
-                  <div className="flex-1 text-slate-300 group-hover:text-white transition-colors">
-                    完成 <strong>ASUS GX10 (D-Hive)</strong> 邊緣網格底層開發與百台節點壓力測試。
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 group">
-                  <div className="w-16 text-right font-mono font-bold text-cyan-400">2026 Q2</div>
-                  <div className="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
-                  <div className="flex-1 text-slate-300 group-hover:text-white transition-colors">
-                    深度整合 <strong>TWAI 雲端 (C-Hive)</strong> 溢流機制，實現邊緣/雲端無縫動態調度。
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 group">
-                  <div className="w-16 text-right font-mono font-bold text-emerald-400">2026 Q4</div>
-                  <div className="w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)]"></div>
-                  <div className="flex-1 text-slate-300 group-hover:text-white transition-colors">
-                    正式上線 <strong>Nectar Store</strong> 技能生態系，開放全球開發者上傳模型模組。
-                  </div>
-                </div>
-              </div>
-
-              {/* Info: (20260319 - Luphia) Connecting line */}
-              <div className="absolute left-[111px] top-10 bottom-10 w-0.5 bg-neutral-700 z-0"></div>
             </div>
           </div>
+        </div>
 
-          {/* Info: (20260319 - Luphia) Call to Action */}
-          <div className="col-span-12 md:col-span-5 flex flex-col">
-            <h3 className="text-xl font-bold flex items-center gap-2 mb-6 text-slate-200">
-              <Handshake size={20} className="text-amber-500" /> Invite to Collaborate
-            </h3>
+        {/* Info: (20260319 - Luphia) Right Column - Pricing Tiers */}
+        <div className="col-span-8 flex gap-6">
 
-            <div className="flex-1 bg-gradient-to-tr from-amber-600 to-orange-500 rounded-3xl p-8 shadow-2xl shadow-orange-500/20 relative overflow-hidden group">
-              <div className="absolute -bottom-10 -right-10 opacity-10 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
-                <Globe2 size={240} />
+          {/* Info: (20260319 - Luphia) Eco Tier */}
+          <div className="flex-1 bg-gradient-to-b from-white to-slate-50 rounded-3xl p-6 border-2 border-slate-200 hover:border-amber-300 shadow-md group transition-all flex flex-col">
+            <div className="flex justify-between items-start mb-6">
+              <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center border border-amber-200 group-hover:scale-110 transition-transform">
+                <Cpu size={32} className="text-amber-600" />
               </div>
-
-              <div className="relative z-10 h-full flex flex-col">
-                <h4 className="text-3xl font-black text-white leading-tight mb-4">
-                  Join the<br />Hive Network.
-                </h4>
-                <p className="text-orange-100 font-medium mb-auto leading-relaxed text-sm">
-                  我們正在尋求 <strong>種子輪 (Seed Round) 戰略投資</strong>，以及對於導入 AI 算力有龐大需求的 <strong>企業級 PoC 共創夥伴</strong>。
-                </p>
-
-                <div className="mt-6 flex items-center gap-3 text-white font-bold bg-black/20 w-fit px-5 py-3 rounded-xl border border-white/20 hover:bg-black/40 transition-colors cursor-pointer backdrop-blur-md">
-                  Let&apos;s Talk <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
-                </div>
-              </div>
+              <span className="px-3 py-1.5 bg-slate-100 text-slate-500 font-bold text-[10px] uppercase tracking-wider rounded-full border border-slate-200">
+                Cost-Effective
+              </span>
             </div>
+            <h3 className="text-3xl font-black text-slate-800 mb-1.5">Eco Tier <span className="text-sm text-slate-400 font-medium ml-2">經濟層</span></h3>
+            <div className="text-4xl font-mono font-extrabold text-amber-500 mb-4 drop-shadow-sm">$0.05 <span className="text-sm text-slate-400 font-sans tracking-normal">/ hr</span></div>
+
+            <p className="text-slate-600 leading-relaxed font-medium mb-6">
+              全數調用 ASUS GX10 邊緣算力，最適合對延遲容忍度較高的巨量資料清洗、批次處理與背景分析任務。
+            </p>
+
+            <ul className="space-y-3 mt-auto mb-2 text-sm text-slate-600 font-medium">
+              <li className="flex items-center gap-3"><ShieldCheck size={18} className="text-amber-500" /> 100% 邊緣分散式架構</li>
+              <li className="flex items-center gap-3"><ShieldCheck size={18} className="text-amber-500" /> 基礎平行資料處理池</li>
+              <li className="flex items-center gap-3"><ShieldCheck size={18} className="text-amber-500" /> 最精簡的成本保障機制</li>
+            </ul>
+          </div>
+
+          {/* Info: (20260319 - Luphia) Enterprise Tier */}
+          <div className="flex-1 bg-gradient-to-b from-slate-900 to-neutral-950 rounded-3xl p-6 border-2 border-cyan-500/50 shadow-2xl relative overflow-hidden group transition-all flex flex-col">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+
+            <div className="flex justify-between items-start mb-6 relative z-10">
+              <div className="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)] group-hover:scale-110 transition-transform">
+                <Activity size={32} className="text-cyan-400" />
+              </div>
+              <span className="px-3 py-1.5 bg-cyan-500/20 text-cyan-300 font-bold text-[10px] uppercase tracking-wider rounded-full border border-cyan-500/30">
+                Mission Critical
+              </span>
+            </div>
+            <h3 className="text-3xl font-black text-white mb-1.5 relative z-10">Enterprise Tier <span className="text-sm text-slate-400 font-medium ml-2">企業層</span></h3>
+            <div className="text-4xl font-mono font-extrabold text-cyan-400 mb-4 drop-shadow-sm relative z-10">Pay-as-you-go</div>
+
+            <p className="text-slate-300 leading-relaxed font-light mb-6 relative z-10">
+              動態啟用 TWAI 雲端巨型模型與高端 GPU 資源，保證超低延遲與極限峰值運算能力，專為關鍵核心業務打造。
+            </p>
+
+            <ul className="space-y-3 mt-auto mb-2 text-sm text-slate-300 font-light relative z-10">
+              <li className="flex items-center gap-3"><ShieldCheck size={18} className="text-cyan-400" /> 動態 TWAI 公有雲無縫溢流</li>
+              <li className="flex items-center gap-3"><ShieldCheck size={18} className="text-cyan-400" /> 企業級即時超低延遲保障</li>
+              <li className="flex items-center gap-3"><ShieldCheck size={18} className="text-cyan-400" /> 核心系統 SLA 99.99% 承諾</li>
+            </ul>
           </div>
 
         </div>
@@ -97,12 +102,12 @@ export default function SinoBeeSlide10() {
       </div>
 
       {/* Info: (20260319 - Luphia) Footer */}
-      <div className="absolute bottom-8 left-20 right-20 flex justify-between items-center text-slate-500 text-xs font-bold tracking-widest uppercase">
+      <div className="absolute bottom-8 left-24 right-24 flex justify-between items-center text-slate-400 text-xs font-bold tracking-widest uppercase">
         <div className="flex items-center gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-          2026 iSunFA • SinoBee Inc.
+          <CreditCard size={14} className="text-amber-500" />
+          Business Model
         </div>
-        <div>SinoBee Pitch Deck</div>
+        <div>CAFECA Pitch Deck</div>
       </div>
     </div>
   );

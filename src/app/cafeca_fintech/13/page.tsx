@@ -1,123 +1,98 @@
-import { Brain, Leaf, Briefcase, MonitorSmartphone, TrendingUp } from 'lucide-react';
+import { PieChart, Users, ArrowRightLeft, ScrollText } from 'lucide-react';
 
-export default function CafecaFintechSlide8() {
+export default function CafecaFintechSlide10() {
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex overflow-hidden">
+    <div className="w-[1280px] h-[720px] bg-slate-50 flex overflow-hidden relative">
 
-      {/* Info: (20260315 - Luphia) Background Pattern */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-100/50 rounded-full blur-[80px] -translate-y-1/4 translate-x-1/4"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-50/50 rounded-full blur-[80px] translate-y-1/4 -translate-x-1/4"></div>
+      <div className="absolute top-0 right-0 w-[400px] h-full bg-sky-50 -skew-x-12 translate-x-1/2 transform origin-top"></div>
 
-      {/* Info: (20260315 - Luphia) Left Axis - Title */}
-      <div className="w-[35%] h-full bg-slate-900 p-12 flex flex-col justify-center relative shadow-2xl z-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-20 mix-blend-overlay"></div>
-
-        <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-900/50 border border-sky-700/50 text-sky-400 text-xs font-bold tracking-wider mb-8">
-            <TrendingUp size={14} />
-            REVENUE MODEL
+      {/* Info: (20260122 - Luphia) Left Content */}
+      <div className="flex-1 p-16 flex flex-col justify-center relative z-10">
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wider mb-6">
+            <PieChart size={14} />
+            EQUITY STRUCTURE
           </div>
-
-          <h2 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-4 text-white">
-            CAFECA<br />
-            <span className="text-sky-400">未來營收</span> 結構
-          </h2>
-          <p className="text-slate-400 leading-relaxed text-lg mt-6">
-            以高毛利、經常性收入為導向的多元商業模式，建立穩定且具備規模化成長潛力的永續收入生態系。
+          <h2 className="text-5xl font-extrabold text-slate-900 mb-6">股權結構</h2>
+          <p className="text-slate-600 text-lg max-w-xl leading-relaxed">
+            穩健的股權架構與創新的研發成果交換機制，奠定公司長遠發展的基石。
           </p>
         </div>
-      </div>
 
-      {/* Info: (20260315 - Luphia) Right Axis - 2x2 Grid */}
-      <div className="flex-1 h-full p-12 bg-transparent flex flex-col justify-center relative z-10">
-        <div className="grid grid-cols-2 gap-6 h-[500px]">
+        <div className="grid grid-cols-1 gap-8 max-w-2xl">
 
-          {/* Info: (20260315 - Luphia) 50% AI Model */}
-          <div className="col-span-2 md:col-span-1 bg-white rounded-3xl p-8 border border-sky-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-2 h-full bg-sky-500"></div>
-            <div className="absolute -right-10 -bottom-10 opacity-5 group-hover:scale-110 transition-transform duration-500">
-              <Brain size={160} />
+          {/* Info: (20260122 - Luphia) Block 1: Issued Shares */}
+          <div className="flex items-start gap-6 bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 shrink-0">
+              <Users size={24} />
             </div>
-
-            <div className="flex justify-between items-start mb-6">
-              <div className="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center text-sky-600 shadow-sm border border-sky-100 group-hover:scale-110 transition-transform">
-                <Brain size={28} />
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">已發行股份</h3>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-4xl font-bold text-sky-600 font-mono">30</span>
+                <span className="text-sm text-slate-500 font-medium">萬股</span>
               </div>
-              <div className="text-4xl font-black text-sky-600">40<span className="text-2xl ml-1">%</span></div>
+              <p className="text-slate-600 text-sm">由自身與家人持有</p>
             </div>
-
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">人工智能模型訂閱費</h3>
-            <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">AI Model Subscription</p>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              提供費思，Green AI 串接與訂閱服務。
-            </p>
           </div>
 
-          {/* Info: (20260315 - Luphia) 30% Green Accounting */}
-          <div className="col-span-2 md:col-span-1 bg-white rounded-3xl p-8 border border-emerald-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500"></div>
-            <div className="absolute -right-10 -bottom-10 opacity-5 group-hover:scale-110 transition-transform duration-500">
-              <Leaf size={160} />
+          {/* Info: (20260122 - Luphia) Block 2: Stock Options */}
+          <div className="flex items-start gap-6 bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-[100px] z-0"></div>
+            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 shrink-0 z-10">
+              <ArrowRightLeft size={24} />
             </div>
-
-            <div className="flex justify-between items-start mb-6">
-              <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm border border-emerald-100 group-hover:scale-110 transition-transform">
-                <Leaf size={28} />
+            <div className="z-10">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">研發成果交換選擇權</h3>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-4xl font-bold text-orange-600 font-mono">100</span>
+                <span className="text-sm text-slate-500 font-medium">萬股</span>
+                <span className="text-xs text-slate-400 ml-2 bg-slate-100 px-2 py-1 rounded">@ 20 元 / 股</span>
               </div>
-              <div className="text-4xl font-black text-emerald-600">10<span className="text-2xl ml-1">%</span></div>
-            </div>
+              <p className="text-slate-600 text-sm mb-4">透過選擇權交換研發成果</p>
 
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">綠色會計與持續審計</h3>
-            <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">Green Audit Services</p>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              即時追蹤碳足跡與自動化核銷系統，協助企業應對日益嚴格的法規要求。
-            </p>
-          </div>
-
-          {/* Info: (20260315 - Luphia) 10% Service Subscription */}
-          <div className="col-span-2 md:col-span-1 bg-white rounded-3xl p-8 border border-indigo-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500"></div>
-            <div className="absolute -right-10 -bottom-10 opacity-5 group-hover:scale-110 transition-transform duration-500">
-              <MonitorSmartphone size={160} />
-            </div>
-
-            <div className="flex justify-between items-start mb-6">
-              <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 shadow-sm border border-indigo-100 group-hover:scale-110 transition-transform">
-                <MonitorSmartphone size={28} />
+              <div className="flex items-center gap-2 text-xs font-bold text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 w-fit">
+                <ScrollText size={14} />
+                持有者：台灣陽光雲有限公司
               </div>
-              <div className="text-4xl font-black text-indigo-600">40<span className="text-2xl ml-1">%</span></div>
             </div>
-
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">金融科技服務訂閱費</h3>
-            <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">Platform Subscription</p>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              面對金融機構，提供易用且高安全性的金融服務平台軟體訂閱。
-            </p>
-          </div>
-
-          {/* Info: (20260315 - Luphia) 10% Tech Consulting */}
-          <div className="col-span-2 md:col-span-1 bg-white rounded-3xl p-8 border border-orange-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-2 h-full bg-orange-500"></div>
-            <div className="absolute -right-10 -bottom-10 opacity-5 group-hover:scale-110 transition-transform duration-500">
-              <Briefcase size={160} />
-            </div>
-
-            <div className="flex justify-between items-start mb-6">
-              <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 shadow-sm border border-orange-100 group-hover:scale-110 transition-transform">
-                <Briefcase size={28} />
-              </div>
-              <div className="text-4xl font-black text-orange-600">10<span className="text-2xl ml-1">%</span></div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">技術顧問</h3>
-            <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">Technical Consulting</p>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              針對特大型企業或金融機構提供客製化 AI 技術導入架構建議。
-            </p>
           </div>
 
         </div>
       </div>
+
+      {/* Info: (20260122 - Luphia) Right Graphic Area */}
+      <div className="w-[45%] bg-slate-900 relative flex items-center justify-center p-12 overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-500 via-slate-900 to-slate-900"></div>
+
+        {/* Info: (20260122 - Luphia) Visualization Diagram */}
+        <div className="relative w-full max-w-md aspect-square">
+          {/* Info: (20260315 - Luphia) Center Circle */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-slate-800 rounded-full border-4 border-sky-500/30 flex items-center justify-center z-10 shadow-[0_0_50px_rgba(14,165,233,0.2)]">
+            <div className="text-center">
+              <div className="text-sky-400 font-bold text-xl tracking-wider">CAFECA</div>
+              <div className="text-slate-500 text-[10px]">EQUITY</div>
+            </div>
+          </div>
+
+          {/* Info: (20260315 - Luphia) Orbit Item 1 */}
+          <div className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 animate-[spin_10s_linear_infinite]">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <Users size={24} className="text-sky-600" />
+            </div>
+          </div>
+
+          {/* Info: (20260315 - Luphia) Orbit Item 2 */}
+          <div className="absolute top-1/2 left-1/2 w-80 h-80 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-slate-700 animate-[spin_15s_linear_infinite_reverse]">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-6 w-20 h-20 bg-orange-500 rounded-full flex flex-col items-center justify-center shadow-lg text-white text-[10px] font-bold">
+              <div>Option</div>
+              <div className="text-lg">100萬</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   );
 }

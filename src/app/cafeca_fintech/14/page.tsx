@@ -1,82 +1,105 @@
-import { TrendingUp, Building2, Cloud } from 'lucide-react';
+import { Target, Flag, Cpu, Coins } from 'lucide-react';
 
-export default function CafecaFintechSlide9() {
+export default function CafecaFintechSlide11() {
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex overflow-hidden">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex flex-col overflow-hidden">
 
-      {/* Info: (20260122 - Luphia) Background Decorations */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-100/50 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-100/50 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/3"></div>
+      {/* Info: (20260123 - Luphia) Background Elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute -top-[300px] -right-[300px] w-[800px] h-[800px] bg-sky-100/50 rounded-full blur-[100px]"></div>
+        <div className="absolute -bottom-[300px] -left-[300px] w-[800px] h-[800px] bg-indigo-50/50 rounded-full blur-[100px]"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+      </div>
 
-      <div className="w-full max-w-[1280px] mx-auto px-16 py-12 relative z-10 flex flex-col h-full">
-
-        {/* Info: (20260122 - Luphia) Header */}
-        <div className="mb-8 flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wider mb-4 border border-sky-200">
-            <TrendingUp size={14} />
-            R&D INVESTMENT
+      {/* Info: (20260123 - Luphia) Header */}
+      <div className="relative z-10 w-full px-16 pt-12 mb-6 flex justify-between items-end">
+        <div>
+          <div className="flex items-center gap-4 mb-2">
+            <div className="w-12 h-1 bg-sky-600 rounded-full"></div>
+            <span className="text-sky-700 font-bold tracking-[0.2em] uppercase text-sm">Strategic Milestone</span>
           </div>
-          <h2 className="text-5xl font-extrabold text-slate-900 tracking-tight">投入研發</h2>
-          <div className="h-1 w-20 bg-sky-500 rounded-full mt-6"></div>
+          <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
+            募資目標
+          </h1>
         </div>
 
-        {/* Info: (20260122 - Luphia) Content Area - Cards */}
-        <div className="flex-1 flex items-center justify-center gap-12 px-12">
+        <div className="flex items-center gap-6 bg-white py-4 px-8 rounded-2xl shadow-lg border border-sky-100 animate-fade-in-up">
+          <div className="bg-sky-100 p-3 rounded-xl text-sky-600">
+            <Coins size={32} />
+          </div>
+          <div>
+            <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Fundraising Offer</div>
+            <div className="text-3xl font-extrabold text-slate-800">15 萬股 <span className="text-base text-slate-500 font-medium normal-case ml-1">Shares</span></div>
+          </div>
+        </div>
+      </div>
 
-          {/* Info: (20260122 - Luphia) Card 1: Cafeca */}
-          <div className="flex-1 max-w-sm h-[420px] bg-white rounded-[2rem] shadow-xl border border-slate-100 relative group overflow-hidden hover:-translate-y-2 transition-transform duration-300">
-            <div className="absolute top-0 inset-x-0 h-2 bg-sky-500"></div>
+      {/* Info: (20260123 - Luphia) Main Content */}
+      <div className="relative z-10 flex-1 px-16 pb-12 flex gap-16 items-center">
 
-            <div className="p-8 flex flex-col h-full items-center text-center">
-              <div className="w-20 h-20 bg-sky-50 rounded-2xl flex items-center justify-center text-sky-600 mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <Building2 size={36} />
+        {/* Info: (20260123 - Luphia) Left: Primary Goals Column */}
+        <div className="w-[48%] flex flex-col gap-6">
+
+          {/* Info: (20260123 - Luphia) Goal 1: Compliance */}
+          <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 relative group overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-sky-50 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+            <div className="relative z-10">
+              <div className="w-12 h-12 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 mb-4 group-hover:rotate-12 transition-transform">
+                <Target size={24} />
               </div>
-
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">卡菲卡金融科技</h3>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-8">Cafeca Fintech Co., Ltd.</p>
-
-              <div className="mt-auto w-full">
-                <div className="text-sm text-slate-500 mb-1 font-medium">投入金額</div>
-                <div className="text-4xl font-extrabold text-sky-600 font-mono tracking-tight flex justify-center items-baseline">
-                  <span className="text-xl mr-1 text-slate-400">$</span>
-                  15,000,000
-                </div>
-                <div className="text-xs text-slate-400 mt-2 font-mono">TWD</div>
-              </div>
+              <h2 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
+                TWD 800 萬：推動八家企業綠色融資
+              </h2>
+              <p className="text-slate-500 text-sm leading-relaxed text-justify">
+                獲取金融監理沙盒許可，成為合規的金融基礎設施提供商，為企業提供直接、高效的融資運營服務，催化企業導入綠色製程。收集環境工程、化學工程、土木工程、水利工程、材料科學等關鍵數據，建立 Green AI 完善訓練資料庫。
+              </p>
             </div>
           </div>
 
-          {/* Info: (20260122 - Luphia) Divider / Connector */}
-          <div className="text-slate-300">
-            <div className="w-16 h-[2px] bg-slate-200 rounded-full"></div>
-          </div>
-
-          {/* Info: (20260122 - Luphia) Card 2: Sunshine Cloud */}
-          <div className="flex-1 max-w-sm h-[420px] bg-white rounded-[2rem] shadow-xl border border-slate-100 relative group overflow-hidden hover:-translate-y-2 transition-transform duration-300">
-            <div className="absolute top-0 inset-x-0 h-2 bg-orange-500"></div>
-
-            <div className="p-8 flex flex-col h-full items-center text-center">
-              <div className="w-20 h-20 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <Cloud size={36} />
+          {/* Info: (20260123 - Luphia) Goal 2: Compute Lease */}
+          <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 relative group overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+            <div className="relative z-10">
+              <div className="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-4 group-hover:rotate-12 transition-transform">
+                <Cpu size={24} />
               </div>
-
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">台灣陽光雲</h3>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-8">Taiwan Sunshine Cloud Co., Ltd.</p>
-
-              <div className="mt-auto w-full">
-                <div className="text-sm text-slate-500 mb-1 font-medium">投入金額</div>
-                <div className="text-4xl font-extrabold text-orange-500 font-mono tracking-tight flex justify-center items-baseline">
-                  <span className="text-xl mr-1 text-slate-400">$</span>
-                  48,000,000
-                </div>
-                <div className="text-xs text-slate-400 mt-2 font-mono">TWD</div>
-              </div>
+              <h2 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
+                TWD 800 萬：模型訓練算力租賃與伺服器採購
+              </h2>
+              <p className="text-slate-500 text-sm leading-relaxed text-justify">
+                確保 AI 模型持續演進的核心動力，建立自主且強大的運算基礎設施，支持未來 Green AI 模型的深度訓練與優化。
+              </p>
             </div>
           </div>
 
+        </div>
+
+        {/* Info: (20260123 - Luphia) Right: Target Markets Grid */}
+        <div className="flex-1 grid grid-cols-2 gap-6">
+          {[
+            { name: '臺灣', en: 'Taiwan', color: 'bg-emerald-500' },
+            { name: '香港', en: 'Hong Kong', color: 'bg-purple-500' },
+            { name: '新加坡', en: 'Singapore', color: 'bg-sky-500' },
+            { name: '日本', en: 'Japan', color: 'bg-rose-500' },
+          ].map((market) => (
+            <div key={market.name} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-slate-300 transition-all group flex items-center gap-4">
+              <div className={`w-12 h-12 ${market.color} bg-opacity-10 rounded-xl flex items-center justify-center text-${market.color.split('-')[1]}-600 group-hover:scale-110 transition-transform`}>
+                <Flag size={20} className={market.color.replace('bg-', 'text-')} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-slate-800">{market.name}</h3>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{market.en}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>
+
+      <div className="absolute bottom-6 right-12 text-slate-300 text-[10px] font-mono z-10">
+        iSunFA • FUNDRAISING & EXPANSION
+      </div>
+
     </div>
   );
 }

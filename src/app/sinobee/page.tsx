@@ -3,20 +3,23 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MonitorPlay, Download, Grid, Maximize2 } from 'lucide-react';
 import Link from 'next/link';
-import SinoBeeSlide1 from '@/app/sinobee/1/page';
-import SinoBeeSlide2 from '@/app/sinobee/2/page';
-import SinoBeeSlide3 from '@/app/sinobee/3/page';
-import SinoBeeSlide4 from '@/app/sinobee/4/page';
-import SinoBeeSlide5 from '@/app/sinobee/5/page';
-import SinoBeeSlide6 from '@/app/sinobee/6/page';
-import SinoBeeSlide7 from '@/app/sinobee/7/page';
-import SinoBeeSlide8 from '@/app/sinobee/8/page';
-import SinoBeeSlide9 from '@/app/sinobee/9/page';
-import SinoBeeSlide10 from '@/app/sinobee/10/page';
+import CAFECASlide1 from '@/app/sinobee/1/page';
+import CAFECASlide2 from '@/app/sinobee/2/page';
+import CAFECASlide3 from '@/app/sinobee/3/page';
+import CAFECASlide4 from '@/app/sinobee/4/page';
+import CAFECASlide5 from '@/app/sinobee/5/page';
+import CAFECASlide6 from '@/app/sinobee/6/page';
+import CAFECASlide7 from '@/app/sinobee/7/page';
+import CAFECASlide8 from '@/app/sinobee/8/page';
+import CAFECASlide9 from '@/app/sinobee/9/page';
+import CAFECASlide10 from '@/app/sinobee/10/page';
+import CAFECASlide11 from '@/app/sinobee/11/page';
+import CAFECASlide12 from '@/app/sinobee/12/page';
+import CAFECASlide13 from '@/app/sinobee/13/page';
 
-export default function SinoBeeSlideBrowser() {
+export default function CAFECASlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 10;
+  const totalSlides = 13;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [mobileScale, setMobileScale] = useState(0.3);
@@ -45,31 +48,37 @@ export default function SinoBeeSlideBrowser() {
   }, []);
 
   const SlideComponents: { [key: number]: React.ComponentType } = {
-    1: SinoBeeSlide1,
-    2: SinoBeeSlide2,
-    3: SinoBeeSlide3,
-    4: SinoBeeSlide4,
-    5: SinoBeeSlide5,
-    6: SinoBeeSlide6,
-    7: SinoBeeSlide7,
-    8: SinoBeeSlide8,
-    9: SinoBeeSlide9,
-    10: SinoBeeSlide10,
+    1: CAFECASlide1,
+    2: CAFECASlide2,
+    3: CAFECASlide3,
+    4: CAFECASlide4,
+    5: CAFECASlide5,
+    6: CAFECASlide6,
+    7: CAFECASlide7,
+    8: CAFECASlide8,
+    9: CAFECASlide9,
+    10: CAFECASlide10,
+    11: CAFECASlide11,
+    12: CAFECASlide12,
+    13: CAFECASlide13,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
 
   const slideTitles: { [key: number]: string } = {
-    1: 'Title: SinoBee',
+    1: 'Title: CAFECA',
     2: 'The Problem',
-    3: 'The SinoBee Solution',
-    4: 'Hybrid-Decentralized Architecture',
-    5: 'Swarm Agents',
-    6: 'Nectar Store',
-    7: 'Business Model - HaaS',
-    8: 'Key Use Cases',
-    9: 'Why SinoBee?',
-    10: 'Vision & Call to Action',
+    3: 'The CAFECA Solution',
+    4: '個體節點架構',
+    5: 'Hybrid-Decentralized Architecture',
+    6: '串列全球的閒置算力實現各種可能',
+    7: '系統集群架構',
+    8: 'Swarm Agents',
+    9: 'Nectar Store',
+    10: 'Business Model - HaaS',
+    11: 'Key Use Cases',
+    12: 'Why CAFECA?',
+    13: 'Vision & Call to Action',
   };
 
   const nextSlide = useCallback(() => {
@@ -102,7 +111,7 @@ export default function SinoBeeSlideBrowser() {
             <MonitorPlay size={20} className="text-amber-950" />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-gray-200">SinoBee Pitch Deck</h1>
+            <h1 className="text-sm font-bold text-gray-200">CAFECA Pitch Deck</h1>
             <p className="text-xs text-gray-500">v1.0.0 • 2026 iSunFA</p>
           </div>
         </Link>
@@ -126,13 +135,13 @@ export default function SinoBeeSlideBrowser() {
           </button>
         </div>
         <div className="flex items-center gap-3">
-          <Link href="/sino_bee/print" target="_blank" className="hidden md:block" aria-label="Print or Export PDF">
+          <Link href="/sinobee/print" target="_blank" className="hidden md:block" aria-label="Print or Export PDF">
             <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700 text-gray-200 hover:text-amber-400 hover:border-amber-400/30">
               <Download size={14} />
               <span>PDF</span>
             </button>
           </Link>
-          <Link href={`/sino_bee/${currentSlide}`} target="_blank" className="hidden md:block" aria-label="Open slide in new tab">
+          <Link href={`/sinobee/${currentSlide}`} target="_blank" className="hidden md:block" aria-label="Open slide in new tab">
             <button className="p-2 hover:bg-neutral-800 rounded-md text-gray-400 hover:text-amber-400 transition-colors" aria-label="Maximize slide">
               <Maximize2 size={18} />
             </button>
@@ -162,7 +171,7 @@ export default function SinoBeeSlideBrowser() {
             return (
               <div key={id} className={`w-full relative overflow-hidden transition-all duration-500 ease-out ${opacityClass}`} style={{ height: 720 * mobileScale }}>
                 <div style={{ transform: `scale(${mobileScale})`, transformOrigin: 'top left', width: 1280, height: 720 }} className="bg-white shadow-xl rounded-lg border border-neutral-800">
-                  <div className="w-full h-full [&>div]:!min-h-0 [&>div]:!h-full [&>div]:!bg-transparent [&>div]:!p-0">
+                  <div className="w-full h-full [&>div]:!min-h-0 [&>div]:!h-full [&>div]:!p-0">
                     {shouldRender ? <Component /> : <div className="w-full h-full bg-neutral-800/50 animate-pulse" />}
                   </div>
                 </div>
@@ -180,7 +189,7 @@ export default function SinoBeeSlideBrowser() {
         <div className="flex-1 flex overflow-hidden">
           <div className="flex-1 bg-neutral-950 flex items-center justify-center p-8 relative overflow-hidden" ref={containerRef}>
             <div style={{ transform: `scale(${scale})`, width: 1280, height: 720, transformOrigin: 'center center' }} className="bg-white shadow-2xl flex-shrink-0 relative overflow-hidden ring-1 ring-neutral-800">
-              <div className="w-full h-full [&>div]:!min-h-0 [&>div]:!h-full [&>div]:!bg-transparent [&>div]:!p-0">
+              <div className="w-full h-full [&>div]:!min-h-0 [&>div]:!h-full [&>div]:!p-0">
                 <CurrentSlideComponent />
               </div>
             </div>
@@ -200,7 +209,7 @@ export default function SinoBeeSlideBrowser() {
                 >
                   <div className="absolute inset-0 bg-white">
                     <div className="w-full h-full flex items-center justify-center bg-gray-50 text-gray-300 text-xs font-mono uppercase">
-                      SinoBee
+                      CAFECA
                     </div>
                     <div className="absolute bottom-0 inset-x-0 bg-neutral-900/90 p-2 text-left">
                       <div className="flex justify-between items-center mb-0.5">

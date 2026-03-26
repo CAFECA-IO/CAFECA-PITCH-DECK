@@ -1,6 +1,6 @@
 import { Hexagon, Network, Sprout } from 'lucide-react';
 
-export default function SinoBeeSlide3() {
+export default function CAFECASlide3() {
   return (
     <div className="w-[1280px] h-[720px] bg-neutral-900 relative overflow-hidden flex flex-col justify-center border border-neutral-800 text-white">
 
@@ -90,9 +90,9 @@ export default function SinoBeeSlide3() {
       <div className="absolute bottom-8 left-24 right-24 flex justify-between items-center text-slate-500 text-xs font-bold tracking-widest uppercase">
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-          The SinoBee Solution
+          The CAFECA Solution
         </div>
-        <div>SinoBee Pitch Deck</div>
+        <div>CAFECA Pitch Deck</div>
       </div>
     </div>
   );

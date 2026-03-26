@@ -1,6 +1,6 @@
 import { AlertTriangle, ServerCrash, ZapOff, BrainCircuit } from 'lucide-react';
 
-export default function SinoBeeSlide2() {
+export default function CAFECASlide2() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden flex flex-col justify-center border border-slate-200">
 
@@ -73,7 +73,7 @@ export default function SinoBeeSlide2() {
           <div className="w-1.5 h-1.5 rounded-full bg-rose-500"></div>
           The Bottleneck
         </div>
-        <div>SinoBee Pitch Deck</div>
+        <div>CAFECA Pitch Deck</div>
       </div>
     </div>
   );

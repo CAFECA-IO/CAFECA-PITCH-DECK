@@ -1,6 +1,6 @@
 import { Hexagon, Network, Cpu, CloudLightning } from 'lucide-react';
 
-export default function SinoBeeSlide1() {
+export default function CAFECASlide1() {
   return (
     <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden flex flex-col justify-center border border-neutral-800">
       {/* Info: (20260319 - Luphia) Dynamic Background */}
@@ -28,7 +28,7 @@ export default function SinoBeeSlide1() {
           </div>
 
           <h1 className="text-7xl font-black text-white leading-tight mb-8 tracking-tight">
-            SinoBee
+            SINOBEE
             <span className="block text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-amber-300 font-bold mt-4 leading-normal">
               無限擴展的混合群集 AI 算力網路
             </span>
@@ -79,7 +79,7 @@ export default function SinoBeeSlide1() {
       <div className="absolute bottom-8 left-24 right-24 flex justify-between items-center text-neutral-500 text-xs font-medium tracking-widest">
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-          2026 iSunFA • SINO BEE INC.
+          2026 CAFECA INC.
         </div>
         <div className="uppercase">Confidential Pitch Deck</div>
       </div>

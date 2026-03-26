@@ -1,128 +1,94 @@
-import { Activity, Zap, ShieldCheck } from 'lucide-react';
-import QRCode from 'react-qr-code';
+import { Database, BrainCircuit, Wrench, Layers } from 'lucide-react';
 
 export default function CafecaFintechSlide3() {
-  const companies = [
-    { rank: 1, name: '台灣積體電路製造', grade: 'S', score: 83.6 },
-    { rank: 2, name: '中華電信', grade: 'A', score: 79.75 },
-    { rank: 3, name: '統一超商', grade: 'A', score: 77.8 },
-    { rank: 4, name: '遠東新世紀', grade: 'A', score: 74.25 },
-    { rank: 5, name: '東和鋼鐵', grade: 'B', score: 67.7 },
-    { rank: 6, name: '中國鋼鐵', grade: 'B', score: 64.8 },
-    { rank: 7, name: '台塑石化', grade: 'B', score: 63.4 },
-    { rank: 8, name: '亞洲水泥', grade: 'B', score: 61.6 },
-    { rank: 9, name: '台灣電力公司', grade: 'B', score: 60.5 },
-    { rank: 10, name: '麥寮汽電', grade: 'C', score: 52.9 },
-  ];
-
-  const getRankColor = (grade: string) => {
-    switch (grade) {
-      case 'S':
-        return 'text-amber-500 bg-amber-50 border-amber-200';
-      case 'A':
-        return 'text-emerald-600 bg-emerald-50 border-emerald-200';
-      case 'B':
-        return 'text-sky-600 bg-sky-50 border-sky-200';
-      case 'C':
-        return 'text-slate-500 bg-slate-100 border-slate-200';
-      default:
-        return 'text-slate-400 bg-slate-50 border-slate-200';
-    }
-  };
-
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-amber-500 font-bold';
-    if (score >= 70) return 'text-emerald-600 font-bold';
-    if (score >= 60) return 'text-sky-600 font-bold';
-    return 'text-slate-500 font-bold';
-  };
-
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex overflow-hidden">
-      {/* Info: (20260318 - Luphia) Left Sidebar - Summary */}
-      <div className="w-[35%] h-full bg-white border-r border-slate-200 p-10 flex flex-col relative z-10 shadow-lg">
-        <div className="flex-1">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wider mb-8">
-            <Activity size={14} />
-            INVESTMENT PROSPECT
-          </div>
-
-          <h2 className="text-4xl font-extrabold text-slate-900 leading-tight mb-8">
-            <span className="text-sky-600">IRSC:</span>
-            <br />
-            Investment <br />
-            Prospect Analysis
-          </h2>
-
-          <div className="space-y-6">
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col items-center gap-4 text-center">
-              <div className="font-bold text-slate-800 text-lg">掃描查看完整分析報告</div>
-              <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-100">
-                <QRCode
-                  value="https://irsc.isunfa.com/report/8d42b994-c1d0-44db-b68c-7f0133eaab1e"
-                  size={160}
-                  level="H"
-                />
-              </div>
-              <div className="text-sm font-mono text-slate-500 mt-2">REPORT ID: 8D42B994</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-slate-400 text-[10px] font-mono border-t border-slate-100 pt-6 flex items-center gap-2">
-          <ShieldCheck size={12} className="text-sky-500" />
-          CAFECA FINTECH • IRSC ANALYSIS REPORT
-        </div>
+    <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl flex flex-col border border-gray-800 text-white font-sans">
+      
+      {/* Background Gradients */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute right-0 top-0 w-1/2 h-1/2 bg-blue-600 rounded-full mix-blend-multiply filter blur-[120px] opacity-70 animate-blob"></div>
+        <div className="absolute left-0 bottom-0 w-1/2 h-1/2 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[120px] opacity-70 animate-blob" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute left-1/4 top-1/4 w-1/2 h-1/2 bg-purple-600 rounded-full mix-blend-multiply filter blur-[120px] opacity-70 animate-blob" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      {/* Info: (20260318 - Luphia) Right Content - Ranking Table */}
-      <div className="flex-1 h-full bg-gradient-to-br from-slate-50 to-slate-100/50 p-10 flex flex-col justify-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 p-12 opacity-[0.03] pointer-events-none">
-          <Zap size={400} />
+      <div className="px-16 pt-8 relative z-10 flex-shrink-0">
+        <div className="flex items-center gap-4 mb-2">
+          <div className="w-12 h-1 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
+          <span className="text-blue-400 font-bold tracking-[0.2em] uppercase text-xs">AI Architecture</span>
         </div>
+        <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300 leading-tight mb-1">
+          費思 v0.1.0
+        </h1>
+        <h2 className="text-xl font-light text-slate-300 tracking-wide">
+          碳會計專業多模態模型 (Carbon Accounting Multimodal Model)
+        </h2>
+      </div>
 
-        <div className="relative z-10 bg-white shadow-xl shadow-slate-200/50 rounded-2xl border border-slate-100 overflow-hidden flex flex-col h-[600px]">
-          {/* Info: (20260318 - Luphia) Table Header */}
-          <div className="grid grid-cols-12 gap-4 px-8 py-5 bg-slate-900 text-white font-semibold text-sm tracking-wide">
-            <div className="col-span-2 text-center">Rank</div>
-            <div className="col-span-5">Company</div>
-            <div className="col-span-2 text-center">Grade</div>
-            <div className="col-span-3 text-right">Score</div>
+      <div className="flex-1 px-16 flex flex-col justify-center relative z-10 w-full max-w-5xl mx-auto pb-4 gap-4 mt-2">
+        
+        {/* Top Layer: Interaction & Processing */}
+        <div className="flex gap-4 w-full h-32">
+          <div className="flex-1 bg-slate-800/60 backdrop-blur-md rounded-xl border border-slate-700/50 p-5 flex flex-col justify-between hover:bg-slate-800/80 transition-colors shadow-lg group relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent"></div>
+            <div className="flex items-center justify-between z-10 relative">
+              <h3 className="text-xl font-bold text-indigo-300">思維鏈模組</h3>
+              <BrainCircuit className="text-indigo-400 w-7 h-7 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+            </div>
+            <p className="text-slate-400 text-sm font-medium z-10 relative mt-2">Chain of Thought (CoT)<br/>增強複雜推理與邏輯運算解析能力</p>
           </div>
 
-          {/* Info: (20260318 - Luphia) Table Body */}
-          <div className="flex-1 flex flex-col divide-y divide-slate-50">
-            {companies.map((company) => (
-              <div
-                key={company.name}
-                className="flex-1 grid grid-cols-12 gap-4 px-8 items-center bg-white hover:bg-slate-50/80 transition-colors"
-              >
-                {/* Info: (20260318 - Luphia) Rank */}
-                <div className="col-span-2 text-center font-bold text-slate-400 text-lg font-mono">
-                  #{company.rank.toString().padStart(2, '0')}
-                </div>
+          <div className="flex-1 bg-slate-800/60 backdrop-blur-md rounded-xl border border-slate-700/50 p-5 flex flex-col justify-between hover:bg-slate-800/80 transition-colors shadow-lg group relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+            <div className="flex items-center justify-between z-10 relative">
+              <h3 className="text-xl font-bold text-cyan-300">工具調用模組與工具庫</h3>
+              <Wrench className="text-cyan-400 w-7 h-7 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+            </div>
+            <p className="text-slate-400 text-sm font-medium z-10 relative mt-2">Tool Calling Module & Library<br/>動態擷取外部數據與自動化作業</p>
+          </div>
+        </div>
 
-                {/* Info: (20260318 - Luphia) Company Name */}
-                <div className="col-span-5 font-bold text-slate-800 text-xl tracking-wide">
-                  {company.name}
-                </div>
-
-                {/* Info: (20260318 - Luphia) Grade */}
-                <div className="col-span-2 flex justify-center">
-                  <span className={`px-4 py-1 rounded-lg text-lg font-black border ${getRankColor(company.grade)}`}>
-                    {company.grade}
-                  </span>
-                </div>
-
-                {/* Info: (20260318 - Luphia) Score */}
-                <div className={`col-span-3 text-right text-2xl font-mono tracking-tight ${getScoreColor(company.score)}`}>
-                  {company.score.toFixed(2)}
-                </div>
+        {/* Middle Layer: RAG DB */}
+        <div className="w-full bg-slate-800/60 backdrop-blur-md rounded-xl border border-slate-700/50 p-6 shadow-lg relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent"></div>
+          <div className="flex items-center gap-3 mb-4 relative z-10">
+            <Database className="text-purple-400 w-5 h-5" />
+            <h3 className="text-xl font-bold text-purple-300">RAG 向量知識庫 (Vector Knowledge Base)</h3>
+          </div>
+          
+          <div className="grid grid-cols-4 gap-3 relative z-10">
+            {[
+              "財務會計", "化學工程", "環境工程", "IFRS",
+              "GAAP", "土木工程", "材料工程", "水利工程"
+            ].map((topic, i) => (
+              <div key={i} className="bg-slate-900/50 rounded-lg py-2.5 px-2 text-center border border-slate-700/50 text-slate-300 text-sm font-medium hover:border-purple-500/50 hover:bg-slate-800 transition-colors shadow-inner flex items-center justify-center">
+                <span className="truncate">{topic}</span>
               </div>
             ))}
           </div>
         </div>
+
+        {/* Bottom Layer: Base Model */}
+        <div className="w-full bg-gradient-to-r from-blue-900/80 via-indigo-900/80 to-blue-900/80 backdrop-blur-md rounded-xl border border-blue-500/30 py-5 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col items-center justify-center relative overflow-hidden group">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-50"></div>
+          <h3 className="text-xs text-blue-300/80 font-medium mb-1.5 tracking-[0.2em] uppercase">Foundation Model</h3>
+          <div className="flex items-center gap-3">
+            <Layers className="text-blue-400 w-6 h-6" />
+            <h2 className="text-2xl font-black text-white tracking-wide shadow-blue-500 drop-shadow-lg">
+              福爾摩沙大模型 Llama 3.1-FFM 70B
+            </h2>
+          </div>
+        </div>
+
       </div>
+
+      <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10 pointer-events-none">
+        <div>MODEL ARCHITECTURE</div>
+        <div className="flex gap-2 items-center">
+          <div className="w-2 h-2 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)] bg-blue-500"></div>
+          2026 CAFECA FINTECH
+        </div>
+      </div>
+
     </div>
   );
 }

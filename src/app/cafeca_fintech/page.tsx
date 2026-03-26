@@ -19,12 +19,10 @@ import CafecaFintechSlide13 from '@/app/cafeca_fintech/13/page';
 import CafecaFintechSlide14 from '@/app/cafeca_fintech/14/page';
 import CafecaFintechSlide15 from '@/app/cafeca_fintech/15/page';
 import CafecaFintechSlide16 from '@/app/cafeca_fintech/16/page';
-import CafecaFintechSlide17 from '@/app/cafeca_fintech/17/page';
-import CafecaFintechSlide18 from '@/app/cafeca_fintech/18/page';
 
 export default function CafecaFintechSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 18;
+  const totalSlides = 16;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
@@ -75,31 +73,27 @@ export default function CafecaFintechSlideBrowser() {
     14: CafecaFintechSlide14,
     15: CafecaFintechSlide15,
     16: CafecaFintechSlide16,
-    17: CafecaFintechSlide17,
-    18: CafecaFintechSlide18,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
 
   const slideTitles: { [key: number]: string } = {
     1: 'Cover: CAFECA Fintech',
-    2: 'Corporate Vision',
-    3: 'IRSC: Investment Prospect Analysis',
-    4: 'IRSC: Carbon Footprint Check',
-    5: 'Company Profile',
-    6: 'Carbon vs Accounting AI',
-    7: 'Net Zero Carbon Solution',
-    8: '80% Carbon Reduction Solution',
-    9: 'Urban Mining (TSMC & Kinik)',
-    10: 'iSunFA: Value Creation',
-    11: 'Core Product: iSunFA',
-    12: 'Core Technology',
-    13: 'Revenue Model',
-    14: 'R&D Investment',
-    15: 'Equity Structure',
-    16: 'Fundraising Goals',
-    17: 'Regulatory Sandbox',
-    18: 'The Negentropy Law',
+    2: 'Carbon vs Accounting AI',
+    3: '費思 v0.1.0',
+    4: '一噸鋼筋的代價',
+    5: 'Urban Mining (TSMC & Kinik)',
+    6: 'iSunFA: Value Creation',
+    7: 'Core Product: iSunFA',
+    8: 'Core Technology',
+    9: 'Corporate Vision',
+    10: 'Company Profile',
+    11: 'Revenue Model',
+    12: 'R&D Investment',
+    13: 'Equity Structure',
+    14: 'Fundraising Goals',
+    15: 'Regulatory Sandbox',
+    16: 'The Negentropy Law',
   };
 
   const nextSlide = useCallback(() => {

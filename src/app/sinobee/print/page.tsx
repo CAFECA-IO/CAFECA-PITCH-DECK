@@ -1,15 +1,18 @@
 'use client';
 
-import SinoBeeSlide1 from '@/app/sinobee/1/page';
-import SinoBeeSlide2 from '@/app/sinobee/2/page';
-import SinoBeeSlide3 from '@/app/sinobee/3/page';
-import SinoBeeSlide4 from '@/app/sinobee/4/page';
-import SinoBeeSlide5 from '@/app/sinobee/5/page';
-import SinoBeeSlide6 from '@/app/sinobee/6/page';
-import SinoBeeSlide7 from '@/app/sinobee/7/page';
-import SinoBeeSlide8 from '@/app/sinobee/8/page';
-import SinoBeeSlide9 from '@/app/sinobee/9/page';
-import SinoBeeSlide10 from '@/app/sinobee/10/page';
+import CAFECASlide1 from '@/app/sinobee/1/page';
+import CAFECASlide2 from '@/app/sinobee/2/page';
+import CAFECASlide3 from '@/app/sinobee/3/page';
+import CAFECASlide4 from '@/app/sinobee/4/page';
+import CAFECASlide5 from '@/app/sinobee/5/page';
+import CAFECASlide6 from '@/app/sinobee/6/page';
+import CAFECASlide7 from '@/app/sinobee/7/page';
+import CAFECASlide8 from '@/app/sinobee/8/page';
+import CAFECASlide9 from '@/app/sinobee/9/page';
+import CAFECASlide10 from '@/app/sinobee/10/page';
+import CAFECASlide11 from '@/app/sinobee/11/page';
+import CAFECASlide12 from '@/app/sinobee/12/page';
+import CAFECASlide13 from '@/app/sinobee/13/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -42,7 +45,7 @@ const parsePageRange = (range: string, max: number): Set<number> => {
   return pages;
 };
 
-export default function SinoBeePrint() {
+export default function CAFECAPrint() {
   const [isExporting, setIsExporting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [showExportMenu, setShowExportMenu] = useState(false);
@@ -79,7 +82,7 @@ export default function SinoBeePrint() {
             filter: (node) => { if (node.tagName === 'SCRIPT' || node.tagName === 'LINK') return false; return true; }
           });
           const base64 = dataUrl.split(',')[1];
-          zip.file(`SinoBee_Slide_${(i + 1).toString().padStart(2, '0')}.png`, base64, { base64: true });
+          zip.file(`CAFECA_Slide_${(i + 1).toString().padStart(2, '0')}.png`, base64, { base64: true });
         }
         setProgress(Math.round(((i + 1) / slidePages.length) * 100));
       }
@@ -88,7 +91,7 @@ export default function SinoBeePrint() {
       const url = URL.createObjectURL(content);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'SinoBee_Slides_PNG.zip';
+      a.download = 'CAFECA_Slides_PNG.zip';
       a.click();
       URL.revokeObjectURL(url);
       setShowExportMenu(false);
@@ -143,16 +146,19 @@ export default function SinoBeePrint() {
         @media print { .slide-page { margin-bottom: 0; border: none; padding: 0; } }
       `}} />
 
-      <div className="slide-page"><SinoBeeSlide1 /></div>
-      <div className="slide-page"><SinoBeeSlide2 /></div>
-      <div className="slide-page"><SinoBeeSlide3 /></div>
-      <div className="slide-page"><SinoBeeSlide4 /></div>
-      <div className="slide-page"><SinoBeeSlide5 /></div>
-      <div className="slide-page"><SinoBeeSlide6 /></div>
-      <div className="slide-page"><SinoBeeSlide7 /></div>
-      <div className="slide-page"><SinoBeeSlide8 /></div>
-      <div className="slide-page"><SinoBeeSlide9 /></div>
-      <div className="slide-page"><SinoBeeSlide10 /></div>
+      <div className="slide-page"><CAFECASlide1 /></div>
+      <div className="slide-page"><CAFECASlide2 /></div>
+      <div className="slide-page"><CAFECASlide3 /></div>
+      <div className="slide-page"><CAFECASlide4 /></div>
+      <div className="slide-page"><CAFECASlide5 /></div>
+      <div className="slide-page"><CAFECASlide6 /></div>
+      <div className="slide-page"><CAFECASlide7 /></div>
+      <div className="slide-page"><CAFECASlide8 /></div>
+      <div className="slide-page"><CAFECASlide9 /></div>
+      <div className="slide-page"><CAFECASlide10 /></div>
+      <div className="slide-page"><CAFECASlide11 /></div>
+      <div className="slide-page"><CAFECASlide12 /></div>
+      <div className="slide-page"><CAFECASlide13 /></div>
     </div>
   );
 }
