@@ -3,21 +3,21 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MonitorPlay, Grid, Maximize2, Download } from 'lucide-react';
 import Link from 'next/link';
-import GreenAccountingSlide1 from '@/app/green_accounting/1/page';
-import GreenAccountingSlide2 from '@/app/green_accounting/2/page';
-import GreenAccountingSlide3 from '@/app/green_accounting/3/page';
-import GreenAccountingSlide4 from '@/app/green_accounting/4/page';
-import GreenAccountingSlide5 from '@/app/green_accounting/5/page';
-import GreenAccountingSlide6 from '@/app/green_accounting/6/page';
-import GreenAccountingSlide7 from '@/app/green_accounting/7/page';
-import GreenAccountingSlide8 from '@/app/green_accounting/8/page';
-import GreenAccountingSlide9 from '@/app/green_accounting/9/page';
-import GreenAccountingSlide10 from '@/app/green_accounting/10/page';
-import GreenAccountingSlide11 from '@/app/green_accounting/11/page';
-import GreenAccountingSlide12 from '@/app/green_accounting/12/page';
-import GreenAccountingSlide13 from '@/app/green_accounting/13/page';
+import ISunFASlide1 from '@/app/isunfa/1/page';
+import ISunFASlide2 from '@/app/isunfa/2/page';
+import ISunFASlide3 from '@/app/isunfa/3/page';
+import ISunFASlide4 from '@/app/isunfa/4/page';
+import ISunFASlide5 from '@/app/isunfa/5/page';
+import ISunFASlide6 from '@/app/isunfa/6/page';
+import ISunFASlide7 from '@/app/isunfa/7/page';
+import ISunFASlide8 from '@/app/isunfa/8/page';
+import ISunFASlide9 from '@/app/isunfa/9/page';
+import ISunFASlide10 from '@/app/isunfa/10/page';
+import ISunFASlide11 from '@/app/isunfa/11/page';
+import ISunFASlide12 from '@/app/isunfa/12/page';
+import ISunFASlide13 from '@/app/isunfa/13/page';
 
-export default function GreenAccountingSlideBrowser() {
+export default function ISunFASlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const totalSlides = 13;
   const containerRef = useRef<HTMLDivElement>(null);
@@ -59,26 +59,26 @@ export default function GreenAccountingSlideBrowser() {
 
   // Info: (20260212 - Luphia) Slide Components Map
   const SlideComponents: { [key: number]: React.ComponentType } = {
-    1: GreenAccountingSlide1,
-    2: GreenAccountingSlide2,
-    3: GreenAccountingSlide3,
-    4: GreenAccountingSlide4,
-    5: GreenAccountingSlide5,
-    6: GreenAccountingSlide6,
-    7: GreenAccountingSlide7,
-    8: GreenAccountingSlide8,
-    9: GreenAccountingSlide9,
-    10: GreenAccountingSlide10,
-    11: GreenAccountingSlide11,
-    12: GreenAccountingSlide12,
-    13: GreenAccountingSlide13,
+    1: ISunFASlide1,
+    2: ISunFASlide2,
+    3: ISunFASlide3,
+    4: ISunFASlide4,
+    5: ISunFASlide5,
+    6: ISunFASlide6,
+    7: ISunFASlide7,
+    8: ISunFASlide8,
+    9: ISunFASlide9,
+    10: ISunFASlide10,
+    11: ISunFASlide11,
+    12: ISunFASlide12,
+    13: ISunFASlide13,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
 
   // Info: (20260212 - Luphia) Based on recent implementation context:
   const slideTitles: { [key: number]: string } = {
-    1: 'Cover: Green Accounting',
+    1: 'Cover: iSunFA',
     2: 'Slogan: Lead the Net Zero',
     3: 'Highlights: Dual Transformation',
     4: 'Pain Points: Traditional Challenge',
@@ -120,11 +120,11 @@ export default function GreenAccountingSlideBrowser() {
       {/* Info: (20260212 - Luphia) Universal Header */}
       <div className="h-14 border-b border-neutral-800 flex items-center justify-between px-4 bg-neutral-900 z-20 flex-shrink-0">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div className="bg-emerald-600 p-1.5 rounded-lg">
+          <div className="bg-orange-600 p-1.5 rounded-lg">
             <MonitorPlay size={20} className="text-white" />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-gray-200">Green Accounting Presentation</h1>
+            <h1 className="text-sm font-bold text-gray-200">iSunFA Presentation</h1>
             <p className="text-xs text-gray-500">v1.0.0 • 2026 iSunFA</p>
           </div>
         </Link>
@@ -152,13 +152,13 @@ export default function GreenAccountingSlideBrowser() {
 
         {/* Info: (20260212 - Luphia) Right Side Actions - Visible on both but adjusted */}
         <div className="flex items-center gap-3">
-          <Link href="/green_accounting/print" target="_blank" className="hidden md:block">
+          <Link href="/isunfa/print" target="_blank" className="hidden md:block">
             <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700">
               <Download size={14} />
               <span>PDF</span>
             </button>
           </Link>
-          <Link href={`/green_accounting/${currentSlide}`} target="_blank" className="hidden md:block">
+          <Link href={`/isunfa/${currentSlide}`} target="_blank" className="hidden md:block">
             <button className="p-2 hover:bg-neutral-800 rounded-md text-gray-400 hover:text-white transition-colors">
               <Maximize2 size={18} />
             </button>
@@ -225,7 +225,7 @@ export default function GreenAccountingSlideBrowser() {
                 </div>
 
                 {/* Info: (20260212 - Luphia) Overlay Page Number for Mobile */}
-                <div className={`absolute top-2 right-2 px-2 py-1 rounded-full z-10 pointer-events-none transition-opacity duration-300 ${distance === 0 ? 'bg-emerald-600 text-white shadow-lg' : 'bg-black/50 text-gray-400'}`}>
+                <div className={`absolute top-2 right-2 px-2 py-1 rounded-full z-10 pointer-events-none transition-opacity duration-300 ${distance === 0 ? 'bg-orange-600 text-white shadow-lg' : 'bg-black/50 text-gray-400'}`}>
                   <span className="text-[10px] font-bold">{id}</span>
                   <span className="text-[8px] opacity-80">/{totalSlides}</span>
                 </div>
@@ -271,7 +271,7 @@ export default function GreenAccountingSlideBrowser() {
                   key={id}
                   onClick={() => goToSlide(id)}
                   className={`flex-shrink-0 w-full aspect-video rounded-lg border-2 transition-all duration-200 relative group overflow-hidden ${currentSlide === id
-                    ? 'border-emerald-500 ring-2 ring-emerald-500/20'
+                    ? 'border-orange-500 ring-2 ring-orange-500/20'
                     : 'border-neutral-800 hover:border-neutral-700 opacity-60 hover:opacity-100'
                     }`}
                 >
@@ -283,7 +283,7 @@ export default function GreenAccountingSlideBrowser() {
                     {/* Info: (20260212 - Luphia) Overlay Title */}
                     <div className="absolute bottom-0 inset-x-0 bg-neutral-900/90 p-2 text-left">
                       <div className="flex justify-between items-center mb-0.5">
-                        <span className="text-[10px] font-bold text-emerald-500">#{id.toString().padStart(2, '0')}</span>
+                        <span className="text-[10px] font-bold text-orange-500">#{id.toString().padStart(2, '0')}</span>
                       </div>
                       <div className="text-[10px] text-gray-300 font-medium truncate leading-tight">{slideTitles[id] || `Slide ${id}`}</div>
                     </div>

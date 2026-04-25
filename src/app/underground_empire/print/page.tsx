@@ -1,18 +1,11 @@
 'use client';
 
-import GreenAccountingSlide1 from '@/app/green_accounting/1/page';
-import GreenAccountingSlide2 from '@/app/green_accounting/2/page';
-import GreenAccountingSlide3 from '@/app/green_accounting/3/page';
-import GreenAccountingSlide4 from '@/app/green_accounting/4/page';
-import GreenAccountingSlide5 from '@/app/green_accounting/5/page';
-import GreenAccountingSlide6 from '@/app/green_accounting/6/page';
-import GreenAccountingSlide7 from '@/app/green_accounting/7/page';
-import GreenAccountingSlide8 from '@/app/green_accounting/8/page';
-import GreenAccountingSlide9 from '@/app/green_accounting/9/page';
-import GreenAccountingSlide10 from '@/app/green_accounting/10/page';
-import GreenAccountingSlide11 from '@/app/green_accounting/11/page';
-import GreenAccountingSlide12 from '@/app/green_accounting/12/page';
-import GreenAccountingSlide13 from '@/app/green_accounting/13/page';
+import Slide1 from '@/app/underground_empire/1/page';
+import Slide2 from '@/app/underground_empire/2/page';
+import Slide3 from '@/app/underground_empire/3/page';
+import Slide4 from '@/app/underground_empire/4/page';
+import Slide5 from '@/app/underground_empire/5/page';
+import Slide6 from '@/app/underground_empire/6/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -45,7 +38,7 @@ const parsePageRange = (range: string, max: number): Set<number> => {
   return pages;
 };
 
-export default function GreenAccountingPrint() {
+export default function UndergroundEmpirePrint() {
   const [isExporting, setIsExporting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [showExportMenu, setShowExportMenu] = useState(false);
@@ -95,7 +88,7 @@ export default function GreenAccountingPrint() {
             }
           });
           const base64 = dataUrl.split(',')[1];
-          zip.file(`GreenAccounting_Slide_${(i + 1).toString().padStart(2, '0')}.png`, base64, { base64: true });
+          zip.file(`UndergroundEmpire_Slide_${(i + 1).toString().padStart(2, '0')}.png`, base64, { base64: true });
         }
 
         setProgress(Math.round(((i + 1) / slidePages.length) * 100));
@@ -105,7 +98,7 @@ export default function GreenAccountingPrint() {
       const url = URL.createObjectURL(content);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'GreenAccounting_Slides_PNG.zip';
+      a.download = 'UndergroundEmpire_Slides_PNG.zip';
       a.click();
       URL.revokeObjectURL(url);
 
@@ -120,11 +113,11 @@ export default function GreenAccountingPrint() {
   };
 
   return (
-    <div className="print-container bg-white min-h-screen">
-      <div className="fixed top-4 right-4 z-50 flex gap-2 print:hidden backdrop-blur-md bg-white/80 p-2 rounded-lg shadow-lg border border-gray-200 items-start">
+    <div className="print-container bg-slate-950 min-h-screen">
+      <div className="fixed top-4 right-4 z-50 flex gap-2 print:hidden backdrop-blur-md bg-slate-900/80 p-2 rounded-lg shadow-lg border border-slate-700 items-start">
         <button
           onClick={() => window.print()}
-          className="px-4 py-2 bg-gray-900 text-white rounded-md text-sm font-bold shadow-md hover:bg-gray-800 transition-colors flex items-center gap-2 h-10"
+          className="px-4 py-2 bg-slate-800 text-white rounded-md text-sm font-bold shadow-md hover:bg-slate-700 transition-colors flex items-center gap-2 h-10"
           disabled={isExporting}
         >
           Print / PDF
@@ -133,7 +126,7 @@ export default function GreenAccountingPrint() {
         <div className="relative">
           <button
             onClick={() => setShowExportMenu(!showExportMenu)}
-            className="px-4 py-2 bg-emerald-600 text-white rounded-md text-sm font-bold shadow-md hover:bg-emerald-700 transition-colors flex items-center gap-2 h-10"
+            className="px-4 py-2 bg-red-900 text-white rounded-md text-sm font-bold shadow-md hover:bg-red-800 transition-colors flex items-center gap-2 h-10"
             disabled={isExporting}
           >
             {isExporting ? <Loader2 className="animate-spin" size={16} /> : <Download size={16} />}
@@ -142,16 +135,16 @@ export default function GreenAccountingPrint() {
           </button>
 
           {showExportMenu && (
-            <div className="absolute top-12 right-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-4 transition-all animate-in fade-in zoom-in-95 duration-200">
+            <div className="absolute top-12 right-0 w-72 bg-slate-900 rounded-xl shadow-2xl border border-slate-700 p-4 transition-all animate-in fade-in zoom-in-95 duration-200">
               <div className="flex justify-between items-center mb-3">
-                <h3 className="text-gray-900 font-bold text-sm">Export Options</h3>
-                <button onClick={() => setShowExportMenu(false)} className="text-gray-400 hover:text-gray-600" aria-label="Close export menu">
+                <h3 className="text-slate-100 font-bold text-sm">Export Options</h3>
+                <button onClick={() => setShowExportMenu(false)} className="text-slate-400 hover:text-slate-200" aria-label="Close export menu">
                   <X size={16} />
                 </button>
               </div>
 
               <div className="mb-4">
-                <label htmlFor="page-range-input" className="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wider">
+                <label htmlFor="page-range-input" className="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">
                   Page Range
                 </label>
                 <input
@@ -159,18 +152,18 @@ export default function GreenAccountingPrint() {
                   id="page-range-input"
                   value={pageRange}
                   onChange={(e) => setPageRange(e.target.value)}
-                  placeholder="e.g. 1-3, 5, 8-10 (Empty = All)"
+                  placeholder="e.g. 1-3, 5 (Empty = All)"
                   aria-label="Page Range"
-                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm text-gray-900 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                  className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-sm text-slate-100 focus:ring-2 focus:ring-red-900 focus:border-transparent outline-none transition-all placeholder:text-slate-600"
                 />
-                <p className="mt-2 text-[10px] text-gray-500 leading-tight">
+                <p className="mt-2 text-[10px] text-slate-500 leading-tight">
                   Leave empty to export all slides. Use commas for multiple ranges.
                 </p>
               </div>
 
               <button
                 onClick={handleExport}
-                className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-sm font-bold shadow-md transition-all active:scale-[0.98] flex justify-center items-center gap-2"
+                className="w-full py-2.5 bg-red-900 hover:bg-red-800 text-white rounded-lg text-sm font-bold shadow-md transition-all active:scale-[0.98] flex justify-center items-center gap-2"
               >
                 <Download size={16} />
                 Start Export
@@ -191,6 +184,7 @@ export default function GreenAccountingPrint() {
             margin: 0;
             padding: 0;
             -webkit-print-color-adjust: exact;
+            background-color: #020617; /* slate-950 */
           }
           .slide-page {
             break-after: page;
@@ -205,7 +199,7 @@ export default function GreenAccountingPrint() {
         }
         .slide-page {
            margin-bottom: 2rem;
-           border: 1px dashed #ccc;
+           border: 1px dashed #334155; /* slate-700 */
            display: flex;
            justify-content: center;
            padding: 1rem;
@@ -219,19 +213,12 @@ export default function GreenAccountingPrint() {
         }
       `}} />
 
-      <div className="slide-page"><GreenAccountingSlide1 /></div>
-      <div className="slide-page"><GreenAccountingSlide2 /></div>
-      <div className="slide-page"><GreenAccountingSlide3 /></div>
-      <div className="slide-page"><GreenAccountingSlide4 /></div>
-      <div className="slide-page"><GreenAccountingSlide5 /></div>
-      <div className="slide-page"><GreenAccountingSlide6 /></div>
-      <div className="slide-page"><GreenAccountingSlide7 /></div>
-      <div className="slide-page"><GreenAccountingSlide8 /></div>
-      <div className="slide-page"><GreenAccountingSlide9 /></div>
-      <div className="slide-page"><GreenAccountingSlide10 /></div>
-      <div className="slide-page"><GreenAccountingSlide11 /></div>
-      <div className="slide-page"><GreenAccountingSlide12 /></div>
-      <div className="slide-page"><GreenAccountingSlide13 /></div>
+      <div className="slide-page"><Slide1 /></div>
+      <div className="slide-page"><Slide2 /></div>
+      <div className="slide-page"><Slide3 /></div>
+      <div className="slide-page"><Slide4 /></div>
+      <div className="slide-page"><Slide5 /></div>
+      <div className="slide-page"><Slide6 /></div>
     </div>
   );
 }
