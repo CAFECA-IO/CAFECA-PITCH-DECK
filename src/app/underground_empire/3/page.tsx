@@ -1,6 +1,6 @@
 'use client';
 
-import { BookX, Frown, Coffee } from 'lucide-react';
+import { BookX, Frown } from 'lucide-react';
 
 export default function Slide3() {
   return (
