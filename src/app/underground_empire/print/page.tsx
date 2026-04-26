@@ -6,6 +6,14 @@ import Slide3 from '@/app/underground_empire/3/page';
 import Slide4 from '@/app/underground_empire/4/page';
 import Slide5 from '@/app/underground_empire/5/page';
 import Slide6 from '@/app/underground_empire/6/page';
+import Slide7 from '@/app/underground_empire/7/page';
+import Slide8 from '@/app/underground_empire/8/page';
+import Slide9 from '@/app/underground_empire/9/page';
+import Slide10 from '@/app/underground_empire/10/page';
+import Slide11 from '@/app/underground_empire/11/page';
+import Slide12 from '@/app/underground_empire/12/page';
+import Slide13 from '@/app/underground_empire/13/page';
+import Slide14 from '@/app/underground_empire/14/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -219,6 +227,14 @@ export default function UndergroundEmpirePrint() {
       <div className="slide-page"><Slide4 /></div>
       <div className="slide-page"><Slide5 /></div>
       <div className="slide-page"><Slide6 /></div>
+      <div className="slide-page"><Slide7 /></div>
+      <div className="slide-page"><Slide8 /></div>
+      <div className="slide-page"><Slide9 /></div>
+      <div className="slide-page"><Slide10 /></div>
+      <div className="slide-page"><Slide11 /></div>
+      <div className="slide-page"><Slide12 /></div>
+      <div className="slide-page"><Slide13 /></div>
+      <div className="slide-page"><Slide14 /></div>
     </div>
   );
 }

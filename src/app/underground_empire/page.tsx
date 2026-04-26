@@ -9,10 +9,18 @@ import Slide3 from '@/app/underground_empire/3/page';
 import Slide4 from '@/app/underground_empire/4/page';
 import Slide5 from '@/app/underground_empire/5/page';
 import Slide6 from '@/app/underground_empire/6/page';
+import Slide7 from '@/app/underground_empire/7/page';
+import Slide8 from '@/app/underground_empire/8/page';
+import Slide9 from '@/app/underground_empire/9/page';
+import Slide10 from '@/app/underground_empire/10/page';
+import Slide11 from '@/app/underground_empire/11/page';
+import Slide12 from '@/app/underground_empire/12/page';
+import Slide13 from '@/app/underground_empire/13/page';
+import Slide14 from '@/app/underground_empire/14/page';
 
 export default function UndergroundEmpireSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 6;
+  const totalSlides = 14;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [mobileScale, setMobileScale] = useState(0.3);
@@ -48,6 +56,14 @@ export default function UndergroundEmpireSlideBrowser() {
     4: Slide4,
     5: Slide5,
     6: Slide6,
+    7: Slide7,
+    8: Slide8,
+    9: Slide9,
+    10: Slide10,
+    11: Slide11,
+    12: Slide12,
+    13: Slide13,
+    14: Slide14,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
@@ -55,10 +71,18 @@ export default function UndergroundEmpireSlideBrowser() {
   const slideTitles: { [key: number]: string } = {
     1: 'Cover: 地下帝國',
     2: 'Concept: 武器化的相互依賴',
-    3: '2026: AI 算力與晶片封鎖',
-    4: '2026: CBDC 與金融脫鉤',
-    5: '2026: 海底電纜與數據主權',
-    6: 'Conclusion: 夾縫中的生存之道',
+    3: 'Intermission: 這本書好硬',
+    4: 'Drama: 狗血校園劇說明',
+    5: 'Drama: 班長大米的特權',
+    6: 'Drama: 問題少年大熊',
+    7: 'Drama: 小南重訓健身',
+    8: 'Drama: 小夫成績突飛猛進',
+    9: 'Drama: 大米的危機感',
+    10: 'Drama: 大米的制裁計畫',
+    11: '2026: AI 算力與晶片封鎖',
+    12: '2026: CBDC 與金融脫鉤',
+    13: '2026: 海底電纜與數據主權',
+    14: 'Conclusion: 夾縫中的生存之道',
   };
 
   const nextSlide = useCallback(() => {
