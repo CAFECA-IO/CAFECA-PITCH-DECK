@@ -73,20 +73,20 @@ export default function CafecaFintechSlide3() {
           <Database size={400} />
         </div>
 
-        <div className="space-y-5 relative z-10">
+        <div className="space-y-3 relative z-10">
 
           {/* Info: (20260310 - Luphia) Timeline Item */}
           <div className="flex gap-4 group">
             <div className="flex flex-col items-center">
-              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 ring-4 ring-white shadow-sm"></div>
               <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
             </div>
-            <div className="pb-2">
-              <div className="flex items-baseline gap-3 mb-1">
-                <span className="text-lg font-bold text-sky-600 font-mono">2017 - 2020</span>
-                <h3 className="text-base font-bold text-slate-800">賦能新北市政府溫室氣體追蹤</h3>
+            <div className="pb-1">
+              <div className="flex items-baseline gap-3 mb-0.5">
+                <span className="text-base font-bold text-sky-600 font-mono">2017 - 2020</span>
+                <h3 className="text-sm font-bold text-slate-800">賦能新北市政府溫室氣體追蹤</h3>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+              <p className="text-slate-600 text-xs leading-relaxed text-justify">
                 透過 10000+ 低功耗邊緣運算裝置，實現全市溫室氣體追蹤系統，並提供即時數據分析與預測。
               </p>
             </div>
@@ -95,15 +95,15 @@ export default function CafecaFintechSlide3() {
           {/* Info: (20260122 - Luphia) Timeline Item 1 */}
           <div className="flex gap-4 group">
             <div className="flex flex-col items-center">
-              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 ring-4 ring-white shadow-sm"></div>
               <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
             </div>
-            <div className="pb-2">
-              <div className="flex items-baseline gap-3 mb-1">
-                <span className="text-lg font-bold text-sky-600 font-mono">2018 - 2021</span>
-                <h3 className="text-base font-bold text-slate-800">賦能好好證券</h3>
+            <div className="pb-1">
+              <div className="flex items-baseline gap-3 mb-0.5">
+                <span className="text-base font-bold text-sky-600 font-mono">2018 - 2021</span>
+                <h3 className="text-sm font-bold text-slate-800">賦能好好證券</h3>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+              <p className="text-slate-600 text-xs leading-relaxed text-justify">
                 加速金融監理沙盒實證流程，厚植創新金融業務之領照競爭力。
               </p>
             </div>
@@ -112,15 +112,15 @@ export default function CafecaFintechSlide3() {
           {/* Info: (20260122 - Luphia) Timeline Item 2 */}
           <div className="flex gap-4 group">
             <div className="flex flex-col items-center">
-              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 ring-4 ring-white shadow-sm"></div>
               <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
             </div>
-            <div className="pb-2">
-              <div className="flex items-baseline gap-3 mb-1">
-                <span className="text-lg font-bold text-sky-600 font-mono">2019</span>
-                <h3 className="text-base font-bold text-slate-800">賦能金管會檢查局</h3>
+            <div className="pb-1">
+              <div className="flex items-baseline gap-3 mb-0.5">
+                <span className="text-base font-bold text-sky-600 font-mono">2019</span>
+                <h3 className="text-sm font-bold text-slate-800">賦能金管會檢查局</h3>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+              <p className="text-slate-600 text-xs leading-relaxed text-justify">
                 建構數位孿生實驗環境，強化金融政策之情境模擬與回測驗證。
               </p>
             </div>
@@ -129,16 +129,16 @@ export default function CafecaFintechSlide3() {
           {/* Info: (20260122 - Luphia) Timeline Item 3 */}
           <div className="flex gap-4 group">
             <div className="flex flex-col items-center">
-              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 ring-4 ring-white shadow-sm"></div>
               <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
             </div>
-            <div className="pb-2">
-              <div className="flex items-baseline gap-3 mb-1">
-                <span className="text-lg font-bold text-sky-600 font-mono">2020 - 2021</span>
-                <h3 className="text-base font-bold text-slate-800">參與國家高速網路中心</h3>
+            <div className="pb-1">
+              <div className="flex items-baseline gap-3 mb-0.5">
+                <span className="text-base font-bold text-sky-600 font-mono">2020 - 2021</span>
+                <h3 className="text-sm font-bold text-slate-800">參與國家高速網路中心</h3>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed text-justify">
-                建構國家級人工智能大數據算力平台。
+              <p className="text-slate-600 text-xs leading-relaxed text-justify">
+                建構國家級人工智能大數據算力平台「臺灣杉二號」。
               </p>
             </div>
           </div>
@@ -146,15 +146,15 @@ export default function CafecaFintechSlide3() {
           {/* Info: (20260310 - Luphia) Timeline Item */}
           <div className="flex gap-4 group">
             <div className="flex flex-col items-center">
-              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 ring-4 ring-white shadow-sm"></div>
               <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
             </div>
-            <div className="pb-2">
-              <div className="flex items-baseline gap-3 mb-1">
-                <span className="text-lg font-bold text-sky-600 font-mono">2020 - 2022</span>
-                <h3 className="text-base font-bold text-slate-800">參與台灣積體電路製造股份有限公司碳盤查</h3>
+            <div className="pb-1">
+              <div className="flex items-baseline gap-3 mb-0.5">
+                <span className="text-base font-bold text-sky-600 font-mono">2020 - 2022</span>
+                <h3 className="text-sm font-bold text-slate-800">參與台灣積體電路製造股份有限公司碳盤查</h3>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+              <p className="text-slate-600 text-xs leading-relaxed text-justify">
                 透過自動化工具將企業會計憑證轉換為碳盤查資料，並提供即時數據分析與預測。
               </p>
             </div>
@@ -163,16 +163,33 @@ export default function CafecaFintechSlide3() {
           {/* Info: (20260310 - Luphia) Timeline Item */}
           <div className="flex gap-4 group">
             <div className="flex flex-col items-center">
-              <div className="w-3 h-3 rounded-full bg-sky-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 ring-4 ring-white shadow-sm"></div>
               <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
             </div>
-            <div className="pb-2">
-              <div className="flex items-baseline gap-3 mb-1">
-                <span className="text-lg font-bold text-sky-600 font-mono">2025 - 2026</span>
-                <h3 className="text-base font-bold text-slate-800">參與中國砂輪企業股份有限公司碳盤查</h3>
+            <div className="pb-1">
+              <div className="flex items-baseline gap-3 mb-0.5">
+                <span className="text-base font-bold text-sky-600 font-mono">2025 - 2026</span>
+                <h3 className="text-sm font-bold text-slate-800">參與中國砂輪企業股份有限公司碳盤查</h3>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+              <p className="text-slate-600 text-xs leading-relaxed text-justify">
                 透過 Green AI 技術，實現自動化碳盤查，並持續追蹤製程與廢棄物處理狀態，發掘企業礦脈。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260509 - added) Timeline Item */}
+          <div className="flex gap-4 group">
+            <div className="flex flex-col items-center">
+              <div className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 ring-4 ring-white shadow-sm"></div>
+              <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
+            </div>
+            <div className="pb-1">
+              <div className="flex items-baseline gap-3 mb-0.5">
+                <span className="text-base font-bold text-sky-600 font-mono">2026</span>
+                <h3 className="text-sm font-bold text-slate-800">獲選經濟部與 NVIDIA「Taipei-1」第四批次執行單位</h3>
+              </div>
+              <p className="text-slate-600 text-xs leading-relaxed text-justify">
+                取得超級電腦算力資源，進一步深化 AI 金融與碳盤查模型，拓展國際競爭力。
               </p>
             </div>
           </div>
@@ -180,15 +197,15 @@ export default function CafecaFintechSlide3() {
           {/* Info: (20260122 - Luphia) Timeline Item 4 */}
           <div className="flex gap-4 group">
             <div className="flex flex-col items-center">
-              <div className="w-3 h-3 rounded-full bg-orange-500 mt-2 ring-4 ring-white shadow-sm"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-orange-500 mt-1.5 ring-4 ring-white shadow-sm"></div>
               <div className="w-0.5 flex-1 bg-slate-200 my-1 group-last:hidden"></div>
             </div>
-            <div className="pb-2">
-              <div className="flex items-baseline gap-3 mb-1">
-                <span className="text-lg font-bold text-orange-600 font-mono">2022 - Now</span>
-                <h3 className="text-base font-bold text-slate-800">FAITH 核心引擎</h3>
+            <div className="pb-1">
+              <div className="flex items-baseline gap-3 mb-0.5">
+                <span className="text-base font-bold text-orange-600 font-mono">2022 - Now</span>
+                <h3 className="text-sm font-bold text-slate-800">FAITH 核心引擎</h3>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+              <p className="text-slate-600 text-xs leading-relaxed text-justify">
                 憑藉深厚的行業實務底蘊，開創以 <span className="font-bold text-orange-600">FAITH</span> (Financial Accounting Insight Trusted Heuristics) 為核心引擎的全方位金融科技生態，賦能多元化產品矩陣。
               </p>
             </div>

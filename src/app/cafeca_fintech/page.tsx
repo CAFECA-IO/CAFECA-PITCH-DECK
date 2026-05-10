@@ -81,7 +81,7 @@ export default function CafecaFintechSlideBrowser() {
     1: 'Cover: CAFECA Fintech',
     2: 'Carbon vs Accounting AI',
     3: '費思 v0.1.0',
-    4: '一噸鋼筋的代價',
+    4: 'iSunFA 核心產品',
     5: 'Urban Mining (TSMC & Kinik)',
     6: 'iSunFA: Value Creation',
     7: 'Core Product: iSunFA',
@@ -91,7 +91,7 @@ export default function CafecaFintechSlideBrowser() {
     11: 'Revenue Model',
     12: 'R&D Investment',
     13: 'Equity Structure',
-    14: 'Fundraising Goals',
+    14: 'Core Team',
     15: 'Regulatory Sandbox',
     16: 'The Negentropy Law',
   };

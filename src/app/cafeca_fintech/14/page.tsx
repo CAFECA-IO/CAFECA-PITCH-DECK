@@ -1,103 +1,116 @@
-import { Target, Flag, Cpu, Coins } from 'lucide-react';
+'use client';
 
-export default function CafecaFintechSlide11() {
+import { Users, Briefcase, Cpu, Factory, LineChart } from 'lucide-react';
+
+export default function CafecaFintechSlide14() {
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative flex flex-col overflow-hidden">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden flex flex-col justify-center">
 
-      {/* Info: (20260123 - Luphia) Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute -top-[300px] -right-[300px] w-[800px] h-[800px] bg-sky-100/50 rounded-full blur-[100px]"></div>
-        <div className="absolute -bottom-[300px] -left-[300px] w-[800px] h-[800px] bg-indigo-50/50 rounded-full blur-[100px]"></div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
-      </div>
+      {/* Info: Background Elements */}
+      <div className="absolute -top-32 -right-32 w-96 h-96 bg-sky-400/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none"></div>
 
-      {/* Info: (20260123 - Luphia) Header */}
-      <div className="relative z-10 w-full px-16 pt-12 mb-6 flex justify-between items-end">
-        <div>
-          <div className="flex items-center gap-4 mb-2">
-            <div className="w-12 h-1 bg-sky-600 rounded-full"></div>
-            <span className="text-sky-700 font-bold tracking-[0.2em] uppercase text-sm">Strategic Milestone</span>
-          </div>
-          <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
-            募資目標
-          </h1>
-        </div>
-
-        <div className="flex items-center gap-6 bg-white py-4 px-8 rounded-2xl shadow-lg border border-sky-100 animate-fade-in-up">
-          <div className="bg-sky-100 p-3 rounded-xl text-sky-600">
-            <Coins size={32} />
-          </div>
+      <div className="relative z-10 w-full px-16 pt-10 pb-6">
+        <div className="flex items-center justify-between">
           <div>
-            <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Fundraising Offer</div>
-            <div className="text-3xl font-extrabold text-slate-800">15 萬股 <span className="text-base text-slate-500 font-medium normal-case ml-1">Shares</span></div>
+            <div className="flex items-center gap-4 mb-2">
+              <div className="w-12 h-1 bg-sky-600 rounded-full"></div>
+              <span className="text-sky-700 font-bold tracking-[0.2em] uppercase text-sm">Core Team</span>
+            </div>
+            <h1 className="text-5xl font-extrabold text-slate-800 leading-tight">
+              核心團隊
+            </h1>
           </div>
-        </div>
-      </div>
 
-      {/* Info: (20260123 - Luphia) Main Content */}
-      <div className="relative z-10 flex-1 px-16 pb-12 flex gap-16 items-center">
-
-        {/* Info: (20260123 - Luphia) Left: Primary Goals Column */}
-        <div className="w-[48%] flex flex-col gap-6">
-
-          {/* Info: (20260123 - Luphia) Goal 1: Compliance */}
-          <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 relative group overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-sky-50 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-            <div className="relative z-10">
-              <div className="w-12 h-12 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 mb-4 group-hover:rotate-12 transition-transform">
-                <Target size={24} />
-              </div>
-              <h2 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
-                TWD 800 萬：推動八家企業綠色融資
-              </h2>
-              <p className="text-slate-500 text-sm leading-relaxed text-justify">
-                獲取金融監理沙盒許可，成為合規的金融基礎設施提供商，為企業提供直接、高效的融資運營服務，催化企業導入綠色製程。收集環境工程、化學工程、土木工程、水利工程、材料科學等關鍵數據，建立 Green AI 完善訓練資料庫。
-              </p>
+          <div className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
+            <div className="bg-sky-100 p-2.5 rounded-xl text-sky-600">
+              <Users size={28} />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-0.5">Founders</div>
+              <div className="text-xl font-extrabold text-slate-800">跨領域專業團隊</div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Info: (20260123 - Luphia) Goal 2: Compute Lease */}
-          <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 relative group overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-            <div className="relative z-10">
-              <div className="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-4 group-hover:rotate-12 transition-transform">
+      <div className="relative z-10 flex-1 px-16 pb-12">
+        <div className="grid grid-cols-2 gap-8 h-full">
+
+          {/* Info: Member 1: 張智崴 */}
+          <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div className="flex items-start justify-between mb-4 pb-4 border-b border-slate-100">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-1">張智崴 <span className="text-sky-600 ml-2">Co-founder & CEO</span></h3>
+                <span className="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">環境工程 / 資訊科技背景</span>
+              </div>
+              <div className="bg-sky-50 p-3 rounded-2xl text-sky-600 shadow-inner">
                 <Cpu size={24} />
               </div>
-              <h2 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
-                TWD 800 萬：模型訓練算力租賃與伺服器採購
-              </h2>
-              <p className="text-slate-500 text-sm leading-relaxed text-justify">
-                確保 AI 模型持續演進的核心動力，建立自主且強大的運算基礎設施，支持未來 Green AI 模型的深度訓練與優化。
-              </p>
             </div>
+            <p className="text-slate-600 text-base leading-relaxed flex-1 text-justify">
+              將金融合規與物理碳排代碼化的系統架構師，具備豐富的金融科技實戰經驗與邊緣運算核心技術，參與臺灣、阿曼、中國國家級大型運算平台建設。受成功大學環境工程學系前系主任蔡俊鴻教授指導與號召，致力於推動綠色產業生態技術。超過十年以上的開源社群深耕，致力於以有趣的方式揭露政府資料，促進民眾與政府的溝通。
+            </p>
+          </div>
+
+          {/* Info: Member 2: 梁紫涵 */}
+          <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div className="flex items-start justify-between mb-4 pb-4 border-b border-slate-100">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-1">梁紫涵 <span className="text-emerald-600 ml-2">Co-founder & PE</span></h3>
+                <span className="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">化學工程背景</span>
+              </div>
+              <div className="bg-emerald-50 p-3 rounded-2xl text-emerald-600 shadow-inner">
+                <Briefcase size={24} />
+              </div>
+            </div>
+            <p className="text-slate-600 text-base leading-relaxed flex-1 text-justify">
+              參與臺灣杉二號開發，提出關鍵區塊鏈技術架構規劃，專長於數據分析。專注於系統底層邏輯與架構設計，並致力於將複雜技術落地應用。期望透過資訊科技打造具備信任與韌性的數位基礎設施，解決真實世界的挑戰，讓社會運作更加透明與永續。
+            </p>
+          </div>
+
+          {/* Info: Member 3: 張銀玲 */}
+          <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div className="flex items-start justify-between mb-4 pb-4 border-b border-slate-100">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-1">張銀玲 <span className="text-indigo-600 ml-2">Co-founder</span></h3>
+                <span className="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">20 年深厚銀行資歷</span>
+              </div>
+              <div className="bg-indigo-50 p-3 rounded-2xl text-indigo-600 shadow-inner">
+                <LineChart size={24} />
+              </div>
+            </div>
+            <p className="text-slate-600 text-base leading-relaxed flex-1 text-justify">
+              精通企業財會語言，具備權威性的金融實務經驗。因深刻體會到傳統企業在財務報表產出、審計流程上的耗時與低效，以及全球綠色金融來的龐大合規壓力，成為創立公司的核心動機。
+            </p>
+          </div>
+
+          {/* Info: Member 4: 張智傑 */}
+          <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div className="flex items-start justify-between mb-4 pb-4 border-b border-slate-100">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-1">張智傑 <span className="text-amber-600 ml-2">Co-founder</span></h3>
+                <span className="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">重工業與結構工程背景</span>
+              </div>
+              <div className="bg-amber-50 p-3 rounded-2xl text-amber-600 shadow-inner">
+                <Factory size={24} />
+              </div>
+            </div>
+            <p className="text-slate-600 text-base leading-relaxed flex-1 text-justify">
+              擁有深厚的鋼鐵結構工程底蘊，熟稔重型機械運作、政府工安環保法規與永續工程科學。在重工業與製造業的最前線，親自參與過高碳排產業的運作與合規流程，以及多項重要地標建築建設工程。
+            </p>
           </div>
 
         </div>
-
-        {/* Info: (20260123 - Luphia) Right: Target Markets Grid */}
-        <div className="flex-1 grid grid-cols-2 gap-6">
-          {[
-            { name: '臺灣', en: 'Taiwan', color: 'bg-emerald-500' },
-            { name: '香港', en: 'Hong Kong', color: 'bg-purple-500' },
-            { name: '新加坡', en: 'Singapore', color: 'bg-sky-500' },
-            { name: '日本', en: 'Japan', color: 'bg-rose-500' },
-          ].map((market) => (
-            <div key={market.name} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-slate-300 transition-all group flex items-center gap-4">
-              <div className={`w-12 h-12 ${market.color} bg-opacity-10 rounded-xl flex items-center justify-center text-${market.color.split('-')[1]}-600 group-hover:scale-110 transition-transform`}>
-                <Flag size={20} className={market.color.replace('bg-', 'text-')} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-slate-800">{market.name}</h3>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{market.en}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
       </div>
 
-      <div className="absolute bottom-6 right-12 text-slate-300 text-[10px] font-mono z-10">
-        iSunFA • FUNDRAISING & EXPANSION
+      {/* Info: Footer */}
+      <div className="absolute bottom-4 left-0 w-full px-16 flex justify-between text-slate-400 text-xs tracking-widest uppercase font-medium">
+        <div>Confidential</div>
+        <div className="flex gap-2 items-center">
+          <div className="w-2 h-2 rounded-full bg-sky-400"></div>
+          2026 CAFECA FINTECH
+        </div>
       </div>
 
     </div>
