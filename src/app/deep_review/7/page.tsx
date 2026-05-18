@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
 import { Cpu, Sparkles, MessageSquare, Zap } from 'lucide-react';
@@ -126,6 +126,11 @@ const MEMBERS = [
 export default function DeepReviewSlide7() {
   const [selectedMemberId, setSelectedMemberId] = useState('system');
   const selectedMember = MEMBERS.find(m => m.id === selectedMemberId) || MEMBERS[0];
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsMounted(true);
+  }, []);
 
   return (
     <div className="min-h-screen w-full bg-slate-100 flex items-center justify-center p-4">
@@ -199,20 +204,22 @@ export default function DeepReviewSlide7() {
                 </div>
 
                 <div className="flex-1 w-full relative">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={CAPABILITY_DATA}>
-                      <PolarGrid stroke="#e2e8f0" />
-                      <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 10, fontWeight: 'bold' }} />
-                      <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
-                      <Radar
-                        name={selectedMember.name}
-                        dataKey={selectedMember.dataKey}
-                        stroke={selectedMemberId.includes('system') || selectedMemberId === 'sentiment' ? '#4f46e5' : '#f97316'}
-                        fill={selectedMemberId.includes('system') || selectedMemberId === 'sentiment' ? '#4f46e5' : '#f97316'}
-                        fillOpacity={0.5}
-                      />
-                    </RadarChart>
-                  </ResponsiveContainer>
+                  {isMounted && (
+                    <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
+                      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={CAPABILITY_DATA}>
+                        <PolarGrid stroke="#e2e8f0" />
+                        <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 10, fontWeight: 'bold' }} />
+                        <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
+                        <Radar
+                          name={selectedMember.name}
+                          dataKey={selectedMember.dataKey}
+                          stroke={selectedMemberId.includes('system') || selectedMemberId === 'sentiment' ? '#4f46e5' : '#f97316'}
+                          fill={selectedMemberId.includes('system') || selectedMemberId === 'sentiment' ? '#4f46e5' : '#f97316'}
+                          fillOpacity={0.5}
+                        />
+                      </RadarChart>
+                    </ResponsiveContainer>
+                  )}
                 </div>
               </div>
 

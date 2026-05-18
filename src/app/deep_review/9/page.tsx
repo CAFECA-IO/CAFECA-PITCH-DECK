@@ -22,6 +22,7 @@ import {
   Trophy,
   TrendingUp
 } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 // Info: (20260131 - Luphia) Mock Data for Fund Flows (Subscription vs Redemption)
 const FLOW_DATA = [
@@ -52,6 +53,12 @@ const COMPETITORS = [
 ];
 
 export default function DeepReviewSlide9() {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsMounted(true);
+  }, []);
+
   return (
     <div className="min-h-screen w-full bg-slate-100 flex items-center justify-center p-4">
       {/* Info: (20260131 - Luphia) Container */}
@@ -130,17 +137,19 @@ export default function DeepReviewSlide9() {
                   <div className="text-[10px] text-green-600 bg-green-50 px-2 py-0.5 rounded-full font-bold">淨流入: +14 億</div>
                 </div>
                 <div className="h-40">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={FLOW_DATA} stackOffset="sign">
-                      <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                      <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#94a3b8' }} />
-                      <YAxis hide />
-                      <Tooltip cursor={{ fill: 'transparent' }} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', fontSize: '12px' }} />
-                      <Legend iconSize={8} wrapperStyle={{ fontSize: '10px' }} />
-                      <Bar dataKey="sub" name="申購" fill="#10b981" barSize={20} radius={[4, 4, 0, 0]} />
-                      <Bar dataKey="red" name="贖回" fill="#ef4444" barSize={20} radius={[0, 0, 4, 4]} />
-                    </BarChart>
-                  </ResponsiveContainer>
+                  {isMounted && (
+                    <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
+                      <BarChart data={FLOW_DATA} stackOffset="sign">
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
+                        <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#94a3b8' }} />
+                        <YAxis hide />
+                        <Tooltip cursor={{ fill: 'transparent' }} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', fontSize: '12px' }} />
+                        <Legend iconSize={8} wrapperStyle={{ fontSize: '10px' }} />
+                        <Bar dataKey="sub" name="申購" fill="#10b981" barSize={20} radius={[4, 4, 0, 0]} />
+                        <Bar dataKey="red" name="贖回" fill="#ef4444" barSize={20} radius={[0, 0, 4, 4]} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  )}
                 </div>
               </div>
 
