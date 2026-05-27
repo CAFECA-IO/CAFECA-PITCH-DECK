@@ -1,62 +1,55 @@
 'use client';
 
-import { AlertTriangle, Factory, FileWarning, TrendingDown } from 'lucide-react';
+import { FileText, Cpu, Globe } from 'lucide-react';
 
-export default function TaitraSlide2() {
+export default function TaitraSlide1() {
   return (
-    <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans">
-      <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
-        <div className="px-16 pt-16 z-10">
-          <span className="text-sky-600 font-bold tracking-[0.2em] text-sm uppercase">The Challenge</span>
-          <h2 className="text-4xl font-extrabold text-slate-900 mt-2 mb-12">
-            挑戰與痛點：CBAM 與國內碳費的雙重夾擊
-          </h2>
-        </div>
+    <div className="min-h-screen w-full bg-slate-900 flex items-center justify-center p-4 font-sans text-slate-100">
+      <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl flex flex-col border border-slate-800 rounded-xl">
+        {/* Abstract Background Elements */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-900/20 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-900/20 rounded-full blur-3xl pointer-events-none translate-y-1/2 -translate-x-1/3" />
+        <div 
+          className="absolute inset-0 opacity-20 mix-blend-soft-light pointer-events-none"
+          style={{ 
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` 
+          }}
+        />
 
-        <div className="flex-1 px-16 z-10 grid grid-cols-2 gap-12 pb-12">
-          {/* Left Column: The Context */}
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-              <Factory className="text-slate-400" /> 企業面臨的生存危機
-            </h3>
-            <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              歐盟碳邊境調整機制 (CBAM) 與台灣碳費徵收正式上路，企業若無法精準交代碳足跡，將面臨高昂的碳關稅，甚至失去國際供應鏈的訂單。
-            </p>
-            <div className="bg-rose-50 border-l-4 border-rose-500 p-6 rounded-r-lg">
-              <h4 className="font-bold text-rose-800 flex items-center gap-2 mb-2">
-                <AlertTriangle size={20} /> 核心困境
-              </h4>
-              <p className="text-rose-700">「記帳與記碳分離」，導致財務數據與碳盤查數據脫鉤，無法應對高頻率、高標準的國際稽核要求。</p>
+        <div className="flex-1 flex flex-col px-20 z-10 justify-center items-center text-center">
+          <div className="flex gap-4 mb-8">
+            <div className="p-3 bg-sky-500/10 rounded-2xl border border-sky-500/20">
+              <FileText className="w-8 h-8 text-sky-400" />
+            </div>
+            <div className="p-3 bg-emerald-500/10 rounded-2xl border border-emerald-500/20">
+              <Cpu className="w-8 h-8 text-emerald-400" />
+            </div>
+            <div className="p-3 bg-blue-500/10 rounded-2xl border border-blue-500/20">
+              <Globe className="w-8 h-8 text-blue-400" />
             </div>
           </div>
 
-          {/* Right Column: Pain Points */}
-          <div className="flex flex-col justify-center space-y-6">
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4 items-start hover:shadow-md transition-shadow">
-              <div className="p-3 bg-amber-100 rounded-lg text-amber-600">
-                <FileWarning size={24} />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-slate-800 mb-1">人工處理成本極高</h4>
-                <p className="text-slate-600">傳統碳盤查依賴人工蒐集電費單、採購單，耗時且極易出錯，無法做到即時追蹤。</p>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4 items-start hover:shadow-md transition-shadow">
-              <div className="p-3 bg-indigo-100 rounded-lg text-indigo-600">
-                <TrendingDown size={24} />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-slate-800 mb-1">碳係數匹配困難</h4>
-                <p className="text-slate-600">數千種原物料與活動數據，缺乏標準化系統對應環保署或國際碳係數庫，導致盤查結果不被認可。</p>
-              </div>
-            </div>
+          <div className="inline-block mb-6">
+            <span className="text-emerald-400 font-bold tracking-[0.2em] text-sm uppercase bg-emerald-400/10 px-6 py-2 rounded-full border border-emerald-400/20 shadow-[0_0_15px_rgba(52,211,153,0.1)]">
+              CFV AI AGENT
+            </span>
           </div>
+
+          <h1 className="text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
+            從<span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">記帳</span>到<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">記碳</span>
+            <br />
+            <span className="text-4xl md:text-5xl mt-4 block font-bold text-slate-300">迎戰碳費與 CBAM 的 AI 突圍術</span>
+          </h1>
+
+          <p className="text-xl text-slate-400 font-medium max-w-3xl mx-auto leading-relaxed border-t border-slate-800 pt-8 mt-4">
+            自動化憑證解析 × 精準碳排轉換 × 零信任審計追蹤<br />
+            打造接軌國際的數位產品護照 (DPP)
+          </p>
         </div>
 
-        <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
-          <div>iSunFA TAITRA</div>
-          <div className="font-mono">#02</div>
+        <div className="absolute bottom-8 w-full px-16 flex justify-between text-slate-500 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
+          <div>TAITRA</div>
+          <div className="font-mono">#01</div>
         </div>
       </div>
     </div>

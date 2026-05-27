@@ -1,98 +1,69 @@
 'use client';
 
-import { BrainCircuit, SplitSquareHorizontal, Database, Braces, AlertTriangle } from 'lucide-react';
+import { Coins, UserCheck, ShieldAlert, Award } from 'lucide-react';
 
-export default function TaitraSlide5() {
+export default function TaitraSlide4() {
   return (
-    <div className="min-h-screen w-full bg-slate-900 flex items-center justify-center p-4 font-sans text-slate-100">
-      <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl flex flex-col border border-slate-800 rounded-xl">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-900/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3" />
+    <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
+      <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
         
-        <div className="px-16 pt-16 z-10 text-center">
-          <span className="text-indigo-400 font-bold tracking-[0.2em] text-sm uppercase">Harness Engineering</span>
-          <h2 className="text-4xl font-extrabold text-white mt-2 mb-4">
-            克服幻覺：導入駕馭工程 (Harness Engineering)
+        <div className="px-16 pt-16 z-10">
+          <span className="text-amber-600 font-bold tracking-[0.2em] text-sm uppercase bg-amber-50 px-4 py-1.5 rounded-full border border-amber-100">
+            Domestic Policy & Bidding
+          </span>
+          <h2 className="text-4xl font-extrabold text-slate-900 mt-4">
+            背景痛點 (2/2)：國內碳費徵收與供應鏈淨零壓力
           </h2>
-          <p className="text-slate-400 text-lg max-w-4xl mx-auto">
-            為何 AI 面對會計與碳盤查時常會「一本正經地胡說八道」？我們如何從工程架構層面根除這個致命傷。
+          <p className="text-slate-500 mt-2 text-lg max-w-3xl">
+            台灣氣候變遷因應法正式推動碳費徵收，從鋼鐵、石化到電子大廠，企業在內外夾擊下面臨無痛減碳與稅收的雙重考驗。
           </p>
         </div>
 
-        <div className="flex-1 px-16 z-10 flex gap-12 mt-12 items-stretch pb-16">
-          
-          {/* Left: The Problem */}
-          <div className="w-1/3 flex flex-col gap-6">
-            <div className="bg-rose-950/20 border border-rose-900/50 p-6 rounded-2xl h-full relative">
-              <div className="absolute -top-5 left-6 bg-rose-500/20 p-2 rounded-xl border border-rose-500/30">
-                <AlertTriangle className="text-rose-400 w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold mt-4 mb-6 text-rose-300">幻覺的兩大元兇</h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-                    <span className="text-rose-400">1.</span> 專業知識嚴重不足
-                  </h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    通用型 AI 缺乏深度的財務法規與 ISO 14064-1 盤查準則。面對模糊字眼時，往往憑藉機率進行不合規的猜測。
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-                    <span className="text-rose-400">2.</span> 資料量撐爆 Token 上限
-                  </h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    若將所有會計科目表、數萬筆碳排係數庫一次性丟給 AI，不僅會超越上下文 (Token) 限制，更會造成「注意力渙散 (Lost in the middle)」，導致配對錯亂。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: The Solution */}
-          <div className="w-2/3 bg-slate-800/80 border border-slate-700 p-8 rounded-2xl relative">
-            <div className="absolute -top-5 left-8 bg-indigo-500 p-2 rounded-xl shadow-lg">
-              <BrainCircuit className="text-white w-6 h-6" />
-            </div>
-            <h3 className="text-2xl font-bold mt-2 mb-6 text-indigo-300">
-              解法：駕馭工程 (Harness Engineering)
+        <div className="flex-1 px-16 z-10 grid grid-cols-2 gap-12 mt-4 pb-12 items-center">
+          {/* Left Column: Context */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
+              <Coins className="text-amber-500" /> 國內碳費正式開徵
             </h3>
-            <p className="text-slate-300 mb-8 text-sm">
-              不再期待單一 Prompt 解決所有問題。我們將複雜的「碳會計盤查任務」，拆解為多個相互獨立、邏輯嚴密的小型微型任務 (Micro-tasks)，並為每個任務配備專屬的知識外掛。
+            <p className="text-lg text-slate-600 leading-relaxed">
+              環境部公告碳費徵收標準，納管排放大戶並逐步向下推行。這項法規意味著「碳排即成本」，企業生產的每一噸二氧化碳，都將在資產負債表上產生實質的財務支出。
             </p>
-
-            <div className="flex gap-4 items-center">
-              
-              <div className="flex-1 bg-slate-900 border border-slate-600 p-5 rounded-xl text-center">
-                <SplitSquareHorizontal className="w-8 h-8 text-sky-400 mx-auto mb-3" />
-                <h4 className="font-bold text-white text-sm mb-2">任務精細切割</h4>
-                <p className="text-xs text-slate-400">將大任務拆為：<br/>A. 憑證數據清理<br/>B. 會計科目映射<br/>C. 碳係數配對</p>
-              </div>
-
-              <div className="text-slate-500 font-bold text-xl">+</div>
-
-              <div className="flex-1 bg-slate-900 border border-slate-600 p-5 rounded-xl text-center">
-                <Database className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
-                <h4 className="font-bold text-white text-sm mb-2">動態注入專屬資料庫</h4>
-                <p className="text-xs text-slate-400">執行任務 B 時，只給「會計準則」；執行任務 C 時，只給「精確縮小範圍後的碳係數庫」。</p>
-              </div>
-
-              <div className="text-slate-500 font-bold text-xl">=</div>
-
-              <div className="flex-1 bg-slate-900 border border-indigo-500/50 p-5 rounded-xl text-center shadow-[0_0_15px_rgba(99,102,241,0.2)]">
-                <Braces className="w-8 h-8 text-indigo-400 mx-auto mb-3" />
-                <h4 className="font-bold text-white text-sm mb-2">100% 專業且受控的產出</h4>
-                <p className="text-xs text-slate-400">避開 Token 上限，AI 在小範圍內專注處理，確保輸出的每一筆數據都具備稽核等級的精準度。</p>
-              </div>
-
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl">
+              <h4 className="font-bold text-amber-800 flex items-center gap-2 mb-1.5">
+                <ShieldAlert size={20} /> 中小企業被動受波及
+              </h4>
+              <p className="text-sm text-amber-700">即使不是首波課徵大戶，但大廠為了自身減碳要求，會將碳排配額指標強制分攤至所有上游供應鏈，中小製造業避無可避。</p>
             </div>
           </div>
 
+          {/* Right Column: Pain Points */}
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="p-3 bg-blue-50 text-blue-600 rounded-lg h-fit">
+                <UserCheck size={24} />
+              </div>
+              <div>
+                <h4 className="text-xl font-bold text-slate-800 mb-1">大廠訂單篩選機制</h4>
+                <p className="text-sm text-slate-600 leading-relaxed">護國神山等晶圓半導體龍頭已明確要求其供應商：未在規定期限內完成 ISO 14067 產品碳盤查者，將在供應商考核中扣分甚至直接剔除競標資格。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="p-3 bg-emerald-50 text-emerald-600 rounded-lg h-fit">
+                <Award size={24} />
+              </div>
+              <div>
+                <h4 className="text-xl font-bold text-slate-800 mb-1">綠色金融與貸款利差</h4>
+                <p className="text-sm text-slate-600 leading-relaxed">ESG 指標直接影響銀行融資額度與融資利率。拿不出可靠碳足跡證明書的企業，將面臨融資困難，資金成本增加 1%-2% 以上。</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-500 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
-          <div>iSunFA TAITRA</div>
-          <div className="font-mono">#05</div>
+        <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
+          <div>TAITRA</div>
+          <div className="font-mono">#04</div>
         </div>
       </div>
     </div>

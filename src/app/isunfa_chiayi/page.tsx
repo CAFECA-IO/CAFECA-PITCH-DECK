@@ -17,10 +17,11 @@ import ISunFASlide9 from '@/app/isunfa_chiayi/9/page';
 import ISunFASlide10 from '@/app/isunfa_chiayi/10/page';
 import ISunFASlide11 from '@/app/isunfa_chiayi/11/page';
 import ISunFASlide12 from '@/app/isunfa_chiayi/12/page';
+import ISunFASlide13 from '@/app/isunfa_chiayi/13/page';
 
 export default function ISunFAChiayiSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 12;
+  const totalSlides = 13;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [mobileScale, setMobileScale] = useState(0.3);
@@ -64,6 +65,7 @@ export default function ISunFAChiayiSlideBrowser() {
     10: ISunFASlide10,
     11: ISunFASlide11,
     12: ISunFASlide12,
+    13: ISunFASlide13,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
@@ -73,14 +75,15 @@ export default function ISunFAChiayiSlideBrowser() {
     2: '惡夢才剛開始',
     3: '老闆們的痛點',
     4: '全能數位領班',
-    5: '客戶專屬服務生',
-    6: '智能營養分析師',
-    7: '駐點音樂師',
-    8: '專屬智能會計師',
-    9: '隱形成本公式',
-    10: '專屬推薦碼',
-    11: '命定咖啡館生態圈',
-    12: '聯繫我們',
+    5: '智慧 POS 建立成本',
+    6: '客戶專屬服務生',
+    7: '智能營養分析師',
+    8: '駐點音樂師',
+    9: '專屬智能會計師',
+    10: '隱形成本公式',
+    11: '專屬推薦碼',
+    12: '命定咖啡館生態圈',
+    13: '聯繫我們',
   };
 
   const nextSlide = useCallback(() => {

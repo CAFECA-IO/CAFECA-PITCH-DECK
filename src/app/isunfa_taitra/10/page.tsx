@@ -1,82 +1,87 @@
 'use client';
 
-import { FileBarChart2, ScrollText, CheckCircle } from 'lucide-react';
+import { Target, Layout, ShieldAlert } from 'lucide-react';
 
-export default function TaitraSlide10() {
+export default function TaitraSlide8() {
   return (
-    <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans">
+    <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
+        
         <div className="px-16 pt-16 z-10">
-          <span className="text-indigo-600 font-bold tracking-[0.2em] text-sm uppercase">Step 3: Auto-Generated Reports</span>
-          <h2 className="text-4xl font-extrabold text-slate-900 mt-2">
-            步驟三：一鍵生成財報與碳盤查報告
+          <span className="text-sky-600 font-bold tracking-[0.2em] text-sm uppercase bg-sky-50 px-4 py-1.5 rounded-full border border-sky-100">
+            ISO 14067 Step 1
+          </span>
+          <h2 className="text-4xl font-extrabold text-slate-900 mt-4">
+            ISO 14067 步驟 (1/4)：目的與範圍界定 (Goal & Scope)
           </h2>
-          <p className="text-slate-500 mt-4 text-lg max-w-3xl">揮別每季/每年底的崩潰加班，從數據匯入到產出合規報告，全程自動化。</p>
+          <p className="text-slate-500 mt-2 text-lg max-w-3xl">
+            產品碳足跡盤查的基石，必須在量化前嚴格定義計算的標的與覆蓋範圍。
+          </p>
         </div>
 
-        <div className="flex-1 px-16 z-10 flex gap-12 mt-12 pb-16">
-          
-          <div className="w-1/2 flex flex-col gap-6">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 relative overflow-hidden group hover:border-sky-300 transition-colors">
-              <div className="absolute top-0 right-0 p-4 opacity-5">
-                <FileBarChart2 size={100} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3 mb-6">
-                <div className="p-2 bg-sky-100 rounded-lg text-sky-600">
-                  <FileBarChart2 size={24} />
-                </div>
-                財務審計報告
+        <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-4 pb-12 items-center">
+          {/* Card 1: Functional Unit */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-sky-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <Target className="text-sky-500" /> 1. 功能單位 (FU)
               </h3>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-slate-600">
-                  <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
-                  <span>自動結轉並生成資產負債表與損益表</span>
-                </li>
-                <li className="flex items-center gap-3 text-slate-600">
-                  <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
-                  <span>符合商業會計法與 IFRS 國際財務報導準則</span>
-                </li>
-                <li className="flex items-center gap-3 text-slate-600">
-                  <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
-                  <span>附帶 AI 解析過程的溯源連結，會計師查帳零死角</span>
-                </li>
-              </ul>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                所有碳足跡數據必須以此**可量化的基準單位**進行折算與呈現，確保未來比較時的公正性。
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">案例範例</span>
+              <p className="text-xs text-slate-700 font-medium">「生產 1 公噸特定等級之不鏽鋼材」或「使用 1 小時之雲端運算服務」。</p>
             </div>
           </div>
 
-          <div className="w-1/2 flex flex-col gap-6">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 relative overflow-hidden group hover:border-emerald-300 transition-colors">
-              <div className="absolute top-0 right-0 p-4 opacity-5">
-                <ScrollText size={100} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3 mb-6">
-                <div className="p-2 bg-emerald-100 rounded-lg text-emerald-600">
-                  <ScrollText size={24} />
-                </div>
-                ISO 14064-1 溫室氣體盤查報告
+          {/* Card 2: System Boundary */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-emerald-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <Layout className="text-emerald-500" /> 2. 系統邊界
               </h3>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-slate-600">
-                  <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
-                  <span>自動分類範疇一、範疇二、範疇三之排放源</span>
-                </li>
-                <li className="flex items-center gap-3 text-slate-600">
-                  <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
-                  <span>動態計算與彙整，隨時匯出最新符合查證標準的清冊</span>
-                </li>
-                <li className="flex items-center gap-3 text-slate-600">
-                  <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
-                  <span>內建防呆機制，碳係數異常提報系統，避免無效查證</span>
-                </li>
-              </ul>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                繪製生命週期流程圖，定義哪些「單元過程」必須納入計算邊界，哪些被排除。
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">邊界劃分</span>
+              <p className="text-xs text-slate-700 font-medium">
+                * B2B 採用「搖籃到大門 (Cradle-to-Gate)」<br />
+                * B2C 採用「搖籃到墳墓 (Cradle-to-Grave)」
+              </p>
             </div>
           </div>
 
+          {/* Card 3: Cut-off Criteria */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-rose-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <ShieldAlert className="text-rose-500" /> 3. 排除準則 (Cut-off)
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                排除次要輸入必須透明揭露。此外，機器設備、廠房建設等資本財，依 PCR 規範可合規排除但須合理論證。
+              </p>
+            </div>
+            <div className="bg-rose-50 rounded-xl p-4 border border-rose-100">
+              <span className="text-xs font-bold text-rose-800 uppercase tracking-wider block mb-1">排除與資本財</span>
+              <p className="text-xs text-rose-700 font-medium leading-relaxed">
+                * 項目排除：單一排除 &lt; 1% 且總排除 &lt; 5% 限制線。<br />
+                * 資本財排除：符合 PCR 下可合規排除基礎設施，但須於報告書中透明揭露與科學論證。
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
-          <div>iSunFA TAITRA</div>
-          <div className="font-mono">#10</div>
+          <div>TAITRA</div>
+          <div className="font-mono">#08</div>
         </div>
       </div>
     </div>

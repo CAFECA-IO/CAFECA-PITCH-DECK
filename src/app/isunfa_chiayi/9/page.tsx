@@ -1,36 +1,97 @@
 'use client';
 
-export default function Slide9() {
+import { ShieldCheck, Sparkles, LineChart, Calculator } from 'lucide-react';
+
+export default function Slide8() {
+  const brains = [
+    { 
+      title: '秒速對帳腦', 
+      desc: '自動核對多元支付與現金', 
+      icon: Calculator, 
+      color: 'from-blue-500 to-cyan-400', 
+      textColor: 'text-cyan-400', 
+      glow: 'hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]' 
+    },
+    { 
+      title: '即時損益腦', 
+      desc: '打烊瞬間產出今日財報', 
+      icon: LineChart, 
+      color: 'from-purple-500 to-pink-400', 
+      textColor: 'text-pink-400', 
+      glow: 'hover:shadow-[0_0_30px_rgba(244,114,182,0.15)]' 
+    },
+    { 
+      title: '資金預測腦', 
+      desc: 'AI 智慧推算下期備料資金', 
+      icon: Sparkles, 
+      color: 'from-amber-500 to-orange-400', 
+      textColor: 'text-amber-400', 
+      glow: 'hover:shadow-[0_0_30px_rgba(251,191,36,0.15)]' 
+    },
+    { 
+      title: '合規歸檔腦', 
+      desc: '進銷存發票區塊鏈防竄改', 
+      icon: ShieldCheck, 
+      color: 'from-emerald-500 to-teal-400', 
+      textColor: 'text-emerald-400', 
+      glow: 'hover:shadow-[0_0_30px_rgba(52,211,153,0.15)]' 
+    },
+  ];
+
   return (
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
-      <div className="w-[1280px] h-[720px] bg-[#050505] relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800">
+      <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800">
+        
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
 
-        {/* Dynamic Background */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-900/20 via-[#050505] to-[#050505]"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none"></div>
-        </div>
+        {/* Ambient Background Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        {/* Formula Section */}
-        <div className="z-10 text-center px-12 mb-16 relative flex flex-col items-center">
-          <div className="inline-block px-6 py-2 rounded-full border border-amber-500/30 text-amber-300 text-sm tracking-widest mb-10 bg-amber-900/20 backdrop-blur-md">
-            新時代時間方程式
+        {/* Header */}
+        <div className="z-10 text-center mb-16 px-12 mt-4">
+          <div className="inline-block px-6 py-2 rounded-full border border-blue-500/30 text-blue-300 text-sm tracking-widest mb-6 bg-blue-900/20 backdrop-blur-md">
+            05 | 專屬智能會計師
           </div>
-
-          <div className="relative">
-            <div className="absolute -inset-6 bg-gradient-to-r from-amber-500/20 via-orange-400/20 to-amber-500/20 blur-2xl rounded-full"></div>
-            <h2 className="text-6xl md:text-7xl font-mono font-bold tracking-tight text-white drop-shadow-2xl relative">
-              <span className="text-amber-400">T<sub className="text-4xl">style</sub></span> = 24<span className="text-4xl text-neutral-400">H</span> - (<span className="text-red-400">T<sub className="text-4xl">admin</sub></span> ÷ <span className="text-emerald-400 font-black tracking-widest drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">AI</span>)
-            </h2>
-          </div>
-        </div>
-
-        {/* Highlight Result */}
-        <div className="z-10 mt-12 bg-neutral-900/80 backdrop-blur-xl border border-amber-500/30 rounded-full px-16 py-8 shadow-[0_0_40px_rgba(245,158,11,0.2)] flex items-center gap-6 transform hover:scale-105 transition-transform duration-500 cursor-default">
-          <div className="w-4 h-4 bg-amber-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(245,158,11,0.8)]"></div>
-          <h3 className="text-[40px] font-bold text-neutral-100 tracking-wider">
-            把 <span className="text-6xl text-amber-400 mx-2 font-black drop-shadow-[0_0_15px_rgba(245,158,11,0.6)]">60%</span> 時間還給你，專注打造在地品牌
+          <h2 className="text-6xl md:text-7xl font-bold tracking-[0.05em] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-400 mb-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+            終結深夜算帳的惡夢
+          </h2>
+          <h3 className="text-2xl font-light text-blue-200/90 tracking-[0.2em] leading-relaxed">
+            客人走了，你也該下班了
+            <span className="block mt-4 text-lg text-blue-300/60 tracking-[0.3em] uppercase">
+              打烊即自動結算 • 把時間還給生活
+            </span>
           </h3>
+        </div>
+
+        {/* Four Brains Grid */}
+        <div className="z-10 grid grid-cols-4 gap-6 px-16 w-full max-w-[1200px]">
+          {brains.map((brain, idx) => {
+            const Icon = brain.icon;
+            return (
+              <div 
+                key={idx} 
+                className={`group relative bg-neutral-900/80 backdrop-blur-sm border border-neutral-800/80 rounded-3xl p-8 flex flex-col items-center hover:border-neutral-700 transition-all duration-500 overflow-hidden ${brain.glow} hover:-translate-y-2 cursor-default`}
+              >
+                {/* Background Hover Effect */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${brain.color} opacity-0 group-hover:opacity-[0.08] transition-opacity duration-500`}></div>
+                
+                {/* Icon Circle */}
+                <div className="w-20 h-20 mb-8 rounded-full bg-neutral-950 border border-neutral-800 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-700 shadow-inner">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${brain.color} opacity-10 group-hover:opacity-30 transition-opacity duration-500`}></div>
+                  <Icon size={36} className={`${brain.textColor} relative z-10 transition-transform duration-500 group-hover:scale-110 drop-shadow-md`} strokeWidth={1.5} />
+                </div>
+                
+                <h4 className="text-2xl font-bold text-neutral-100 mb-4 tracking-wider group-hover:text-white transition-colors">{brain.title}</h4>
+                
+                {/* Animated Divider */}
+                <div className="w-8 h-[2px] rounded-full bg-neutral-800 mb-5 group-hover:w-16 transition-all duration-500 relative overflow-hidden">
+                   <div className={`absolute inset-0 bg-gradient-to-r ${brain.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                </div>
+                
+                <p className="text-neutral-400 font-light text-center tracking-widest leading-relaxed text-[15px] group-hover:text-neutral-300 transition-colors whitespace-nowrap">{brain.desc}</p>
+              </div>
+            );
+          })}
         </div>
 
         {/* Footer Info */}

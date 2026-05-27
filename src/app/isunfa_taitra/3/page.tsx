@@ -1,72 +1,147 @@
 'use client';
 
-import { ArrowRight, Database, Calculator, FileCheck2, ScanLine } from 'lucide-react';
+import { ShieldCheck, BrainCircuit, Sparkles } from 'lucide-react';
 
-export default function TaitraSlide3() {
+export default function TaitraSlide2() {
   return (
-    <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans">
+    <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
+        {/* Background gradient blob */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
+
+        {/* Slide Header */}
         <div className="px-16 pt-16 z-10">
-          <span className="text-emerald-600 font-bold tracking-[0.2em] text-sm uppercase">Solution Architecture</span>
-          <h2 className="text-4xl font-extrabold text-slate-900 mt-2">
-            核心解法：財務與碳排雙軌並進的 AI 引擎
+          <span className="text-emerald-600 font-bold tracking-[0.2em] text-sm uppercase bg-emerald-50 px-4 py-1.5 rounded-full border border-emerald-100">
+            What You Will Learn
+          </span>
+          <h2 className="text-4xl font-extrabold text-slate-900 mt-4">
+            你將學到什麼？
           </h2>
-          <p className="text-slate-500 mt-4 text-lg max-w-3xl">一套憑證，兩套帳本。將企業日常的「財務記帳」直接轉化為「碳盤查數據」，實現無痛合規。</p>
+          <p className="text-slate-500 mt-2 text-lg max-w-4xl">
+            深入掌握產品碳足跡盤查的國際合規知識，以及如何透過 AI 關鍵技術落地，全面賦能綠色轉型。
+          </p>
         </div>
 
-        <div className="flex-1 px-16 z-10 flex flex-col justify-center mt-8 pb-12">
+        {/* Content Body: 3-column learning outcomes */}
+        <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-6 pb-12 items-center">
 
-          {/* Pipeline Diagram */}
-          <div className="flex items-center justify-between gap-4">
-
-            {/* Step 1 */}
-            <div className="flex-1 bg-white border-2 border-slate-200 rounded-2xl p-6 text-center shadow-sm relative">
-              <div className="w-16 h-16 mx-auto bg-slate-100 rounded-full flex items-center justify-center text-slate-600 mb-4">
-                <ScanLine size={32} />
+          {/* Card 1: ISO 14067 Compliance */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden h-[380px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-emerald-500" />
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 bg-emerald-50 text-emerald-600 rounded-xl border border-emerald-100">
+                  <ShieldCheck size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">1. AI 快速獲取新知</h3>
               </div>
-              <h3 className="font-bold text-slate-800 text-lg mb-2">1. 原始憑證匯入</h3>
-              <p className="text-sm text-slate-500">發票、收據、進口報單</p>
+              <p className="text-xs text-slate-500 mb-4 leading-relaxed">
+                運用 AI 作為專屬學習助理，在最短時間內跨入陌生的碳盤查與法規領域。
+              </p>
+              <ul className="space-y-2.5 text-xs text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold mt-0.5">▪</span>
+                  <span><strong>概念白話文翻譯</strong>：將艱澀難懂的 ISO 14067 條文轉化為易懂的商業邏輯。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold mt-0.5">▪</span>
+                  <span><strong>法規精準速讀術</strong>：快速解析上百頁的標準文件，提煉出「能做與不能做」的合規紅線。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold mt-0.5">▪</span>
+                  <span><strong>專屬領域知識庫</strong>：透過資料餵養與提示技巧，打造您的 24 小時隨身顧問。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold mt-0.5">▪</span>
+                  <span><strong>稽核情境對答演練</strong>：模擬 SGS 等第三方查證機構的提問，強化實戰應對能力。</span>
+                </li>
+              </ul>
             </div>
-
-            <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
-
-            {/* Step 2 */}
-            <div className="flex-1 bg-sky-50 border-2 border-sky-200 rounded-2xl p-6 text-center shadow-sm relative transform scale-105">
-              <div className="w-16 h-16 mx-auto bg-sky-100 rounded-full flex items-center justify-center text-sky-600 mb-4">
-                <Database size={32} />
-              </div>
-              <h3 className="font-bold text-sky-900 text-lg mb-2">2. AI 智能解析與雙軌入帳</h3>
-              <p className="text-sm text-sky-700">擷取品項、金額、數量<br />自動生成財務傳票</p>
+            <div className="text-[10px] text-slate-400 font-mono tracking-wider border-t border-slate-100 pt-3">
+              PHASE 01: AI ASSISTED LEARNING
             </div>
-
-            <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
-
-            {/* Step 3 */}
-            <div className="flex-1 bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-6 text-center shadow-sm relative">
-              <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-4">
-                <Calculator size={32} />
-              </div>
-              <h3 className="font-bold text-emerald-900 text-lg mb-2">3. 碳係數自動換算</h3>
-              <p className="text-sm text-emerald-700">對應環境部碳係數<br />計算範疇一、二、三碳排</p>
-            </div>
-
-            <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
-
-            {/* Step 4 */}
-            <div className="flex-1 bg-indigo-50 border-2 border-indigo-200 rounded-2xl p-6 text-center shadow-sm relative">
-              <div className="w-16 h-16 mx-auto bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mb-4">
-                <FileCheck2 size={32} />
-              </div>
-              <h3 className="font-bold text-indigo-900 text-lg mb-2">4. 產出報告與 DPP</h3>
-              <p className="text-sm text-indigo-700">ISO 14064-1 報告<br />數位產品護照 (DPP)</p>
-            </div>
-
           </div>
+
+          {/* Card 2: Autonomous AI Agents */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden h-[380px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-indigo-500" />
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 bg-indigo-50 text-indigo-600 rounded-xl border border-indigo-100">
+                  <Sparkles size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">2. AI 代理完成任務</h3>
+              </div>
+              <p className="text-xs text-slate-500 mb-4 leading-relaxed">
+                認識 AI Agent 的自主執行能力，將繁瑣的資料處理與碳盤查運算流程全面自動化。
+              </p>
+              <ul className="space-y-2.5 text-xs text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="text-indigo-500 font-bold mt-0.5">▪</span>
+                  <span><strong>多模態資料萃取</strong>：自動辨識並解析來自 PDF、圖片或表單的非結構化原始憑證。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-indigo-500 font-bold mt-0.5">▪</span>
+                  <span><strong>碳係數智慧映射</strong>：利用向量檢索 (RAG) 從巨量資料庫中精準媒合最適當的碳排係數。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-indigo-500 font-bold mt-0.5">▪</span>
+                  <span><strong>自動化邏輯運算</strong>：代理程式自主執行跨單位換算與乘載計算，徹底排除人工試算錯誤。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-indigo-500 font-bold mt-0.5">▪</span>
+                  <span><strong>端到端報告生成</strong>：從清理原始數據，到一鍵產出符合 ISO 規範的碳足跡報告書。</span>
+                </li>
+              </ul>
+            </div>
+            <div className="text-[10px] text-slate-400 font-mono tracking-wider border-t border-slate-100 pt-3">
+              PHASE 02: AUTONOMOUS AI AGENTS
+            </div>
+          </div>
+
+          {/* Card 3: AI Hallucination Defense */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden h-[380px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-sky-500" />
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 bg-sky-50 text-sky-600 rounded-xl border border-sky-100">
+                  <BrainCircuit size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">3. AI 幻覺防禦</h3>
+              </div>
+              <p className="text-xs text-slate-500 mb-4 leading-relaxed">
+                學習如何利用硬核的駕馭工程（Harness Engineering）突破 AI 幻覺與落地瓶頸。
+              </p>
+              <ul className="space-y-2.5 text-xs text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-500 font-bold mt-0.5">▪</span>
+                  <span><strong>多模態物理加總驗證</strong>：阻斷 AI 對財務憑證數值的虛構。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-500 font-bold mt-0.5">▪</span>
+                  <span><strong>RAG 檢索與 PCR 鎖定</strong>：杜絕低估係數的綠色漂洗風險。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-500 font-bold mt-0.5">▪</span>
+                  <span><span><strong>Chained Agents 生成</strong>：分段組裝長文本報告，解決跑版問題。</span></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-500 font-bold mt-0.5">▪</span>
+                  <span><strong>人機協同 (HITL) 覆核</strong>：信心度評估與微任務安全覆核。</span>
+                </li>
+              </ul>
+            </div>
+            <div className="text-[10px] text-slate-400 font-mono tracking-wider border-t border-slate-100 pt-3">
+              PHASE 03: HARNESS ENGINEERING
+            </div>
+          </div>
+
         </div>
 
+        {/* Footer */}
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
-          <div>iSunFA TAITRA</div>
-          <div className="font-mono">#03</div>
+          <div>TAITRA</div>
+          <div className="font-mono">#02</div>
         </div>
       </div>
     </div>

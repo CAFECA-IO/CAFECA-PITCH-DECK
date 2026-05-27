@@ -1,109 +1,86 @@
 'use client';
 
-import { FileText, CheckSquare, Activity, ShieldCheck } from 'lucide-react';
+import { Database, FileSpreadsheet, Percent } from 'lucide-react';
 
-export default function TaitraSlide11() {
+export default function TaitraSlide9() {
   return (
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
         
-        <div className="px-16 pt-16 z-10 flex items-center justify-between">
-          <div>
-            <span className="text-indigo-600 font-bold tracking-[0.2em] text-sm uppercase bg-indigo-50 px-4 py-1.5 rounded-full border border-indigo-100">Step 3 Verification</span>
-            <h2 className="text-3xl font-extrabold text-slate-900 mt-4">
-              步驟三檢核：報告完整性與平衡邏輯自評
-            </h2>
-            <p className="text-slate-500 mt-2 text-lg">財報與碳盤查報告輸出的最終守門員，確保數據結構嚴密無死角。</p>
-          </div>
-          <ShieldCheck className="w-16 h-16 text-indigo-200" />
+        <div className="px-16 pt-16 z-10">
+          <span className="text-emerald-600 font-bold tracking-[0.2em] text-sm uppercase bg-emerald-50 px-4 py-1.5 rounded-full border border-emerald-100">
+            ISO 14067 Step 2
+          </span>
+          <h2 className="text-4xl font-extrabold text-slate-900 mt-4">
+            ISO 14067 步驟 (2/4)：生命週期清查分析 (LCI)
+          </h2>
+          <p className="text-slate-500 mt-2 text-lg max-w-3xl">
+            數據收集與分析階段。收集所有納入系統邊界內的活動數據與對應的碳排係數。
+          </p>
         </div>
 
-        <div className="flex-1 px-16 z-10 mt-8 flex flex-col gap-6">
-          
-          <div className="flex gap-6 h-full pb-12">
-            {/* Knowledge Injection */}
-            <div className="w-1/3 bg-slate-900 rounded-2xl p-6 text-white shadow-lg relative flex flex-col">
-              <div className="flex items-center gap-3 mb-4 text-indigo-400">
-                <FileText size={24} />
-                <h3 className="text-xl font-bold">1. 注入結構化知識</h3>
-              </div>
-              <p className="text-sm text-slate-400 mb-6">任務執行前，載入國際財務與永續報告書格式標準：</p>
-              
-              <div className="space-y-4 flex-1">
-                <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                  <h4 className="font-bold text-indigo-300 text-sm mb-1">IFRS 9 / GAAP 財報編製準則</h4>
-                  <p className="text-xs text-slate-400">資產負債表之會計恆等式規範，損益表之結轉原則。</p>
-                </div>
-                <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                  <h4 className="font-bold text-indigo-300 text-sm mb-1">ISO 14064-1 / ISO 14067</h4>
-                  <p className="text-xs text-slate-400">溫室氣體聲明之結構要求，以及產品碳足跡盤查清冊必備欄位。</p>
-                </div>
-              </div>
+        <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-4 pb-12 items-center">
+          {/* Primary Data */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-emerald-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <FileSpreadsheet className="text-emerald-500" /> 1. 初級數據收集
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                針對企業能直接控制或影響的過程，**必須優先收集現場一手量測的初級數據**。
+              </p>
             </div>
+            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">要求規範</span>
+              <p className="text-xs text-slate-700 font-medium">例如工廠電錶度數、燃料耗用量、原料實際採購重。時間需覆蓋連續至少 12 個月。</p>
+            </div>
+          </div>
 
-            {/* AI Auto Inspection & Confidence */}
-            <div className="w-2/3 flex flex-col gap-6">
-              
-              <div className="flex gap-6 h-1/2">
-                <div className="flex-1 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-                  <div className="flex items-center gap-3 mb-4 text-emerald-600">
-                    <CheckSquare size={24} />
-                    <h3 className="text-xl font-bold">2. AI 自主設計檢驗項目</h3>
-                  </div>
-                  <ul className="space-y-3 text-sm text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-500 font-bold">▪</span>
-                      [財報平衡檢驗] 資產總額是否嚴格等於「負債總額 + 權益總額」？
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-500 font-bold">▪</span>
-                      [碳排分類檢驗] 範疇一、二、三的碳排總和是否完全窮盡所有來源，且無重複計算 (Double Counting)？
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-500 font-bold">▪</span>
-                      [審計軌跡檢驗] 所有盤查清冊中的碳排數值，是否皆具有指向原始憑證哈希值 (Hash) 的反向追蹤連結？
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          {/* Secondary Data */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-sky-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <Database className="text-sky-500" /> 2. 次級數據應用
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                引用權威第三方資料庫或官方公告之碳排係數。數據必須經品質矩陣評級，評估是否合規。
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">DQR 品質評分</span>
+              <p className="text-xs text-slate-700 font-medium leading-relaxed">
+                次級數據需經 <strong>DQR 評級</strong>（評分 1-5），包含 5 大維度：技術 (TeR)、地理 (GR)、時間代表性 (TiR)、完整性 (C) 與精確性 (P)。
+              </p>
+            </div>
+          </div>
 
-              <div className="flex gap-6 h-1/2">
-                <div className="flex-1 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-6 shadow-sm text-white">
-                  <div className="flex items-center gap-3 mb-4 text-emerald-400">
-                    <Activity size={24} />
-                    <h3 className="text-xl font-bold">3. 信心度評估與重做機制</h3>
-                  </div>
-                  
-                  <div className="flex items-center gap-8">
-                    <div className="text-center relative">
-                      <svg className="w-24 h-24 transform -rotate-90">
-                        <circle cx="48" cy="48" r="40" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-slate-700" />
-                        <circle cx="48" cy="48" r="40" stroke="currentColor" strokeWidth="8" fill="transparent" strokeDasharray="251.2" strokeDashoffset="0" className="text-emerald-500" />
-                      </svg>
-                      <div className="absolute inset-0 flex items-center justify-center font-bold text-xl text-emerald-400">100%</div>
-                    </div>
-                    
-                    <div className="flex-1 space-y-3">
-                      <div className="bg-emerald-950/40 p-3 rounded-lg border border-emerald-900/50">
-                        <p className="text-sm text-emerald-200"><span className="font-bold text-emerald-400">評估結果：</span> 恆等式成立，軌跡完整，無重複計算。</p>
-                      </div>
-                      <div className="bg-slate-800/80 p-3 rounded-lg border border-slate-700 flex items-center gap-2">
-                        <CheckSquare className="text-slate-400 w-5 h-5 flex-shrink-0" />
-                        <p className="text-sm text-slate-300">執行動作：鎖定數據狀態，正式發布審計報表與數位產品護照 (DPP)。</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+          {/* Allocation */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-indigo-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <Percent className="text-indigo-500" /> 3. 分配與回收原則
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                處理多種聯產品（如副產碎金屬）及使用回收料/廢棄物再利用時，須遵循嚴格邊界劃分。
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">聯產品與回收分配</span>
+              <p className="text-xs text-slate-700 font-medium leading-relaxed">
+                * 分配順序：優先避免分配 &gt; 物理分配 (質量) &gt; 經濟分配。<br />
+                * 回收分配：回收料與廢棄物之生命週期邊界劃分，需遵循 PCR 的切斷法 (Cut-off) 或避讓法處理。
+              </p>
             </div>
           </div>
         </div>
 
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
-          <div>iSunFA TAITRA</div>
-          <div className="font-mono">#11</div>
+          <div>TAITRA</div>
+          <div className="font-mono">#09</div>
         </div>
       </div>
     </div>

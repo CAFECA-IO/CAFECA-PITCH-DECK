@@ -1,103 +1,73 @@
 'use client';
 
-import { QRCodeSVG } from 'qrcode.react';
-import { ArrowRight, Gift, Sparkles, Building2 } from 'lucide-react';
+import { ArrowRight, Database, Calculator, FileCheck2, ScanLine } from 'lucide-react';
 
-export default function TaitraSlide14() {
+export default function TaitraSlide12() {
   return (
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
+        <div className="px-16 pt-16 z-10">
+          <span className="text-emerald-600 font-bold tracking-[0.2em] text-sm uppercase">Solution Architecture</span>
+          <h2 className="text-4xl font-extrabold text-slate-900 mt-2">
+            核心解法：財務與碳排雙軌並進的 AI 引擎
+          </h2>
+          <p className="text-slate-500 mt-4 text-lg max-w-3xl">一套憑證，兩套帳本。將企業日常的「財務記帳」直接轉化為「碳盤查數據」，實現無痛合規。</p>
+        </div>
 
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-emerald-100 to-transparent rounded-full blur-3xl pointer-events-none -translate-y-1/4 translate-x-1/4" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-sky-100 to-transparent rounded-full blur-3xl pointer-events-none translate-y-1/4 -translate-x-1/4" />
+        <div className="flex-1 px-16 z-10 flex flex-col justify-center mt-8 pb-12">
 
-        <div className="flex-1 flex px-24 z-10 items-center justify-between pb-12">
+          {/* Pipeline Diagram */}
+          <div className="flex items-center justify-between gap-4">
 
-          {/* Left Content Area */}
-          <div className="w-1/2 flex flex-col gap-8">
-            <div>
-              <span className="text-emerald-600 font-bold tracking-[0.2em] text-sm uppercase bg-emerald-50 px-6 py-2 rounded-full border border-emerald-100 shadow-sm inline-block mb-8">
-                Exclusive Offer
-              </span>
-              <h2 className="text-5xl font-extrabold text-slate-900 leading-tight">
-                即刻啟動您的<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">AI 碳會計轉型</span>
-              </h2>
+            {/* Step 1 */}
+            <div className="flex-1 bg-white border-2 border-slate-200 rounded-2xl p-6 text-center shadow-sm relative">
+              <div className="w-16 h-16 mx-auto bg-slate-100 rounded-full flex items-center justify-center text-slate-600 mb-4">
+                <ScanLine size={32} />
+              </div>
+              <h3 className="font-bold text-slate-800 text-lg mb-2">1. 原始憑證匯入</h3>
+              <p className="text-sm text-slate-500">發票、收據、進口報單</p>
             </div>
 
-            <p className="text-xl text-slate-600 font-medium leading-relaxed">
-              立即掃描右方 QR Code，<br />
-              體驗專屬的 AI 財報與碳盤查服務。
-            </p>
+            <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
 
-            <div className="bg-sky-50 border border-sky-200 p-6 rounded-2xl inline-block mt-4 w-fit shadow-sm">
-              <div className="flex items-center gap-3 text-sky-700 font-bold mb-2">
-                <Gift className="w-5 h-5" />
-                <span>專屬推薦碼</span>
+            {/* Step 2 */}
+            <div className="flex-1 bg-sky-50 border-2 border-sky-200 rounded-2xl p-6 text-center shadow-sm relative transform scale-105">
+              <div className="w-16 h-16 mx-auto bg-sky-100 rounded-full flex items-center justify-center text-sky-600 mb-4">
+                <Database size={32} />
               </div>
-              <div className="flex items-center gap-6">
-                <span className="font-mono text-4xl font-black tracking-widest text-sky-900 bg-white px-4 py-2 rounded-lg border border-sky-100 shadow-inner">
-                  TAITRA2026
-                </span>
-              </div>
-              <p className="text-sm text-sky-600 mt-3 font-medium flex items-center gap-2">
-                <Sparkles className="w-4 h-4" /> 憑推薦碼註冊享外貿協會專案優惠
-              </p>
+              <h3 className="font-bold text-sky-900 text-lg mb-2">2. AI 智能解析與雙軌入帳</h3>
+              <p className="text-sm text-sky-700">擷取品項、金額、數量<br />自動生成財務傳票</p>
             </div>
+
+            <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
+
+            {/* Step 3 */}
+            <div className="flex-1 bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-6 text-center shadow-sm relative">
+              <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-4">
+                <Calculator size={32} />
+              </div>
+              <h3 className="font-bold text-emerald-900 text-lg mb-2">3. 碳係數自動換算</h3>
+              <p className="text-sm text-emerald-700">對應環境部碳係數<br />計算範疇一、二、三碳排</p>
+            </div>
+
+            <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
+
+            {/* Step 4 */}
+            <div className="flex-1 bg-indigo-50 border-2 border-indigo-200 rounded-2xl p-6 text-center shadow-sm relative">
+              <div className="w-16 h-16 mx-auto bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mb-4">
+                <FileCheck2 size={32} />
+              </div>
+              <h3 className="font-bold text-indigo-900 text-lg mb-2">4. 產出報告與 DPP</h3>
+              <p className="text-sm text-indigo-700">ISO 14064-1 報告<br />數位產品護照 (DPP)</p>
+            </div>
+
           </div>
-
-          {/* Right Content Area (QR Code) */}
-          <div className="w-1/2 flex justify-center items-center">
-            <div className="relative group">
-              {/* Animated glow effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-sky-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-
-              <div className="relative bg-white p-12 rounded-[2rem] shadow-2xl border border-slate-100 flex flex-col items-center transform transition-transform hover:-translate-y-2 duration-300">
-                <div className="mb-8 text-center">
-                  <div className="inline-flex items-center justify-center p-3 bg-slate-50 rounded-xl mb-4 border border-slate-100 shadow-sm">
-                    <Building2 className="w-6 h-6 text-slate-700" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-800">陽光智能會計</h3>
-                  <p className="text-slate-500 mt-1 font-mono text-sm">https://isunfa.com</p>
-                </div>
-
-                <div className="p-4 bg-white rounded-2xl shadow-inner border border-slate-100">
-                  <QRCodeSVG
-                    value="https://isunfa.com"
-                    size={280}
-                    level="H"
-                    includeMargin={false}
-                    className="text-slate-900"
-                  />
-                </div>
-
-                <div className="mt-8 flex items-center gap-2 text-emerald-600 font-bold bg-emerald-50 px-6 py-3 rounded-full">
-                  <span>立即掃描體驗</span>
-                  <ArrowRight className="w-5 h-5 animate-bounce-x" />
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
-          <div>iSunFA TAITRA</div>
-          <div className="font-mono">#14</div>
+          <div>TAITRA</div>
+          <div className="font-mono">#12</div>
         </div>
-
-        {/* Add custom keyframes for the horizontal bounce animation */}
-        <style dangerouslySetInnerHTML={{
-          __html: `
-          @keyframes bounce-x {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(25%); }
-          }
-          .animate-bounce-x {
-            animation: bounce-x 1s infinite;
-          }
-        `}} />
       </div>
     </div>
   );

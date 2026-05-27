@@ -1,86 +1,89 @@
 'use client';
 
-import { QrCode, Globe2, Cpu, BarChart3 } from 'lucide-react';
+import { BarChart3, Flame, Scale } from 'lucide-react';
 
-export default function TaitraSlide12() {
+export default function TaitraSlide10() {
   return (
-    <div className="min-h-screen w-full bg-slate-900 flex items-center justify-center p-4 font-sans text-slate-100">
-      <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl flex flex-col border border-slate-800 rounded-xl">
-        {/* Background Maps/Globes concept */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none" />
+    <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
+      <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
         
-        <div className="px-16 pt-16 z-10 text-center">
-          <span className="text-blue-400 font-bold tracking-[0.2em] text-sm uppercase">Ultimate Output</span>
-          <h2 className="text-4xl font-extrabold text-white mt-2 mb-4">
-            終極產出：打造接軌國際的數位產品護照 (DPP)
+        <div className="px-16 pt-16 z-10">
+          <span className="text-indigo-600 font-bold tracking-[0.2em] text-sm uppercase bg-indigo-50 px-4 py-1.5 rounded-full border border-indigo-100">
+            ISO 14067 Step 3
+          </span>
+          <h2 className="text-4xl font-extrabold text-slate-900 mt-4">
+            ISO 14067 步驟 (3/4)：生命週期影響評估與解釋 (LCIA)
           </h2>
-          <p className="text-slate-400 text-lg max-w-4xl mx-auto">
-            滿足歐盟要求，將透明、可信任的綠色數據，轉化為產品進軍國際市場的終極通行證。
+          <p className="text-slate-500 mt-2 text-lg max-w-3xl">
+            碳足跡量化計算與敏感度評估。將溫室氣體活動數據折算為二氧化碳當量，並做嚴謹釋意。
           </p>
         </div>
 
-        <div className="flex-1 px-16 z-10 flex items-center gap-12 mt-8 pb-12">
-          
-          {/* Mobile Phone Mockup for DPP */}
-          <div className="w-1/3 flex justify-center">
-            <div className="w-[280px] h-[540px] bg-white rounded-[2.5rem] border-[8px] border-slate-800 shadow-2xl flex flex-col overflow-hidden relative">
-              <div className="absolute top-0 w-full h-6 bg-slate-800 rounded-b-2xl" />
-              
-              <div className="bg-emerald-600 p-6 pt-10 text-white text-center">
-                <QrCode size={48} className="mx-auto mb-4" />
-                <h4 className="font-bold text-lg">Product Passport</h4>
-                <p className="text-xs opacity-80 mt-1">ID: TW-2026-X89B</p>
-              </div>
-              
-              <div className="p-4 space-y-4 bg-slate-50 flex-1">
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="text-xs text-slate-500 mb-1">Carbon Footprint (ISO 14067)</p>
-                  <p className="text-xl font-bold text-slate-800">12.4 kg CO₂e/unit</p>
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="text-xs text-slate-500 mb-1">Recycled Material Rate</p>
-                  <div className="w-full bg-slate-100 h-2 rounded-full mt-2">
-                    <div className="bg-emerald-500 h-2 rounded-full w-[45%]"></div>
-                  </div>
-                  <p className="text-xs font-bold text-emerald-600 mt-1">45% Certified</p>
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="text-xs text-slate-500 mb-1">Audit Trail</p>
-                  <p className="text-[10px] font-mono text-slate-400">Blockchain Verified ✓</p>
-                </div>
-              </div>
+        <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-4 pb-12 items-center">
+          {/* GWP 100 */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-indigo-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <BarChart3 className="text-indigo-500" /> 1. 全球暖化潛勢 (GWP 100)
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                採用 IPCC 最新 100 年 GWP 係數折算。<strong>外部購買的碳抵消與碳權，絕對不得用於扣減產品碳足跡。</strong>
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">溫室氣體與碳抵消</span>
+              <p className="text-xs text-slate-700 font-medium leading-relaxed">
+                * 七大氣體：CO₂, CH₄, N₂O 等加權折算。<br />
+                * <strong>抵消紅線</strong>：標準規定外部碳抵消（Offsets）<strong>不得</strong>用於抵扣產品碳足跡以宣稱碳中和。
+              </p>
             </div>
           </div>
 
-          <div className="w-2/3 grid grid-cols-2 gap-6">
-            <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
-              <Globe2 className="text-blue-400 mb-4 w-10 h-10" />
-              <h3 className="text-xl font-bold text-white mb-2">暢通無阻的 CBAM 申報</h3>
-              <p className="text-slate-400 text-sm">直接匯出符合 CBAM 過渡期及正式期申報格式的數據，免去與歐洲進口商來回信件溝通的摩擦成本。</p>
+          {/* Fossil vs Biogenic */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-rose-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <Flame className="text-rose-500" /> 2. 化石碳與生物碳區分
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                報告中<strong>必須</strong>將化石燃料排放與生物來源（如木材）的碳排放與清除分開列表揭露。
+              </p>
             </div>
-            
-            <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
-              <Cpu className="text-purple-400 mb-4 w-10 h-10" />
-              <h3 className="text-xl font-bold text-white mb-2">供應鏈數據串聯</h3>
-              <p className="text-slate-400 text-sm">打破資訊孤島。品牌廠可直接讀取供應商的 DPP 數據，快速加總形成終端產品的完整生命週期碳排。</p>
-            </div>
-
-            <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 col-span-2 flex items-center gap-6">
-              <div className="p-4 bg-emerald-500/20 rounded-full">
-                <BarChart3 className="text-emerald-400 w-10 h-10" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">賺取「綠色溢價 (Green Premium)」</h3>
-                <p className="text-slate-400 text-sm">透明可信的碳資訊不再只是合規成本，而是提升產品在歐洲市場競爭力、爭取更高定價的綠色資產。</p>
-              </div>
+            <div className="bg-rose-50 rounded-xl p-4 border border-rose-100">
+              <span className="text-xs font-bold text-rose-800 uppercase tracking-wider block mb-1">LUC 攤銷與生物碳儲存</span>
+              <p className="text-xs text-rose-700 font-medium leading-relaxed">
+                * dLUC 計算：直接土地利用變更需依 20 年線性均攤。<br />
+                * 生物碳清除與儲存：生物碳排放與清除單獨列計；儲存期未滿 100 年有嚴格的計量扣減限制。
+              </p>
             </div>
           </div>
 
+          {/* Sensitivity & Uncertainty */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-2 bg-amber-500" />
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <Scale className="text-amber-500" /> 3. 敏感度與不確定性分析
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                評估關鍵假設（如能源結構選擇、原料分配方法）變更時對產品碳足跡結果產生的波動。
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">報告穩健性</span>
+              <p className="text-xs text-slate-700 font-medium leading-relaxed">
+                透明呈現不確定性來源與佔比，確保碳足跡結論在不同參數配置下均具備高度可信度。
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-500 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
-          <div>iSunFA TAITRA</div>
-          <div className="font-mono">#12</div>
+        <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
+          <div>TAITRA</div>
+          <div className="font-mono">#10</div>
         </div>
       </div>
     </div>

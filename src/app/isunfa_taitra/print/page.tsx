@@ -14,6 +14,26 @@ import TaitraSlide11 from '@/app/isunfa_taitra/11/page';
 import TaitraSlide12 from '@/app/isunfa_taitra/12/page';
 import TaitraSlide13 from '@/app/isunfa_taitra/13/page';
 import TaitraSlide14 from '@/app/isunfa_taitra/14/page';
+import TaitraSlide15 from '@/app/isunfa_taitra/15/page';
+import TaitraSlide16 from '@/app/isunfa_taitra/16/page';
+import TaitraSlide17 from '@/app/isunfa_taitra/17/page';
+import TaitraSlide18 from '@/app/isunfa_taitra/18/page';
+import TaitraSlide19 from '@/app/isunfa_taitra/19/page';
+import TaitraSlide20 from '@/app/isunfa_taitra/20/page';
+import TaitraSlide21 from '@/app/isunfa_taitra/21/page';
+import TaitraSlide22 from '@/app/isunfa_taitra/22/page';
+import TaitraSlide23 from '@/app/isunfa_taitra/23/page';
+import TaitraSlide24 from '@/app/isunfa_taitra/24/page';
+import TaitraSlide25 from '@/app/isunfa_taitra/25/page';
+import TaitraSlide26 from '@/app/isunfa_taitra/26/page';
+import TaitraSlide27 from '@/app/isunfa_taitra/27/page';
+import TaitraSlide28 from '@/app/isunfa_taitra/28/page';
+import TaitraSlide29 from '@/app/isunfa_taitra/29/page';
+import TaitraSlide30 from '@/app/isunfa_taitra/30/page';
+import TaitraSlide31 from '@/app/isunfa_taitra/31/page';
+import TaitraSlide32 from '@/app/isunfa_taitra/32/page';
+import TaitraSlide33 from '@/app/isunfa_taitra/33/page';
+import TaitraSlide34 from '@/app/isunfa_taitra/34/page';
 
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
@@ -223,7 +243,7 @@ export default function TaitraPrint() {
         }
       `}} />
 
-      <div className="slide-page"><TaitraSlide1 /></div>
+            <div className="slide-page"><TaitraSlide1 /></div>
       <div className="slide-page"><TaitraSlide2 /></div>
       <div className="slide-page"><TaitraSlide3 /></div>
       <div className="slide-page"><TaitraSlide4 /></div>
@@ -237,6 +257,26 @@ export default function TaitraPrint() {
       <div className="slide-page"><TaitraSlide12 /></div>
       <div className="slide-page"><TaitraSlide13 /></div>
       <div className="slide-page"><TaitraSlide14 /></div>
+      <div className="slide-page"><TaitraSlide15 /></div>
+      <div className="slide-page"><TaitraSlide16 /></div>
+      <div className="slide-page"><TaitraSlide17 /></div>
+      <div className="slide-page"><TaitraSlide18 /></div>
+      <div className="slide-page"><TaitraSlide19 /></div>
+      <div className="slide-page"><TaitraSlide20 /></div>
+      <div className="slide-page"><TaitraSlide21 /></div>
+      <div className="slide-page"><TaitraSlide22 /></div>
+      <div className="slide-page"><TaitraSlide23 /></div>
+      <div className="slide-page"><TaitraSlide24 /></div>
+      <div className="slide-page"><TaitraSlide25 /></div>
+      <div className="slide-page"><TaitraSlide26 /></div>
+      <div className="slide-page"><TaitraSlide27 /></div>
+      <div className="slide-page"><TaitraSlide28 /></div>
+      <div className="slide-page"><TaitraSlide29 /></div>
+      <div className="slide-page"><TaitraSlide30 /></div>
+      <div className="slide-page"><TaitraSlide31 /></div>
+      <div className="slide-page"><TaitraSlide32 /></div>
+      <div className="slide-page"><TaitraSlide33 /></div>
+      <div className="slide-page"><TaitraSlide34 /></div>
     </div>
   );
 }

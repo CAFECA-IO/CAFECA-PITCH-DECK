@@ -1,109 +1,80 @@
 'use client';
 
-import { BookOpen, CheckSquare, Activity, RotateCcw, ShieldCheck } from 'lucide-react';
+import { Leaf, Info, ArrowRightLeft, ShieldCheck } from 'lucide-react';
 
-export default function TaitraSlide7() {
+export default function TaitraSlide5() {
   return (
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
         
-        <div className="px-16 pt-16 z-10 flex items-center justify-between">
-          <div>
-            <span className="text-sky-600 font-bold tracking-[0.2em] text-sm uppercase bg-sky-50 px-4 py-1.5 rounded-full border border-sky-100">Step 1 Verification</span>
-            <h2 className="text-3xl font-extrabold text-slate-900 mt-4">
-              步驟一檢核：AI 自我檢驗與信心度評估
-            </h2>
-            <p className="text-slate-500 mt-2 text-lg">透過注入專業會計準則，賦予 AI 自行設計測驗與反思錯誤的能力。</p>
-          </div>
-          <ShieldCheck className="w-16 h-16 text-sky-200" />
+        <div className="px-16 pt-16 z-10">
+          <span className="text-emerald-600 font-bold tracking-[0.2em] text-sm uppercase bg-emerald-50 px-4 py-1.5 rounded-full border border-emerald-100">
+            What is Carbon Footprint?
+          </span>
+          <h2 className="text-4xl font-extrabold text-slate-900 mt-4">
+            碳足跡意義 (1/3)：什麼是產品碳足跡 (CFP)？
+          </h2>
+          <p className="text-slate-500 mt-2 text-lg max-w-3xl">
+            在綠色轉型的道路上，企業必須精準理解「碳足跡」的科學量化定義與計算規範。
+          </p>
         </div>
 
-        <div className="flex-1 px-16 z-10 mt-8 flex flex-col gap-6">
-          
-          <div className="flex gap-6 h-full pb-12">
-            {/* Knowledge Injection */}
-            <div className="w-1/3 bg-slate-900 rounded-2xl p-6 text-white shadow-lg relative flex flex-col">
-              <div className="flex items-center gap-3 mb-4 text-sky-400">
-                <BookOpen size={24} />
-                <h3 className="text-xl font-bold">1. 注入結構化知識</h3>
-              </div>
-              <p className="text-sm text-slate-400 mb-6">任務執行前，限定 AI 僅能參考以下範圍：</p>
-              
-              <div className="space-y-4 flex-1">
-                <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                  <h4 className="font-bold text-sky-300 text-sm mb-1">IFRS / GAAP 會計準則</h4>
-                  <p className="text-xs text-slate-400">第 15 號「客戶合約之收入」與「營業費用分類規範」。</p>
+        <div className="flex-1 px-16 z-10 grid grid-cols-12 gap-8 mt-4 pb-12 items-center">
+          {/* Left Block: Definition Card (7 cols) */}
+          <div className="col-span-7 bg-slate-900 text-white p-8 rounded-2xl shadow-lg relative overflow-hidden h-fit">
+            <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-emerald-500/20 rounded-full blur-2xl pointer-events-none" />
+            <h3 className="text-2xl font-bold flex items-center gap-3 text-emerald-400 mb-6">
+              <Leaf /> 產品碳足跡 (CFP) 的科學定義
+            </h3>
+            <p className="text-lg text-slate-200 leading-relaxed mb-6">
+              指依據 **生命週期評估 (LCA)** 方法學，量化單一產品系統中所有**溫室氣體 (GHG)** 排放量與清除量的總和，並以**二氧化碳當量 (CO₂e)** 呈現的數值。
+            </p>
+            <div className="space-y-4">
+              <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700 flex items-start gap-3">
+                <Info className="text-sky-400 mt-1 flex-shrink-0" size={18} />
+                <div>
+                  <h4 className="font-bold text-slate-100 text-sm">以「二氧化碳當量 (CO₂e)」統一計量</h4>
+                  <p className="text-xs text-slate-400 mt-0.5">將 CH₄ (甲烷)、N₂O (氧化亞氮) 等多種溫室氣體，依據 IPCC 公佈的全球暖化潛勢 (GWP 100) 乘數，折算為等同的 CO₂ 排放量進行加總。</p>
                 </div>
-                <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                  <h4 className="font-bold text-sky-300 text-sm mb-1">在地稅務法規</h4>
-                  <p className="text-xs text-slate-400">統一發票使用辦法、營業稅法 (5% 稅額計算)。</p>
+              </div>
+              <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700 flex items-start gap-3">
+                <ShieldCheck className="text-emerald-400 mt-1 flex-shrink-0" size={18} />
+                <div>
+                  <h4 className="font-bold text-slate-100 text-sm">國際統一標準：ISO 14067:2018</h4>
+                  <p className="text-xs text-slate-400 mt-0.5">全球公認最嚴謹的產品碳足跡量化標準，為企業申報、申訴與國際稽核提供唯一的共同語言與程序指引。</p>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* AI Auto Inspection & Confidence */}
-            <div className="w-2/3 flex flex-col gap-6">
-              
-              <div className="flex gap-6 h-1/2">
-                <div className="flex-1 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-                  <div className="flex items-center gap-3 mb-4 text-emerald-600">
-                    <CheckSquare size={24} />
-                    <h3 className="text-xl font-bold">2. AI 自主設計檢驗項目</h3>
-                  </div>
-                  <ul className="space-y-3 text-sm text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-500 font-bold">▪</span>
-                      [借貸平衡檢驗] 檢查擷取之明細項目加總，是否嚴格等於憑證總金額？
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-500 font-bold">▪</span>
-                      [稅額邏輯檢驗] 銷售額 × 5% 是否等於稅額 (容許進位誤差)？
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-500 font-bold">▪</span>
-                      [會計科目合規] 該品項對應之會計科目，是否落於 GAAP 營業費用表內？
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          {/* Right Block: Boundaries (5 cols) */}
+          <div className="col-span-5 space-y-6">
+            <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
+              <ArrowRightLeft className="text-emerald-600" /> 常見系統邊界劃分
+            </h3>
+            
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <span className="text-xs font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Cradle-to-Gate</span>
+              <h4 className="font-bold text-slate-800 text-lg mt-2 mb-1">搖籃到大門 (B2B 中間產品)</h4>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                包含從最上游原料開採、運輸至本廠，加工生產成半成品出廠前的所有碳排。適用於供應鏈間之零組件交易。
+              </p>
+            </div>
 
-              <div className="flex gap-6 h-1/2">
-                <div className="flex-1 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-6 shadow-sm text-white">
-                  <div className="flex items-center gap-3 mb-4 text-amber-400">
-                    <Activity size={24} />
-                    <h3 className="text-xl font-bold">3. 信心度評估與重做機制</h3>
-                  </div>
-                  
-                  <div className="flex items-center gap-8">
-                    <div className="text-center relative">
-                      <svg className="w-24 h-24 transform -rotate-90">
-                        <circle cx="48" cy="48" r="40" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-slate-700" />
-                        <circle cx="48" cy="48" r="40" stroke="currentColor" strokeWidth="8" fill="transparent" strokeDasharray="251.2" strokeDashoffset="62.8" className="text-rose-500" />
-                      </svg>
-                      <div className="absolute inset-0 flex items-center justify-center font-bold text-xl">75%</div>
-                    </div>
-                    
-                    <div className="flex-1 space-y-3">
-                      <div className="bg-rose-950/40 p-3 rounded-lg border border-rose-900/50">
-                        <p className="text-sm text-rose-200"><span className="font-bold text-rose-400">觸發條件：</span> 信心度 &lt; 90% (加總出現 1 塊錢誤差)</p>
-                      </div>
-                      <div className="bg-amber-950/40 p-3 rounded-lg border border-amber-900/50 flex items-center gap-2">
-                        <RotateCcw className="text-amber-400 w-5 h-5" />
-                        <p className="text-sm text-amber-200"><span className="font-bold text-amber-400">執行動作：</span> 拋棄本次幻覺生成，重啟微型任務，並要求 AI 重新校對稅額進位邏輯。</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Cradle-to-Grave</span>
+              <h4 className="font-bold text-slate-800 text-lg mt-2 mb-1">搖籃到墳墓 (B2C 終端消費品)</h4>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                涵蓋原料、製造、運送、分銷、消費者使用，到最後的報廢、回收與處置階段。適用於銷售給大眾的終端消費品。
+              </p>
             </div>
           </div>
         </div>
 
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
-          <div>iSunFA TAITRA</div>
-          <div className="font-mono">#07</div>
+          <div>TAITRA</div>
+          <div className="font-mono">#05</div>
         </div>
       </div>
     </div>

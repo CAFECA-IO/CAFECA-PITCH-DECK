@@ -12,6 +12,7 @@ import ISunFASlide9 from '@/app/isunfa_chiayi/9/page';
 import ISunFASlide10 from '@/app/isunfa_chiayi/10/page';
 import ISunFASlide11 from '@/app/isunfa_chiayi/11/page';
 import ISunFASlide12 from '@/app/isunfa_chiayi/12/page';
+import ISunFASlide13 from '@/app/isunfa_chiayi/13/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -231,6 +232,7 @@ export default function ISunFAChiayiPrint() {
       <div className="slide-page"><ISunFASlide10 /></div>
       <div className="slide-page"><ISunFASlide11 /></div>
       <div className="slide-page"><ISunFASlide12 /></div>
+      <div className="slide-page"><ISunFASlide13 /></div>
     </div>
   );
 }
