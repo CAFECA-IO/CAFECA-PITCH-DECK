@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Eye, FileText, Cpu, ArrowRight } from 'lucide-react';
 
-export default function CafecaIsunfaSlide5() {
+export default function IsunfaCnSlide5() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
@@ -21,7 +21,7 @@ export default function CafecaIsunfaSlide5() {
             <span className="text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs">iSunFA Solution</span>
           </div>
           <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-300 leading-tight">
-            企業的綠色眼睛，人工智能碳會計師 — 費思
+            企业的绿色眼睛，人工智能碳会计师 — 费思
           </h1>
         </div>
         <div className="opacity-80 mt-1">
@@ -34,7 +34,7 @@ export default function CafecaIsunfaSlide5() {
 
         <div className="bg-slate-950/60 backdrop-blur-md border border-slate-800 p-8 rounded-3xl mb-8">
           <p className="text-xl text-slate-200 font-medium leading-relaxed text-justify">
-            以<strong className="text-emerald-400 mx-1 font-extrabold">全方位企業活動憑證</strong>為核心，自動勾稽進料單、採購單、運輸單與發票傳票。結合 <strong className="text-sky-400 mx-1 font-extrabold">AI 自動提示機制</strong>，引導人工精準補件，兼顧<strong className="text-emerald-300 mx-1 font-extrabold">自動化效率</strong>與<strong className="text-sky-300 mx-1 font-extrabold">審計嚴謹度</strong>。
+            以<strong className="text-emerald-400 mx-1 font-extrabold">全方位企业活動凭证</strong>为核心，自動勾稽进料單、采购單、运输單与发票记账凭证。結合 <strong className="text-sky-400 mx-1 font-extrabold">AI 自動提示机制</strong>，引导人工精准补件，兼顾<strong className="text-emerald-300 mx-1 font-extrabold">自動化效率</strong>与<strong className="text-sky-300 mx-1 font-extrabold">審计严谨度</strong>。
           </p>
         </div>
 
@@ -46,9 +46,9 @@ export default function CafecaIsunfaSlide5() {
             <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 mb-3">
               <FileText size={24} />
             </div>
-            <h4 className="font-bold text-slate-200 text-sm mb-1">全方位活動憑證</h4>
+            <h4 className="font-bold text-slate-200 text-sm mb-1">全方位活動凭证</h4>
             <p className="text-xs text-slate-500 leading-normal">
-              自動勾稽進料單、採購單、運輸單與發票傳票
+              自動勾稽进料單、采购單、运输單与发票记账凭证
             </p>
           </div>
 
@@ -59,9 +59,9 @@ export default function CafecaIsunfaSlide5() {
             <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center text-slate-950 mb-3 shadow-[0_0_15px_rgba(16,185,129,0.4)]">
               <Cpu size={24} />
             </div>
-            <h4 className="font-bold text-emerald-300 text-sm mb-1">AI 勾稽與自動提示</h4>
+            <h4 className="font-bold text-emerald-300 text-sm mb-1">AI 勾稽与自動提示</h4>
             <p className="text-xs text-emerald-100/70 leading-normal">
-              引導人工精準補件，兼顧效率與審計嚴謹度
+              引导人工精准补件，兼顾效率与審计严谨度
             </p>
           </div>
 
@@ -72,9 +72,9 @@ export default function CafecaIsunfaSlide5() {
             <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-sky-400 mb-3">
               <Eye size={24} />
             </div>
-            <h4 className="font-bold text-slate-200 text-sm mb-1">審計合規與核算</h4>
+            <h4 className="font-bold text-slate-200 text-sm mb-1">審计合规与核算</h4>
             <p className="text-xs text-slate-500 leading-normal">
-              產出符合國際標準之高信賴度碳足跡報告
+              产出符合国际标准之高信赖度碳足迹报告
             </p>
           </div>
 

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { MapPin, Landmark, TrendingUp, Network } from 'lucide-react';
 
-export default function CafecaIsunfaSlide9() {
+export default function IsunfaCnSlide9() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
@@ -21,7 +21,7 @@ export default function CafecaIsunfaSlide9() {
             <span className="text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs">Market Opportunity / TAM</span>
           </div>
           <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-300 leading-tight">
-            東亞製造業供應鏈市場規模
+            东亚制造业供应链市场规模
           </h1>
         </div>
         <div className="opacity-80 mt-1">
@@ -45,11 +45,11 @@ export default function CafecaIsunfaSlide9() {
             </div>
             
             <h2 className="text-4xl font-black text-white font-mono flex items-baseline gap-1 mt-3">
-              &gt; 15 <span className="text-lg text-emerald-400 font-sans">億 TWD / 年</span>
+              &gt; 15 <span className="text-lg text-emerald-400 font-sans">亿新台币/年</span>
             </h2>
             
             <p className="text-xs text-slate-400 leading-relaxed mt-4">
-              排除中國市場，僅東亞與東協的核心製造業合規年產值已超過 15 億新台幣。iSunFA 的地端超輕量部署極適合這類注重商業隱私的精密供應鏈企業。
+              排除中国市场，仅东亚与东协的核心制造业合规年产值已超过 15 亿新台币。iSunFA 的地端超轻量部署极适合这类注重商业隐私的精密供应链企业。
             </p>
           </div>
 
@@ -59,10 +59,10 @@ export default function CafecaIsunfaSlide9() {
             </div>
             <div>
               <h4 className="font-bold text-slate-200 text-xs mb-1">
-                生態合作與戰略資源
+                生态合作与战略资源
               </h4>
               <p className="text-[10px] text-slate-400 leading-relaxed">
-                大量使用台智雲超算加速器，成大創新育成中心、日本 ATR KGAP+ 資源，並透過讓利分潤與多家系統整合商合作。
+                大量使用台智云超算加速器，成大创新育成中心、日本 ATR KGAP+ 资源，并透过让利分润与多家系统整合商合作。
               </p>
             </div>
           </div>
@@ -73,13 +73,13 @@ export default function CafecaIsunfaSlide9() {
           
           {[
             { country: '日本 (Japan)', count: '25,000 家', color: 'text-amber-400', bg: 'bg-amber-500/10' },
-            { country: '韓國 (Korea)', count: '15,000 家', color: 'text-sky-400', bg: 'bg-sky-500/10' },
-            { country: '臺灣 (Taiwan)', count: '12,000 家', color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+            { country: '韩国 (Korea)', count: '15,000 家', color: 'text-sky-400', bg: 'bg-sky-500/10' },
+            { country: '台湾 (Taiwan)', count: '12,000 家', color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
             { country: '越南 (Vietnam)', count: '8,000 家', color: 'text-teal-400', bg: 'bg-teal-500/10' },
             { country: '印尼 (Indonesia)', count: '6,500 家', color: 'text-indigo-400', bg: 'bg-indigo-500/10' },
-            { country: '馬來西亞 (Malaysia)', count: '5,000 家', color: 'text-rose-400', bg: 'bg-rose-500/10' },
-            { country: '菲律賓 (Philippines)', count: '4,000 家', color: 'text-orange-400', bg: 'bg-orange-500/10' },
-            { country: '合計 (東亞製造業)', count: '75,500 家', color: 'text-white', bg: 'bg-white/5 font-extrabold' }
+            { country: '马来西亚 (Malaysia)', count: '5,000 家', color: 'text-rose-400', bg: 'bg-rose-500/10' },
+            { country: '菲律宾 (Philippines)', count: '4,000 家', color: 'text-orange-400', bg: 'bg-orange-500/10' },
+            { country: '合计 (东亚制造业)', count: '75,500 家', color: 'text-white', bg: 'bg-white/5 font-extrabold' }
           ].map((item, i) => (
             <div key={i} className={`bg-slate-950/60 border border-slate-800 p-4 rounded-xl flex items-center justify-between hover:border-slate-700 transition-colors`}>
               <div className="flex items-center gap-2">

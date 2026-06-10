@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-export default function CafecaIsunfaSlide13() {
+export default function IsunfaHotaiStarfabAcceleratorSlide17() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] text-white relative flex items-center justify-center overflow-hidden font-sans border border-slate-900/80 shadow-2xl">
 
@@ -37,7 +37,7 @@ export default function CafecaIsunfaSlide13() {
             {/* Target Value symbol */}
             <div className="flex flex-col items-center">
               <span className="text-emerald-400 font-bold drop-shadow-[0_0_25px_rgba(16,185,129,0.4)] text-[80px] leading-none">Ω</span>
-              <span className="text-xs font-mono text-slate-500 mt-4 tracking-tighter uppercase font-normal text-center">Total Net-Zero Value</span>
+              <span className="text-xs font-mono text-slate-500 mt-4 tracking-tighter uppercase font-normal text-center">Total Vehicle Asset Value</span>
             </div>
 
             <span className="text-slate-700 not-italic font-light text-6xl">=</span>
@@ -55,10 +55,10 @@ export default function CafecaIsunfaSlide13() {
                   <span className="text-white text-5xl tracking-wide">Tech(t)</span>
                   <span className="text-emerald-500/50 not-italic text-5xl mx-2">·</span>
                   <span className="text-emerald-400 text-6xl font-italic leading-none">η</span>
-                  <span className="text-base text-emerald-700 italic translate-y-3 ml-1">green</span>
+                  <span className="text-xs text-emerald-700 italic translate-y-3 ml-1">preservation</span>
                 </div>
                 <div className="pt-4 text-3xl text-slate-500 font-mono italic shrink-0">
-                  <span className="inline">ln( Energy Consumption )</span>
+                  <span className="inline">ln( Maintenance Quality )</span>
                 </div>
               </div>
 
@@ -69,30 +69,30 @@ export default function CafecaIsunfaSlide13() {
           {/* Corporate Vision statement */}
           <div className="mt-20 max-w-3xl text-center px-4 w-full">
             <p className="text-2xl text-slate-300 font-light leading-relaxed">
-              「讓科技與環境共同創造
+              「讓科技與服務共同創造
               <span className="inline">
-                <span className="text-emerald-400 font-semibold mx-3 italic">秩序的累積</span>
+                <span className="text-emerald-400 font-semibold mx-3 italic">價值的累積</span>
                 」
               </span>
             </p>
             <p className="mt-6 text-sm text-slate-500 font-mono tracking-widest uppercase opacity-60 leading-relaxed">
-              Reversing climate entropy through time-weighted intelligence.
+              Reversing vehicle asset entropy through time-weighted intelligence.
             </p>
           </div>
 
           {/* Bottom stats nodes */}
           <div className="mt-16 flex justify-center gap-x-24 border-t border-white/5 pt-10 w-full px-4">
             <div className="text-center group/stat shrink-0">
-              <p className="text-emerald-500 font-mono text-sm group-hover:scale-110 transition-transform">dE/dt ↓</p>
-              <p className="text-[10px] text-slate-600 uppercase mt-2 font-bold tracking-widest">Entropy Rate</p>
+              <p className="text-emerald-500 font-mono text-sm group-hover:scale-110 transition-transform">dAsset/dt ↑</p>
+              <p className="text-[10px] text-slate-600 uppercase mt-2 font-bold tracking-widest">Asset Rate</p>
             </div>
             <div className="text-center group/stat shrink-0">
-              <p className="text-emerald-500 font-mono text-sm group-hover:scale-110 transition-transform">Σ Intelligence ↑</p>
-              <p className="text-[10px] text-slate-600 uppercase mt-2 font-bold tracking-widest">Tech Accumulation</p>
+              <p className="text-emerald-500 font-mono text-sm group-hover:scale-110 transition-transform">Σ Records ↑</p>
+              <p className="text-[10px] text-slate-600 uppercase mt-2 font-bold tracking-widest">Record Volume</p>
             </div>
             <div className="text-center group/stat shrink-0">
-              <p className="text-emerald-500 font-mono text-sm group-hover:scale-110 transition-transform">100% Green</p>
-              <p className="text-[10px] text-slate-600 uppercase mt-2 font-bold tracking-widest">Energy Source</p>
+              <p className="text-emerald-500 font-mono text-sm group-hover:scale-110 transition-transform">100% Verified</p>
+              <p className="text-[10px] text-slate-600 uppercase mt-2 font-bold tracking-widest">Verified Status</p>
             </div>
           </div>
 
@@ -101,6 +101,15 @@ export default function CafecaIsunfaSlide13() {
         {/* Grid Corner details */}
         <div className="absolute top-8 left-8 w-6 h-6 border-t-2 border-l-2 border-emerald-500/30"></div>
         <div className="absolute bottom-8 right-8 w-6 h-6 border-b-2 border-r-2 border-emerald-500/30"></div>
+      </div>
+
+      {/* Footer */}
+      <div className="absolute bottom-4 left-0 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium">
+        <div>Slide 17 / 17</div>
+        <div className="flex gap-2 items-center">
+          <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+          2026 HOTAI MOTOR x iSunFA
+        </div>
       </div>
 
     </div>

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Lightbulb, Database, Sparkles, TrendingDown } from 'lucide-react';
 
-export default function CafecaIsunfaSlide6() {
+export default function IsunfaCnSlide6() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
@@ -21,7 +21,7 @@ export default function CafecaIsunfaSlide6() {
             <span className="text-amber-400 font-bold tracking-[0.2em] uppercase text-xs">Dynamic Optimization</span>
           </div>
           <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-emerald-400 to-sky-300 leading-tight">
-            綠色典範對標與淨零路徑最佳化
+            绿色典范对标与净零路径优化
           </h1>
         </div>
         <div className="opacity-80 mt-1">
@@ -40,10 +40,10 @@ export default function CafecaIsunfaSlide6() {
             </div>
             
             <p className="text-lg text-slate-200 leading-relaxed text-justify mb-4">
-              工業製程的每個環節，總有其他企業效率更好，碳排更少。iSunFA 能依據龐大資料庫，<strong className="text-amber-400">秒級鎖定各個製程環節的綠色典範</strong>。
+              工业工艺的每个环节，总有其他企业效率更好，碳排更少。iSunFA 能依据庞大数据库，<strong className="text-amber-400">秒级锁定各个工艺环节的绿色典范</strong>。
             </p>
             <p className="text-base text-slate-300 leading-relaxed text-justify">
-              透過 AI 演算法，為企業量身打造、並動態導入<strong className="text-emerald-400">最理想的淨零路徑</strong>，幫助企業以最低代價取得頂級市場競爭力。
+              透过 AI 算法，为企业量身打造、并動态导入<strong className="text-emerald-400">最理想的净零路径</strong>，帮助企业以最低代价取得顶级市场竞争力。
             </p>
           </div>
         </div>
@@ -56,9 +56,9 @@ export default function CafecaIsunfaSlide6() {
               <Database size={22} />
             </div>
             <div>
-              <h4 className="font-bold text-slate-200 text-base mb-1">秒級典範資料庫檢索</h4>
+              <h4 className="font-bold text-slate-200 text-base mb-1">秒级典范数据库檢索</h4>
               <p className="text-xs text-slate-400 leading-relaxed">
-                收集數十萬項國際指標製造業數據，即時比對自身工藝與行業最佳實踐（Best Practice）的排碳落差。
+                收集数十万项国际指标制造业数据，即时比对自身工艺与行业最佳实践（Best Practice）的排碳落差。
               </p>
             </div>
           </div>
@@ -68,9 +68,9 @@ export default function CafecaIsunfaSlide6() {
               <Sparkles size={22} />
             </div>
             <div>
-              <h4 className="font-bold text-slate-200 text-base mb-1">AI 動態生成減碳路径</h4>
+              <h4 className="font-bold text-slate-200 text-base mb-1">AI 動态生成减碳路径</h4>
               <p className="text-xs text-slate-400 leading-relaxed">
-                考量預算、產能配置與設備生命週期，AI 演算法自動規劃高性價比的長短期減碳替代路徑。
+                考量预算、产能配置与设备生命周期，AI 算法自動规划高性价比的长短期减碳替代路径。
               </p>
             </div>
           </div>
@@ -80,9 +80,9 @@ export default function CafecaIsunfaSlide6() {
               <Lightbulb size={22} />
             </div>
             <div>
-              <h4 className="font-bold text-slate-200 text-base mb-1">低代價、高市場競爭力</h4>
+              <h4 className="font-bold text-slate-200 text-base mb-1">低代价、高市场竞争力</h4>
               <p className="text-xs text-slate-400 leading-relaxed">
-                避免盲目進行天價設備汰換，優先進行局部製程優化或綠能採購，精準配置企業有限資源。
+                避免盲目进行天价设备汰换，优先进行局部工艺优化或绿能采购，精准配置企业有限资源。
               </p>
             </div>
           </div>

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Activity, Globe, Leaf } from 'lucide-react';
 
-export default function CafecaIsunfaSlide3() {
+export default function IsunfaCnSlide3() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
@@ -21,7 +21,7 @@ export default function CafecaIsunfaSlide3() {
             <span className="text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs">The Global Equation</span>
           </div>
           <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-300 leading-tight">
-            氣候物理的絕對常數
+            气候物理的绝对常数
           </h1>
         </div>
         <div className="opacity-80 mt-1">
@@ -40,22 +40,22 @@ export default function CafecaIsunfaSlide3() {
             </div>
             
             <div className="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-4">
-              物理性減碳轉換常數
+              物理性减碳转换常数
             </div>
             
             {/* The Big Equation */}
             <div className="space-y-4">
               <div className="text-6xl font-black text-emerald-400 font-mono tracking-tight">
-                -2.2 兆噸 CO₂e
+                -2.2 兆吨 CO₂e
               </div>
               <div className="text-2xl text-slate-400 font-light">=</div>
               <div className="text-5xl font-extrabold text-white font-mono flex items-center justify-center gap-2">
-                -1<span className="text-3xl text-emerald-500">°C</span> 平均氣溫
+                -1<span className="text-3xl text-emerald-500">°C</span> 平均气温
               </div>
             </div>
             
             <p className="text-slate-400 text-sm mt-6 leading-relaxed">
-              地球平均溫度每降低 1 度，背後需要全球產業鏈實質減排 2.2 兆噸二氧化碳當量。這是一場毫無投機空間的硬核競賽。
+              地球平均温度每降低 1 度，背后需要全球产业链实质减排 2.2 兆吨二氧化碳当量。这是一场毫无投机空間的硬核竞赛。
             </p>
           </div>
         </div>
@@ -67,9 +67,9 @@ export default function CafecaIsunfaSlide3() {
               <Leaf size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-200 mb-2">不可迴避的絕對額度</h3>
+              <h3 className="text-xl font-bold text-slate-200 mb-2">不可回避的绝对额度</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                2.2 兆噸是物理界限。各國政府將此常數拆解至各類製造產業，使得碳配額（Allowance）與碳稅指標成為企業財務報表的「第二資產負債表」。
+                2.2 兆吨是物理界限。各国政府将此常数拆解至各类制造产业，使得碳配额（Allowance）与碳税指标成为企业财务报表的「第二资产负债表」。
               </p>
             </div>
           </div>
@@ -79,9 +79,9 @@ export default function CafecaIsunfaSlide3() {
               <Activity size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-200 mb-2">精準度即是企業利潤</h3>
+              <h3 className="text-xl font-bold text-slate-200 mb-2">精准度即是企业利润</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                誤差 1% 意味著百萬元的關稅計罰或配額流失。企業需要極致精準、製程級的碳足跡數據，而非模糊的估算數據。
+                误差 1% 意味着百万元的关税计罚或配额流失。企业需要极致精准、工艺级的碳足迹数据，而非模糊的估算数据。
               </p>
             </div>
           </div>

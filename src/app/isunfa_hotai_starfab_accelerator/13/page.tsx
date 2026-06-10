@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Cpu, Server, Database, Library, Workflow } from 'lucide-react';
 
-export default function CafecaIsunfaSlide10() {
+export default function IsunfaHotaiStarfabAcceleratorSlide13() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
@@ -21,7 +21,7 @@ export default function CafecaIsunfaSlide10() {
             <span className="text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs">Technical Barrier / Moat</span>
           </div>
           <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-300 leading-tight">
-            專業壁壘：人工智能碳會計師－ 費思（FAITH）
+            技術優勢：車況推理估值專家，人工智能碳會計師－費思
           </h1>
         </div>
         <div className="flex flex-col items-end gap-2">
@@ -44,15 +44,15 @@ export default function CafecaIsunfaSlide10() {
               <Cpu size={24} />
             </div>
             <div>
-              <h4 className="font-bold text-slate-200 text-base">NVIDIA H100 算力集群預訓練</h4>
+              <h4 className="font-bold text-slate-200 text-base">Taipei-1 超級電腦預訓練權重</h4>
               <p className="text-xs text-slate-400 leading-relaxed">
-                利用國家級 Taipei-1 超級電腦算力完成核心預訓練，融合 1990 至 2025 年全球企業公開數據。
+                利用國家級 Taipei-1 超級電腦算力完成多模態預訓練，融合 2010 至 2026 年繁雜的中古客車交易數據與保修歷史資料。
               </p>
             </div>
           </div>
           <div className="text-right flex-shrink-0">
             <span className="text-xs text-slate-500 uppercase font-bold tracking-wider block">Core Moat</span>
-            <span className="text-xl font-bold text-emerald-400">製程級推理專家</span>
+            <span className="text-xl font-bold text-emerald-400">車況推理與估值專家</span>
           </div>
         </div>
 
@@ -64,16 +64,16 @@ export default function CafecaIsunfaSlide10() {
             <div className="bg-slate-950/40 border border-slate-800 p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/30 transition-colors">
               <div className="flex items-center gap-3">
                 <Workflow className="text-emerald-400" size={18} />
-                <span className="text-sm font-bold text-slate-200">跨表單自動勾稽引擎</span>
+                <span className="text-sm font-bold text-slate-200">跨單據手寫識別勾稽引擎</span>
               </div>
-              <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono">Dynamic Check</span>
+              <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono">Multimodal OCR</span>
             </div>
             <div className="bg-slate-950/40 border border-slate-800 p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/30 transition-colors">
               <div className="flex items-center gap-3">
                 <Library className="text-sky-400" size={18} />
-                <span className="text-sm font-bold text-slate-200">物理量化與化學方程式守恆</span>
+                <span className="text-sm font-bold text-slate-200">車輛物理損耗與折舊模型</span>
               </div>
-              <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono">Physics Reasoning</span>
+              <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono">Depreciation Model</span>
             </div>
           </div>
 
@@ -86,10 +86,10 @@ export default function CafecaIsunfaSlide10() {
 
             <div className="grid grid-cols-4 gap-2.5">
               {[
-                "財務會計 (Financial)", "化學工程 (Chemical)",
-                "環境工程 (Environmental)", "IFRS / GAAP 準則",
-                "土木工程 (Civil)", "材料工程 (Materials)",
-                "水利工程 (Hydraulic)", "製程最佳化路徑 (Path)"
+                "汽車工程 (Automotive)", "材料磨損 (Materials)",
+                "折舊精算 (Actuarial)", "保修規範 (Service Specs)",
+                "手寫工單數據集", "中古車價格歷史",
+                "底盤與引擎物理", "零件副廠率模型"
               ].map((topic, i) => (
                 <div key={i} className="bg-slate-900/50 rounded-lg py-2 px-1 text-center border border-slate-800 text-slate-300 text-xs font-medium hover:border-emerald-500/30 hover:bg-slate-900 transition-colors shadow-inner flex items-center justify-center">
                   <span className="truncate">{topic}</span>
@@ -104,10 +104,10 @@ export default function CafecaIsunfaSlide10() {
 
       {/* Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10 pointer-events-none">
-        <div>Slide 10 / 11</div>
+        <div>Slide 13 / 17</div>
         <div className="flex gap-2 items-center">
           <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-          2026 iSunFA
+          2026 HOTAI MOTOR x iSunFA
         </div>
       </div>
 

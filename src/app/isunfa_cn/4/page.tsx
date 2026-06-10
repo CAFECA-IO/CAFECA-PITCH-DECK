@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Settings, Factory, ShieldAlert, Cpu } from 'lucide-react';
 
-export default function CafecaIsunfaSlide4() {
+export default function IsunfaCnSlide4() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
@@ -21,7 +21,7 @@ export default function CafecaIsunfaSlide4() {
             <span className="text-amber-400 font-bold tracking-[0.2em] uppercase text-xs">The Enterprise Dilemma</span>
           </div>
           <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 leading-tight">
-            製造業最核心痛點：極致複雜的製程
+            制造业最核心痛点：极致复杂的工艺
           </h1>
         </div>
         <div className="opacity-80 mt-1">
@@ -36,12 +36,12 @@ export default function CafecaIsunfaSlide4() {
         <div className="w-2/5 space-y-6">
           <div className="bg-gradient-to-br from-amber-950/60 to-red-950/40 border border-amber-500/30 p-8 rounded-3xl shadow-lg relative overflow-hidden">
             <h2 className="text-3xl font-black text-white leading-snug mb-4">
-              每間企業活動各異，<br />
-              有成百上千個製程活動，<br />
-              <span className="text-amber-400">到底該怎麼減？</span>
+              每間企业活動各異，<br />
+              有成百上千个工艺活動，<br />
+              <span className="text-amber-400">到底该怎么减？</span>
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed">
-              傳統碳盤查顧問依賴人工填表、抽樣估算，無法觸及底層工藝的真實排碳。面對極具複雜度與多樣性的重工業，顧問模式完全失靈。
+              传统碳盘查顾问依赖人工填表、抽样估算，无法触及底层工艺的真实排碳。面对极具复杂度与多样性的重工业，顾问模式完全失靈。
             </p>
           </div>
         </div>
@@ -54,8 +54,8 @@ export default function CafecaIsunfaSlide4() {
               <Factory size={22} />
             </div>
             <div>
-              <h4 className="font-bold text-slate-200 text-base mb-1">化學反應與熔煉</h4>
-              <p className="text-xs text-slate-400">鋼鐵、金屬與石化等製程的直接排放，高溫控制極難抽樣估算。</p>
+              <h4 className="font-bold text-slate-200 text-base mb-1">化学反应与熔炼</h4>
+              <p className="text-xs text-slate-400">钢铁、金属与石化等工艺的直接排放，高温控制极难抽样估算。</p>
             </div>
           </div>
 
@@ -64,8 +64,8 @@ export default function CafecaIsunfaSlide4() {
               <Settings size={22} />
             </div>
             <div>
-              <h4 className="font-bold text-slate-200 text-base mb-1">機械加工與動力裝配</h4>
-              <p className="text-xs text-slate-400">多段切削、沖壓與點焊等動態能耗，受現場排班影響劇烈波動。</p>
+              <h4 className="font-bold text-slate-200 text-base mb-1">机械加工与動力装配</h4>
+              <p className="text-xs text-slate-400">多段切削、冲压与点焊等動态能耗，受现场排班影响剧烈波動。</p>
             </div>
           </div>
 
@@ -74,8 +74,8 @@ export default function CafecaIsunfaSlide4() {
               <Cpu size={22} />
             </div>
             <div>
-              <h4 className="font-bold text-slate-200 text-base mb-1">無塵室與高精密製程</h4>
-              <p className="text-xs text-slate-400">極端溫濕度控制、化學氣體清洗，間接碳排計算耗時繁複。</p>
+              <h4 className="font-bold text-slate-200 text-base mb-1">洁净室与高精密工艺</h4>
+              <p className="text-xs text-slate-400">极端温湿度控制、化学气体清洗，間接碳排计算耗时繁复。</p>
             </div>
           </div>
 
@@ -84,8 +84,8 @@ export default function CafecaIsunfaSlide4() {
               <ShieldAlert size={22} />
             </div>
             <div>
-              <h4 className="font-bold text-slate-200 text-base mb-1">範疇三供應鏈回溯</h4>
-              <p className="text-xs text-slate-400">上游原材料來源成千上萬，手動收集供應商數據堪稱不可能任務。</p>
+              <h4 className="font-bold text-slate-200 text-base mb-1">范畴三供应链回溯</h4>
+              <p className="text-xs text-slate-400">上游原材料来源成千上万，手動收集供应商数据堪称不可能任务。</p>
             </div>
           </div>
 

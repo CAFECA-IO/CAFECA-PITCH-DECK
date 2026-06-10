@@ -3,19 +3,19 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MonitorPlay, Download, Grid, Maximize2 } from 'lucide-react';
 import Link from 'next/link';
-import CafecaIsunfaSlide1 from '@/app/cafeca_isunfa/1/page';
-import CafecaIsunfaSlide2 from '@/app/cafeca_isunfa/2/page';
-import CafecaIsunfaSlide3 from '@/app/cafeca_isunfa/3/page';
-import CafecaIsunfaSlide4 from '@/app/cafeca_isunfa/4/page';
-import CafecaIsunfaSlide5 from '@/app/cafeca_isunfa/5/page';
-import CafecaIsunfaSlide6 from '@/app/cafeca_isunfa/6/page';
-import CafecaIsunfaSlide7 from '@/app/cafeca_isunfa/7/page';
-import CafecaIsunfaSlide8 from '@/app/cafeca_isunfa/8/page';
-import CafecaIsunfaSlide9 from '@/app/cafeca_isunfa/9/page';
-import CafecaIsunfaSlide10 from '@/app/cafeca_isunfa/10/page';
-import CafecaIsunfaSlide11 from '@/app/cafeca_isunfa/11/page';
+import IsunfaCnSlide1 from '@/app/isunfa_cn/1/page';
+import IsunfaCnSlide2 from '@/app/isunfa_cn/2/page';
+import IsunfaCnSlide3 from '@/app/isunfa_cn/3/page';
+import IsunfaCnSlide4 from '@/app/isunfa_cn/4/page';
+import IsunfaCnSlide5 from '@/app/isunfa_cn/5/page';
+import IsunfaCnSlide6 from '@/app/isunfa_cn/6/page';
+import IsunfaCnSlide7 from '@/app/isunfa_cn/7/page';
+import IsunfaCnSlide8 from '@/app/isunfa_cn/8/page';
+import IsunfaCnSlide9 from '@/app/isunfa_cn/9/page';
+import IsunfaCnSlide10 from '@/app/isunfa_cn/10/page';
+import IsunfaCnSlide11 from '@/app/isunfa_cn/11/page';
 
-export default function CafecaIsunfaSlideBrowser() {
+export default function IsunfaCnSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const totalSlides = 11;
   const containerRef = useRef<HTMLDivElement>(null);
@@ -52,17 +52,17 @@ export default function CafecaIsunfaSlideBrowser() {
 
   // Info: Slide Components Mapping
   const SlideComponents: { [key: number]: React.ComponentType } = {
-    1: CafecaIsunfaSlide1,
-    2: CafecaIsunfaSlide2,
-    3: CafecaIsunfaSlide3,
-    4: CafecaIsunfaSlide4,
-    5: CafecaIsunfaSlide5,
-    6: CafecaIsunfaSlide6,
-    7: CafecaIsunfaSlide7,
-    8: CafecaIsunfaSlide8,
-    9: CafecaIsunfaSlide9,
-    10: CafecaIsunfaSlide10,
-    11: CafecaIsunfaSlide11,
+    1: IsunfaCnSlide1,
+    2: IsunfaCnSlide2,
+    3: IsunfaCnSlide3,
+    4: IsunfaCnSlide4,
+    5: IsunfaCnSlide5,
+    6: IsunfaCnSlide6,
+    7: IsunfaCnSlide7,
+    8: IsunfaCnSlide8,
+    9: IsunfaCnSlide9,
+    10: IsunfaCnSlide10,
+    11: IsunfaCnSlide11,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
@@ -141,13 +141,13 @@ export default function CafecaIsunfaSlideBrowser() {
 
         {/* Info: Actions */}
         <div className="flex items-center gap-3">
-          <Link href="/cafeca_isunfa/print" target="_blank" className="hidden md:block">
+          <Link href="/isunfa_cn/print" target="_blank" className="hidden md:block">
             <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700 text-gray-200">
               <Download size={14} />
               <span>PDF / PNGs</span>
             </button>
           </Link>
-          <Link href={`/cafeca_isunfa/${currentSlide}`} target="_blank" className="hidden md:block">
+          <Link href={`/isunfa_cn/${currentSlide}`} target="_blank" className="hidden md:block">
             <button className="p-2 hover:bg-neutral-800 rounded-md text-gray-400 hover:text-white transition-colors">
               <Maximize2 size={18} />
             </button>

@@ -1,16 +1,16 @@
 'use client';
 
-import CafecaIsunfaSlide1 from '@/app/cafeca_isunfa/1/page';
-import CafecaIsunfaSlide2 from '@/app/cafeca_isunfa/2/page';
-import CafecaIsunfaSlide3 from '@/app/cafeca_isunfa/3/page';
-import CafecaIsunfaSlide4 from '@/app/cafeca_isunfa/4/page';
-import CafecaIsunfaSlide5 from '@/app/cafeca_isunfa/5/page';
-import CafecaIsunfaSlide6 from '@/app/cafeca_isunfa/6/page';
-import CafecaIsunfaSlide7 from '@/app/cafeca_isunfa/7/page';
-import CafecaIsunfaSlide8 from '@/app/cafeca_isunfa/8/page';
-import CafecaIsunfaSlide9 from '@/app/cafeca_isunfa/9/page';
-import CafecaIsunfaSlide10 from '@/app/cafeca_isunfa/10/page';
-import CafecaIsunfaSlide11 from '@/app/cafeca_isunfa/11/page';
+import IsunfaCnSlide1 from '@/app/isunfa_cn/1/page';
+import IsunfaCnSlide2 from '@/app/isunfa_cn/2/page';
+import IsunfaCnSlide3 from '@/app/isunfa_cn/3/page';
+import IsunfaCnSlide4 from '@/app/isunfa_cn/4/page';
+import IsunfaCnSlide5 from '@/app/isunfa_cn/5/page';
+import IsunfaCnSlide6 from '@/app/isunfa_cn/6/page';
+import IsunfaCnSlide7 from '@/app/isunfa_cn/7/page';
+import IsunfaCnSlide8 from '@/app/isunfa_cn/8/page';
+import IsunfaCnSlide9 from '@/app/isunfa_cn/9/page';
+import IsunfaCnSlide10 from '@/app/isunfa_cn/10/page';
+import IsunfaCnSlide11 from '@/app/isunfa_cn/11/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -43,7 +43,7 @@ const parsePageRange = (range: string, max: number): Set<number> => {
   return pages;
 };
 
-export default function CafecaIsunfaPrint() {
+export default function IsunfaCnPrint() {
   const [isExporting, setIsExporting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [showExportMenu, setShowExportMenu] = useState(false);
@@ -217,17 +217,17 @@ export default function CafecaIsunfaPrint() {
         }
       `}} />
 
-      <div className="slide-page"><CafecaIsunfaSlide1 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide2 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide3 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide4 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide5 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide6 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide7 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide8 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide9 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide10 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide11 /></div>
+      <div className="slide-page"><IsunfaCnSlide1 /></div>
+      <div className="slide-page"><IsunfaCnSlide2 /></div>
+      <div className="slide-page"><IsunfaCnSlide3 /></div>
+      <div className="slide-page"><IsunfaCnSlide4 /></div>
+      <div className="slide-page"><IsunfaCnSlide5 /></div>
+      <div className="slide-page"><IsunfaCnSlide6 /></div>
+      <div className="slide-page"><IsunfaCnSlide7 /></div>
+      <div className="slide-page"><IsunfaCnSlide8 /></div>
+      <div className="slide-page"><IsunfaCnSlide9 /></div>
+      <div className="slide-page"><IsunfaCnSlide10 /></div>
+      <div className="slide-page"><IsunfaCnSlide11 /></div>
     </div>
   );
 }

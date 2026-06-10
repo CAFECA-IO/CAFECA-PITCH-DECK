@@ -3,21 +3,27 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MonitorPlay, Download, Grid, Maximize2 } from 'lucide-react';
 import Link from 'next/link';
-import CafecaIsunfaSlide1 from '@/app/cafeca_isunfa/1/page';
-import CafecaIsunfaSlide2 from '@/app/cafeca_isunfa/2/page';
-import CafecaIsunfaSlide3 from '@/app/cafeca_isunfa/3/page';
-import CafecaIsunfaSlide4 from '@/app/cafeca_isunfa/4/page';
-import CafecaIsunfaSlide5 from '@/app/cafeca_isunfa/5/page';
-import CafecaIsunfaSlide6 from '@/app/cafeca_isunfa/6/page';
-import CafecaIsunfaSlide7 from '@/app/cafeca_isunfa/7/page';
-import CafecaIsunfaSlide8 from '@/app/cafeca_isunfa/8/page';
-import CafecaIsunfaSlide9 from '@/app/cafeca_isunfa/9/page';
-import CafecaIsunfaSlide10 from '@/app/cafeca_isunfa/10/page';
-import CafecaIsunfaSlide11 from '@/app/cafeca_isunfa/11/page';
+import IsunfaHotaiStarfabAcceleratorSlide1 from '@/app/isunfa_hotai_starfab_accelerator/1/page';
+import IsunfaHotaiStarfabAcceleratorSlide2 from '@/app/isunfa_hotai_starfab_accelerator/2/page';
+import IsunfaHotaiStarfabAcceleratorSlide3 from '@/app/isunfa_hotai_starfab_accelerator/3/page';
+import IsunfaHotaiStarfabAcceleratorSlide4 from '@/app/isunfa_hotai_starfab_accelerator/4/page';
+import IsunfaHotaiStarfabAcceleratorSlide5 from '@/app/isunfa_hotai_starfab_accelerator/5/page';
+import IsunfaHotaiStarfabAcceleratorSlide6 from '@/app/isunfa_hotai_starfab_accelerator/6/page';
+import IsunfaHotaiStarfabAcceleratorSlide7 from '@/app/isunfa_hotai_starfab_accelerator/7/page';
+import IsunfaHotaiStarfabAcceleratorSlide8 from '@/app/isunfa_hotai_starfab_accelerator/8/page';
+import IsunfaHotaiStarfabAcceleratorSlide9 from '@/app/isunfa_hotai_starfab_accelerator/9/page';
+import IsunfaHotaiStarfabAcceleratorSlide10 from '@/app/isunfa_hotai_starfab_accelerator/10/page';
+import IsunfaHotaiStarfabAcceleratorSlide11 from '@/app/isunfa_hotai_starfab_accelerator/11/page';
+import IsunfaHotaiStarfabAcceleratorSlide12 from '@/app/isunfa_hotai_starfab_accelerator/12/page';
+import IsunfaHotaiStarfabAcceleratorSlide13 from '@/app/isunfa_hotai_starfab_accelerator/13/page';
+import IsunfaHotaiStarfabAcceleratorSlide14 from '@/app/isunfa_hotai_starfab_accelerator/14/page';
+import IsunfaHotaiStarfabAcceleratorSlide15 from '@/app/isunfa_hotai_starfab_accelerator/15/page';
+import IsunfaHotaiStarfabAcceleratorSlide16 from '@/app/isunfa_hotai_starfab_accelerator/16/page';
+import IsunfaHotaiStarfabAcceleratorSlide17 from '@/app/isunfa_hotai_starfab_accelerator/17/page';
 
-export default function CafecaIsunfaSlideBrowser() {
+export default function IsunfaHotaiStarfabAcceleratorSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 11;
+  const totalSlides = 17;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
@@ -52,33 +58,45 @@ export default function CafecaIsunfaSlideBrowser() {
 
   // Info: Slide Components Mapping
   const SlideComponents: { [key: number]: React.ComponentType } = {
-    1: CafecaIsunfaSlide1,
-    2: CafecaIsunfaSlide2,
-    3: CafecaIsunfaSlide3,
-    4: CafecaIsunfaSlide4,
-    5: CafecaIsunfaSlide5,
-    6: CafecaIsunfaSlide6,
-    7: CafecaIsunfaSlide7,
-    8: CafecaIsunfaSlide8,
-    9: CafecaIsunfaSlide9,
-    10: CafecaIsunfaSlide10,
-    11: CafecaIsunfaSlide11,
+    1: IsunfaHotaiStarfabAcceleratorSlide1,
+    2: IsunfaHotaiStarfabAcceleratorSlide2,
+    3: IsunfaHotaiStarfabAcceleratorSlide3,
+    4: IsunfaHotaiStarfabAcceleratorSlide4,
+    5: IsunfaHotaiStarfabAcceleratorSlide5,
+    6: IsunfaHotaiStarfabAcceleratorSlide6,
+    7: IsunfaHotaiStarfabAcceleratorSlide7,
+    8: IsunfaHotaiStarfabAcceleratorSlide8,
+    9: IsunfaHotaiStarfabAcceleratorSlide9,
+    10: IsunfaHotaiStarfabAcceleratorSlide10,
+    11: IsunfaHotaiStarfabAcceleratorSlide11,
+    12: IsunfaHotaiStarfabAcceleratorSlide12,
+    13: IsunfaHotaiStarfabAcceleratorSlide13,
+    14: IsunfaHotaiStarfabAcceleratorSlide14,
+    15: IsunfaHotaiStarfabAcceleratorSlide15,
+    16: IsunfaHotaiStarfabAcceleratorSlide16,
+    17: IsunfaHotaiStarfabAcceleratorSlide17,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
 
   const slideTitles: { [key: number]: string } = {
-    1: 'Cover: iSunFA',
-    2: 'Climate Crisis',
-    3: 'The Carbon Equation',
-    4: 'Manufacturing Complexity',
-    5: 'AI Carbon Inference',
-    6: 'Dynamic Optimization',
-    7: '5 Compliance Pillars',
-    8: 'Edge AI Efficiency',
-    9: 'Target Market / TAM',
-    10: 'Technical Moat',
-    11: 'The Negentropy Law',
+    1: 'Cover: Hotai DPP',
+    2: 'Ecosystem Pain Points',
+    3: 'The Vehicle Value Equation',
+    4: 'Work Order Fragmentation',
+    5: 'AI Document OCR',
+    6: 'Mobile Scanner Mockup',
+    7: 'Mobile DPP Dashboard',
+    8: 'Real-time Valuation & Journey',
+    9: 'Real-time Condition & Valuation',
+    10: '5 Pillars of Vehicle DPP',
+    11: 'Hotai Ecosystem Scale / TAM',
+    12: '3-Month Launch Plan',
+    13: 'Technical Moat',
+    14: 'Cooperation Data Request',
+    15: 'Core Team',
+    16: 'Team Achievements',
+    17: 'The Negentropy Law',
   };
 
   const nextSlide = useCallback(() => {
@@ -113,8 +131,8 @@ export default function CafecaIsunfaSlideBrowser() {
             <MonitorPlay size={20} className="text-white" />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-gray-200">iSunFA Presentation</h1>
-            <p className="text-xs text-gray-500">v1.0.0 • 2026 iSunFA CDIB Pitch</p>
+            <h1 className="text-sm font-bold text-gray-200">車輛數位產品護照 (Vehicle DPP)</h1>
+            <p className="text-xs text-gray-500">v1.0.0 • 2026 HOTAI MOTOR x iSunFA</p>
           </div>
         </Link>
 
@@ -141,13 +159,13 @@ export default function CafecaIsunfaSlideBrowser() {
 
         {/* Info: Actions */}
         <div className="flex items-center gap-3">
-          <Link href="/cafeca_isunfa/print" target="_blank" className="hidden md:block">
+          <Link href="/isunfa_hotai_starfab_accelerator/print" target="_blank" className="hidden md:block">
             <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700 text-gray-200">
               <Download size={14} />
               <span>PDF / PNGs</span>
             </button>
           </Link>
-          <Link href={`/cafeca_isunfa/${currentSlide}`} target="_blank" className="hidden md:block">
+          <Link href={`/isunfa_hotai_starfab_accelerator/${currentSlide}`} target="_blank" className="hidden md:block">
             <button className="p-2 hover:bg-neutral-800 rounded-md text-gray-400 hover:text-white transition-colors">
               <Maximize2 size={18} />
             </button>

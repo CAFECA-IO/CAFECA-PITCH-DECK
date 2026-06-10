@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { ShieldAlert, Cpu, Landmark, Coins } from 'lucide-react';
 
-export default function CafecaIsunfaSlide8() {
+export default function IsunfaCnSlide8() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
@@ -21,7 +21,7 @@ export default function CafecaIsunfaSlide8() {
             <span className="text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs">Edge AI & Cost Efficiency</span>
           </div>
           <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-300 leading-tight">
-            地端超輕量部署：極致的高性價比
+            地端超轻量部署：极致的高性价比
           </h1>
         </div>
         <div className="opacity-80 mt-1">
@@ -50,17 +50,17 @@ export default function CafecaIsunfaSlide8() {
 
             <div className="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800 space-y-1.5 mb-3">
               <div className="flex justify-between items-center text-xs">
-                <span className="text-slate-400">運算硬體需求</span>
+                <span className="text-slate-400">运算硬体需求</span>
                 <span className="font-bold text-white font-mono">20x RTX 5070 Ti</span>
               </div>
               <div className="flex justify-between items-center text-xs">
-                <span className="text-slate-400">總體部署時間</span>
-                <span className="font-bold text-emerald-400 font-mono">72 小時</span>
+                <span className="text-slate-400">总体部署时間</span>
+                <span className="font-bold text-emerald-400 font-mono">72 小时</span>
               </div>
             </div>
 
             <p className="text-[10px] text-slate-400 leading-relaxed">
-              72小時內即可完成組織碳排查、產品碳足跡、數位產品護照、綠色供應鏈管理與淨零規劃！
+              72小时内即可完成组织碳排查、产品碳足迹、数字产品护照、绿色供应链管理与净零规划！
             </p>
           </div>
 
@@ -70,10 +70,10 @@ export default function CafecaIsunfaSlide8() {
             </div>
             <div>
               <h4 className="font-bold text-slate-200 text-xs mb-1">
-                輕資產商業模式 (Business Model)
+                轻资产商业模式 (Business Model)
               </h4>
               <p className="text-[10px] text-slate-400 leading-relaxed">
-                提供雲端訂閱（加價 60%）或地端 Turn-Key 軟硬一體機（硬體加價 60% 買斷），公司無硬體資本墊款壓力。
+                提供云端订阅（加价 60%）或地端 Turn-Key 软硬一体机（硬体加价 60% 买断），公司无硬体资本垫款压力。
               </p>
             </div>
           </div>
@@ -84,9 +84,9 @@ export default function CafecaIsunfaSlide8() {
           <div>
             <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2 mb-1">
               <Landmark className="text-emerald-500" size={18} />
-              方案營運成本極致對比 (TWD)
+              方案营运成本极致对比 (TWD)
             </h3>
-            <p className="text-xs text-slate-500">一次性建置與長期營運費用比較</p>
+            <p className="text-xs text-slate-500">一次性建置与长期营运费用比较</p>
           </div>
 
           <div className="bg-slate-950/60 border border-slate-800/80 p-6 rounded-[2rem] space-y-6">
@@ -96,14 +96,14 @@ export default function CafecaIsunfaSlide8() {
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-slate-300 flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500"></span>
-                  傳統客製化 LLM 專案 (開發+維護)
+                  传统客制化 LLM 项目 (开发+维护)
                 </span>
                 <span className="font-mono font-bold text-rose-400">&gt; TWD 45,000,000</span>
               </div>
               <div className="w-full h-3 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
                 <div className="h-full bg-gradient-to-r from-rose-600 to-rose-400 rounded-full shadow-[0_0_8px_rgba(244,63,94,0.4)]" style={{ width: '100%' }}></div>
               </div>
-              <p className="text-[10px] text-slate-500">巨額研發前置資金，專案定製週期 6-12 個月，具高維護成本與專案失敗風險。</p>
+              <p className="text-[10px] text-slate-500">巨额研发前置资金，项目定制周期 6-12 个月，具高维护成本与项目失败风险。</p>
             </div>
 
             {/* Bar 2: Gemini 3 Flash */}
@@ -111,14 +111,14 @@ export default function CafecaIsunfaSlide8() {
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-slate-300 flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                  Gemini 3 Flash 雲端 API (5年累計)
+                  Gemini 3 Flash 云端 API (5年累计)
                 </span>
                 <span className="font-mono font-bold text-amber-400">TWD 7,900,000</span>
               </div>
               <div className="w-full h-3 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
                 <div className="h-full bg-gradient-to-r from-amber-600 to-amber-400 rounded-full shadow-[0_0_8px_rgba(245,158,11,0.4)]" style={{ width: '17.5%' }}></div>
               </div>
-              <p className="text-[10px] text-slate-500">依 Token 數計費，累積呼叫成本隨時間遞增，且面臨高敏感商業與技術數據外洩風險。</p>
+              <p className="text-[10px] text-slate-500">依 Token 数计费，累积呼叫成本随时間递增，且面临高敏感商业与技术数据外泄风险。</p>
             </div>
 
             {/* Bar 3: FAITH */}
@@ -126,14 +126,14 @@ export default function CafecaIsunfaSlide8() {
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-emerald-400 flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_#10b981]"></span>
-                  FAITH 地端邊緣運算 (單次分析成本)
+                  FAITH 地端边缘运算 (單次分析成本)
                 </span>
                 <span className="font-mono font-bold text-emerald-400">TWD 16,438</span>
               </div>
               <div className="w-full h-3 bg-slate-900 rounded-full overflow-hidden border border-slate-800/80 relative">
                 <div className="h-full bg-emerald-500 rounded-full shadow-[0_0_12px_#10b981]" style={{ width: '1.5%' }}></div>
               </div>
-              <p className="text-[10px] text-emerald-400/80">單次製程級分析營運成本僅需 TWD 16,438（內含 20 顯示卡全速運轉 72 小時之 864 度電費、極嚴苛設備一年折舊攤提與研發成本）。</p>
+              <p className="text-[10px] text-emerald-400/80">單次工艺级分析营运成本仅需 TWD 16,438（内含 20 显示卡全速运转 72 小时之 864 度电费、极严苛设备一年折旧摊提与研发成本）。</p>
             </div>
 
           </div>
@@ -144,9 +144,9 @@ export default function CafecaIsunfaSlide8() {
               <ShieldAlert size={20} />
             </div>
             <div>
-              <h4 className="font-bold text-emerald-300 text-xs mb-0.5">零信任地端安全，兼顧法規與長效省錢</h4>
+              <h4 className="font-bold text-emerald-300 text-xs mb-0.5">零信任地端安全，兼顾法规与长效省钱</h4>
               <p className="text-[10px] text-slate-400 leading-relaxed">
-                不僅消除高敏感生產數據上雲外洩之風險，更節約了絕大部分的長期 API 支出，以自主算力實現永續經營。
+                不仅消除高敏感生产数据上云外泄之风险，更节约了绝大部分的长期 API 支出，以自主算力实现永续经营。
               </p>
             </div>
           </div>

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-export default function CafecaIsunfaSlide11() {
+export default function IsunfaCnSlide11() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] text-white relative flex items-center justify-center overflow-hidden font-sans border border-slate-900/80 shadow-2xl">
 
@@ -69,9 +69,9 @@ export default function CafecaIsunfaSlide11() {
           {/* Corporate Vision statement */}
           <div className="mt-20 max-w-3xl text-center px-4 w-full">
             <p className="text-2xl text-slate-300 font-light leading-relaxed">
-              「讓科技與環境共同創造
+              「让科技与环境共同创造
               <span className="inline">
-                <span className="text-emerald-400 font-semibold mx-3 italic">秩序的累積</span>
+                <span className="text-emerald-400 font-semibold mx-3 italic">秩序的累积</span>
                 」
               </span>
             </p>

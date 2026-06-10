@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Flame, AlertTriangle, ShieldAlert } from 'lucide-react';
 
-export default function CafecaIsunfaSlide2() {
+export default function IsunfaCnSlide2() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
@@ -21,7 +21,7 @@ export default function CafecaIsunfaSlide2() {
             <span className="text-red-400 font-bold tracking-[0.2em] uppercase text-xs">Climate Crisis / External Driver</span>
           </div>
           <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-400 to-orange-300 leading-tight">
-            2026 年全球極端氣候臨界點
+            2026 年全球极端气候临界点
           </h1>
         </div>
         <div className="opacity-80 mt-1">
@@ -41,14 +41,14 @@ export default function CafecaIsunfaSlide2() {
             
             <div className="flex items-center gap-3 text-red-400 font-bold text-sm uppercase tracking-wider mb-2">
               <AlertTriangle className="animate-bounce" size={18} />
-              Heat Dome Effect (熱穹效應)
+              Heat Dome Effect (热穹效应)
             </div>
             
             <h2 className="text-7xl font-black text-white font-mono flex items-baseline gap-1">
               52<span className="text-4xl text-red-500">°C</span>
             </h2>
             <p className="text-slate-300 text-lg leading-relaxed mt-4">
-              極端溫度在東亞及全球工業區創下歷史新高，引發電力崩潰、生產停擺與供應鏈中斷。
+              极端温度在东亚及全球工业区创下历史新高，引发电力崩溃、生产停摆与供应链中断。
             </p>
           </div>
         </div>
@@ -60,9 +60,9 @@ export default function CafecaIsunfaSlide2() {
               <Flame size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-200 mb-2">生產效率的斷崖式下跌</h3>
+              <h3 className="text-xl font-bold text-slate-200 mb-2">生产效率的断崖式下跌</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                極端高溫大幅推升工廠製冷與運作能耗，直接導致電網負載超載，限電與停工常態化，製造業面臨空前的綠色轉型壓力。
+                极端高温大幅推升工厂制冷与运作能耗，直接导致电网负载超载，限电与停工常态化，制造业面临空前的绿色转型压力。
               </p>
             </div>
           </div>
@@ -72,9 +72,9 @@ export default function CafecaIsunfaSlide2() {
               <ShieldAlert size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-200 mb-2">綠色合規的監管海嘯</h3>
+              <h3 className="text-xl font-bold text-slate-200 mb-2">绿色合规的监管海啸</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                高溫效應迫使各國政府與國際貿易組織提前收緊碳排上限，CBAM、綠色供應鏈審查從「長期目標」轉變為「即時生存合規考驗」。
+                高温效应迫使各国政府与国际贸易组织提前收紧碳排上限，CBAM、绿色供应链審查从「长期目标」转变为「即时生存合规考验」。
               </p>
             </div>
           </div>

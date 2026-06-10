@@ -1,16 +1,22 @@
 'use client';
 
-import CafecaIsunfaSlide1 from '@/app/cafeca_isunfa/1/page';
-import CafecaIsunfaSlide2 from '@/app/cafeca_isunfa/2/page';
-import CafecaIsunfaSlide3 from '@/app/cafeca_isunfa/3/page';
-import CafecaIsunfaSlide4 from '@/app/cafeca_isunfa/4/page';
-import CafecaIsunfaSlide5 from '@/app/cafeca_isunfa/5/page';
-import CafecaIsunfaSlide6 from '@/app/cafeca_isunfa/6/page';
-import CafecaIsunfaSlide7 from '@/app/cafeca_isunfa/7/page';
-import CafecaIsunfaSlide8 from '@/app/cafeca_isunfa/8/page';
-import CafecaIsunfaSlide9 from '@/app/cafeca_isunfa/9/page';
-import CafecaIsunfaSlide10 from '@/app/cafeca_isunfa/10/page';
-import CafecaIsunfaSlide11 from '@/app/cafeca_isunfa/11/page';
+import IsunfaHotaiStarfabAcceleratorSlide1 from '@/app/isunfa_hotai_starfab_accelerator/1/page';
+import IsunfaHotaiStarfabAcceleratorSlide2 from '@/app/isunfa_hotai_starfab_accelerator/2/page';
+import IsunfaHotaiStarfabAcceleratorSlide3 from '@/app/isunfa_hotai_starfab_accelerator/3/page';
+import IsunfaHotaiStarfabAcceleratorSlide4 from '@/app/isunfa_hotai_starfab_accelerator/4/page';
+import IsunfaHotaiStarfabAcceleratorSlide5 from '@/app/isunfa_hotai_starfab_accelerator/5/page';
+import IsunfaHotaiStarfabAcceleratorSlide6 from '@/app/isunfa_hotai_starfab_accelerator/6/page';
+import IsunfaHotaiStarfabAcceleratorSlide7 from '@/app/isunfa_hotai_starfab_accelerator/7/page';
+import IsunfaHotaiStarfabAcceleratorSlide8 from '@/app/isunfa_hotai_starfab_accelerator/8/page';
+import IsunfaHotaiStarfabAcceleratorSlide9 from '@/app/isunfa_hotai_starfab_accelerator/9/page';
+import IsunfaHotaiStarfabAcceleratorSlide10 from '@/app/isunfa_hotai_starfab_accelerator/10/page';
+import IsunfaHotaiStarfabAcceleratorSlide11 from '@/app/isunfa_hotai_starfab_accelerator/11/page';
+import IsunfaHotaiStarfabAcceleratorSlide12 from '@/app/isunfa_hotai_starfab_accelerator/12/page';
+import IsunfaHotaiStarfabAcceleratorSlide13 from '@/app/isunfa_hotai_starfab_accelerator/13/page';
+import IsunfaHotaiStarfabAcceleratorSlide14 from '@/app/isunfa_hotai_starfab_accelerator/14/page';
+import IsunfaHotaiStarfabAcceleratorSlide15 from '@/app/isunfa_hotai_starfab_accelerator/15/page';
+import IsunfaHotaiStarfabAcceleratorSlide16 from '@/app/isunfa_hotai_starfab_accelerator/16/page';
+import IsunfaHotaiStarfabAcceleratorSlide17 from '@/app/isunfa_hotai_starfab_accelerator/17/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -43,7 +49,7 @@ const parsePageRange = (range: string, max: number): Set<number> => {
   return pages;
 };
 
-export default function CafecaIsunfaPrint() {
+export default function IsunfaHotaiStarfabAcceleratorPrint() {
   const [isExporting, setIsExporting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [showExportMenu, setShowExportMenu] = useState(false);
@@ -93,7 +99,7 @@ export default function CafecaIsunfaPrint() {
             }
           });
           const base64 = dataUrl.split(',')[1];
-          zip.file(`iSunFA_Slide_${(i + 1).toString().padStart(2, '0')}.png`, base64, { base64: true });
+          zip.file(`Hotai_DPP_Slide_${(i + 1).toString().padStart(2, '0')}.png`, base64, { base64: true });
         }
 
         setProgress(Math.round(((i + 1) / slidePages.length) * 100));
@@ -103,7 +109,7 @@ export default function CafecaIsunfaPrint() {
       const url = URL.createObjectURL(content);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'iSunFA_Slides_PNG.zip';
+      a.download = 'Hotai_DPP_Slides_PNG.zip';
       a.click();
       URL.revokeObjectURL(url);
 
@@ -217,17 +223,23 @@ export default function CafecaIsunfaPrint() {
         }
       `}} />
 
-      <div className="slide-page"><CafecaIsunfaSlide1 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide2 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide3 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide4 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide5 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide6 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide7 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide8 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide9 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide10 /></div>
-      <div className="slide-page"><CafecaIsunfaSlide11 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide1 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide2 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide3 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide4 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide5 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide6 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide7 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide8 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide9 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide10 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide11 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide12 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide13 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide14 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide15 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide16 /></div>
+      <div className="slide-page"><IsunfaHotaiStarfabAcceleratorSlide17 /></div>
     </div>
   );
 }
