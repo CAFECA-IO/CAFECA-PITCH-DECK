@@ -41,13 +41,13 @@ export default function CafecaFaithSlide9() {
           <h2 className="text-4xl font-black leading-tight text-slate-800 tracking-tight">
             市場規模<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 text-5xl">
-              &gt; 75 億 TWD <span className="text-2xl text-slate-500">/ 年</span>
+              &gt; 312.7 億 TWD <span className="text-2xl text-slate-500">/ 年</span>
             </span>
           </h2>
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 mt-4">
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-              排除中國市場，僅東亞與東協的核心製造業每年環境工程商機已超過 75 億新台幣。iSunFA 的地端超輕量部署極適合這類注重商業隱私的精密供應鏈企業。
+              排除中國市場，僅東亞與東協的核心製造業每年環境工程商機已超過 312.7 億新台幣。iSunFA 的地端超輕量部署極適合這類注重商業隱私的精密供應鏈企業。
             </p>
           </div>
         </div>
