@@ -17,10 +17,12 @@ import CafecaFaithSlide11 from '@/app/cafeca_faith/11/page';
 import CafecaFaithSlide12 from '@/app/cafeca_faith/12/page';
 import CafecaFaithSlide13 from '@/app/cafeca_faith/13/page';
 import CafecaFaithSlide14 from '@/app/cafeca_faith/14/page';
+import CafecaFaithSlide15 from '@/app/cafeca_faith/15/page';
+import CafecaFaithSlide16 from '@/app/cafeca_faith/16/page';
 
 export default function CafecaFaithSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 14;
+  const totalSlides = 16;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
@@ -69,6 +71,8 @@ export default function CafecaFaithSlideBrowser() {
     12: CafecaFaithSlide12,
     13: CafecaFaithSlide13,
     14: CafecaFaithSlide14,
+    15: CafecaFaithSlide15,
+    16: CafecaFaithSlide16,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
@@ -81,13 +85,15 @@ export default function CafecaFaithSlideBrowser() {
     5: '綠色典範移轉',
     6: '循環經濟路徑',
     7: '減碳效益與收入',
-    8: '企業所需分析',
-    9: '市場規模與生態系',
-    10: '專家模型核心',
-    11: '商業模式與定價',
-    12: '底層技術優勢',
-    13: '核心團隊',
-    14: '聯絡資訊',
+    8: '中國砂輪實證',
+    9: '企業所需分析',
+    10: '市場規模與生態系',
+    11: '專家模型核心',
+    12: '商業模式與定價',
+    13: '底層技術優勢',
+    14: '核心團隊',
+    15: '團隊經歷',
+    16: '聯絡資訊',
   };
 
   const nextSlide = useCallback(() => {

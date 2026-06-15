@@ -1,106 +1,84 @@
 'use client';
 
-import { Cloud, Server, CheckCircle2, ShieldCheck, Zap, Database } from 'lucide-react';
+import { Cpu, Database, Network, Globe2, FileText } from 'lucide-react';
+import Image from 'next/image';
 
-export default function CafecaFaithSlide11() {
+export default function CafecaFaithSlide10() {
   return (
-    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
-
-      {/* Background Accents (Matching Screenshot Style) */}
-      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
-        <div className="absolute -left-32 -top-32 w-[600px] h-[600px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
-        <div className="absolute -right-32 -bottom-32 w-[600px] h-[600px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
+      
+      {/* Background Gradients */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute left-1/4 top-10 w-[600px] h-[600px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute left-10 bottom-10 w-[400px] h-[400px] bg-orange-50 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Header */}
-      <div className="z-20 text-center mb-8 mt-4">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100 mb-4 shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-          <span className="text-sm font-semibold text-orange-600 uppercase tracking-widest">Business Model</span>
-        </div>
-        <h2 className="text-4xl font-black text-slate-800 tracking-tight">循前人軌跡，創轉型綠徑</h2>
-        <p className="text-base text-slate-500 mt-2 font-medium">針對不同規模企業，提供最適合的數位綠色轉型方案</p>
+      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
+        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+        <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">AI Core Knowledge Base</span>
       </div>
 
-      {/* Pricing Cards Container */}
-      <div className="z-20 w-full max-w-4xl grid grid-cols-2 gap-8 px-12 relative">
-
-        {/* Card 1: Cloud Subscription */}
-        <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-            <Cloud className="w-40 h-40 text-orange-500" />
+      {/* Content Container (Left 2/3) */}
+      <div className="z-10 w-2/3 h-full flex flex-col justify-center px-16 relative">
+        
+        {/* Header Text */}
+        <div className="space-y-6 mb-12 mt-4 text-left">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100">
+            <Cpu className="w-5 h-5 text-orange-500" />
+            <span className="text-sm font-semibold text-orange-600">專家模型核心</span>
           </div>
 
-          <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-4 shadow-inner">
-            <Cloud className="w-7 h-7" />
-          </div>
-
-          <h3 className="text-2xl font-bold text-slate-800 mb-2">雲端訂閱 (無硬體)</h3>
-          <p className="text-slate-500 mb-6 text-sm">適合快速導入、尋求輕量化綠色轉型的中小企業，無須額外建置硬體資源。</p>
-
-          <div className="flex items-baseline gap-2 mb-6">
-            <span className="text-sm font-bold text-slate-400">NT$</span>
-            <span className="text-5xl font-black text-slate-800 tracking-tighter">29,400</span>
-            <span className="text-slate-400 font-medium">/ 年</span>
-          </div>
-
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <CheckCircle2 className="w-5 h-5 text-orange-500" />
-              <span className="text-slate-600 font-medium text-sm">純軟體 SaaS 雲端服務</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Zap className="w-5 h-5 text-orange-500" />
-              <span className="text-slate-600 font-medium text-sm">即開即用，快速對接</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Database className="w-5 h-5 text-orange-500" />
-              <span className="text-slate-600 font-medium text-sm">標準溫室氣體與碳足跡運算</span>
-            </div>
-          </div>
+          <h2 className="text-4xl font-black leading-tight text-slate-800">
+            整合 <span className="text-orange-500">1995 至 2025</span> 全球公開產業資訊<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">與跨領域工程專業知識，訓練而成的人工智能。</span>
+          </h2>
         </div>
 
-        {/* Card 2: On-Premise Buyout */}
-        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 border border-orange-400 shadow-2xl hover:shadow-[0_20px_50px_rgba(249,115,22,0.3)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
-            <Server className="w-40 h-40 text-white" />
-          </div>
-
-          <div className="w-14 h-14 bg-white/20 text-white rounded-2xl flex items-center justify-center mb-4 shadow-inner border border-white/20 backdrop-blur-sm">
-            <Server className="w-7 h-7" />
-          </div>
-
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-2xl font-bold text-white">本地部署 (買斷制)</h3>
-            <span className="px-3 py-1 bg-white text-orange-600 text-[10px] font-bold rounded-full uppercase tracking-wider shadow-sm">
-              企業首選
-            </span>
-          </div>
-
-          <p className="text-orange-100 mb-6 text-sm">針對高度注重資料隱私與邊緣運算的精密製造供應鏈，提供地端超輕量部署。</p>
-
-          <div className="flex items-baseline gap-2 mb-6">
-            <span className="text-sm font-bold text-orange-200">NT$</span>
-            <span className="text-5xl font-black text-white tracking-tighter">303,660</span>
-            <span className="text-orange-200 font-medium">/ 買斷</span>
-          </div>
-
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <ShieldCheck className="w-5 h-5 text-white" />
-              <span className="text-white font-medium text-sm">高度資安防護與商業隱私</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Server className="w-5 h-5 text-white" />
-              <span className="text-white font-medium text-sm">邊緣硬體設備與地端主機</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Zap className="w-5 h-5 text-white" />
-              <span className="text-white font-medium text-sm">自定義系統對接與客製化擴充</span>
-            </div>
-          </div>
+        {/* Core Model Visualization Layout */}
+        <div className="w-full flex gap-10 items-center">
+           <div className="grid grid-cols-2 gap-4 flex-1">
+             <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
+                <Database className="w-8 h-8 text-orange-500" />
+                <div>
+                  <h3 className="font-bold text-slate-800">全球專利與文獻</h3>
+                  <p className="text-xs text-slate-500 mt-1">超過 30 年的跨國技術文獻、工程專利與綠色製程規格標準。</p>
+                </div>
+             </div>
+             <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
+                <Network className="w-8 h-8 text-orange-500" />
+                <div>
+                  <h3 className="font-bold text-slate-800">跨領域數據圖譜</h3>
+                  <p className="text-xs text-slate-500 mt-1">串聯材料科學、熱力學與自動化工程的知識圖譜，精準推理。</p>
+                </div>
+             </div>
+             <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
+                <Globe2 className="w-8 h-8 text-orange-500 shrink-0" />
+                <div>
+                  <h3 className="font-bold text-slate-800">多國語言與法規適配</h3>
+                  <p className="text-xs text-slate-500 mt-1">內建多國環保法規與碳排放審計標準，無縫接軌國際。</p>
+                </div>
+             </div>
+             <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
+                <FileText className="w-8 h-8 text-orange-500 shrink-0" />
+                <div>
+                  <h3 className="font-bold text-slate-800">全球 ESG 與財務報告</h3>
+                  <p className="text-xs text-slate-500 mt-1">深度學習歷年全球上市企業 ESG 永續報告與財務審計報告，掌握真實轉型路徑。</p>
+                </div>
+             </div>
+           </div>
         </div>
 
+      </div>
+
+      {/* Right 1/3 Image Area */}
+      <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
+        <Image
+          src="/cafeca_faith/robot_core.jpeg"
+          alt="AI Core Robot"
+          fill
+          className="object-cover"
+          style={{ objectFit: 'cover' }}
+        />
       </div>
 
     </div>

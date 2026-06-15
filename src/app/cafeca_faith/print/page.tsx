@@ -14,6 +14,8 @@ import CafecaFaithSlide11 from '@/app/cafeca_faith/11/page';
 import CafecaFaithSlide12 from '@/app/cafeca_faith/12/page';
 import CafecaFaithSlide13 from '@/app/cafeca_faith/13/page';
 import CafecaFaithSlide14 from '@/app/cafeca_faith/14/page';
+import CafecaFaithSlide15 from '@/app/cafeca_faith/15/page';
+import CafecaFaithSlide16 from '@/app/cafeca_faith/16/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -234,6 +236,8 @@ export default function CafecaFaithPrint() {
       <div className="slide-page"><CafecaFaithSlide12 /></div>
       <div className="slide-page"><CafecaFaithSlide13 /></div>
       <div className="slide-page"><CafecaFaithSlide14 /></div>
+      <div className="slide-page"><CafecaFaithSlide15 /></div>
+      <div className="slide-page"><CafecaFaithSlide16 /></div>
     </div>
   );
 }
