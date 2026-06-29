@@ -1,116 +1,144 @@
 'use client';
 
-import {
-  LineChart,
-  ShieldCheck,
-  Building,
-  Cpu,
-  Factory,
-  Recycle,
-  Award,
-  Workflow
-} from 'lucide-react';
+import { CheckCircle2, Award, MapPin } from 'lucide-react';
 
-export default function CafecaFaithSlide15() {
-  const experiences = [
+export default function CafecaFaithSlide14() {
+  const sharedFeatures = [
+    '碳標章及減碳標章申請書件全程編製輔導',
+    '協助對接第三方公正查驗機構與現場稽核',
+    '地端 IoT / 電錶自動化數據同步對接',
+    'AI 專家模型推演製程，最佳化減碳路徑',
+  ];
+
+  const tiers = [
     {
-      year: '2017 - 2020',
-      title: '新北市政府溫室氣體追蹤',
-      description: '導入萬級物聯網與邊緣運算裝置，實現全市級溫室氣體即時追蹤系統，奠定巨量環境數據處理基礎。',
-      icon: LineChart,
+      name: '輕量入門級',
+      price: '94,500',
+      description: '提供完整的碳足跡標章與減碳標章申請輔導服務。',
+      criteria: {
+        area: '場域總面積 ≤ 1,000 坪',
+        revenue: '年營業額 ≤ 1 億元',
+      },
+      tag: '微型企業',
+      accentColor: 'from-blue-500 to-cyan-400',
+      bgColor: 'bg-blue-50/50',
+      textColor: 'text-blue-700',
+      borderColor: 'border-blue-100',
     },
     {
-      year: '2018 - 2021',
-      title: '金融監理沙盒實證 (好好證券)',
-      description: '具備深厚合規與資安底蘊，協助企業通過金管會金融監理沙盒實證，厚植創新業務之競爭力。',
-      icon: ShieldCheck,
+      name: '專業成長級',
+      price: '283,500',
+      description: '提供完整的碳足跡標章與減碳標章申請輔導服務。',
+      criteria: {
+        area: '場域總面積 1,000 - 5,000 坪',
+        revenue: '年營業額 1 億 - 5 億元',
+      },
+      tag: '中小型企業',
+      accentColor: 'from-blue-600 to-indigo-600',
+      bgColor: 'bg-blue-50/50',
+      textColor: 'text-blue-700',
+      borderColor: 'border-blue-100',
+      isPopular: true,
     },
     {
-      year: '2019',
-      title: '金管會檢查局數位孿生專案',
-      description: '建構數位孿生實驗環境，強化政策之情境模擬與回測驗證，展現頂尖的模型模擬與演算技術。',
-      icon: Building,
+      name: '旗艦企業級',
+      price: '567,000',
+      description: '提供完整的碳足跡標章與減碳標章申請輔導服務。',
+      criteria: {
+        area: '場域總面積 ≥ 5,000 坪',
+        revenue: '年營業額 ≥ 5 億元',
+      },
+      tag: '大型企業',
+      accentColor: 'from-purple-500 to-indigo-700',
+      bgColor: 'bg-purple-50/50',
+      textColor: 'text-purple-700',
+      borderColor: 'border-purple-100',
     },
-    {
-      year: '2020 - 2021',
-      title: '參與國家高速網路中心專案',
-      description: '參與建構國家級人工智能大數據算力平台「臺灣杉二號」，積累處理超級電腦算力與系統架構經驗。',
-      icon: Cpu,
-    },
-    {
-      year: '2020 - 2022',
-      title: '台積電 (TSMC) 碳盤查實證',
-      description: '開發物流碳足跡工具，協助台積電進行全年度運輸碳盤查，累積大型企業碳盤查經驗。',
-      icon: Factory,
-    },
-    {
-      year: '2025 - 2026',
-      title: '中國砂輪 (KINIK) 碳盤查實證',
-      description: '透過 Green AI 技術實現全自動化碳盤查，結合製程溯源技術，精準發掘污泥廢棄物中的再生價值。',
-      icon: Recycle,
-    },
-    {
-      year: '2026',
-      title: '經濟部與 NVIDIA Taipei-1',
-      description: '獲選第四批次算力執行單位，取得國際頂尖超級電腦算力資源，進一步深化費思模型推理運算與工具調用能力。',
-      icon: Award,
-    },
-    {
-      year: '2022 - Now',
-      title: '費思永續智能核心引擎',
-      description: '收斂過去大型系統與 AI 落地經驗，開創以費思為核心的碳盤查智能機器人，賦能企業實現綠色典範移轉。',
-      icon: Workflow,
-    }
   ];
 
   return (
-    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-gray-100 text-gray-900 font-sans">
-
-      {/* Background Gradients from isunfa.com style */}
-      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none">
-        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff8c00] to-[#ffda44] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div>
-      </div>
-      <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] pointer-events-none">
-        <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff8c00] to-[#ffda44] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div>
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
+      
+      {/* Background Accents */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute -left-32 -top-32 w-[700px] h-[700px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute -right-32 -bottom-32 w-[700px] h-[700px] bg-indigo-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
       </div>
 
       {/* Header */}
-      <div className="z-20 w-full px-16 flex justify-between items-end mb-10 mt-4 border-b border-orange-100 pb-6">
-        <div>
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-orange-50 ring-1 ring-orange-200 mb-4 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-orange-600 animate-pulse"></span>
-            <span className="text-xs font-semibold text-orange-600 uppercase tracking-widest">Experience & Milestones</span>
-          </div>
-          <h2 className="text-4xl font-black text-gray-900 tracking-tight">
-            團隊重要經歷與實績
-          </h2>
+      <div className="z-20 text-center mb-6 mt-2">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-3 shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span className="text-xs font-semibold text-blue-700 uppercase tracking-widest">Solutions & Pricing</span>
         </div>
-        <div className="text-right">
-          <p className="text-gray-500 text-sm font-medium mb-1">關鍵里程碑</p>
-          <p className="text-xl font-bold text-gray-800">2017 – 2026</p>
-        </div>
+        <h2 className="text-4xl font-black text-slate-800 tracking-tight">碳足跡標章方案 (環境部申請)</h2>
+        <p className="text-sm text-slate-500 mt-1 font-medium">依據場域面積與年營業額範疇，提供三種不同級距的碳標章申請輔導，其服務內容均相同</p>
       </div>
 
-      {/* Grid Layout 4x2 */}
-      <div className="z-20 w-full grid grid-cols-4 gap-6 px-16 mb-4">
-        {experiences.map((exp, index) => (
-          <div key={index} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group relative overflow-hidden">
+      {/* Plans Grid */}
+      <div className="z-20 w-full max-w-6xl grid grid-cols-3 gap-6 px-8 relative">
+        {tiers.map((tier, index) => (
+          <div
+            key={index}
+            className={`bg-white rounded-3xl p-6 border transition-all duration-300 relative flex flex-col group overflow-hidden ${
+              tier.isPopular
+                ? 'border-orange-300 shadow-xl ring-2 ring-orange-500/10 -translate-y-1 hover:shadow-2xl'
+                : 'border-slate-200 shadow-lg hover:shadow-xl hover:-translate-y-1'
+            }`}
+          >
+            {/* Highlight ribbon */}
+            <div className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${tier.accentColor}`} />
 
-            {/* Subtle highlight gradient on hover */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-amber-300 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="flex justify-between items-start mb-4">
+              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner ${tier.bgColor} ${tier.textColor}`}>
+                <Award className="w-6 h-6" />
+              </div>
+              <span className={`px-2.5 py-1 text-[10px] font-bold rounded-full ${
+                tier.isPopular
+                  ? 'bg-orange-500 text-white shadow-sm'
+                  : 'bg-slate-100 text-slate-600'
+              }`}>
+                {tier.tag}
+              </span>
+            </div>
 
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-sm font-bold text-orange-500 font-mono tracking-wider">{exp.year}</span>
-              <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-600 group-hover:scale-110 group-hover:bg-orange-100 transition-all">
-                <exp.icon className="w-5 h-5" />
+            <h3 className="text-xl font-bold text-slate-800 mb-1">{tier.name}</h3>
+            <p className="text-[11px] text-slate-400 font-medium mb-3 leading-tight min-h-[32px]">{tier.description}</p>
+
+            {/* Price Section */}
+            <div className="flex items-baseline gap-1 mb-4 border-b border-slate-100 pb-4">
+              <span className="text-xs font-bold text-slate-400">NT$</span>
+              <span className="text-3xl font-black text-slate-800 tracking-tight">{tier.price}</span>
+              <span className="text-slate-400 text-xs font-medium">/ 案</span>
+            </div>
+
+            {/* Criteria Section */}
+            <div className="mb-4 bg-slate-50 rounded-xl p-3 border border-slate-100">
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-slate-400 animate-bounce" />
+                適用範疇基準
+              </div>
+              <div className="space-y-1 text-xs font-semibold text-slate-700">
+                <div className="flex justify-between">
+                  <span>場域總面積</span>
+                  <span className="text-slate-900 font-bold">{tier.criteria.area}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>年營業額範圍</span>
+                  <span className="text-slate-900 font-bold">{tier.criteria.revenue}</span>
+                </div>
               </div>
             </div>
 
-            <h3 className="text-[15px] font-bold text-gray-800 mb-3 leading-snug min-h-[46px] flex items-start">{exp.title}</h3>
-
-            <p className="text-gray-500 text-[13px] leading-relaxed flex-1">
-              {exp.description}
-            </p>
+            {/* Features List */}
+            <div className="space-y-2 flex-1">
+              {sharedFeatures.map((feature, fIdx) => (
+                <div key={fIdx} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                  <span className="text-slate-600 text-[11px] leading-tight font-medium">{feature}</span>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>

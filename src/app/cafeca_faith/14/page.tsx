@@ -1,98 +1,147 @@
 'use client';
 
-import { Users, GraduationCap } from 'lucide-react';
+import { CheckCircle2, Layers, MapPin } from 'lucide-react';
 
 export default function CafecaFaithSlide13() {
-  const team = [
+  const sharedFeatures = [
+    '產品生命週期 (Cradle-to-Gate) 碳排放計算',
+    '物料清單 (BOM) 原料配比與製程係數對接',
+    '自動生成符合第三方查證規範之數據稽核佐證包',
+    '智慧數據異常檢測與配比係數校正優化',
+  ];
+
+  const tiers = [
     {
-      id: 'chiwei',
-      name: '張智崴',
-      role: 'Co-founder & CEO',
-      background: '環境工程 / 資訊科技',
-      avatarColor: 'bg-orange-100 text-orange-600 border-orange-200',
-      tagColor: 'bg-orange-50 text-orange-600 border-orange-200',
-      description: '將金融合規與物理碳排程式化的系統架構師，參與臺灣、阿曼、中國國家級大型運算平台建設。受成功大學環境工程學系前系主任蔡俊鴻教授指導與號召，致力於推動綠色產業生態技術。超過十年以上的開源社群深耕，致力於以有趣的方式揭露政府資料，促進民眾與政府的溝通。',
+      name: '輕量入門級',
+      price: '94,500',
+      description: '提供完整的產品生命週期碳排放計算與建模功能。',
+      criteria: {
+        area: '場域總面積 ≤ 1,000 坪',
+        revenue: '年營業額 ≤ 1 億元',
+      },
+      tag: '微型企業',
+      accentColor: 'from-orange-500 to-amber-600',
+      bgColor: 'bg-orange-50/50',
+      textColor: 'text-orange-700',
+      borderColor: 'border-orange-100',
     },
     {
-      id: 'tzuhan',
-      name: '梁紫涵',
-      role: 'Co-founder & PE',
-      background: '化學工程',
-      avatarColor: 'bg-emerald-100 text-emerald-600 border-emerald-200',
-      tagColor: 'bg-emerald-50 text-emerald-600 border-emerald-200',
-      description: '參與臺灣杉二號開發，提出關鍵區塊鏈技術架構規劃，專長於數據分析。專注於系統底層邏輯與架構設計，並致力於將複雜技術落地應用。期望透過資訊科技打造具備信任與韌性的數位基礎設施，解決真實世界的挑戰，讓社會運作更加透明與永續。',
+      name: '專業成長級',
+      price: '283,500',
+      description: '提供完整的產品生命週期碳排放計算與建模功能。',
+      criteria: {
+        area: '場域總面積 1,000 - 5,000 坪',
+        revenue: '年營業額 1 億 - 5 億元',
+      },
+      tag: '中小型企業',
+      accentColor: 'from-orange-600 to-red-500',
+      bgColor: 'bg-orange-50/50',
+      textColor: 'text-orange-700',
+      borderColor: 'border-orange-100',
+      isPopular: true,
     },
     {
-      id: 'yifang',
-      name: '謝宜芳',
-      role: 'Growth Marketing',
-      background: '視覺傳達與行銷',
-      avatarColor: 'bg-blue-100 text-blue-600 border-blue-200',
-      tagColor: 'bg-blue-50 text-blue-600 border-blue-200',
-      description: '專長於品牌溝通、內容策略與視覺設計。擅長將碳管理、數據應用與永續轉型等複雜議題，轉化為具理解度、說服力與市場溝通性的內容形式。負責協助團隊建立清晰的品牌敘事，讓技術價值能被企業、合作夥伴與使用者更快速理解，並提升產品在市場中的信任感與辨識度。',
-    },
-    {
-      id: 'lien',
-      name: '許瓈恩',
-      role: 'Software Engineer',
-      background: '資訊管理',
-      avatarColor: 'bg-violet-100 text-violet-600 border-violet-200',
-      tagColor: 'bg-violet-50 text-violet-600 border-violet-200',
-      description: '專長於系統開發與 AI 駕馭工程，致力於將複雜的底層技術化繁為簡，讓強大的人工智慧卸下高門檻，成為人人都能輕鬆對話的日常夥伴。',
+      name: '旗艦企業級',
+      price: '567,000',
+      description: '提供完整的產品生命週期碳排放計算與建模功能。',
+      criteria: {
+        area: '場域總面積 ≥ 5,000 坪',
+        revenue: '年營業額 ≥ 5 億元',
+      },
+      tag: '大型企業',
+      accentColor: 'from-blue-500 to-indigo-600',
+      bgColor: 'bg-blue-50/50',
+      textColor: 'text-blue-700',
+      borderColor: 'border-blue-100',
     },
   ];
 
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
-
-      {/* Background Gradients */}
+      
+      {/* Background Accents */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
-        <div className="absolute -left-32 -top-32 w-[600px] h-[600px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
-        <div className="absolute -right-32 -bottom-32 w-[600px] h-[600px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
-      </div>
-
-      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
-        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-        <span className="text-xs font-mono text-slate-600 uppercase tracking-widest">Core Team</span>
+        <div className="absolute -left-32 -top-32 w-[700px] h-[700px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute -right-32 -bottom-32 w-[700px] h-[700px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
       </div>
 
       {/* Header */}
-      <div className="z-20 w-full px-16 mb-8 mt-6">
-        <h2 className="text-4xl font-black text-slate-800 tracking-tight flex items-center gap-3">
-          <Users className="w-8 h-8 text-orange-500" />
-          核心團隊
-        </h2>
-        <p className="text-base text-slate-500 mt-2 font-medium">跨領域工程與數據專家，致力於推動綠色產業生態技術</p>
+      <div className="z-20 text-center mb-6 mt-2">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-100 mb-3 shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+          <span className="text-xs font-semibold text-orange-700 uppercase tracking-widest">Solutions & Pricing</span>
+        </div>
+        <h2 className="text-4xl font-black text-slate-800 tracking-tight">產品碳足跡方案 (ISO 14067)</h2>
+        <p className="text-sm text-slate-500 mt-1 font-medium">依據場域面積與年營業額範疇，提供三種不同級距的產品碳足跡計算服務，其服務內容均相同</p>
       </div>
 
-      {/* Grid Layout */}
-      <div className="z-20 w-full px-16 grid grid-cols-2 gap-6 relative">
-        {team.map((member) => (
-          <div key={member.id} className="bg-white rounded-3xl p-6 border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col relative overflow-hidden">
+      {/* Plans Grid */}
+      <div className="z-20 w-full max-w-6xl grid grid-cols-3 gap-6 px-8 relative">
+        {tiers.map((tier, index) => (
+          <div
+            key={index}
+            className={`bg-white rounded-3xl p-6 border transition-all duration-300 relative flex flex-col group overflow-hidden ${
+              tier.isPopular
+                ? 'border-orange-300 shadow-xl ring-2 ring-orange-500/10 -translate-y-1 hover:shadow-2xl'
+                : 'border-slate-200 shadow-lg hover:shadow-xl hover:-translate-y-1'
+            }`}
+          >
+            {/* Highlight ribbon */}
+            <div className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${tier.accentColor}`} />
 
-            {/* Header Section */}
-            <div className="flex items-center gap-4 mb-4">
-              <div>
-                <div className="flex items-baseline gap-3">
-                  <h3 className="text-xl font-bold text-slate-800">{member.name}</h3>
-                  <span className="text-sm font-bold text-slate-400">{member.role}</span>
+            <div className="flex justify-between items-start mb-4">
+              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner ${tier.bgColor} ${tier.textColor}`}>
+                <Layers className="w-6 h-6" />
+              </div>
+              <span className={`px-2.5 py-1 text-[10px] font-bold rounded-full ${
+                tier.isPopular
+                  ? 'bg-orange-500 text-white shadow-sm'
+                  : 'bg-slate-100 text-slate-600'
+              }`}>
+                {tier.tag}
+              </span>
+            </div>
+
+            <h3 className="text-xl font-bold text-slate-800 mb-1">{tier.name}</h3>
+            <p className="text-[11px] text-slate-400 font-medium mb-3 leading-tight min-h-[32px]">{tier.description}</p>
+
+            {/* Price Section */}
+            <div className="flex items-baseline gap-1 mb-4 border-b border-slate-100 pb-4">
+              <span className="text-xs font-bold text-slate-400">NT$</span>
+              <span className="text-3xl font-black text-slate-800 tracking-tight">{tier.price}</span>
+              <span className="text-slate-400 text-xs font-medium">/ 案</span>
+            </div>
+
+            {/* Criteria Section */}
+            <div className="mb-4 bg-slate-50 rounded-xl p-3 border border-slate-100">
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-slate-400 animate-bounce" />
+                適用範疇基準
+              </div>
+              <div className="space-y-1 text-xs font-semibold text-slate-700">
+                <div className="flex justify-between">
+                  <span>場域總面積</span>
+                  <span className="text-slate-900 font-bold">{tier.criteria.area}</span>
                 </div>
-                <div className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border mt-1.5 ${member.tagColor}`}>
-                  <GraduationCap className="w-3.5 h-3.5" />
-                  <span className="text-xs font-bold">{member.background}</span>
+                <div className="flex justify-between">
+                  <span>年營業額範圍</span>
+                  <span className="text-slate-900 font-bold">{tier.criteria.revenue}</span>
                 </div>
               </div>
             </div>
 
-            {/* Description */}
-            <p className="text-slate-600 text-sm leading-relaxed flex-1 text-justify pr-2">
-              {member.description}
-            </p>
-
+            {/* Features List */}
+            <div className="space-y-2 flex-1">
+              {sharedFeatures.map((feature, fIdx) => (
+                <div key={fIdx} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                  <span className="text-slate-600 text-[11px] leading-tight font-medium">{feature}</span>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
-
     </div>
   );
 }

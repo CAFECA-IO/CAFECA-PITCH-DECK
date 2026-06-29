@@ -1,6 +1,6 @@
 'use client';
 
-import { FileText, Sparkles, Brain, Clock, ShieldCheck, Languages, LayoutTemplate, BarChart3 } from 'lucide-react';
+import { FileText, Sparkles, Brain, ShieldCheck, Languages, LayoutTemplate, BarChart3 } from 'lucide-react';
 
 export default function CafecaFaithSlide7() {
   return (

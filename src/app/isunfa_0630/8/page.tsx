@@ -1,6 +1,6 @@
 'use client';
 
-import { ShieldCheck, Sparkles, Brain, Clock, Link2, Search, ActivitySquare, CheckCircle } from 'lucide-react';
+import { ShieldCheck, Sparkles, Brain, Clock, Link2, Search, ActivitySquare } from 'lucide-react';
 
 export default function CafecaFaithSlide8() {
   return (

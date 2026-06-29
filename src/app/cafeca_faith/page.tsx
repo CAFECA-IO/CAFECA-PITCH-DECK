@@ -19,10 +19,13 @@ import CafecaFaithSlide13 from '@/app/cafeca_faith/13/page';
 import CafecaFaithSlide14 from '@/app/cafeca_faith/14/page';
 import CafecaFaithSlide15 from '@/app/cafeca_faith/15/page';
 import CafecaFaithSlide16 from '@/app/cafeca_faith/16/page';
+import CafecaFaithSlide17 from '@/app/cafeca_faith/17/page';
+import CafecaFaithSlide18 from '@/app/cafeca_faith/18/page';
+import CafecaFaithSlide19 from '@/app/cafeca_faith/19/page';
 
 export default function CafecaFaithSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 16;
+  const totalSlides = 19;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
@@ -73,6 +76,9 @@ export default function CafecaFaithSlideBrowser() {
     14: CafecaFaithSlide14,
     15: CafecaFaithSlide15,
     16: CafecaFaithSlide16,
+    17: CafecaFaithSlide17,
+    18: CafecaFaithSlide18,
+    19: CafecaFaithSlide19,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
@@ -89,11 +95,14 @@ export default function CafecaFaithSlideBrowser() {
     9: '企業所需分析',
     10: '市場規模與生態系',
     11: '專家模型核心',
-    12: '商業模式與定價',
-    13: '底層技術優勢',
-    14: '核心團隊',
-    15: '團隊經歷',
-    16: '聯絡資訊',
+    12: '企業人工智能導入',
+    13: '組織碳盤查方案',
+    14: '產品碳足跡方案',
+    15: '碳足跡標章方案',
+    16: '底層技術優勢',
+    17: '核心團隊',
+    18: '團隊經歷',
+    19: '聯絡資訊',
   };
 
   const nextSlide = useCallback(() => {

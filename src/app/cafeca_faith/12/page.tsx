@@ -18,7 +18,7 @@ export default function CafecaFaithSlide11() {
           <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
           <span className="text-sm font-semibold text-orange-600 uppercase tracking-widest">Business Model</span>
         </div>
-        <h2 className="text-4xl font-black text-slate-800 tracking-tight">循前人軌跡，創轉型綠徑</h2>
+        <h2 className="text-4xl font-black text-slate-800 tracking-tight">企業人工智能導入</h2>
         <p className="text-base text-slate-500 mt-2 font-medium">針對不同規模企業，提供最適合的數位綠色轉型方案</p>
       </div>
 

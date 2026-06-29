@@ -1,6 +1,6 @@
 'use client';
 
-import { Database, Calculator, Search, MapPin, Brain, Sparkles, Clock, ShieldCheck } from 'lucide-react';
+import { Calculator, Search, MapPin, Brain, Sparkles, Clock, ShieldCheck } from 'lucide-react';
 
 export default function CafecaFaithSlide5() {
   return (

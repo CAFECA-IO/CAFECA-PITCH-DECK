@@ -1,6 +1,6 @@
 'use client';
 
-import { Coins, BookOpen, RefreshCw, BarChart3, Brain, Sparkles, Clock, ShieldCheck } from 'lucide-react';
+import { BookOpen, RefreshCw, BarChart3, Brain, Sparkles, Clock, ShieldCheck } from 'lucide-react';
 
 export default function CafecaFaithSlide6() {
   return (
