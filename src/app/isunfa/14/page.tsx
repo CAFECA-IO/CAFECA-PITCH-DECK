@@ -1,58 +1,58 @@
 'use client';
 
-import { CheckCircle2, Layers, MapPin } from 'lucide-react';
+import { CheckCircle2, Award, MapPin } from 'lucide-react';
 
-export default function CafecaFaithSlide13() {
+export default function CafecaFaithSlide14() {
   const sharedFeatures = [
-    '產品生命週期 (Cradle-to-Gate) 碳排放計算',
-    '物料清單 (BOM) 原料配比與製程係數對接',
-    '自動生成符合第三方查證規範之數據稽核佐證包',
-    '智慧數據異常檢測與配比係數校正優化',
+    '碳標章及減碳標章申請書件全程編製輔導',
+    '協助對接第三方公正查驗機構與現場稽核',
+    '地端 IoT / 電錶自動化數據同步對接',
+    'AI 專家模型推演製程，最佳化減碳路徑',
   ];
 
   const tiers = [
     {
       name: '輕量入門級',
       price: '94,500',
-      description: '提供完整的產品生命週期碳排放計算與建模功能。',
+      description: '提供完整的碳足跡標章與減碳標章申請輔導服務。',
       criteria: {
         area: '場域總面積 ≤ 1,000 坪',
         revenue: '年營業額 ≤ 1 億元',
       },
       tag: '微型企業',
-      accentColor: 'from-orange-500 to-amber-600',
-      bgColor: 'bg-orange-50/50',
-      textColor: 'text-orange-700',
-      borderColor: 'border-orange-100',
+      accentColor: 'from-blue-500 to-cyan-400',
+      bgColor: 'bg-blue-50/50',
+      textColor: 'text-blue-700',
+      borderColor: 'border-blue-100',
     },
     {
       name: '專業成長級',
       price: '283,500',
-      description: '提供完整的產品生命週期碳排放計算與建模功能。',
+      description: '提供完整的碳足跡標章與減碳標章申請輔導服務。',
       criteria: {
         area: '場域總面積 1,000 - 5,000 坪',
         revenue: '年營業額 1 億 - 5 億元',
       },
       tag: '中小型企業',
-      accentColor: 'from-orange-600 to-red-500',
-      bgColor: 'bg-orange-50/50',
-      textColor: 'text-orange-700',
-      borderColor: 'border-orange-100',
+      accentColor: 'from-blue-600 to-indigo-600',
+      bgColor: 'bg-blue-50/50',
+      textColor: 'text-blue-700',
+      borderColor: 'border-blue-100',
       isPopular: true,
     },
     {
       name: '旗艦企業級',
       price: '567,000',
-      description: '提供完整的產品生命週期碳排放計算與建模功能。',
+      description: '提供完整的碳足跡標章與減碳標章申請輔導服務。',
       criteria: {
         area: '場域總面積 ≥ 5,000 坪',
         revenue: '年營業額 ≥ 5 億元',
       },
       tag: '大型企業',
-      accentColor: 'from-blue-500 to-indigo-600',
-      bgColor: 'bg-blue-50/50',
-      textColor: 'text-blue-700',
-      borderColor: 'border-blue-100',
+      accentColor: 'from-purple-500 to-indigo-700',
+      bgColor: 'bg-purple-50/50',
+      textColor: 'text-purple-700',
+      borderColor: 'border-purple-100',
     },
   ];
 
@@ -61,18 +61,18 @@ export default function CafecaFaithSlide13() {
       
       {/* Background Accents */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
-        <div className="absolute -left-32 -top-32 w-[700px] h-[700px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
-        <div className="absolute -right-32 -bottom-32 w-[700px] h-[700px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute -left-32 -top-32 w-[700px] h-[700px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute -right-32 -bottom-32 w-[700px] h-[700px] bg-indigo-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
       </div>
 
       {/* Header */}
       <div className="z-20 text-center mb-6 mt-2">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-100 mb-3 shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-          <span className="text-xs font-semibold text-orange-700 uppercase tracking-widest">Solutions & Pricing</span>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-3 shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span className="text-xs font-semibold text-blue-700 uppercase tracking-widest">Solutions & Pricing</span>
         </div>
-        <h2 className="text-4xl font-black text-slate-800 tracking-tight">產品碳足跡方案 (ISO 14067)</h2>
-        <p className="text-sm text-slate-500 mt-1 font-medium">依據場域面積與年營業額範疇，提供三種不同級距的產品碳足跡計算服務，其服務內容均相同</p>
+        <h2 className="text-4xl font-black text-slate-800 tracking-tight">碳足跡標章方案 (環境部申請)</h2>
+        <p className="text-sm text-slate-500 mt-1 font-medium">依據場域面積與年營業額範疇，提供三種不同級距的碳標章申請輔導，其服務內容均相同</p>
       </div>
 
       {/* Plans Grid */}
@@ -91,7 +91,7 @@ export default function CafecaFaithSlide13() {
 
             <div className="flex justify-between items-start mb-4">
               <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner ${tier.bgColor} ${tier.textColor}`}>
-                <Layers className="w-6 h-6" />
+                <Award className="w-6 h-6" />
               </div>
               <span className={`px-2.5 py-1 text-[10px] font-bold rounded-full ${
                 tier.isPopular

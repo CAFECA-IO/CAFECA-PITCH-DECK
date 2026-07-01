@@ -29,10 +29,9 @@ export default function CafecaFaithSlide1() {
         {/* Main Title Area */}
         <div className="space-y-6 text-left">
           <h1 className="text-7xl font-black tracking-tight leading-tight text-slate-800">
-            費思<br />
-            人工智能<br />
+            陽光智能<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">
-              減碳機器人
+              碳會計
             </span>
           </h1>
           <p className="text-2xl text-slate-500 font-medium tracking-wider leading-relaxed border-l-4 border-orange-500 pl-6 mt-8">

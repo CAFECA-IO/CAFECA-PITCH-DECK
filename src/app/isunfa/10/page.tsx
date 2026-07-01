@@ -1,119 +1,86 @@
-import React from 'react';
-import { CheckCircle2, FileSignature, Wrench, HandCoins } from 'lucide-react';
+'use client';
 
-export default function iSunFASlide10() {
-  const steps = [
-    {
-      id: "01",
-      title: "資格確認",
-      desc: "確認符合新北市轄內依法登記之公司或商號資格。",
-      icon: <CheckCircle2 className="w-8 h-8 text-white" />,
-      position: "top"
-    },
-    {
-      id: "02",
-      title: "簽約啟動",
-      desc: "完成簽約與費用支付，即刻啟動導入。",
-      icon: <FileSignature className="w-8 h-8 text-white" />,
-      position: "bottom"
-    },
-    {
-      id: "03",
-      title: "部署培訓",
-      desc: "專人到府進行軟硬體建置，並提供完整操作教學。",
-      icon: <Wrench className="w-8 h-8 text-white" />,
-      position: "top"
-    },
-    {
-      id: "04",
-      title: "補助申請",
-      desc: "憑執行成果與發票，向經發局申請補助款。",
-      icon: <HandCoins className="w-8 h-8 text-white" />,
-      position: "bottom"
-    }
-  ];
+import { Cpu, Database, Network, Globe2, FileText } from 'lucide-react';
+import Image from 'next/image';
 
+export default function CafecaFaithSlide10() {
   return (
-    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 font-sans">
-      <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800 text-white">
+    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
+      
+      {/* Background Gradients */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute left-1/4 top-10 w-[600px] h-[600px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute left-10 bottom-10 w-[400px] h-[400px] bg-orange-50 rounded-full filter blur-[120px]"></div>
+      </div>
 
-        {/* Info: (20260212 - Luphia) Background: Subtle Tech Glow */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[20%] left-[10%] w-[40%] h-[40%] bg-orange-900/10 blur-[100px] rounded-full" />
-          <div className="absolute bottom-[20%] right-[10%] w-[40%] h-[40%] bg-orange-900/10 blur-[100px] rounded-full" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
-        </div>
+      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
+        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+        <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">AI Core Knowledge Base</span>
+      </div>
 
-        <div className="z-10 w-full max-w-[1100px] px-12 flex flex-col h-full py-16">
-
-          {/* Info: (20260212 - Luphia) Title Section */}
-          <div className="mb-16 text-center space-y-4">
-            <h2 className="text-5xl font-extrabold tracking-tight text-white">
-              申請流程簡單四步驟
-            </h2>
-            <div className="h-1 w-32 bg-gradient-to-r from-orange-500 to-orange-500 rounded-full mx-auto mt-6" />
+      {/* Content Container (Left 2/3) */}
+      <div className="z-10 w-2/3 h-full flex flex-col justify-center px-16 relative">
+        
+        {/* Header Text */}
+        <div className="space-y-6 mb-12 mt-4 text-left">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100">
+            <Cpu className="w-5 h-5 text-orange-500" />
+            <span className="text-sm font-semibold text-orange-600">專家模型核心</span>
           </div>
 
-          {/* Info: (20260212 - Luphia) Process Wave */}
-          <div className="flex-1 relative flex items-center justify-center">
+          <h2 className="text-4xl font-black leading-tight text-slate-800">
+            整合 <span className="text-orange-500">1995 至 2025</span> 全球公開產業資訊<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">與跨領域工程專業知識，訓練而成的人工智能。</span>
+          </h2>
+        </div>
 
-            {/* Info: (20260212 - Luphia) Connecting Line (SVG Curve) */}
-            <svg className="absolute top-1/2 left-0 w-full h-48 -translate-y-1/2 pointer-events-none" style={{ overflow: 'visible' }}>
-              <path
-                d="M 100 0 C 250 0, 250 150, 400 150 C 550 150, 550 0, 700 0 C 850 0, 850 150, 1000 150"
-                fill="none"
-                stroke="url(#gradient-line)"
-                strokeWidth="4"
-                strokeLinecap="round"
-                className="opacity-50"
-              />
-              <defs>
-                <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#f97316" />
-                  <stop offset="50%" stopColor="#10b981" />
-                  <stop offset="100%" stopColor="#f97316" />
-                </linearGradient>
-              </defs>
-            </svg>
-
-            <div className="w-full grid grid-cols-4 gap-4 relative z-10">
-              {steps.map((step, index) => (
-                <div
-                  key={index}
-                  className={`flex flex-col items-center ${step.position === 'bottom' ? 'mt-24' : '-mt-24'}`}
-                >
-                  {/* Info: (20260212 - Luphia) Number Circle */}
-                  <div className={`relative w-32 h-32 rounded-full border-4 ${index % 2 === 0 ? 'border-orange-500 bg-neutral-900' : 'border-orange-500 bg-neutral-900'} flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.5)] z-10 group transition-transform duration-500 hover:scale-110`}>
-                    <span className={`text-5xl font-bold ${index % 2 === 0 ? 'text-orange-500' : 'text-orange-500'}`}>{step.id}</span>
-
-                    {/* Info: (20260212 - Luphia) Floating Icon Badge */}
-                    <div className={`absolute -right-2 -bottom-2 w-10 h-10 rounded-full flex items-center justify-center ${index % 2 === 0 ? 'bg-orange-600' : 'bg-orange-600'} shadow-lg`}>
-                      {React.cloneElement(step.icon as React.ReactElement<{ className?: string }>, { className: "w-5 h-5 text-white" })}
-                    </div>
-                  </div>
-
-                  {/* Info: (20260212 - Luphia) Text Content */}
-                  <div className={`mt-8 text-center max-w-[240px] ${step.position === 'top' ? 'order-first mb-8 mt-0' : ''}`}>
-                    <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                    <p className="text-neutral-400 text-sm leading-relaxed">{step.desc}</p>
-                  </div>
-
+        {/* Core Model Visualization Layout */}
+        <div className="w-full flex gap-10 items-center">
+           <div className="grid grid-cols-2 gap-4 flex-1">
+             <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
+                <Database className="w-8 h-8 text-orange-500" />
+                <div>
+                  <h3 className="font-bold text-slate-800">全球專利與文獻</h3>
+                  <p className="text-xs text-slate-500 mt-1">超過 30 年的跨國技術文獻、工程專利與綠色製程規格標準。</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Info: (20260212 - Luphia) Footer */}
-        <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-500 text-[10px] tracking-[0.2em] uppercase font-medium">
-          <div>領航淨零，智算未來</div>
-          <div className="flex gap-2 items-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-orange-600"></div>
-            2026 CAFECA Fintech
-          </div>
+             </div>
+             <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
+                <Network className="w-8 h-8 text-orange-500" />
+                <div>
+                  <h3 className="font-bold text-slate-800">跨領域數據圖譜</h3>
+                  <p className="text-xs text-slate-500 mt-1">串聯材料科學、熱力學與自動化工程的知識圖譜，精準推理。</p>
+                </div>
+             </div>
+             <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
+                <Globe2 className="w-8 h-8 text-orange-500 shrink-0" />
+                <div>
+                  <h3 className="font-bold text-slate-800">多國語言與法規適配</h3>
+                  <p className="text-xs text-slate-500 mt-1">內建多國環保法規與碳排放審計標準，無縫接軌國際。</p>
+                </div>
+             </div>
+             <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
+                <FileText className="w-8 h-8 text-orange-500 shrink-0" />
+                <div>
+                  <h3 className="font-bold text-slate-800">全球 ESG 與財務報告</h3>
+                  <p className="text-xs text-slate-500 mt-1">深度學習歷年全球上市企業 ESG 永續報告與財務審計報告，掌握真實轉型路徑。</p>
+                </div>
+             </div>
+           </div>
         </div>
 
       </div>
+
+      {/* Right 1/3 Image Area */}
+      <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
+        <Image
+          src="/cafeca_faith/robot_core.jpeg"
+          alt="AI Core Robot"
+          fill
+          className="object-cover"
+          style={{ objectFit: 'cover' }}
+        />
+      </div>
+
     </div>
   );
 }

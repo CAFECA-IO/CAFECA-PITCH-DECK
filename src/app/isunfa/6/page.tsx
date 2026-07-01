@@ -1,126 +1,182 @@
 'use client';
 
-import { ScanText, Zap, BarChart3, ArrowRightLeft, Database } from 'lucide-react';
+import { BookOpen, RefreshCw, BarChart3, Brain, Sparkles, Clock, ShieldCheck } from 'lucide-react';
 
-export default function iSunFASlide6() {
+export default function CafecaFaithSlide6() {
   return (
-    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 font-sans">
-      <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800 text-white">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
+      
+      {/* Background Gradients */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute -left-1/4 -top-1/4 w-[800px] h-[800px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute -right-1/4 -bottom-1/4 w-[800px] h-[800px] bg-green-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+      </div>
 
-        {/* Info: (20260212 - Luphia) 背景光暈：回歸生機與科技感的綠色 */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[10%] -left-[5%] w-[60%] h-[70%] bg-orange-950/20 blur-[130px] rounded-full opacity-60" />
-          <div className="absolute -bottom-[15%] -right-[10%] w-[50%] h-[60%] bg-amber-950/10 blur-[110px] rounded-full opacity-40" />
+      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
+        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span className="text-xs font-mono text-green-600 uppercase tracking-widest">AI Carbon Calculation</span>
+      </div>
+
+      {/* Content Container */}
+      <div className="z-10 w-full max-w-6xl flex flex-col px-8 relative">
+        
+        {/* Top Header Area */}
+        <div className="text-center space-y-2 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-green-200 shadow-sm mx-auto">
+            <RefreshCw className="w-4 h-4 text-green-600" />
+            <span className="text-xs font-semibold text-green-700">SOP 步驟三：帳務與碳排計算 (Accounting & Carbon Calculation)</span>
+          </div>
+          
+          <h2 className="text-4xl font-black leading-tight text-slate-800">
+            如何透過 AI 完成{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">帳務與碳排計算？</span>
+          </h2>
+          <p className="text-sm text-slate-500 leading-relaxed font-medium max-w-3xl mx-auto">
+            將企業財務憑證即時轉化為碳排放記錄。AI 內建合規計算引擎，支援國際財務準則與碳排標準的一鍵無縫轉換。
+          </p>
         </div>
 
-        <div className="z-10 w-full max-w-6xl px-12 flex flex-col h-full py-12">
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-12 gap-6 items-start w-full">
+          
+          {/* Left Column: AI Mechanism (5/12 width) */}
+          <div className="col-span-5 space-y-3">
+            <h3 className="text-base font-bold text-slate-800 flex items-center gap-2 mb-1">
+              <Brain className="w-4.5 h-4.5 text-green-600" />
+              AI 智慧計算與轉換流程
+            </h3>
 
-          {/* Info: (20260212 - Luphia) 標題區 */}
-          <div className="mb-8 space-y-4">
-            <div className="flex items-center gap-3 text-orange-500 mb-2">
-              <div className="px-2 py-0.5 border border-orange-500/50 rounded text-[10px] font-bold tracking-widest bg-orange-500/10 uppercase">Core Architecture</div>
-              <Zap size={18} className="fill-orange-500" />
+            {/* Step 1 Card */}
+            <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
+              <div className="absolute top-3 right-4 bg-orange-50 text-orange-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                Step 1
+              </div>
+              <h4 className="text-xs font-bold text-slate-800 mb-0.5">財務與碳帳雙軌勾稽</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                自動連結 ERP 會計憑證與碳排放因子，記帳即計碳，同步生成財務明細帳與碳排明細帳。
+              </p>
             </div>
-            <h2 className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-orange-100 to-orange-400">
-              四大智能核心：定義淨零會計標準
-            </h2>
-            <div className="flex items-center gap-4">
-              <div className="h-[2px] w-20 bg-orange-600" />
-              <p className="text-neutral-500 text-lg font-light italic">
-                整合 AI 算力與綠色準則，將碳數據轉化為戰略資產
+
+            {/* Step 2 Card */}
+            <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
+              <div className="absolute top-3 right-4 bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                Step 2
+              </div>
+              <h4 className="text-xs font-bold text-slate-800 mb-0.5">IFRS 與 GAAP 智慧對照</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                支援國際財務報導準則（IFRS）與在地會計準則（GAAP）轉換，自動調節碳資產之會計科目表達。
+              </p>
+            </div>
+
+            {/* Step 3 Card */}
+            <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
+              <div className="absolute top-3 right-4 bg-green-50 text-green-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                Step 3
+              </div>
+              <h4 className="text-xs font-bold text-slate-800 mb-0.5">ISO 與 GHG 雙標準轉換</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                數據一鍵切換，在 ISO 14064-1 的六大類別與 GHG Protocol 的三大範疇 (Scope 1/2/3) 間自動對應。
+              </p>
+            </div>
+
+            {/* Step 4 Card */}
+            <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
+              <div className="absolute top-3 right-4 bg-indigo-50 text-indigo-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                Step 4
+              </div>
+              <h4 className="text-xs font-bold text-slate-800 mb-0.5">動態分配與產品碳足跡</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                根據產品產量、機器工時動態分攤範疇二與三之折合碳排，精準計算單一產品碳足跡 (PCF)。
               </p>
             </div>
           </div>
 
-          {/* Info: (20260212 - Luphia) 模組矩陣：2x2 Grid */}
-          <div className="grid grid-cols-2 gap-6 flex-1">
+          {/* Right Column: AI vs Manual Comparison Table (7/12 width) */}
+          <div className="col-span-7 bg-white border border-slate-200 shadow-md rounded-2xl p-5">
+            <h3 className="text-base font-bold text-slate-800 flex items-center gap-2 mb-3">
+              <Sparkles className="w-4.5 h-4.5 text-green-600" />
+              AI 碳排計算 vs 傳統人工優勢對比
+            </h3>
 
-            {/* Info: (20260212 - Luphia) Module 1: 智能憑證辨識 */}
-            <div className="group relative bg-neutral-900/40 border border-white/5 px-6 py-5 rounded-3xl backdrop-blur-xl hover:bg-neutral-900/60 hover:border-orange-500/30 transition-all duration-500 overflow-hidden">
-              <div className="flex justify-between items-start mb-3">
-                <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <ScanText className="text-orange-400 w-5 h-5" />
-                </div>
-                <span className="text-[10px] font-mono text-orange-800 bg-orange-500/5 px-2 py-1 rounded">Module 01</span>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-orange-300 transition-colors">智能憑證辨識</h3>
-              <p className="text-neutral-400 leading-relaxed text-xs">
-                搭載高精度 AI-OCR 引擎，自動分類電力、燃料及營運憑證。不僅辨識文字，更能自動勾稽發票號碼與供應商碳排特徵，消除 95% 的手動登錄錯誤。
-              </p>
-              <div className="mt-auto pt-2 flex items-center gap-2 text-[10px] text-orange-500/60 font-mono">
-                <span>[ AI_MODEL_V2.0 ]</span>
-                <span className="w-1 h-1 rounded-full bg-orange-900"></span>
-                <span>AUTO_EXTRACTION</span>
-              </div>
+            <div className="overflow-hidden border border-slate-100 rounded-xl">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-200">
+                    <th className="py-2.5 px-3 text-xs font-bold text-slate-500 w-1/4">比較維度</th>
+                    <th className="py-2.5 px-3 text-xs font-bold text-slate-500 w-3/8">傳統人工計算 (Manual)</th>
+                    <th className="py-2.5 px-3 text-xs font-bold text-green-600 bg-green-50/50 w-3/8">AI 智慧計算 (AI)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-slate-400" />
+                      雙軌勾稽
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      財務帳與碳帳各自獨立，需以人工比對，極難對齊。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      憑證輸入時自動建立雙向連結，100% 同源且不漏單。
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <BookOpen className="w-3.5 h-3.5 text-slate-400" />
+                      會計準則對接
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      人工手動調整 GAAP 與 IFRS 合規科目，流程繁複。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      內建翻譯引擎，會計準則對接與調節表自動產製。
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <RefreshCw className="w-3.5 h-3.5 text-slate-400" />
+                      碳標準轉換
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      標準變更時，所有單據必須重新手動分類與算碳。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      底層資料庫架構一鍵轉換 ISO 與 GHG 分類，免除重算。
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <BarChart3 className="w-3.5 h-3.5 text-slate-400" />
+                      分配計算
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      使用固定比例分攤間接排碳，無法反映動態生產變化。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      結合工時與排程數據動態分攤，高精度產出單品碳排。
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5 text-slate-400" />
+                      可審計性
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      計算邏輯隱藏在龐雜的 Excel 公式中，稽核困難。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      所有計算因子與公式均可一鍵追溯到原始會計憑證。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
-            {/* Info: (20260212 - Luphia) Module 2: 自動記帳引擎 */}
-            <div className="group relative bg-neutral-900/40 border border-white/5 px-6 py-5 rounded-3xl backdrop-blur-xl hover:bg-neutral-900/60 hover:border-orange-500/30 transition-all duration-500">
-              <div className="flex justify-between items-start mb-3">
-                <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <ArrowRightLeft className="text-orange-400 w-5 h-5" />
-                </div>
-                <span className="text-[10px] font-mono text-orange-800 bg-orange-500/5 px-2 py-1 rounded">Module 02</span>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-orange-300 transition-colors">平行自動記帳</h3>
-              <p className="text-neutral-400 leading-relaxed text-xs">
-                獨創「財務-碳排」雙軌記帳技術。在處理財務帳務的同時，自動換算對應之碳排放量，實現財報與碳報同步生成，確保數據的一致性與可追溯性（Audit Trail）。
-              </p>
-              <div className="mt-auto pt-2 flex items-center gap-2 text-[10px] text-orange-500/60 font-mono">
-                <span>[ DUAL_LEDGER_SYNC ]</span>
-                <span className="w-1 h-1 rounded-full bg-orange-900"></span>
-                <span>REAL_TIME_POSTING</span>
-              </div>
-            </div>
-
-            {/* Info: (20260212 - Luphia) Module 3: 溫室氣體核算資料庫 */}
-            <div className="group relative bg-orange-500/[0.02] border border-orange-500/10 px-6 py-5 rounded-3xl backdrop-blur-xl hover:bg-neutral-900/60 hover:border-orange-500/30 transition-all duration-500">
-              <div className="flex justify-between items-start mb-3">
-                <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <Database className="text-orange-400 w-5 h-5" />
-                </div>
-                <span className="text-[10px] font-mono text-orange-400 bg-orange-500/20 px-2 py-1 rounded">Compliance Core</span>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-orange-300 transition-colors">動態核算資料庫</h3>
-              <p className="text-neutral-400 leading-relaxed text-xs">
-                內建國際（IPCC, IEA）及國內環境部最新排放係數。支援 ISO 14064-1 規範，為企業申請「自主減量計畫目標 A」提供最科學的計算基石，直取 50 元優惠費率。
-              </p>
-              <div className="mt-auto pt-2 flex items-center gap-2 text-[10px] text-orange-500/60 font-mono">
-                <span>[ ISO_14064_READY ]</span>
-                <span className="w-1 h-1 rounded-full bg-orange-900"></span>
-                <span>LATEST_FACTORS_2026</span>
-              </div>
-            </div>
-
-            {/* Info: (20260212 - Luphia) Module 4: 戰略會計報表 */}
-            <div className="group relative bg-neutral-900/40 border border-white/5 px-6 py-5 rounded-3xl backdrop-blur-xl hover:bg-neutral-900/60 hover:border-orange-500/30 transition-all duration-500">
-              <div className="flex justify-between items-start mb-3">
-                <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <BarChart3 className="text-orange-400 w-5 h-5" />
-                </div>
-                <span className="text-[10px] font-mono text-orange-800 bg-orange-500/5 px-2 py-1 rounded">Module 04</span>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-orange-300 transition-colors">領航戰略報表</h3>
-              <p className="text-neutral-400 leading-relaxed text-xs">
-                將枯燥的數據視覺化為「碳損益表」與「預測模型」。協助決策主管層掌握碳預算執行率，模擬不同減碳方案的財務回報，讓淨零路徑具備高度的經營導向。
-              </p>
-              <div className="mt-auto pt-2 flex items-center gap-2 text-[10px] text-orange-500/60 font-mono">
-                <span>[ STRATEGIC_DASHBOARD ]</span>
-                <span className="w-1 h-1 rounded-full bg-orange-900"></span>
-                <span>CBAM_COMPLIANT</span>
-              </div>
-            </div>
-
           </div>
-        </div>
 
-        {/* Info: (20260212 - Luphia) Footer */}
-        <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-500 text-[10px] tracking-[0.2em] uppercase font-medium">
-          <div>領航淨零，智算未來</div>
-          <div className="flex gap-2 items-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-orange-600"></div>
-            2026 CAFECA Fintech
-          </div>
         </div>
 
       </div>

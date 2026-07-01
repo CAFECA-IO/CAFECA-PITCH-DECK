@@ -1,108 +1,108 @@
-import { Landmark, Coins, TrendingUp, CheckCircle2, Percent } from 'lucide-react';
+'use client';
 
-export default function iSunFASlide11() {
+import { Cloud, Server, CheckCircle2, ShieldCheck, Zap, Database } from 'lucide-react';
+
+export default function CafecaFaithSlide11() {
   return (
-    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 font-sans">
-      <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800 text-white">
+    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
 
-        {/* Info: (20260212 - Luphia) Background: Subtle Aurora & Finance Blue */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[10%] right-[10%] w-[50%] h-[50%] bg-orange-900/10 blur-[120px] rounded-full opacity-60" />
-          <div className="absolute bottom-[10%] left-[5%] w-[40%] h-[40%] bg-blue-900/10 blur-[100px] rounded-full opacity-40" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
-        </div>
-
-        <div className="z-10 w-full max-w-6xl px-12 flex flex-col h-full py-16">
-
-          {/* Info: (20260212 - Luphia) Title Section */}
-          <div className="mb-10 space-y-4 text-center">
-            <div className="flex items-center justify-center gap-3 text-orange-500 mb-2">
-              <div className="px-3 py-1 border border-orange-500/50 rounded-full text-[10px] font-bold tracking-[0.2em] bg-orange-500/10 uppercase">Policy Dividends</div>
-            </div>
-            <h2 className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-orange-100 to-orange-300">
-              雙軸轉型：AI 賦能與政策紅利
-            </h2>
-            <p className="text-neutral-500 text-xl font-light">
-              善用國家級轉型優惠，將合規成本轉化為企業獲利資產
-            </p>
-          </div>
-
-          {/* Info: (20260212 - Luphia) Three Pillars */}
-          <div className="grid grid-cols-3 gap-6 mb-8 flex-1">
-
-            {/* Info: (20260212 - Luphia) Policy 1: Tax Credit */}
-            <div className="group relative bg-neutral-900/40 border border-white/5 p-6 rounded-3xl backdrop-blur-xl hover:border-orange-500/30 transition-all duration-500 flex flex-col">
-              <div className="w-12 h-12 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Landmark className="text-orange-400 w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-1">產創條例 10-1</h3>
-              <div className="text-orange-500 font-mono text-xs mb-3">智慧機械與 AI 投資抵減</div>
-              <p className="text-neutral-400 leading-relaxed text-xs mb-4 flex-1">
-                導入 AI 智能會計系統，符合購置軟體支出抵減標準。可選擇當年度抵減 <span className="text-orange-400 font-bold">5%</span> 或分三年抵減 <span className="text-orange-400 font-bold">3%</span> 營所稅。
-              </p>
-              <ul className="space-y-2 text-[10px] text-neutral-500 mt-auto">
-                <li className="flex items-center gap-2"><CheckCircle2 size={10} className="text-orange-600" /> 直接降低系統建置成本</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={10} className="text-orange-600" /> 符合數位轉型獎勵範疇</li>
-              </ul>
-            </div>
-
-            {/* Info: (20260212 - Luphia) Policy 2: Subsidy */}
-            <div className="group relative bg-neutral-900/40 border border-white/5 p-6 rounded-3xl backdrop-blur-xl hover:border-orange-500/30 transition-all duration-500 flex flex-col">
-              <div className="w-12 h-12 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Coins className="text-orange-400 w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-1">雙軸轉型補助</h3>
-              <div className="text-orange-500 font-mono text-xs mb-3">產業發展署/環境部專案</div>
-              <p className="text-neutral-400 leading-relaxed text-xs mb-4 flex-1">
-                對接「大帶小」或「數位轉型共好」補助方案。協助排碳大戶獲取政府專案支援，減輕系統導入之初期資金壓力。
-              </p>
-              <ul className="space-y-2 text-[10px] text-neutral-500 mt-auto">
-                <li className="flex items-center gap-2"><CheckCircle2 size={10} className="text-orange-600" /> 最高補助金額可達 $40,000+</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={10} className="text-orange-600" /> 專屬供應鏈整合補貼</li>
-              </ul>
-            </div>
-
-            {/* Info: (20260212 - Luphia) Policy 3: Carbon Fee Optimization */}
-            <div className="group relative bg-orange-500/[0.03] border border-orange-500/20 p-6 rounded-3xl backdrop-blur-xl hover:border-orange-500/40 transition-all duration-500 flex flex-col">
-              <div className="w-12 h-12 bg-orange-500/20 rounded-2xl flex items-center justify-center mb-4">
-                <TrendingUp className="text-orange-400 w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-1">氣候法優惠費率</h3>
-              <div className="text-orange-500 font-mono text-xs mb-3">自主減量計畫標竿目標</div>
-              <p className="text-neutral-400 leading-relaxed text-xs mb-4 flex-1">
-                透過 AI 精準核算與模擬，協助企業達成「目標 A」，將碳費從 300 元降至 <span className="text-orange-400 font-bold">50 元/噸</span>。
-              </p>
-              <ul className="space-y-2 text-[10px] text-neutral-500 mt-auto">
-                <li className="flex items-center gap-2"><CheckCircle2 size={10} className="text-orange-600" /> 節省高達 83% 碳費支出</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={10} className="text-orange-600" /> 確保計畫書符合 SBTi 標準</li>
-              </ul>
-            </div>
-
-          </div>
-
-          {/* Info: (20260212 - Luphia) Summary Section: ROI */}
-          <div className="mt-auto bg-neutral-900/60 border border-neutral-800 p-4 rounded-2xl flex items-center justify-between">
-            <div className="flex items-center gap-6">
-              <div className="p-2 bg-white/5 rounded-xl border border-white/10">
-                <Percent className="text-orange-400" size={20} />
-              </div>
-              <div>
-                <h4 className="text-base font-bold">綜合財務回報預估 (Strategic ROI)</h4>
-                <p className="text-neutral-500 text-xs">結合租稅抵減與碳費節省，預計 12-18 個月內達成系統投資平衡點</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Info: (20260212 - Luphia) Footer */}
-        <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-500 text-[10px] tracking-[0.2em] uppercase font-medium">
-          <div>領航淨零，智算未來</div>
-          <div className="flex gap-2 items-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-orange-600"></div>
-            2026 CAFECA Fintech
-          </div>
-        </div>
+      {/* Background Accents (Matching Screenshot Style) */}
+      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
+        <div className="absolute -left-32 -top-32 w-[600px] h-[600px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute -right-32 -bottom-32 w-[600px] h-[600px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
       </div>
+
+      {/* Header */}
+      <div className="z-20 text-center mb-8 mt-4">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100 mb-4 shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+          <span className="text-sm font-semibold text-orange-600 uppercase tracking-widest">Business Model</span>
+        </div>
+        <h2 className="text-4xl font-black text-slate-800 tracking-tight">企業人工智能導入</h2>
+        <p className="text-base text-slate-500 mt-2 font-medium">針對不同規模企業，提供最適合的數位綠色轉型方案</p>
+      </div>
+
+      {/* Pricing Cards Container */}
+      <div className="z-20 w-full max-w-4xl grid grid-cols-2 gap-8 px-12 relative">
+
+        {/* Card 1: Cloud Subscription */}
+        <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+            <Cloud className="w-40 h-40 text-orange-500" />
+          </div>
+
+          <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-4 shadow-inner">
+            <Cloud className="w-7 h-7" />
+          </div>
+
+          <h3 className="text-2xl font-bold text-slate-800 mb-2">雲端訂閱 (無硬體)</h3>
+          <p className="text-slate-500 mb-6 text-sm">適合快速導入、尋求輕量化綠色轉型的中小企業，無須額外建置硬體資源。</p>
+
+          <div className="flex items-baseline gap-2 mb-6">
+            <span className="text-sm font-bold text-slate-400">NT$</span>
+            <span className="text-5xl font-black text-slate-800 tracking-tighter">29,400</span>
+            <span className="text-slate-400 font-medium">/ 年</span>
+          </div>
+
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <CheckCircle2 className="w-5 h-5 text-orange-500" />
+              <span className="text-slate-600 font-medium text-sm">純軟體 SaaS 雲端服務</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Zap className="w-5 h-5 text-orange-500" />
+              <span className="text-slate-600 font-medium text-sm">即開即用，快速對接</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Database className="w-5 h-5 text-orange-500" />
+              <span className="text-slate-600 font-medium text-sm">標準溫室氣體與碳足跡運算</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 2: On-Premise Buyout */}
+        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 border border-orange-400 shadow-2xl hover:shadow-[0_20px_50px_rgba(249,115,22,0.3)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+            <Server className="w-40 h-40 text-white" />
+          </div>
+
+          <div className="w-14 h-14 bg-white/20 text-white rounded-2xl flex items-center justify-center mb-4 shadow-inner border border-white/20 backdrop-blur-sm">
+            <Server className="w-7 h-7" />
+          </div>
+
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-2xl font-bold text-white">本地部署 (買斷制)</h3>
+            <span className="px-3 py-1 bg-white text-orange-600 text-[10px] font-bold rounded-full uppercase tracking-wider shadow-sm">
+              企業首選
+            </span>
+          </div>
+
+          <p className="text-orange-100 mb-6 text-sm">針對高度注重資料隱私與邊緣運算的精密製造供應鏈，提供地端超輕量部署。</p>
+
+          <div className="flex items-baseline gap-2 mb-6">
+            <span className="text-sm font-bold text-orange-200">NT$</span>
+            <span className="text-5xl font-black text-white tracking-tighter">303,660</span>
+            <span className="text-orange-200 font-medium">/ 買斷</span>
+          </div>
+
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <ShieldCheck className="w-5 h-5 text-white" />
+              <span className="text-white font-medium text-sm">高度資安防護與商業隱私</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Server className="w-5 h-5 text-white" />
+              <span className="text-white font-medium text-sm">邊緣硬體設備與地端主機</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Zap className="w-5 h-5 text-white" />
+              <span className="text-white font-medium text-sm">自定義系統對接與客製化擴充</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   );
 }

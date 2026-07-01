@@ -1,32 +1,34 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { ChevronLeft, ChevronRight, MonitorPlay, Download, Grid, Maximize2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MonitorPlay, Grid, Maximize2, Download } from 'lucide-react';
 import Link from 'next/link';
-import CafecaIsunfaSlide1 from '@/app/cafeca_isunfa/1/page';
-import CafecaIsunfaSlide2 from '@/app/cafeca_isunfa/2/page';
-import CafecaIsunfaSlide3 from '@/app/cafeca_isunfa/3/page';
-import CafecaIsunfaSlide4 from '@/app/cafeca_isunfa/4/page';
-import CafecaIsunfaSlide5 from '@/app/cafeca_isunfa/5/page';
-import CafecaIsunfaSlide6 from '@/app/cafeca_isunfa/6/page';
-import CafecaIsunfaSlide7 from '@/app/cafeca_isunfa/7/page';
-import CafecaIsunfaSlide8 from '@/app/cafeca_isunfa/8/page';
-import CafecaIsunfaSlide9 from '@/app/cafeca_isunfa/9/page';
-import CafecaIsunfaSlide10 from '@/app/cafeca_isunfa/10/page';
-import CafecaIsunfaSlide11 from '@/app/cafeca_isunfa/11/page';
+import ISunFASlide1 from '@/app/isunfa_0204/1/page';
+import ISunFASlide2 from '@/app/isunfa_0204/2/page';
+import ISunFASlide3 from '@/app/isunfa_0204/3/page';
+import ISunFASlide4 from '@/app/isunfa_0204/4/page';
+import ISunFASlide5 from '@/app/isunfa_0204/5/page';
+import ISunFASlide6 from '@/app/isunfa_0204/6/page';
+import ISunFASlide7 from '@/app/isunfa_0204/7/page';
+import ISunFASlide8 from '@/app/isunfa_0204/8/page';
+import ISunFASlide9 from '@/app/isunfa_0204/9/page';
+import ISunFASlide10 from '@/app/isunfa_0204/10/page';
+import ISunFASlide11 from '@/app/isunfa_0204/11/page';
+import ISunFASlide12 from '@/app/isunfa_0204/12/page';
+import ISunFASlide13 from '@/app/isunfa_0204/13/page';
 
-export default function CafecaIsunfaSlideBrowser() {
+export default function ISunFASlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 11;
+  const totalSlides = 13;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
-  // Info: Dynamic scaling logic for mobile preview
+  // Info: (20260212 - Luphia) Dynamic scaling logic
   const [mobileScale, setMobileScale] = useState(0.3);
 
   useEffect(() => {
     const handleResize = () => {
-      // Info: Desktop Preview Scaling Calc
+      // Info: (20260212 - Luphia) Desktop Preview Calc
       if (containerRef.current) {
         const { width, height } = containerRef.current.getBoundingClientRect();
         const targetWidth = 1280;
@@ -37,8 +39,13 @@ export default function CafecaIsunfaSlideBrowser() {
         setScale(newScale);
       }
 
-      // Info: Mobile List Scaling Calc
+      // Info: (20260212 - Luphia) Mobile List Calc
       if (window.innerWidth < 768) {
+        /**
+         * Info: (20260212 - Luphia) Mobile Width usually < 768. 
+         * We want to fit 1280px into window width (minus details?)
+         * Let's assume full width minus some padding
+         */
         const w = window.innerWidth;
         const targetW = 1280;
         setMobileScale(w / targetW);
@@ -50,35 +57,39 @@ export default function CafecaIsunfaSlideBrowser() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Info: Slide Components Mapping
+  // Info: (20260212 - Luphia) Slide Components Map
   const SlideComponents: { [key: number]: React.ComponentType } = {
-    1: CafecaIsunfaSlide1,
-    2: CafecaIsunfaSlide2,
-    3: CafecaIsunfaSlide3,
-    4: CafecaIsunfaSlide4,
-    5: CafecaIsunfaSlide5,
-    6: CafecaIsunfaSlide6,
-    7: CafecaIsunfaSlide7,
-    8: CafecaIsunfaSlide8,
-    9: CafecaIsunfaSlide9,
-    10: CafecaIsunfaSlide10,
-    11: CafecaIsunfaSlide11,
+    1: ISunFASlide1,
+    2: ISunFASlide2,
+    3: ISunFASlide3,
+    4: ISunFASlide4,
+    5: ISunFASlide5,
+    6: ISunFASlide6,
+    7: ISunFASlide7,
+    8: ISunFASlide8,
+    9: ISunFASlide9,
+    10: ISunFASlide10,
+    11: ISunFASlide11,
+    12: ISunFASlide12,
+    13: ISunFASlide13,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
 
+  // Info: (20260212 - Luphia) Based on recent implementation context:
   const slideTitles: { [key: number]: string } = {
     1: 'Cover: iSunFA',
-    2: 'Climate Crisis',
-    3: 'The Carbon Equation',
-    4: 'Manufacturing Complexity',
-    5: 'AI Carbon Inference',
-    6: 'Dynamic Optimization',
-    7: '5 Compliance Pillars',
-    8: 'Edge AI Efficiency',
-    9: 'Target Market / TAM',
-    10: 'Technical Moat',
-    11: 'The Negentropy Law',
+    2: 'Slogan: Lead the Net Zero',
+    3: 'Highlights: Dual Transformation',
+    4: 'Pain Points: Traditional Challenge',
+    5: 'Solution: Intelligent Implementation',
+    6: 'Core Architecture: Four Pillars',
+    7: 'Automation: AI Bookkeeping & Reports',
+    8: 'Value Add: Digital Vouchers & ESG',
+    9: 'Commitment: Six Service Guarantees',
+    10: 'Process: Four Simple Steps',
+    11: 'Policy: AI Transformation Dividends',
+    12: 'Contact: Start Your Journey',
   };
 
   const nextSlide = useCallback(() => {
@@ -93,7 +104,7 @@ export default function CafecaIsunfaSlideBrowser() {
     setCurrentSlide(id);
   };
 
-  // Info: Keyboard navigation
+  // Info: (20260212 - Luphia) Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') nextSlide();
@@ -106,19 +117,19 @@ export default function CafecaIsunfaSlideBrowser() {
   return (
     <div className="flex flex-col h-screen bg-neutral-900 text-white overflow-hidden">
 
-      {/* Info: Universal Header */}
+      {/* Info: (20260212 - Luphia) Universal Header */}
       <div className="h-14 border-b border-neutral-800 flex items-center justify-between px-4 bg-neutral-900 z-20 flex-shrink-0">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div className="bg-emerald-600 p-1.5 rounded-lg">
+          <div className="bg-orange-600 p-1.5 rounded-lg">
             <MonitorPlay size={20} className="text-white" />
           </div>
           <div>
             <h1 className="text-sm font-bold text-gray-200">iSunFA Presentation</h1>
-            <p className="text-xs text-gray-500">v1.0.0 • 2026 iSunFA CDIB Pitch</p>
+            <p className="text-xs text-gray-500">v1.0.0 • 2026 iSunFA</p>
           </div>
         </Link>
 
-        {/* Info: Desktop Controls */}
+        {/* Info: (20260212 - Luphia) Desktop Controls - Hidden on Mobile */}
         <div className="hidden md:flex items-center gap-2">
           <span className="text-xs font-mono text-gray-500 mr-2">
             {currentSlide} / {totalSlides}
@@ -139,15 +150,15 @@ export default function CafecaIsunfaSlideBrowser() {
           </button>
         </div>
 
-        {/* Info: Actions */}
+        {/* Info: (20260212 - Luphia) Right Side Actions - Visible on both but adjusted */}
         <div className="flex items-center gap-3">
-          <Link href="/cafeca_isunfa/print" target="_blank" className="hidden md:block">
-            <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700 text-gray-200">
+          <Link href="/isunfa/print" target="_blank" className="hidden md:block">
+            <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700">
               <Download size={14} />
-              <span>PDF / PNGs</span>
+              <span>PDF</span>
             </button>
           </Link>
-          <Link href={`/cafeca_isunfa/${currentSlide}`} target="_blank" className="hidden md:block">
+          <Link href={`/isunfa/${currentSlide}`} target="_blank" className="hidden md:block">
             <button className="p-2 hover:bg-neutral-800 rounded-md text-gray-400 hover:text-white transition-colors">
               <Maximize2 size={18} />
             </button>
@@ -155,15 +166,21 @@ export default function CafecaIsunfaSlideBrowser() {
         </div>
       </div>
 
-      {/* Info: Mobile View */}
+      {/* Info: (20260212 - Luphia) Mobile Vertical Scroll View - Visible only on mobile */}
       <div
         className="md:hidden flex-1 overflow-y-auto bg-neutral-900 scroll-smooth"
         onScroll={(e) => {
           const target = e.currentTarget;
+          // Info: (20260212 - Luphia) 35vh is approx 35% of clientHeight
           const paddingOffset = target.clientHeight * 0.35;
           const slideHeight = (720 * mobileScale) + 16;
+
+          // Info: (20260212 - Luphia) Center of the Viewport relative to content top (0)
           const scrollCenter = target.scrollTop + (target.clientHeight / 2);
+
+          // Info: (20260212 - Luphia) Adjust for the top padding so 0 starts at the first slide
           const relativePosition = scrollCenter - paddingOffset;
+
           const index = Math.floor(relativePosition / slideHeight) + 1;
           const safeIndex = Math.max(1, Math.min(totalSlides, index));
 
@@ -175,13 +192,24 @@ export default function CafecaIsunfaSlideBrowser() {
         <div className="flex flex-col items-center gap-4 py-[35vh] min-h-screen">
           {Array.from({ length: totalSlides }, (_, i) => i + 1).map((id) => {
             const distance = Math.abs(id - currentSlide);
+            // Info: (20260212 - Luphia) Only load 3 slides: current +/- 1
             const shouldRender = distance <= 1;
-            const opacityClass = distance === 0 ? 'opacity-100 scale-100' : 'opacity-40 scale-95 blur-[2px] grayscale';
+
+            /**
+             * Info: (20260212 - Luphia) Visual Effects based on distance
+             * 0: opacity-100 blur-0 grayscale-0
+             * 1: opacity-40 blur-sm grayscale
+             */
+            const opacityClass = distance === 0 ? 'opacity-100 scale-100' :
+              'opacity-40 scale-95 blur-[2px] grayscale';
+
             const Component = SlideComponents[id];
 
             return (
               <div key={id} className={`w-full relative overflow-hidden transition-all duration-500 ease-out ${opacityClass}`}
                 style={{ height: 720 * mobileScale }}>
+
+                {/* Info: (20260212 - Luphia) Scale Wrapper */}
                 <div
                   style={{
                     transform: `scale(${mobileScale})`,
@@ -195,7 +223,9 @@ export default function CafecaIsunfaSlideBrowser() {
                     {shouldRender ? <Component /> : <div className="w-full h-full bg-neutral-800/50 animate-pulse" />}
                   </div>
                 </div>
-                <div className={`absolute top-2 right-2 px-2 py-1 rounded-full z-10 pointer-events-none transition-opacity duration-300 ${distance === 0 ? 'bg-emerald-600 text-white shadow-lg' : 'bg-black/50 text-gray-400'}`}>
+
+                {/* Info: (20260212 - Luphia) Overlay Page Number for Mobile */}
+                <div className={`absolute top-2 right-2 px-2 py-1 rounded-full z-10 pointer-events-none transition-opacity duration-300 ${distance === 0 ? 'bg-orange-600 text-white shadow-lg' : 'bg-black/50 text-gray-400'}`}>
                   <span className="text-[10px] font-bold">{id}</span>
                   <span className="text-[8px] opacity-80">/{totalSlides}</span>
                 </div>
@@ -205,11 +235,15 @@ export default function CafecaIsunfaSlideBrowser() {
         </div>
       </div>
 
-      {/* Info: Desktop Layout */}
+      {/* Info: (20260212 - Luphia) Desktop Layout - Hidden on Mobile */}
       <div className="hidden md:flex flex-1 overflow-hidden">
+        {/* Info: (20260212 - Luphia) Simple flex container for desktop content since header is moved out */}
+
+        {/* Info: (20260212 - Luphia) Main Layout: Content (Left) + Navigator (Right) */}
         <div className="flex-1 flex overflow-hidden">
-          {/* Preview Area */}
+          {/* Info: (20260212 - Luphia) Preview Area */}
           <div className="flex-1 bg-neutral-950 flex items-center justify-center p-8 relative overflow-hidden" ref={containerRef}>
+            {/* Info: (20260212 - Luphia) Scaled Content Wrapper */}
             <div
               style={{
                 transform: `scale(${scale})`,
@@ -225,7 +259,7 @@ export default function CafecaIsunfaSlideBrowser() {
             </div>
           </div>
 
-          {/* Side Navigator */}
+          {/* Info: (20260212 - Luphia) Side Navigator (Right) */}
           <div className="w-64 border-l border-neutral-800 bg-neutral-900 flex flex-col flex-shrink-0">
             <div className="px-4 py-3 text-xs text-gray-500 font-bold uppercase tracking-wider flex items-center gap-2 border-b border-neutral-800">
               <Grid size={12} />
@@ -236,19 +270,20 @@ export default function CafecaIsunfaSlideBrowser() {
                 <button
                   key={id}
                   onClick={() => goToSlide(id)}
-                  aria-label={slideTitles[id] || `Slide ${id}`}
                   className={`flex-shrink-0 w-full aspect-video rounded-lg border-2 transition-all duration-200 relative group overflow-hidden ${currentSlide === id
-                    ? 'border-emerald-500 ring-2 ring-emerald-500/20'
+                    ? 'border-orange-500 ring-2 ring-orange-500/20'
                     : 'border-neutral-800 hover:border-neutral-700 opacity-60 hover:opacity-100'
                     }`}
                 >
+                  {/* Info: (20260212 - Luphia) Mini Preview Mock */}
                   <div className="absolute inset-0 bg-white">
-                    <div className="w-full h-full flex items-center justify-center bg-gray-50 text-gray-400 text-xs font-bold font-sans">
-                      iSunFA
+                    <div className="w-full h-full flex items-center justify-center bg-gray-50 text-gray-300 text-xs font-mono">
+                      SLIDE {id}
                     </div>
+                    {/* Info: (20260212 - Luphia) Overlay Title */}
                     <div className="absolute bottom-0 inset-x-0 bg-neutral-900/90 p-2 text-left">
                       <div className="flex justify-between items-center mb-0.5">
-                        <span className="text-[10px] font-bold text-emerald-500">#{id.toString().padStart(2, '0')}</span>
+                        <span className="text-[10px] font-bold text-orange-500">#{id.toString().padStart(2, '0')}</span>
                       </div>
                       <div className="text-[10px] text-gray-300 font-medium truncate leading-tight">{slideTitles[id] || `Slide ${id}`}</div>
                     </div>

@@ -1,21 +1,18 @@
 'use client';
 
-import CafecaFaithSlide1 from '@/app/isunfa/1/page';
-import CafecaFaithSlide2 from '@/app/isunfa/2/page';
-import CafecaFaithSlide3 from '@/app/isunfa/3/page';
-import CafecaFaithSlide4 from '@/app/isunfa/4/page';
-import CafecaFaithSlide5 from '@/app/isunfa/5/page';
-import CafecaFaithSlide6 from '@/app/isunfa/6/page';
-import CafecaFaithSlide7 from '@/app/isunfa/7/page';
-import CafecaFaithSlide8 from '@/app/isunfa/8/page';
-import CafecaFaithSlide9 from '@/app/isunfa/9/page';
-import CafecaFaithSlide10 from '@/app/isunfa/10/page';
-import CafecaFaithSlide11 from '@/app/isunfa/11/page';
-import CafecaFaithSlide12 from '@/app/isunfa/12/page';
-import CafecaFaithSlide13 from '@/app/isunfa/13/page';
-import CafecaFaithSlide14 from '@/app/isunfa/14/page';
-import CafecaFaithSlide15 from '@/app/isunfa/15/page';
-import CafecaFaithSlide16 from '@/app/isunfa/16/page';
+import ISunFASlide1 from '@/app/isunfa_0204/1/page';
+import ISunFASlide2 from '@/app/isunfa_0204/2/page';
+import ISunFASlide3 from '@/app/isunfa_0204/3/page';
+import ISunFASlide4 from '@/app/isunfa_0204/4/page';
+import ISunFASlide5 from '@/app/isunfa_0204/5/page';
+import ISunFASlide6 from '@/app/isunfa_0204/6/page';
+import ISunFASlide7 from '@/app/isunfa_0204/7/page';
+import ISunFASlide8 from '@/app/isunfa_0204/8/page';
+import ISunFASlide9 from '@/app/isunfa_0204/9/page';
+import ISunFASlide10 from '@/app/isunfa_0204/10/page';
+import ISunFASlide11 from '@/app/isunfa_0204/11/page';
+import ISunFASlide12 from '@/app/isunfa_0204/12/page';
+import ISunFASlide13 from '@/app/isunfa_0204/13/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -48,7 +45,7 @@ const parsePageRange = (range: string, max: number): Set<number> => {
   return pages;
 };
 
-export default function CafecaFaithPrint() {
+export default function ISunFAPrint() {
   const [isExporting, setIsExporting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [showExportMenu, setShowExportMenu] = useState(false);
@@ -98,17 +95,17 @@ export default function CafecaFaithPrint() {
             }
           });
           const base64 = dataUrl.split(',')[1];
-          zip.file(`ISUNFA_Slide_${(i + 1).toString().padStart(2, '0')}.png`, base64, { base64: true });
+          zip.file(`iSunFA_Slide_${(i + 1).toString().padStart(2, '0')}.png`, base64, { base64: true });
         }
 
         setProgress(Math.round(((i + 1) / slidePages.length) * 100));
       }
 
-      const blob = await zip.generateAsync({ type: 'blob' });
-      const url = URL.createObjectURL(blob);
+      const content = await zip.generateAsync({ type: 'blob' });
+      const url = URL.createObjectURL(content);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'ISUNFA_Pitch_Deck.zip';
+      a.download = 'iSunFA_Slides_PNG.zip';
       a.click();
       URL.revokeObjectURL(url);
 
@@ -136,7 +133,7 @@ export default function CafecaFaithPrint() {
         <div className="relative">
           <button
             onClick={() => setShowExportMenu(!showExportMenu)}
-            className="px-4 py-2 bg-emerald-600 text-white rounded-md text-sm font-bold shadow-md hover:bg-emerald-700 transition-colors flex items-center gap-2 h-10"
+            className="px-4 py-2 bg-orange-600 text-white rounded-md text-sm font-bold shadow-md hover:bg-orange-700 transition-colors flex items-center gap-2 h-10"
             disabled={isExporting}
           >
             {isExporting ? <Loader2 className="animate-spin" size={16} /> : <Download size={16} />}
@@ -164,7 +161,7 @@ export default function CafecaFaithPrint() {
                   onChange={(e) => setPageRange(e.target.value)}
                   placeholder="e.g. 1-3, 5, 8-10 (Empty = All)"
                   aria-label="Page Range"
-                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm text-gray-900 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
                 />
                 <p className="mt-2 text-[10px] text-gray-500 leading-tight">
                   Leave empty to export all slides. Use commas for multiple ranges.
@@ -173,7 +170,7 @@ export default function CafecaFaithPrint() {
 
               <button
                 onClick={handleExport}
-                className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-sm font-bold shadow-md transition-all active:scale-[0.98] flex justify-center items-center gap-2"
+                className="w-full py-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-sm font-bold shadow-md transition-all active:scale-[0.98] flex justify-center items-center gap-2"
               >
                 <Download size={16} />
                 Start Export
@@ -222,22 +219,19 @@ export default function CafecaFaithPrint() {
         }
       `}} />
 
-      <div className="slide-page"><CafecaFaithSlide1 /></div>
-      <div className="slide-page"><CafecaFaithSlide2 /></div>
-      <div className="slide-page"><CafecaFaithSlide3 /></div>
-      <div className="slide-page"><CafecaFaithSlide4 /></div>
-      <div className="slide-page"><CafecaFaithSlide5 /></div>
-      <div className="slide-page"><CafecaFaithSlide6 /></div>
-      <div className="slide-page"><CafecaFaithSlide7 /></div>
-      <div className="slide-page"><CafecaFaithSlide8 /></div>
-      <div className="slide-page"><CafecaFaithSlide9 /></div>
-      <div className="slide-page"><CafecaFaithSlide10 /></div>
-      <div className="slide-page"><CafecaFaithSlide11 /></div>
-      <div className="slide-page"><CafecaFaithSlide12 /></div>
-      <div className="slide-page"><CafecaFaithSlide13 /></div>
-      <div className="slide-page"><CafecaFaithSlide14 /></div>
-      <div className="slide-page"><CafecaFaithSlide15 /></div>
-      <div className="slide-page"><CafecaFaithSlide16 /></div>
+      <div className="slide-page"><ISunFASlide1 /></div>
+      <div className="slide-page"><ISunFASlide2 /></div>
+      <div className="slide-page"><ISunFASlide3 /></div>
+      <div className="slide-page"><ISunFASlide4 /></div>
+      <div className="slide-page"><ISunFASlide5 /></div>
+      <div className="slide-page"><ISunFASlide6 /></div>
+      <div className="slide-page"><ISunFASlide7 /></div>
+      <div className="slide-page"><ISunFASlide8 /></div>
+      <div className="slide-page"><ISunFASlide9 /></div>
+      <div className="slide-page"><ISunFASlide10 /></div>
+      <div className="slide-page"><ISunFASlide11 /></div>
+      <div className="slide-page"><ISunFASlide12 /></div>
+      <div className="slide-page"><ISunFASlide13 /></div>
     </div>
   );
 }

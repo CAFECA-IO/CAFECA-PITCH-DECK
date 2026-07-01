@@ -1,109 +1,182 @@
-'use client'
+'use client';
 
-import React from 'react';
-import Image from 'next/image';
-import { Server, Zap, ShieldCheck, HardDrive, BarChart4 } from 'lucide-react';
+import { Calculator, Search, MapPin, Brain, Sparkles, Clock, ShieldCheck } from 'lucide-react';
 
-export default function iSunFASlide5() {
+export default function CafecaFaithSlide5() {
   return (
-    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 font-sans">
-      <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800 text-white">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
+      
+      {/* Background Gradients */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute -left-1/4 -top-1/4 w-[800px] h-[800px] bg-green-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute -right-1/4 -bottom-1/4 w-[800px] h-[800px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+      </div>
 
-        {/* Info: (20260212 - Luphia) Background Gloomier but with Emerald hints for solution */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[40%] h-[40%] bg-orange-900/10 blur-[100px] rounded-full" />
-          <div className="absolute bottom-0 right-1/4 w-[40%] h-[40%] bg-amber-900/10 blur-[100px] rounded-full" />
-          {/* Info: (20260212 - Luphia) Grid Pattern */}
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
+      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
+        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span className="text-xs font-mono text-green-600 uppercase tracking-widest">AI Data Ingestion</span>
+      </div>
+
+      {/* Content Container */}
+      <div className="z-10 w-full max-w-6xl flex flex-col px-8 relative">
+        
+        {/* Top Header Area */}
+        <div className="text-center space-y-2 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-green-200 shadow-sm mx-auto">
+            <Sparkles className="w-4 h-4 text-green-600" />
+            <span className="text-xs font-semibold text-green-700">SOP 步驟二：數據收集與鑑別 (Data Collection & Identification)</span>
+          </div>
+          
+          <h2 className="text-4xl font-black leading-tight text-slate-800">
+            如何透過 AI 完成{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">數據收集與智慧鑑別？</span>
+          </h2>
+          <p className="text-sm text-slate-500 leading-relaxed font-medium max-w-3xl mx-auto">
+            數據收集是碳盤查中最繁重的工序。AI 智慧化解決了傳統人工收集單據、換算單位、查詢係數與驗證距離的巨大痛點。
+          </p>
         </div>
 
-        <div className="z-10 w-full max-w-6xl px-12 flex flex-col h-full py-12">
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-12 gap-6 items-start w-full">
+          
+          {/* Left Column: AI Mechanism (5/12 width) */}
+          <div className="col-span-5 space-y-3">
+            <h3 className="text-base font-bold text-slate-800 flex items-center gap-2 mb-1">
+              <Brain className="w-4.5 h-4.5 text-green-600" />
+              AI 智慧收集與鑑別流程
+            </h3>
 
-          {/* Info: (20260212 - Luphia) Title Section */}
-          <div className="mb-12 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 mb-4">
-              <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-              <span className="text-orange-400 text-xs font-bold tracking-widest uppercase">Solution</span>
+            {/* Step 1 Card */}
+            <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
+              <div className="absolute top-3 right-4 bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                Step 1
+              </div>
+              <h4 className="text-xs font-bold text-slate-800 mb-0.5">多源異質數據自動擷取</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                透過 OCR 與 NLP 技術，自動識別發票、電費單、加油卡等雜亂文件，免除人工手動登載之苦。
+              </p>
             </div>
-            <h2 className="text-5xl font-extrabold tracking-tight text-white">
-              iSunFA 企業淨零智能導入方案
-            </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mx-auto mt-4" />
+
+            {/* Step 2 Card */}
+            <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
+              <div className="absolute top-3 right-4 bg-orange-50 text-orange-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                Step 2
+              </div>
+              <h4 className="text-xs font-bold text-slate-800 mb-0.5">自動單位與當量換算</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                自動辨識公升、度數、噸、公斤等異質單位，AI 依標準轉換公式自動完成當量標準化與換算。
+              </p>
+            </div>
+
+            {/* Step 3 Card */}
+            <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
+              <div className="absolute top-3 right-4 bg-green-50 text-green-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                Step 3
+              </div>
+              <h4 className="text-xs font-bold text-slate-800 mb-0.5">智慧語意係數查詢</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                自動檢索全球排放因子資料庫（如環境部、DEFRA 等），語意比對品名，精準配對最適係數。
+              </p>
+            </div>
+
+            {/* Step 4 Card */}
+            <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
+              <div className="absolute top-3 right-4 bg-indigo-50 text-indigo-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                Step 4
+              </div>
+              <h4 className="text-xs font-bold text-slate-800 mb-0.5">運輸距離自動查證</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                結合 GIS 與地圖 API 自動解析物流起訖點，驗證運輸距離，確保 Scope 3 運輸數據真實可靠。
+              </p>
+            </div>
           </div>
 
-          {/* Info: (20260212 - Luphia) 3 Featured Cards */}
-          <div className="grid grid-cols-3 gap-8 flex-1 items-center">
+          {/* Right Column: AI vs Manual Comparison Table (7/12 width) */}
+          <div className="col-span-7 bg-white border border-slate-200 shadow-md rounded-2xl p-5">
+            <h3 className="text-base font-bold text-slate-800 flex items-center gap-2 mb-3">
+              <Sparkles className="w-4.5 h-4.5 text-blue-600" />
+              AI 數據收集 vs 傳統人工優勢對比
+            </h3>
 
-            {/* Info: (20260212 - Luphia) Feature 1: AI Computing Center */}
-            <div className="group relative bg-neutral-900/40 border border-white/10 p-8 rounded-3xl h-[400px] backdrop-blur-xl hover:border-orange-500/50 hover:bg-neutral-900/60 transition-all duration-500 flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(249,115,22,0.1)]">
-                <Server className="text-orange-400 w-10 h-10" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-300">企業專屬 AI 算力中心</h3>
-              <ul className="text-neutral-400 leading-relaxed text-sm space-y-3 text-left w-full px-4">
-                <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-orange-500 mt-0.5 shrink-0" />
-                  <span>資料落地保存，不出公司大門</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <HardDrive className="w-4 h-4 text-orange-500 mt-0.5 shrink-0" />
-                  <span>採用金融級加密技術</span>
-                </li>
-              </ul>
+            <div className="overflow-hidden border border-slate-100 rounded-xl">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-200">
+                    <th className="py-2.5 px-3 text-xs font-bold text-slate-500 w-1/4">比較維度</th>
+                    <th className="py-2.5 px-3 text-xs font-bold text-slate-500 w-3/8">傳統人工設定 (Manual)</th>
+                    <th className="py-2.5 px-3 text-xs font-bold text-green-600 bg-green-50/50 w-3/8">AI 智慧設定 (AI)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-slate-400" />
+                      數據錄入
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      人工逐筆登載，易出錯且耗時數月。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      批次 OCR 識別與 API 串接，秒級完成。
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <Calculator className="w-3.5 h-3.5 text-slate-400" />
+                      當量換算
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      人工翻查換算公式，容易因單位混亂而算錯。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      自動識別異質單位，自動完成標準化當量換算。
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <Search className="w-3.5 h-3.5 text-slate-400" />
+                      係數查詢
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      手動於數萬筆因子庫中篩選，容易配錯產生合規風險。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      語意匹配引擎，毫秒級自動檢索並對應最新因子。
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <MapPin className="w-3.5 h-3.5 text-slate-400" />
+                      運輸距離
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      手動利用地圖查詢起訖估算，繁瑣且難以查證。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      地圖 API 自動計算起訖物流路徑並存檔供後續稽核。
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50 transition-colors">
+                    <td className="py-2.5 px-3 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5 text-slate-400" />
+                      數據檢核
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] text-slate-500 leading-relaxed">
+                      人眼抽查，難以察記重複申報或中間漏報。
+                    </td>
+                    <td className="py-2.5 px-3 text-[11px] font-semibold text-slate-800 bg-green-50/30 leading-relaxed">
+                      自動校對單據連續性與異常值，智慧提醒數據缺漏。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
-            {/* Info: (20260212 - Luphia) Feature 2: All-in-One */}
-            <div className="group relative bg-neutral-900/40 border border-white/10 rounded-3xl h-[400px] backdrop-blur-xl hover:border-orange-500/50 transition-all duration-500 overflow-hidden">
-              {/* Full Background Image */}
-              <div className="absolute inset-0 z-0">
-                <Image
-                  src="/images/hardware_lease.png"
-                  alt="iSunFA Hardware"
-                  fill
-                  className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-900/60 to-transparent" />
-              </div>
-
-              <div className="relative z-10 flex flex-col items-center justify-end h-full p-8 text-center">
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-300">一機搞定</h3>
-                <p className="text-neutral-300 leading-relaxed text-sm mb-6">
-                  專人到府安裝，隨插即用。
-                </p>
-                <div className="px-4 py-2 bg-orange-500/20 rounded-full border border-orange-500/30 backdrop-blur-md">
-                  <span className="text-orange-400 text-xs font-bold uppercase tracking-wider">All-in-One</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Info: (20260212 - Luphia) Feature 3: High Efficiency */}
-            <div className="group relative bg-neutral-900/40 border border-white/10 p-8 rounded-3xl h-[400px] backdrop-blur-xl hover:border-orange-500/50 hover:bg-neutral-900/60 transition-all duration-500 flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(249,115,22,0.1)]">
-                <Zap className="text-orange-400 w-10 h-10" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-300">高效穩定</h3>
-              <ul className="text-neutral-400 leading-relaxed text-sm space-y-3 text-left w-full px-4">
-                <li className="flex items-start gap-2">
-                  <BarChart4 className="w-4 h-4 text-orange-500 mt-0.5 shrink-0" />
-                  <span>不限憑證數量、不限報表產出量</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Zap className="w-4 h-4 text-orange-500 mt-0.5 shrink-0" />
-                  <span>效能專屬於您</span>
-                </li>
-              </ul>
-            </div>
-
           </div>
-        </div>
 
-        {/* Info: (20260212 - Luphia) Footer */}
-        <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-500 text-[10px] tracking-[0.2em] uppercase font-medium">
-          <div>領航淨零，智算未來</div>
-          <div className="flex gap-2 items-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-orange-600"></div>
-            2026 CAFECA Fintech
-          </div>
         </div>
 
       </div>

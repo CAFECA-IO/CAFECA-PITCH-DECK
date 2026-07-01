@@ -3,26 +3,21 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MonitorPlay, Download, Grid, Maximize2 } from 'lucide-react';
 import Link from 'next/link';
-import CafecaFaithSlide1 from '@/app/isunfa/1/page';
-import CafecaFaithSlide2 from '@/app/isunfa/2/page';
-import CafecaFaithSlide3 from '@/app/isunfa/3/page';
-import CafecaFaithSlide4 from '@/app/isunfa/4/page';
-import CafecaFaithSlide5 from '@/app/isunfa/5/page';
-import CafecaFaithSlide6 from '@/app/isunfa/6/page';
-import CafecaFaithSlide7 from '@/app/isunfa/7/page';
-import CafecaFaithSlide8 from '@/app/isunfa/8/page';
-import CafecaFaithSlide9 from '@/app/isunfa/9/page';
-import CafecaFaithSlide10 from '@/app/isunfa/10/page';
-import CafecaFaithSlide11 from '@/app/isunfa/11/page';
-import CafecaFaithSlide12 from '@/app/isunfa/12/page';
-import CafecaFaithSlide13 from '@/app/isunfa/13/page';
-import CafecaFaithSlide14 from '@/app/isunfa/14/page';
-import CafecaFaithSlide15 from '@/app/isunfa/15/page';
-import CafecaFaithSlide16 from '@/app/isunfa/16/page';
+import CafecaIsunfaSlide1 from '@/app/cafeca_isunfa_202503/1/page';
+import CafecaIsunfaSlide2 from '@/app/cafeca_isunfa_202503/2/page';
+import CafecaIsunfaSlide3 from '@/app/cafeca_isunfa_202503/3/page';
+import CafecaIsunfaSlide4 from '@/app/cafeca_isunfa_202503/4/page';
+import CafecaIsunfaSlide5 from '@/app/cafeca_isunfa_202503/5/page';
+import CafecaIsunfaSlide6 from '@/app/cafeca_isunfa_202503/6/page';
+import CafecaIsunfaSlide7 from '@/app/cafeca_isunfa_202503/7/page';
+import CafecaIsunfaSlide8 from '@/app/cafeca_isunfa_202503/8/page';
+import CafecaIsunfaSlide9 from '@/app/cafeca_isunfa_202503/9/page';
+import CafecaIsunfaSlide10 from '@/app/cafeca_isunfa_202503/10/page';
+import CafecaIsunfaSlide11 from '@/app/cafeca_isunfa_202503/11/page';
 
-export default function CafecaFaithSlideBrowser() {
+export default function CafecaIsunfaSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 16;
+  const totalSlides = 11;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
@@ -57,43 +52,33 @@ export default function CafecaFaithSlideBrowser() {
 
   // Info: Slide Components Mapping
   const SlideComponents: { [key: number]: React.ComponentType } = {
-    1: CafecaFaithSlide1,
-    2: CafecaFaithSlide2,
-    3: CafecaFaithSlide3,
-    4: CafecaFaithSlide4,
-    5: CafecaFaithSlide5,
-    6: CafecaFaithSlide6,
-    7: CafecaFaithSlide7,
-    8: CafecaFaithSlide8,
-    9: CafecaFaithSlide9,
-    10: CafecaFaithSlide10,
-    11: CafecaFaithSlide11,
-    12: CafecaFaithSlide12,
-    13: CafecaFaithSlide13,
-    14: CafecaFaithSlide14,
-    15: CafecaFaithSlide15,
-    16: CafecaFaithSlide16,
+    1: CafecaIsunfaSlide1,
+    2: CafecaIsunfaSlide2,
+    3: CafecaIsunfaSlide3,
+    4: CafecaIsunfaSlide4,
+    5: CafecaIsunfaSlide5,
+    6: CafecaIsunfaSlide6,
+    7: CafecaIsunfaSlide7,
+    8: CafecaIsunfaSlide8,
+    9: CafecaIsunfaSlide9,
+    10: CafecaIsunfaSlide10,
+    11: CafecaIsunfaSlide11,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
 
   const slideTitles: { [key: number]: string } = {
-    1: '封面：陽光智能碳會計',
-    2: '為何需要使用 AI',
-    3: 'AI 導入 SOP',
-    4: 'AI 邊界設定',
-    5: 'AI 數據收集與鑑別',
-    6: 'AI 帳務與碳排計算',
-    7: 'AI 報告撰寫',
-    8: 'AI 內容查證',
-    9: '企業所需分析',
-    10: '專家模型核心',
-    11: '企業人工智能導入',
-    12: '組織碳盤查方案',
-    13: '產品碳足跡方案',
-    14: '碳足跡標章方案',
-    15: '導入 AI 之企業優勢',
-    16: '感謝聆聽',
+    1: 'Cover: iSunFA',
+    2: 'Climate Crisis',
+    3: 'The Carbon Equation',
+    4: 'Manufacturing Complexity',
+    5: 'AI Carbon Inference',
+    6: 'Dynamic Optimization',
+    7: '5 Compliance Pillars',
+    8: 'Edge AI Efficiency',
+    9: 'Target Market / TAM',
+    10: 'Technical Moat',
+    11: 'The Negentropy Law',
   };
 
   const nextSlide = useCallback(() => {
@@ -119,36 +104,36 @@ export default function CafecaFaithSlideBrowser() {
   }, [nextSlide, prevSlide]);
 
   return (
-    <div className="flex flex-col h-screen bg-slate-50 text-slate-800 overflow-hidden font-sans">
+    <div className="flex flex-col h-screen bg-neutral-900 text-white overflow-hidden">
 
       {/* Info: Universal Header */}
-      <div className="h-14 border-b border-slate-200 flex items-center justify-between px-4 bg-white/80 backdrop-blur-md z-20 flex-shrink-0">
+      <div className="h-14 border-b border-neutral-800 flex items-center justify-between px-4 bg-neutral-900 z-20 flex-shrink-0">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div className="bg-gradient-to-br from-orange-500 to-orange-400 p-1.5 rounded-lg shadow-sm">
+          <div className="bg-emerald-600 p-1.5 rounded-lg">
             <MonitorPlay size={20} className="text-white" />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-slate-800 tracking-wide">從記帳到計碳－用 AI 迎戰 IFRS 與 CBAM</h1>
-            <p className="text-xs text-slate-500">v1.0.0 • 2026 第一代人工智能減碳機器人</p>
+            <h1 className="text-sm font-bold text-gray-200">iSunFA Presentation</h1>
+            <p className="text-xs text-gray-500">v1.0.0 • 2026 iSunFA CDIB Pitch</p>
           </div>
         </Link>
 
         {/* Info: Desktop Controls */}
         <div className="hidden md:flex items-center gap-2">
-          <span className="text-xs font-mono text-slate-500 mr-2">
+          <span className="text-xs font-mono text-gray-500 mr-2">
             {currentSlide} / {totalSlides}
           </span>
           <button
             onClick={prevSlide}
             disabled={currentSlide === 1}
-            className="p-2 hover:bg-slate-100 rounded-full disabled:opacity-30 transition-colors text-slate-600"
+            className="p-2 hover:bg-neutral-800 rounded-full disabled:opacity-30 transition-colors"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={nextSlide}
             disabled={currentSlide === totalSlides}
-            className="p-2 hover:bg-slate-100 rounded-full disabled:opacity-30 transition-colors text-slate-600"
+            className="p-2 hover:bg-neutral-800 rounded-full disabled:opacity-30 transition-colors"
           >
             <ChevronRight size={20} />
           </button>
@@ -156,14 +141,14 @@ export default function CafecaFaithSlideBrowser() {
 
         {/* Info: Actions */}
         <div className="flex items-center gap-3">
-          <Link href="/isunfa/print" target="_blank" className="hidden md:block">
-            <button className="flex items-center gap-2 px-3 py-1.5 bg-white hover:bg-slate-50 rounded-md text-xs font-medium transition-colors border border-slate-200 text-slate-700 shadow-sm">
+          <Link href="/cafeca_isunfa/print" target="_blank" className="hidden md:block">
+            <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700 text-gray-200">
               <Download size={14} />
               <span>PDF / PNGs</span>
             </button>
           </Link>
-          <Link href={`/isunfa/${currentSlide}`} target="_blank" className="hidden md:block">
-            <button className="p-2 hover:bg-slate-100 rounded-md text-slate-400 hover:text-slate-600 transition-colors">
+          <Link href={`/cafeca_isunfa/${currentSlide}`} target="_blank" className="hidden md:block">
+            <button className="p-2 hover:bg-neutral-800 rounded-md text-gray-400 hover:text-white transition-colors">
               <Maximize2 size={18} />
             </button>
           </Link>
@@ -172,7 +157,7 @@ export default function CafecaFaithSlideBrowser() {
 
       {/* Info: Mobile View */}
       <div
-        className="md:hidden flex-1 overflow-y-auto bg-slate-50 scroll-smooth"
+        className="md:hidden flex-1 overflow-y-auto bg-neutral-900 scroll-smooth"
         onScroll={(e) => {
           const target = e.currentTarget;
           const paddingOffset = target.clientHeight * 0.35;
@@ -191,7 +176,7 @@ export default function CafecaFaithSlideBrowser() {
           {Array.from({ length: totalSlides }, (_, i) => i + 1).map((id) => {
             const distance = Math.abs(id - currentSlide);
             const shouldRender = distance <= 1;
-            const opacityClass = distance === 0 ? 'opacity-100 scale-100' : 'opacity-40 scale-95 blur-[1px] grayscale';
+            const opacityClass = distance === 0 ? 'opacity-100 scale-100' : 'opacity-40 scale-95 blur-[2px] grayscale';
             const Component = SlideComponents[id];
 
             return (
@@ -207,10 +192,10 @@ export default function CafecaFaithSlideBrowser() {
                   className="bg-white shadow-xl rounded-lg"
                 >
                   <div className="w-full h-full [&>div]:!min-h-0 [&>div]:!h-full [&>div]:!bg-transparent [&>div]:!p-0">
-                    {shouldRender ? <Component /> : <div className="w-full h-full bg-slate-100 animate-pulse" />}
+                    {shouldRender ? <Component /> : <div className="w-full h-full bg-neutral-800/50 animate-pulse" />}
                   </div>
                 </div>
-                <div className={`absolute top-2 right-2 px-2 py-1 rounded-full z-10 pointer-events-none transition-opacity duration-300 ${distance === 0 ? 'bg-orange-500 text-white shadow-lg' : 'bg-slate-200/50 text-slate-500'}`}>
+                <div className={`absolute top-2 right-2 px-2 py-1 rounded-full z-10 pointer-events-none transition-opacity duration-300 ${distance === 0 ? 'bg-emerald-600 text-white shadow-lg' : 'bg-black/50 text-gray-400'}`}>
                   <span className="text-[10px] font-bold">{id}</span>
                   <span className="text-[8px] opacity-80">/{totalSlides}</span>
                 </div>
@@ -224,7 +209,7 @@ export default function CafecaFaithSlideBrowser() {
       <div className="hidden md:flex flex-1 overflow-hidden">
         <div className="flex-1 flex overflow-hidden">
           {/* Preview Area */}
-          <div className="flex-1 bg-slate-50 flex items-center justify-center p-8 relative overflow-hidden" ref={containerRef}>
+          <div className="flex-1 bg-neutral-950 flex items-center justify-center p-8 relative overflow-hidden" ref={containerRef}>
             <div
               style={{
                 transform: `scale(${scale})`,
@@ -232,7 +217,7 @@ export default function CafecaFaithSlideBrowser() {
                 height: 720,
                 transformOrigin: 'center center'
               }}
-              className="bg-white shadow-2xl flex-shrink-0 relative overflow-hidden ring-1 ring-slate-200"
+              className="bg-white shadow-2xl flex-shrink-0 relative overflow-hidden ring-1 ring-neutral-800"
             >
               <div className="w-full h-full [&>div]:!min-h-0 [&>div]:!h-full [&>div]:!bg-transparent [&>div]:!p-0">
                 <CurrentSlideComponent />
@@ -241,8 +226,8 @@ export default function CafecaFaithSlideBrowser() {
           </div>
 
           {/* Side Navigator */}
-          <div className="w-64 border-l border-slate-200 bg-white flex flex-col flex-shrink-0">
-            <div className="px-4 py-3 text-xs text-slate-500 font-bold uppercase tracking-wider flex items-center gap-2 border-b border-slate-200">
+          <div className="w-64 border-l border-neutral-800 bg-neutral-900 flex flex-col flex-shrink-0">
+            <div className="px-4 py-3 text-xs text-gray-500 font-bold uppercase tracking-wider flex items-center gap-2 border-b border-neutral-800">
               <Grid size={12} />
               <span>Navigator</span>
             </div>
@@ -253,19 +238,19 @@ export default function CafecaFaithSlideBrowser() {
                   onClick={() => goToSlide(id)}
                   aria-label={slideTitles[id] || `Slide ${id}`}
                   className={`flex-shrink-0 w-full aspect-video rounded-lg border-2 transition-all duration-200 relative group overflow-hidden ${currentSlide === id
-                    ? 'border-orange-500 ring-2 ring-orange-500/20 shadow-md'
-                    : 'border-slate-200 hover:border-slate-300 opacity-70 hover:opacity-100'
+                    ? 'border-emerald-500 ring-2 ring-emerald-500/20'
+                    : 'border-neutral-800 hover:border-neutral-700 opacity-60 hover:opacity-100'
                     }`}
                 >
-                  <div className="absolute inset-0 bg-slate-50">
-                    <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-400 text-xs font-bold font-sans">
-                      Faith
+                  <div className="absolute inset-0 bg-white">
+                    <div className="w-full h-full flex items-center justify-center bg-gray-50 text-gray-400 text-xs font-bold font-sans">
+                      iSunFA
                     </div>
-                    <div className="absolute bottom-0 inset-x-0 bg-white/90 backdrop-blur-sm p-2 text-left border-t border-slate-100">
+                    <div className="absolute bottom-0 inset-x-0 bg-neutral-900/90 p-2 text-left">
                       <div className="flex justify-between items-center mb-0.5">
-                        <span className="text-[10px] font-bold text-orange-500">#{id.toString().padStart(2, '0')}</span>
+                        <span className="text-[10px] font-bold text-emerald-500">#{id.toString().padStart(2, '0')}</span>
                       </div>
-                      <div className="text-[10px] text-slate-700 font-medium truncate leading-tight">{slideTitles[id] || `Slide ${id}`}</div>
+                      <div className="text-[10px] text-gray-300 font-medium truncate leading-tight">{slideTitles[id] || `Slide ${id}`}</div>
                     </div>
                   </div>
                 </button>

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { QRCodeSVG } from 'qrcode.react';
 
-export default function CafecaFaithSlide14() {
+export default function CafecaFaithSlide10() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
 
@@ -31,7 +31,7 @@ export default function CafecaFaithSlide14() {
           </h1>
           <p className="text-2xl text-slate-500 font-medium tracking-widest border-l-4 border-orange-500 pl-4">
             <span className="text-orange-500">2026</span><br />
-            iSunFA 陽光智能碳會計
+            iSunFA，人工智能碳會計
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function CafecaFaithSlide14() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <span className="text-sm font-bold text-orange-500 uppercase tracking-widest">
-              了解雲端版方案
+              了解雲端方案
             </span>
             <a
               href="https://isunfa.com"

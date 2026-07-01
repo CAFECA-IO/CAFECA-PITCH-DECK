@@ -1,16 +1,16 @@
 'use client';
 
-import CafecaIsunfaSlide1 from '@/app/cafeca_isunfa/1/page';
-import CafecaIsunfaSlide2 from '@/app/cafeca_isunfa/2/page';
-import CafecaIsunfaSlide3 from '@/app/cafeca_isunfa/3/page';
-import CafecaIsunfaSlide4 from '@/app/cafeca_isunfa/4/page';
-import CafecaIsunfaSlide5 from '@/app/cafeca_isunfa/5/page';
-import CafecaIsunfaSlide6 from '@/app/cafeca_isunfa/6/page';
-import CafecaIsunfaSlide7 from '@/app/cafeca_isunfa/7/page';
-import CafecaIsunfaSlide8 from '@/app/cafeca_isunfa/8/page';
-import CafecaIsunfaSlide9 from '@/app/cafeca_isunfa/9/page';
-import CafecaIsunfaSlide10 from '@/app/cafeca_isunfa/10/page';
-import CafecaIsunfaSlide11 from '@/app/cafeca_isunfa/11/page';
+import CafecaIsunfaSlide1 from '@/app/cafeca_isunfa_202503/1/page';
+import CafecaIsunfaSlide2 from '@/app/cafeca_isunfa_202503/2/page';
+import CafecaIsunfaSlide3 from '@/app/cafeca_isunfa_202503/3/page';
+import CafecaIsunfaSlide4 from '@/app/cafeca_isunfa_202503/4/page';
+import CafecaIsunfaSlide5 from '@/app/cafeca_isunfa_202503/5/page';
+import CafecaIsunfaSlide6 from '@/app/cafeca_isunfa_202503/6/page';
+import CafecaIsunfaSlide7 from '@/app/cafeca_isunfa_202503/7/page';
+import CafecaIsunfaSlide8 from '@/app/cafeca_isunfa_202503/8/page';
+import CafecaIsunfaSlide9 from '@/app/cafeca_isunfa_202503/9/page';
+import CafecaIsunfaSlide10 from '@/app/cafeca_isunfa_202503/10/page';
+import CafecaIsunfaSlide11 from '@/app/cafeca_isunfa_202503/11/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';

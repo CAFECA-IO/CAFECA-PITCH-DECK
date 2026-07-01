@@ -1,98 +1,142 @@
 'use client';
 
-import { UserCog, ShieldCheck, CloudUpload, RefreshCw, Wrench, Infinity } from 'lucide-react';
+import { ActivitySquare, FileSearch, ShieldCheck, Link2, Leaf } from 'lucide-react';
+import Image from 'next/image';
 
-export default function iSunFASlide9() {
-  const commitments = [
-    {
-      icon: <UserCog className="w-8 h-8 text-orange-400" />,
-      title: "專人到府部署",
-      desc: "專業工程師親自到場設定，免除 IT 門檻，確保系統即刻上線運作。"
-    },
-    {
-      icon: <ShieldCheck className="w-8 h-8 text-orange-400" />,
-      title: "金融級資安",
-      desc: "採本地端加密存儲技術，確保財務數據與商業機密滴水不漏。"
-    },
-    {
-      icon: <CloudUpload className="w-8 h-8 text-orange-400" />,
-      title: "自動異地備援",
-      desc: "每日數據加密備份至異地雲端，完善災難復原機制，營運不中斷。"
-    },
-    {
-      icon: <RefreshCw className="w-8 h-8 text-orange-400" />,
-      title: "法規合規更新",
-      desc: "系統隨稅法、會計準則及 ISO 規範自動同步更新，確保企業永遠合規。"
-    },
-    {
-      icon: <Wrench className="w-8 h-8 text-orange-400" />,
-      title: "硬體安心保固",
-      desc: "提供硬體故障即時檢修與替換服務，保障企業財務運作零停擺。"
-    },
-    {
-      icon: <Infinity className="w-8 h-8 text-orange-400" />,
-      title: "無限量授權",
-      desc: "不限憑證張數、不限報表產出數量，滿足企業成長擴張需求。"
-    }
-  ];
-
+export default function CafecaFaithSlide8() {
   return (
-    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 font-sans">
-      <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800 text-white">
+    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
 
-        {/* Info: (20260212 - Luphia) Background: Subtle Tech Glow */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[60%] bg-orange-900/10 blur-[120px] rounded-full" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
-        </div>
+      {/* Background Gradients */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute left-1/4 top-10 w-[600px] h-[600px] bg-emerald-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute left-10 bottom-10 w-[400px] h-[400px] bg-blue-50 rounded-full filter blur-[120px]"></div>
+      </div>
 
-        <div className="z-10 w-full max-w-6xl px-12 flex flex-col h-full py-16">
+      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
+        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span className="text-xs font-mono text-emerald-600 uppercase tracking-widest">Comprehensive ESG Analysis</span>
+      </div>
 
-          {/* Info: (20260212 - Luphia) Title Section */}
-          <div className="mb-12 text-center space-y-4">
-            <h2 className="text-5xl font-extrabold tracking-tight text-white">
-              六大基礎服務承諾：讓您導入無後顧之憂
-            </h2>
-            <div className="h-1 w-32 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mx-auto mt-6" />
+      {/* Content Container (Left 2/3) */}
+      <div className="z-10 w-2/3 h-full flex flex-col justify-center px-12 relative pt-16">
+
+        {/* Top Header Area */}
+        <div className="space-y-4 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100">
+            <ShieldCheck className="w-5 h-5 text-emerald-600" />
+            <span className="text-sm font-semibold text-emerald-700">一氣呵成完成所有企業所需分析</span>
           </div>
 
-          {/* Info: (20260212 - Luphia) 3x2 Grid */}
-          <div className="grid grid-cols-3 gap-6 flex-1 px-4">
-            {commitments.map((item, index) => (
-              <div
-                key={index}
-                className="group relative bg-neutral-900/40 border border-white/10 p-6 rounded-2xl backdrop-blur-xl hover:border-orange-500/50 hover:bg-neutral-900/60 transition-all duration-500 flex flex-col"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(249,115,22,0.1)]">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-orange-300 transition-colors">
-                    {item.title}
-                  </h3>
+          <h2 className="text-4xl font-black leading-tight text-slate-800">
+            從廠區到產品，<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-400">完整涵蓋全球永續合規標準。</span>
+          </h2>
+        </div>
+
+        {/* 5 Analysis Items Grid */}
+        <div className="grid grid-cols-2 gap-4 w-full pr-8">
+
+          {/* Item 1 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute left-0 top-0 w-1 h-full bg-blue-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-blue-50 rounded-lg group-hover:bg-blue-500 transition-colors">
+                  <ActivitySquare className="w-5 h-5 text-blue-500 group-hover:text-white transition-colors" />
                 </div>
-                <p className="text-neutral-400 leading-relaxed text-sm">
-                  {item.desc}
-                </p>
-                {/* Info: (20260212 - Luphia) Decorative Corner */}
-                <div className="absolute top-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                </div>
+                <h3 className="font-bold text-slate-800">組織碳盤查</h3>
               </div>
-            ))}
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">ISO 14064-1</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              自動整合多個廠區的排放源數據，產出符合國際標準的組織溫室氣體申報報告。
+            </p>
           </div>
-        </div>
 
-        {/* Info: (20260212 - Luphia) Footer */}
-        <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-500 text-[10px] tracking-[0.2em] uppercase font-medium">
-          <div>領航淨零，智算未來</div>
-          <div className="flex gap-2 items-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-orange-600"></div>
-            2026 CAFECA Fintech
+          {/* Item 2 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute left-0 top-0 w-1 h-full bg-emerald-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-emerald-50 rounded-lg group-hover:bg-emerald-500 transition-colors">
+                  <FileSearch className="w-5 h-5 text-emerald-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">產品碳足跡</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">ISO 14067</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              以製程反向推理技術，計算出單一產品在生命週期內的碳排放，符合查證規範。
+            </p>
           </div>
+
+          {/* Item 3 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute left-0 top-0 w-1 h-full bg-indigo-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-indigo-50 rounded-lg group-hover:bg-indigo-500 transition-colors">
+                  <ShieldCheck className="w-5 h-5 text-indigo-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">數位產品護照</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">EU DPP Compliant</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              產出符合歐盟規範的數位產品護照 (DPP)，即時回報產品碳履歷，保障產品順利通過邊境關稅審查。
+            </p>
+          </div>
+
+          {/* Item 4 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute left-0 top-0 w-1 h-full bg-orange-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-orange-50 rounded-lg group-hover:bg-orange-500 transition-colors">
+                  <Link2 className="w-5 h-5 text-orange-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">綠色供應鏈管理</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">Scope 3 Management</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              動態追蹤並稽核下游供應商的實質碳排數據，降低企業的範疇三 (Scope 3) 供應鏈碳風險。
+            </p>
+          </div>
+
+          {/* Item 5 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between col-span-2 w-1/2">
+            <div className="absolute left-0 top-0 w-1 h-full bg-teal-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-teal-50 rounded-lg group-hover:bg-teal-500 transition-colors">
+                  <Leaf className="w-5 h-5 text-teal-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">淨零碳排規劃</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">Net-Zero Path</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              結合多維數據分析與綠色路徑規劃，動態模擬最佳設備升級與減量投資路徑。
+            </p>
+          </div>
+
         </div>
 
       </div>
+
+      {/* Right 1/3 Image Area */}
+      <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
+        <Image
+          src="/cafeca_faith/robot_impact.jpeg"
+          alt="Impact and ROI Robot"
+          fill
+          className="object-cover"
+          style={{ objectFit: 'cover' }}
+        />
+      </div>
+
     </div>
   );
 }
