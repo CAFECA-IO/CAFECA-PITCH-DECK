@@ -1,6 +1,6 @@
 'use client';
 
-import { Send, User, Bot, FileText, CheckCircle2, Layout, Settings, History, Activity, Database, ShieldCheck, FileSpreadsheet } from 'lucide-react';
+import { Send, User, Bot, FileText, CheckCircle2, Layout, Settings, History, Activity, Database, ShieldCheck, FileSpreadsheet, MessageSquare, Plus, Search, Clock } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
 // Typewriter component for streaming text effect
@@ -77,7 +77,7 @@ export default function CafecaFaithSlide9() {
   const messages: IMessage[] = [
     { id: 0, role: 'ai', content: '您好！我是您的 AI 碳盤查助手。為了開始今天的盤查工作，請先告訴我您要盤查的企業名稱與年度？' },
     { id: 1, role: 'user', content: '卡菲卡智慧製造股份有限公司，2025年度。' },
-    { id: 2, role: 'ai', content: '收到！正在為「卡菲卡實業」準備 2025 年度的盤查環境...\n\n系統已初步建立 ISO 14064-1:2018 框架。' },
+    { id: 2, role: 'ai', content: '收到！正在為「卡菲卡智慧製造股份有限公司」準備 2025 年度的盤查環境...\n\n系統已初步建立 ISO 14064-1:2018 框架。' },
     { id: 3, role: 'ai', content: '接下來，請選定您的基準年 (Base Year)，這將作為後續減碳目標與路徑規劃的參考起點。' },
     { id: 4, role: 'user', content: '我們選定 2023 年作為基準年。' },
     { id: 5, role: 'ai', content: '好的，基準年已設定為 2023 年。正在更新報告內容並載入相關排放因子係數庫...' },
@@ -86,6 +86,13 @@ export default function CafecaFaithSlide9() {
     { id: 8, role: 'ai', content: '了解。邊界已鎖定。最後，請提供初步的能源使用數據，例如 Scope 1 的天然氣與 Scope 2 的電力使用量？' },
     { id: 9, role: 'user', content: '我已將 2025 年度的能源使用清單彙整完畢，請參考附件。', file: '2025_Energy_Data_Summary.xlsx' },
     { id: 10, role: 'ai', content: '數據已處理完畢！我已為您生成了完整的碳盤查報告草案，您可以點擊右側預覽並進行校閱。' },
+  ];
+
+  const sessions = [
+    { id: 1, title: '2025 溫室氣體盤查報告', date: '今天', active: true, status: '進行中' },
+    { id: 2, title: '2024 永續報告書 (ESG)', date: '2天前', active: false, status: '已完成' },
+    { id: 3, title: 'CBAM 產品碳足跡計算', date: '1週前', active: false, status: '草稿' },
+    { id: 4, title: '年度供應鏈碳排核閱', date: '2026/01/15', active: false, status: '已歸檔' },
   ];
 
   const isVisible = (section: string) => visibleSections.includes(section);
@@ -100,7 +107,7 @@ export default function CafecaFaithSlide9() {
             <Layout size={20} className="text-white" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-sm tracking-tight">CAFECA AI 智能碳盤查系統</span>
+            <span className="font-bold text-sm tracking-tight">人工智能碳會計師 - 費思</span>
             <span className="text-[10px] text-slate-500 font-medium uppercase tracking-[0.2em]">Environmental Intelligence Platform</span>
           </div>
         </div>
@@ -130,15 +137,72 @@ export default function CafecaFaithSlide9() {
 
       <div className="flex-1 flex overflow-hidden">
 
-        {/* Left Side: AI Chat (420px) */}
-        <div className="w-[420px] border-r border-slate-800 flex flex-col bg-[#111827]">
+        {/* Leftmost Sidebar: Sessions List (240px) */}
+        <div className="w-[240px] bg-[#020617] border-r border-slate-800/50 flex flex-col z-20">
+          <div className="p-4 border-b border-slate-800/50">
+            <button className="w-full py-2.5 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-orange-500/20 group">
+              <Plus size={16} className="group-hover:rotate-90 transition-transform" />
+              <span>建立新的專案</span>
+            </button>
+          </div>
+
+          <div className="flex-1 overflow-y-auto p-3 space-y-2 custom-scrollbar">
+            <div className="flex items-center justify-between px-2 py-2">
+              <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">歷史報告會話</span>
+              <Search size={12} className="text-slate-600" />
+            </div>
+            {sessions.map((s) => (
+              <div
+                key={s.id}
+                className={`p-3 rounded-xl cursor-pointer transition-all border ${s.active
+                  ? 'bg-slate-800/50 border-slate-700/50 shadow-inner'
+                  : 'border-transparent hover:bg-slate-800/30'
+                  }`}
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${s.active ? 'bg-orange-500/20 text-orange-500' : 'bg-slate-800 text-slate-500'
+                    }`}>
+                    <MessageSquare size={16} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className={`text-[11px] font-bold truncate ${s.active ? 'text-slate-100' : 'text-slate-400'}`}>
+                      {s.title}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9px] text-slate-500 font-medium flex items-center gap-1">
+                        <Clock size={10} /> {s.date}
+                      </span>
+                      <span className={`text-[8px] font-bold px-1.5 py-0.5 rounded ${s.status === '進行中' ? 'text-orange-500 bg-orange-500/10' :
+                        s.status === '已完成' ? 'text-emerald-500 bg-emerald-500/10' : 'text-slate-500 bg-slate-800'
+                        }`}>
+                        {s.status}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="p-4 border-t border-slate-800/50 mt-auto">
+            <div className="flex items-center gap-3 p-2 hover:bg-slate-800/30 rounded-xl cursor-pointer transition-colors">
+              <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400">
+                <Settings size={14} />
+              </div>
+              <span className="text-[11px] font-bold text-slate-400">系統偏好設定</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Middle: AI Chat (380px) */}
+        <div className="w-[380px] border-r border-slate-800/50 flex flex-col bg-[#0f172a]">
           <div className="p-5 border-b border-slate-800 bg-slate-900/30 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Activity size={14} className="text-orange-500" />
-              <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">引導式對話工作區</h3>
+              <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">引導式工作區</h3>
             </div>
             <div className="px-2 py-0.5 bg-orange-500/10 text-orange-500 text-[9px] font-black rounded border border-orange-500/20">
-              AGENT ACTIVE
+              費思在線中
             </div>
           </div>
 
