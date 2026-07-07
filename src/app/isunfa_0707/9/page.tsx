@@ -221,7 +221,7 @@ export default function CafecaFaithSlide9() {
                     )}
                   </div>
                   <span className={`text-[9px] font-bold uppercase tracking-widest ${msg.role === 'user' ? 'text-right text-slate-400' : 'text-slate-400'}`}>
-                    {msg.role === 'ai' ? '費思 (Faith)' : '系統管理員'}
+                    {msg.role === 'ai' ? '費思 (Faith)' : '我'}
                   </span>
                 </div>
               </div>
@@ -295,10 +295,10 @@ export default function CafecaFaithSlide9() {
                 </div>
               ) : (
                 <div className="h-64 border-2 border-dashed border-slate-100 rounded-2xl flex flex-col items-center justify-center gap-4 group mb-12">
-                   <div className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-200">
-                     <FileText size={24} />
-                   </div>
-                   <span className="text-[10px] text-slate-300 font-bold uppercase tracking-[0.2em]">等待 AI 生成報告標題...</span>
+                  <div className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-200">
+                    <FileText size={24} />
+                  </div>
+                  <span className="text-[10px] text-slate-300 font-bold uppercase tracking-[0.2em]">等待 AI 生成報告標題...</span>
                 </div>
               )}
 
