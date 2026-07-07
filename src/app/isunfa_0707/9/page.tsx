@@ -1,7 +1,8 @@
 'use client';
 
-import { Send, User, Bot, FileText, CheckCircle2, Layout, Settings, History, Activity, Database, ShieldCheck, FileSpreadsheet, MessageSquare, Plus, Search, Clock } from 'lucide-react';
+import { Send, User, Bot, FileText, CheckCircle2, Layout, Settings, Activity, Database, ShieldCheck, FileSpreadsheet, MessageSquare, Plus, Search, Clock, Download } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 // Typewriter component for streaming text effect
 const Typewriter = ({ text, speed = 20, delay = 0, onComplete }: { text: string, speed?: number, delay?: number, onComplete?: () => void }) => {
@@ -36,6 +37,7 @@ export default function CafecaFaithSlide9() {
   const [step, setStep] = useState(0);
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Scroll to bottom when messages update
@@ -98,49 +100,40 @@ export default function CafecaFaithSlide9() {
   const isVisible = (section: string) => visibleSections.includes(section);
 
   return (
-    <div className="w-[1280px] h-[720px] bg-[#0f172a] relative overflow-hidden flex flex-col border border-slate-800 text-slate-100 font-sans shadow-2xl">
-
-      {/* Top Navigation Bar */}
-      <div className="h-14 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 flex items-center justify-between px-6 z-30">
+    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden flex flex-col border border-slate-200 text-slate-900 font-sans shadow-2xl">
+      <div className="h-14 bg-white border-b border-slate-200 flex items-center justify-between px-6 z-30 shadow-sm">
         <div className="flex items-center gap-4">
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-2 rounded-xl shadow-lg shadow-orange-500/20">
+          <div className="bg-orange-600 p-2 rounded-xl shadow-lg shadow-orange-600/20">
             <Layout size={20} className="text-white" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-sm tracking-tight">人工智能碳會計師 - 費思</span>
-            <span className="text-[10px] text-slate-500 font-medium uppercase tracking-[0.2em]">Environmental Intelligence Platform</span>
+            <span className="font-bold text-sm tracking-tight text-slate-900">人工智能碳會計師 - 費思</span>
+            <span className="text-[10px] text-slate-400 font-medium uppercase tracking-[0.2em]">Environmental Intelligence Platform</span>
           </div>
         </div>
 
         <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-4 bg-slate-800/50 px-4 py-1.5 rounded-full border border-slate-700">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-              <span className="text-[10px] font-bold text-emerald-400">系統在線</span>
-            </div>
-            <div className="h-3 w-[1px] bg-slate-700"></div>
-            <div className="flex items-center gap-2 text-[10px] text-slate-400 font-medium">
-              <Database size={12} />
-              <span>數據庫版本: 2025.Q2.v1</span>
-            </div>
-          </div>
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
-              <Settings size={16} className="text-slate-400" />
-            </div>
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 flex items-center justify-center">
-              <User size={18} className="text-slate-300" />
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+            <span className="text-[10px] font-bold text-emerald-600 uppercase">System Online</span>
+          </div>
+          <div className="h-4 w-[1px] bg-slate-200"></div>
+          <div className="flex items-center gap-2 text-[10px] text-slate-400 font-medium">
+            <Database size={12} />
+            <span>數據庫版本: 2025.Q2.v1</span>
+          </div>
+          <div className="flex items-center gap-3 ml-4">
+            <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center">
+              <User size={18} className="text-slate-500" />
             </div>
           </div>
         </div>
       </div>
 
       <div className="flex-1 flex overflow-hidden">
-
-        {/* Leftmost Sidebar: Sessions List (240px) */}
-        <div className="w-[240px] bg-[#020617] border-r border-slate-800/50 flex flex-col z-20">
-          <div className="p-4 border-b border-slate-800/50">
-            <button className="w-full py-2.5 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-orange-500/20 group">
+        <div className="w-[240px] bg-white border-r border-slate-200 flex flex-col z-20">
+          <div className="p-4 border-b border-slate-100">
+            <button className="w-full py-2.5 px-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-orange-600/20 group">
               <Plus size={16} className="group-hover:rotate-90 transition-transform" />
               <span>建立新的專案</span>
             </button>
@@ -148,32 +141,32 @@ export default function CafecaFaithSlide9() {
 
           <div className="flex-1 overflow-y-auto p-3 space-y-2 custom-scrollbar">
             <div className="flex items-center justify-between px-2 py-2">
-              <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">歷史報告會話</span>
-              <Search size={12} className="text-slate-600" />
+              <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">歷史報告會話</span>
+              <Search size={12} className="text-slate-300" />
             </div>
             {sessions.map((s) => (
               <div
                 key={s.id}
                 className={`p-3 rounded-xl cursor-pointer transition-all border ${s.active
-                  ? 'bg-slate-800/50 border-slate-700/50 shadow-inner'
-                  : 'border-transparent hover:bg-slate-800/30'
+                  ? 'bg-orange-50 border-orange-100 shadow-sm'
+                  : 'border-transparent hover:bg-slate-50'
                   }`}
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${s.active ? 'bg-orange-500/20 text-orange-500' : 'bg-slate-800 text-slate-500'
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${s.active ? 'bg-orange-600 text-white' : 'bg-slate-100 text-slate-400'
                     }`}>
                     <MessageSquare size={16} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className={`text-[11px] font-bold truncate ${s.active ? 'text-slate-100' : 'text-slate-400'}`}>
+                    <p className={`text-[11px] font-bold truncate ${s.active ? 'text-slate-900' : 'text-slate-600'}`}>
                       {s.title}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-[9px] text-slate-500 font-medium flex items-center gap-1">
+                      <span className="text-[9px] text-slate-400 font-medium flex items-center gap-1">
                         <Clock size={10} /> {s.date}
                       </span>
-                      <span className={`text-[8px] font-bold px-1.5 py-0.5 rounded ${s.status === '進行中' ? 'text-orange-500 bg-orange-500/10' :
-                        s.status === '已完成' ? 'text-emerald-500 bg-emerald-500/10' : 'text-slate-500 bg-slate-800'
+                      <span className={`text-[8px] font-bold px-1.5 py-0.5 rounded ${s.status === '進行中' ? 'text-orange-600 bg-orange-100' :
+                        s.status === '已完成' ? 'text-emerald-600 bg-emerald-100' : 'text-slate-400 bg-slate-100'
                         }`}>
                         {s.status}
                       </span>
@@ -184,342 +177,277 @@ export default function CafecaFaithSlide9() {
             ))}
           </div>
 
-          <div className="p-4 border-t border-slate-800/50 mt-auto">
-            <div className="flex items-center gap-3 p-2 hover:bg-slate-800/30 rounded-xl cursor-pointer transition-colors">
-              <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400">
+          <div className="p-4 border-t border-slate-100 mt-auto bg-slate-50/50">
+            <div className="flex items-center gap-3 p-2 hover:bg-white rounded-xl cursor-pointer transition-colors border border-transparent hover:border-slate-200">
+              <div className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400">
                 <Settings size={14} />
               </div>
-              <span className="text-[11px] font-bold text-slate-400">系統偏好設定</span>
+              <span className="text-[11px] font-bold text-slate-600">系統偏好設定</span>
             </div>
           </div>
         </div>
 
-        {/* Middle: AI Chat (380px) */}
-        <div className="w-[380px] border-r border-slate-800/50 flex flex-col bg-[#0f172a]">
-          <div className="p-5 border-b border-slate-800 bg-slate-900/30 flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <Activity size={14} className="text-orange-500" />
-              <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">引導式工作區</h3>
-            </div>
-            <div className="px-2 py-0.5 bg-orange-500/10 text-orange-500 text-[9px] font-black rounded border border-orange-500/20">
-              費思在線中
-            </div>
-          </div>
-
-          <div ref={chatContainerRef} className="flex-1 p-6 space-y-6 overflow-y-auto custom-scrollbar">
+        <div className="w-[380px] border-r border-slate-200 flex flex-col bg-white">
+          <div className="flex-1 overflow-y-auto p-5 space-y-6 custom-scrollbar bg-slate-50/30">
             {messages.filter(m => m.id <= step).map((msg, i) => (
               <div key={i} className={`flex gap-3 ${msg.role === 'user' ? 'flex-row-reverse' : ''} animate-in fade-in slide-in-from-bottom-2 duration-300`}>
-                <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg ${msg.role === 'ai'
-                  ? 'bg-gradient-to-br from-orange-500 to-orange-600'
-                  : 'bg-slate-800 border border-slate-700'
+                <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm ${msg.role === 'ai'
+                  ? 'bg-orange-600'
+                  : 'bg-white border border-slate-200 text-slate-400'
                   }`}>
-                  {msg.role === 'ai' ? <Bot size={20} className="text-white" /> : <User size={20} className="text-slate-300" />}
+                  {msg.role === 'ai' ? <Bot size={20} className="text-white" /> : <User size={20} />}
                 </div>
-                <div className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed ${msg.role === 'ai'
-                  ? 'bg-slate-800/80 text-slate-200 border border-slate-700/50 rounded-tl-none shadow-xl backdrop-blur-sm'
-                  : 'bg-orange-500/10 text-orange-200 border border-orange-500/30 rounded-tr-none'
-                  }`}>
-                  {msg.role === 'ai' && step === msg.id ? (
-                    <Typewriter text={msg.content} />
-                  ) : (
-                    <>
-                      {msg.content.split('\n').map((line, j) => (
-                        <p key={j} className={j > 0 ? 'mt-2' : ''}>{line}</p>
-                      ))}
-                      {msg.file && (
-                        <div className="mt-3 flex items-center gap-3 bg-slate-900/50 p-3 rounded-xl border border-slate-700 hover:bg-slate-900 transition-colors cursor-pointer group">
-                          <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-500 group-hover:scale-110 transition-transform">
-                            <FileSpreadsheet size={20} />
-                          </div>
-                          <div className="flex flex-col">
-                            <span className="text-[11px] font-bold text-slate-200">{msg.file}</span>
-                            <span className="text-[9px] text-slate-500 uppercase tracking-tighter">Microsoft Excel • 24.5 KB</span>
-                          </div>
+                <div className="flex flex-col gap-2 max-w-[85%]">
+                  <div className={`p-4 rounded-2xl text-xs font-medium leading-relaxed ${msg.role === 'ai'
+                    ? 'bg-white text-slate-700 border border-slate-100 rounded-tl-none shadow-sm'
+                    : 'bg-orange-600 text-white rounded-tr-none shadow-md shadow-orange-600/10'
+                    }`}>
+                    {msg.role === 'ai' && step === msg.id ? (
+                      <Typewriter text={msg.content} />
+                    ) : (
+                      <div className="whitespace-pre-line">{msg.content}</div>
+                    )}
+                    {msg.file && (
+                      <div className="mt-4 p-3 bg-white/10 rounded-xl border border-white/20 flex items-center gap-3 group/file cursor-pointer hover:bg-white/20 transition-all">
+                        <div className="w-10 h-10 rounded-lg bg-emerald-400/20 flex items-center justify-center text-emerald-100 group-hover/file:scale-110 transition-transform">
+                          <FileSpreadsheet size={20} />
                         </div>
-                      )}
-                    </>
-                  )}
+                        <div className="flex-1 min-w-0">
+                          <p className="text-[10px] font-bold text-white truncate">{msg.file}</p>
+                          <p className="text-[8px] text-white/60 uppercase tracking-tighter">Microsoft Excel • 24.5 KB</p>
+                        </div>
+                        <CheckCircle2 size={14} className="text-emerald-400" />
+                      </div>
+                    )}
+                  </div>
+                  <span className={`text-[9px] font-bold uppercase tracking-widest ${msg.role === 'user' ? 'text-right text-slate-400' : 'text-slate-400'}`}>
+                    {msg.role === 'ai' ? '費思 (Faith)' : '系統管理員'}
+                  </span>
                 </div>
               </div>
             ))}
-
-            {/* Typing Indicator */}
-            {step < 10 && step % 2 === 0 && (
-              <div className="flex gap-3">
-                <div className="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center border border-slate-700">
-                  <Bot size={20} className="text-slate-500" />
-                </div>
-                <div className="bg-slate-800/30 h-10 w-20 rounded-2xl rounded-tl-none flex items-center justify-center gap-1.5 border border-slate-800">
-                  <div className="w-1.5 h-1.5 bg-orange-500/60 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                  <div className="w-1.5 h-1.5 bg-orange-500/60 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                  <div className="w-1.5 h-1.5 bg-orange-500/60 rounded-full animate-bounce"></div>
-                </div>
-              </div>
-            )}
+            <div ref={chatEndRef} />
           </div>
 
-          <div className="p-5 border-t border-slate-800 bg-slate-900/50">
+          <div className="p-4 bg-white border-t border-slate-100">
             <div className="relative group">
               <input
                 aria-label="對話輸入"
                 type="text"
-                placeholder={step % 2 === 0 ? "AI 思考中..." : "在此輸入您的回覆..."}
-                className="w-full bg-slate-950 border border-slate-800 rounded-2xl py-3.5 px-5 pr-14 text-sm text-slate-300 focus:outline-none focus:border-orange-500/50 transition-all placeholder:text-slate-600"
-                disabled
+                placeholder="輸入您的回覆..."
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-5 pr-12 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-orange-600/20 focus:border-orange-600 transition-all placeholder:text-slate-400 shadow-inner"
               />
-              <button
-                aria-label="傳送訊息"
-                className={`absolute right-2 top-2 p-2 rounded-xl transition-all ${step % 2 !== 0 ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30' : 'bg-slate-800 text-slate-600'
-                  }`}>
-                <Send size={18} />
+              <button aria-label="傳送訊息" className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all shadow-lg shadow-orange-600/20">
+                <Send size={16} />
               </button>
-            </div>
-            <div className="mt-3 flex items-center justify-center gap-4 text-[9px] text-slate-600 font-bold uppercase tracking-widest">
-              <span className="flex items-center gap-1"><ShieldCheck size={10} className="text-emerald-500" /> 數據加密</span>
-              <span className="w-1 h-1 bg-slate-800 rounded-full"></span>
-              <span className="flex items-center gap-1"><History size={10} /> 自動備份</span>
             </div>
           </div>
         </div>
 
-        {/* Right Side: Report Canvas (860px) */}
-        <div className="flex-1 flex flex-col bg-[#0f172a] relative">
-
-          {/* Canvas Toolbar */}
-          <div className="h-12 border-b border-slate-800 flex items-center justify-between px-6 bg-slate-900/40 backdrop-blur-sm sticky top-0 z-10">
+        <div className="flex-1 bg-slate-100 relative overflow-hidden flex flex-col">
+          <div className="h-12 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-between px-6 z-20 shadow-sm">
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
-                <FileText size={14} className="text-orange-500" />
-                <span className="hover:text-slate-200 transition-colors cursor-pointer">GHG_Inventory_Report_2025.pdf</span>
-              </div>
-              <div className="h-4 w-[1px] bg-slate-800"></div>
-              <div className="flex gap-2">
-                <span className="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-500 rounded text-[9px] font-bold border border-emerald-500/20">LIVE EDITING</span>
-                <span className="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded text-[9px] font-bold border border-slate-700">DRAFT</span>
+              <div className="flex items-center gap-2 px-2 py-1 bg-slate-100 rounded-lg border border-slate-200">
+                <FileText size={14} className="text-slate-500" />
+                <span className="text-[10px] font-bold text-slate-600 truncate max-w-[200px]">2025_Carbon_Report_Draft_v1.pdf</span>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="flex -space-x-2">
-                <div className="w-6 h-6 rounded-full border-2 border-slate-900 bg-orange-500 flex items-center justify-center text-[10px] font-bold">AI</div>
-                <div className="w-6 h-6 rounded-full border-2 border-slate-900 bg-slate-700 flex items-center justify-center text-[10px] font-bold">U</div>
-              </div>
-              <div className="h-4 w-[1px] bg-slate-800"></div>
-              <button className="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1 rounded-lg border border-slate-700 transition-colors">導出報告</button>
+            <div className="flex items-center gap-2">
+              <button className="flex items-center gap-2 px-3 py-1.5 bg-orange-600 text-white rounded-lg text-[10px] font-bold hover:bg-orange-700 transition-all shadow-md shadow-orange-600/10">
+                <Download size={14} />
+                <span>匯出報告</span>
+              </button>
             </div>
           </div>
 
-          <div className="flex-1 p-16 overflow-y-auto custom-scrollbar bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:32px_32px]">
-            <div className="max-w-[700px] mx-auto space-y-16">
-
-              {/* 1. Report Header Section */}
+          <div className="flex-1 overflow-y-auto p-12 custom-scrollbar bg-slate-100">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="max-w-[700px] mx-auto bg-white shadow-2xl rounded-sm min-h-[1000px] p-16 relative border border-slate-200 flex flex-col space-y-16"
+            >
+              {/* 0. Report Header - Hidden until Step 2 */}
               {isVisible('header') ? (
-                <div className="space-y-6 animate-in fade-in zoom-in-95 duration-1000">
-                  <div className="flex items-center gap-4">
-                    <div className="h-[2px] bg-orange-500 w-16"></div>
-                    <span className="text-[10px] font-black text-orange-500 uppercase tracking-[0.4em]">Section 00</span>
+                <div className="flex justify-between items-start mb-12 border-b border-slate-100 pb-10 animate-in fade-in slide-in-from-top-8 duration-1000">
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-orange-600 flex items-center justify-center rounded-lg shadow-sm shadow-orange-600/10">
+                        <Layout size={16} className="text-white" />
+                      </div>
+                      <span className="text-[10px] font-bold text-orange-600 uppercase tracking-[0.3em]">Section 00</span>
+                    </div>
+                    <div className="space-y-2">
+                      <h1 className="text-[32px] font-bold text-slate-900 tracking-tight leading-[1.2]">
+                        卡菲卡智慧製造股份有限公司
+                      </h1>
+                      <p className="text-xl font-medium text-slate-400">
+                        2025 年度碳盤查報告書 <span className="text-slate-300 font-normal ml-2">(草案)</span>
+                      </p>
+                    </div>
                   </div>
-                  <h1 className="text-5xl font-black text-white tracking-tight leading-tight">
-                    卡菲卡智慧製造股份有限公司<br />
-                    <span className="text-slate-500 bg-clip-text text-transparent bg-gradient-to-r from-slate-400 to-slate-600">2025 年度碳盤查報告書 (草案)</span>
-                  </h1>
-                  <div className="flex flex-wrap gap-3">
-                    <div className="flex items-center gap-2 text-[10px] text-orange-500 font-bold bg-orange-500/5 px-3 py-1.5 rounded-lg border border-orange-500/20">
-                      <CheckCircle2 size={14} />
-                      <span>ISO 14064-1:2018 框架</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-[10px] text-slate-400 font-bold bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-700/50">
-                      <Database size={14} />
-                      <span>GWP: AR6 (2021)</span>
-                    </div>
+                  <div className="bg-slate-50 px-4 py-2 rounded-lg border border-slate-100 shrink-0 min-w-[120px]">
+                    <span className="block text-[8px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Report Status</span>
+                    <span className="text-[10px] font-bold text-emerald-600 flex items-center gap-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                      Draft Generated
+                    </span>
                   </div>
                 </div>
               ) : (
-                <div className="space-y-6 opacity-20">
-                  <div className="h-8 bg-slate-800 w-1/3 rounded-lg animate-pulse"></div>
-                  <div className="h-16 bg-slate-800 w-3/4 rounded-2xl animate-pulse"></div>
-                  <div className="flex gap-2">
-                    <div className="h-6 bg-slate-800 w-24 rounded-lg animate-pulse"></div>
-                    <div className="h-6 bg-slate-800 w-24 rounded-lg animate-pulse"></div>
-                  </div>
+                <div className="h-64 border-2 border-dashed border-slate-100 rounded-2xl flex flex-col items-center justify-center gap-4 group mb-12">
+                   <div className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-200">
+                     <FileText size={24} />
+                   </div>
+                   <span className="text-[10px] text-slate-300 font-bold uppercase tracking-[0.2em]">等待 AI 生成報告標題...</span>
                 </div>
               )}
 
-              {/* 2. Overview Section */}
-              <div className={`grid grid-cols-2 gap-6 transition-all duration-1000 delay-300 ${isVisible('header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <div className="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 hover:border-orange-500/30 transition-all group">
-                  <span className="block text-[10px] text-slate-500 uppercase font-black tracking-widest mb-2 group-hover:text-orange-500 transition-colors">盤查主體</span>
-                  <span className="text-lg font-bold text-slate-200">卡菲卡智慧製造股份有限公司</span>
-                </div>
-                <div className="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 hover:border-orange-500/30 transition-all group">
-                  <span className="block text-[10px] text-slate-500 uppercase font-black tracking-widest mb-2 group-hover:text-orange-500 transition-colors">盤查期間</span>
-                  <span className="text-lg font-bold text-slate-200">2025/01/01 - 2025/12/31</span>
-                </div>
-              </div>
-
-              {/* 3. Base Year Section */}
-              <section className={`space-y-6 transition-all duration-1000 ${isVisible('baseYear') ? 'opacity-100 scale-100' : 'opacity-10 scale-[0.98]'}`}>
-                <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                  <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full shadow-[0_0_10px_rgba(249,115,22,0.5)]"></span>
+              <section className={`space-y-8 transition-all duration-1000 ${isVisible('baseYear') ? 'opacity-100 scale-100' : 'opacity-10 scale-[0.98]'}`}>
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3">
+                    <div className="w-1 h-6 bg-orange-600 rounded-full"></div>
                     基準年設定
                   </h2>
-                  <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Section 01</span>
+                  <span className="text-[9px] font-bold text-slate-300 uppercase tracking-[0.2em]">Section 01</span>
                 </div>
 
                 {isVisible('baseYear') ? (
-                  <div className="bg-gradient-to-br from-emerald-500/10 to-transparent p-8 rounded-3xl border border-emerald-500/20 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-700">
+                  <div className="bg-slate-50/50 p-8 rounded-2xl border border-slate-100 shadow-sm animate-in fade-in slide-in-from-top-4 duration-700">
                     <div className="flex items-start justify-between mb-6">
-                      <div>
-                        <div className="text-xs font-black text-emerald-500 uppercase tracking-widest mb-1">SELECTED BASE YEAR</div>
-                        <div className="text-3xl font-black text-white">2023 年度</div>
+                      <div className="space-y-1">
+                        <div className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">Selected Base Year</div>
+                        <div className="text-2xl font-bold text-slate-900">2023 年度報告期間</div>
                       </div>
-                      <div className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-black border border-emerald-500/30">
-                        VERIFIED BY AI
+                      <div className="px-3 py-1 bg-white text-emerald-600 rounded-lg text-[9px] font-bold border border-emerald-100 shadow-sm">
+                        Verified by AI
                       </div>
                     </div>
-                    <p className="text-sm text-slate-400 leading-relaxed font-medium">
-                      根據 14064-1 規範，系統已自動校對 2023 年之電力排碳係數 (0.495 kgCO2e/度) 與相關燃料排放因子。此基準年將作為 2030 減碳 30% 之計算起點。
+                    <p className="text-[13px] text-slate-500 leading-relaxed font-medium">
+                      根據 <span className="text-slate-900 font-bold">ISO 14064-1</span> 規範，系統已自動校對 2023 年之電力排碳係數 (0.495 kgCO2e/度) 與相關燃料排放因子。此基準年將作為 2030 減碳 30% 之計算起點。
                     </p>
                   </div>
                 ) : (
-                  <div className="h-32 bg-slate-900/40 border-2 border-dashed border-slate-800 rounded-3xl flex flex-col items-center justify-center gap-4 group">
+                  <div className="h-32 bg-slate-50 border-2 border-dashed border-slate-200 rounded-3xl flex flex-col items-center justify-center gap-4 group">
                     <div className="flex gap-2">
-                      <div className="w-2 h-2 bg-slate-700 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                      <div className="w-2 h-2 bg-slate-700 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                      <div className="w-2 h-2 bg-slate-700 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-slate-200 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                      <div className="w-2 h-2 bg-slate-200 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                      <div className="w-2 h-2 bg-slate-200 rounded-full animate-bounce"></div>
                     </div>
-                    <span className="text-[10px] text-slate-600 font-bold uppercase tracking-[0.2em] group-hover:text-slate-500 transition-colors">正在等待用戶設定參數...</span>
+                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">正在等待用戶設定參數...</span>
                   </div>
                 )}
               </section>
 
-              {/* 4. Boundaries Section */}
-              <section className={`space-y-6 transition-all duration-1000 ${isVisible('boundaries') ? 'opacity-100 scale-100' : 'opacity-10 scale-[0.98]'}`}>
-                <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                  <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full shadow-[0_0_10px_rgba(249,115,22,0.5)]"></span>
+              <section className={`space-y-8 transition-all duration-1000 ${isVisible('boundaries') ? 'opacity-100 scale-100' : 'opacity-10 scale-[0.98]'}`}>
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3">
+                    <div className="w-1 h-6 bg-orange-600 rounded-full"></div>
                     組織邊界鑑定
                   </h2>
-                  <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Section 02</span>
+                  <span className="text-[9px] font-bold text-slate-300 uppercase tracking-[0.2em]">Section 02</span>
                 </div>
 
                 {isVisible('boundaries') ? (
                   <div className="grid grid-cols-3 gap-4 animate-in fade-in slide-in-from-right-4 duration-700">
-                    <div className="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3">
-                      <div className="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500">
+                    <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3">
+                      <div className="w-8 h-8 rounded-lg bg-orange-600/10 flex items-center justify-center text-orange-600">
                         <Activity size={18} />
                       </div>
                       <div>
-                        <div className="text-[10px] font-black text-slate-500 mb-1">鑑定方法</div>
-                        <div className="text-xs font-bold text-white">營運控制權法</div>
+                        <div className="text-[10px] font-black text-slate-400 mb-1">鑑定方法</div>
+                        <div className="text-xs font-bold text-slate-900">營運控制權法</div>
                       </div>
                     </div>
-                    <div className="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3">
-                      <div className="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500">
+                    <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3">
+                      <div className="w-8 h-8 rounded-lg bg-orange-600/10 flex items-center justify-center text-orange-600">
                         <Layout size={18} />
                       </div>
                       <div>
-                        <div className="text-[10px] font-black text-slate-500 mb-1">設施數量</div>
-                        <div className="text-xs font-bold text-white">4 個據點 (HQ + 3 工廠)</div>
+                        <div className="text-[10px] font-black text-slate-400 mb-1">設施數量</div>
+                        <div className="text-xs font-bold text-slate-900">4 個據點 (HQ + 3 工廠)</div>
                       </div>
                     </div>
-                    <div className="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3">
-                      <div className="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500">
+                    <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3">
+                      <div className="w-8 h-8 rounded-lg bg-orange-600/10 flex items-center justify-center text-orange-600">
                         <ShieldCheck size={18} />
                       </div>
                       <div>
-                        <div className="text-[10px] font-black text-slate-500 mb-1">排除範圍</div>
-                        <div className="text-xs font-bold text-white">外部租賃倉庫 (忽略)</div>
+                        <div className="text-[10px] font-black text-slate-400 mb-1">排除範圍</div>
+                        <div className="text-xs font-bold text-slate-900">外部租賃倉庫 (忽略)</div>
                       </div>
                     </div>
                   </div>
                 ) : (
-                  <div className="h-24 bg-slate-900/20 border border-slate-800 rounded-3xl animate-pulse"></div>
+                  <div className="h-24 bg-slate-50 border border-slate-100 rounded-3xl animate-pulse"></div>
                 )}
               </section>
 
-              {/* 5. Emissions Summary Section */}
-              <section className={`space-y-6 transition-all duration-1000 ${isVisible('emissions') ? 'opacity-100 scale-100' : 'opacity-10 scale-[0.98]'}`}>
-                <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                  <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full shadow-[0_0_10px_rgba(249,115,22,0.5)]"></span>
+              <section className={`space-y-8 transition-all duration-1000 ${isVisible('emissions') ? 'opacity-100 scale-100' : 'opacity-10 scale-[0.98]'}`}>
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3">
+                    <div className="w-1 h-6 bg-orange-600 rounded-full"></div>
                     溫室氣體排放量摘要
                   </h2>
-                  <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Section 03</span>
+                  <span className="text-[9px] font-bold text-slate-300 uppercase tracking-[0.2em]">Section 03</span>
                 </div>
 
                 {isVisible('emissions') ? (
                   <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-                    <div className="overflow-hidden rounded-2xl border border-slate-800 shadow-2xl">
+                    <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl bg-white">
                       <table className="w-full text-left text-sm">
-                        <thead className="bg-slate-900/80 text-slate-400 text-[10px] font-black uppercase tracking-widest border-b border-slate-800">
+                        <thead className="bg-slate-50 text-slate-500 text-[10px] font-black uppercase tracking-widest border-b border-slate-100">
                           <tr>
                             <th className="px-6 py-4">類別 (ISO Category)</th>
                             <th className="px-6 py-4">來源說明</th>
                             <th className="px-6 py-4 text-right">排放量 (tCO2e)</th>
                           </tr>
                         </thead>
-                        <tbody className="bg-slate-900/20 divide-y divide-slate-800">
-                          <tr className="hover:bg-slate-800/30 transition-colors">
+                        <tbody className="divide-y divide-slate-100">
+                          <tr className="hover:bg-slate-50 transition-colors">
                             <td className="px-6 py-5 flex items-center gap-3">
-                              <div className="w-1.5 h-6 bg-orange-500 rounded-full"></div>
-                              <span className="font-bold">Category 1: 直接排放</span>
+                              <div className="w-1.5 h-6 bg-orange-600 rounded-full"></div>
+                              <span className="font-bold text-slate-900">Category 1: 直接排放</span>
                             </td>
-                            <td className="px-6 py-5 text-slate-400 font-medium">天然氣燃燒、公務車</td>
-                            <td className="px-6 py-5 text-right font-mono font-bold text-orange-500">85.42</td>
+                            <td className="px-6 py-5 text-slate-500 font-medium">天然氣燃燒、公務車</td>
+                            <td className="px-6 py-5 text-right font-mono font-bold text-orange-600">85.42</td>
                           </tr>
-                          <tr className="hover:bg-slate-800/30 transition-colors">
+                          <tr className="hover:bg-slate-50 transition-colors">
                             <td className="px-6 py-5 flex items-center gap-3">
                               <div className="w-1.5 h-6 bg-orange-400 rounded-full"></div>
-                              <span className="font-bold">Category 2: 能源間接</span>
+                              <span className="font-bold text-slate-900">Category 2: 能源間接</span>
                             </td>
-                            <td className="px-6 py-5 text-slate-400 font-medium">外購電力</td>
+                            <td className="px-6 py-5 text-slate-500 font-medium">外購電力</td>
                             <td className="px-6 py-5 text-right font-mono font-bold text-orange-400">594.00</td>
                           </tr>
                         </tbody>
-                        <tfoot className="bg-orange-500/10 border-t border-orange-500/20">
+                        <tfoot className="bg-slate-50/50 border-t border-slate-100">
                           <tr>
-                            <td colSpan={2} className="px-6 py-4 font-black text-orange-500 text-xs uppercase tracking-widest">Total Gross Emissions</td>
-                            <td className="px-6 py-4 text-right font-mono font-black text-white text-lg">679.42</td>
+                            <td colSpan={2} className="px-6 py-4 font-black text-slate-400 text-[10px] uppercase tracking-widest">Total Gross Emissions</td>
+                            <td className="px-6 py-4 text-right font-mono font-black text-slate-900 text-lg">679.42</td>
                           </tr>
                         </tfoot>
                       </table>
                     </div>
                   </div>
                 ) : (
-                  <div className="h-48 bg-slate-900/20 border border-slate-800 rounded-3xl animate-pulse"></div>
+                  <div className="h-48 bg-slate-50 border border-slate-100 rounded-3xl animate-pulse"></div>
                 )}
               </section>
 
-              {/* 6. Final Summary Section */}
-              {isVisible('summary') && (
-                <div className="py-12 border-t border-slate-800 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                  <div className="bg-slate-800/20 p-8 rounded-3xl border border-slate-700/50 flex items-center justify-between">
-                    <div className="space-y-2">
-                      <h3 className="text-lg font-bold text-white">報告草案已完成生成</h3>
-                      <p className="text-sm text-slate-500">所有數據已根據 ISO 14064-1:2018 進行初步勾稽與計算。</p>
-                    </div>
-                    <button className="bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-3 rounded-2xl font-bold text-sm shadow-xl shadow-orange-500/20 hover:scale-105 transition-transform">
-                      進入詳細校閱介面
-                    </button>
-                  </div>
-                </div>
-              )}
-
               {/* Padding bottom */}
               <div className="h-32"></div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Floating Action Button for Report Status */}
-          <div className="absolute right-12 bottom-12 z-20">
-            <div className="bg-slate-900/80 backdrop-blur-xl border border-slate-700 p-4 rounded-3xl shadow-2xl flex items-center gap-6 group hover:border-orange-500/50 transition-all">
+          <div className="absolute right-10 bottom-10 z-20">
+            <div className="bg-slate-900/90 backdrop-blur-xl border border-slate-700/50 p-4 rounded-2xl shadow-2xl flex items-center gap-5 group hover:border-orange-500/50 transition-all">
               <div className="relative">
-                <Activity className="text-orange-500" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-slate-900 animate-pulse"></div>
+                <Activity className="text-orange-600" size={18} />
+                <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-slate-900 animate-pulse"></div>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] text-slate-500 font-black uppercase tracking-widest">報告生成進度</span>
+              <div className="flex flex-col gap-1.5">
+                <span className="text-[9px] text-slate-400 font-bold uppercase tracking-widest leading-none">報告生成進度分析</span>
                 <div className="flex items-center gap-3">
                   <div className="w-32 h-1.5 bg-slate-800 rounded-full overflow-hidden">
                     <div
