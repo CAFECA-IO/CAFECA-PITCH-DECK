@@ -1,53 +1,71 @@
-import Image from 'next/image';
+'use client';
+import { motion } from 'framer-motion';
+import { Monitor, ShieldCheck, Zap, Terminal } from 'lucide-react';
 
-export default function CAFECASlide6() {
+export default function Slide6() {
   return (
-    <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden flex flex-col justify-center border border-neutral-800">
-
-      {/* Info: Background Graphic */}
-      <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[400px] bg-gradient-to-r from-cyan-500/5 via-neutral-900 to-amber-500/5 pointer-events-none"></div>
-
-      <div className="relative z-10 px-24 h-full flex flex-row items-center pt-16 pb-16 gap-16">
-
-        {/* Left Side: Title & Info */}
-        <div className="w-[480px] flex-shrink-0 flex flex-col justify-center">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-1 bg-cyan-500 rounded-full"></div>
-            <span className="text-cyan-500 font-bold tracking-[0.2em] uppercase text-sm">Global Swarm</span>
+    <div className="w-full h-full bg-slate-50 text-slate-800 flex items-center justify-center p-24 relative overflow-hidden">
+      <div className="max-w-6xl w-full grid grid-cols-2 gap-24 items-center relative z-10">
+        <div className="space-y-12">
+          <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-orange-600 font-black tracking-widest text-xs uppercase"
+            >
+              The AI Operating System
+            </motion.div>
+            <h2 className="text-6xl font-bold tracking-tight">iSunCloud OS v1.0.0</h2>
+            <p className="text-xl text-slate-500 leading-relaxed">
+              專為 AI 運算量身打造。基於 Ubuntu 24.04 深度優化，提供極致的算力調度與安全性。
+            </p>
           </div>
 
-          <h2 className="text-[3.25rem] font-extrabold text-white leading-tight mb-8 tracking-tight">
-            串列全球的閒置算力<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-amber-300">實現各種可能</span>
-          </h2>
-
-          <div className="w-24 h-1 border-b border-neutral-700/50 mb-8"></div>
-
-          <p className="text-lg text-slate-400 font-light leading-relaxed">
-            透過混合群集網路技術，無縫連接分散在世界各地的邊緣運算節點與主流雲端資源，突破硬體上限，釋放前所未有的無限擴展力。
-          </p>
-        </div>
-
-        {/* Right Side: Image */}
-        <div className="flex-1 h-full relative min-w-0 flex items-center justify-center p-8 bg-white/5 border border-white/10 rounded-[2.5rem] backdrop-blur-md shadow-2xl">
-          <div className="relative w-full h-full">
-            <Image
-              src="/sinobee/combine.png"
-              alt="Swarm Architecture"
-              fill
-              className="object-contain"
-              priority
-            />
+          <div className="space-y-4">
+            {[
+              { icon: <Monitor size={20} />, text: "相容於 Ubuntu 24.04 AI 作業系統" },
+              { icon: <ShieldCheck size={20} />, text: "內建軍規級在地數據隔離機制" },
+              { icon: <Zap size={20} />, text: "深度優化 CUDA 與 TensorRT 加速" },
+              { icon: <Terminal size={20} />, text: "一鍵部署 AIPP Store 全球模型" }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="flex items-center gap-4 text-slate-700 bg-white p-4 rounded-2xl border border-slate-100"
+              >
+                <div className="text-orange-600">{item.icon}</div>
+                <span className="font-bold text-sm">{item.text}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
 
-      <div className="absolute bottom-6 left-24 right-24 flex justify-between items-center text-slate-500 text-xs font-bold tracking-widest uppercase">
-        <div className="flex items-center gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-cyan-500"></div>
-          Idle Compute Power
-        </div>
-        <div>iSunCloud Pitch Deck</div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-slate-100 rounded-[2.5rem] border border-slate-200 p-2 shadow-md shadow-slate-200/50 overflow-hidden aspect-video relative group"
+        >
+          <div className="bg-white rounded-[2.2rem] h-full p-8 font-mono text-xs text-slate-600 space-y-2 overflow-hidden">
+            <div className="flex items-center gap-2 mb-4 border-b border-slate-100 pb-2">
+              <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+              <div className="w-3 h-3 rounded-full bg-amber-500/50"></div>
+              <div className="w-3 h-3 rounded-full bg-orange-600/50"></div>
+              <span className="ml-2 text-[10px] uppercase tracking-widest font-bold">iSunCloud Terminal</span>
+            </div>
+            <div className="text-orange-600/70">isuncloud@box:~$ systemctl status isun-ai-engine</div>
+            <div className="text-slate-500">● isun-ai-engine.service - iSunCloud AI Inference Engine</div>
+            <div>   Loaded: loaded (/lib/systemd/system/isun-ai-engine.service; enabled)</div>
+            <div className="text-orange-500">   Active: active (running) since Wed 2026-07-08 10:00:00 UTC</div>
+            <div>   Main PID: 1234 (python3)</div>
+            <div>   Tasks: 45 (limit: 4915)</div>
+            <div>   Memory: 12.4G (limit: 64.0G)</div>
+            <div className="text-orange-500 animate-pulse mt-4">[INFO] Synchronizing with TWS H100 Cluster...</div>
+            <div className="text-orange-500 animate-pulse">[INFO] Periodic Reinforcement Training: ACTIVE</div>
+            <div className="text-orange-500/50">[SUCCESS] Hybrid Bridge Connected.</div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

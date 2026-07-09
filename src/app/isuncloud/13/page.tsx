@@ -1,108 +1,212 @@
-import { ArrowRight, Globe2, Network, Target, Handshake } from 'lucide-react';
+'use client';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Cpu, 
+  ArrowRightLeft, 
+  Stethoscope, 
+  Scale, 
+  Coins, 
+  Factory,
+  RefreshCw,
+  Lock
+} from 'lucide-react';
+import { useState, useEffect } from 'react';
 
-export default function CAFECASlide13() {
+export default function Slide13() {
+  const [activeStep, setActiveStep] = useState(0);
+
+  // Hardcoded particle positions to avoid impurity and effect-based state setting errors
+  const particles = [
+    { x: 120, y: -80 }, { x: -150, y: 120 }, { x: 80, y: 180 }, { x: -180, y: -90 },
+    { x: 200, y: 40 }, { x: -50, y: -190 }, { x: 160, y: 140 }, { x: -120, y: 50 }
+  ];
+
+  // Animation sequence: 0: Initial, 1: Routing, 2: Feedback, 3: Encryption & Supercomputer, 4: Local Upgrade
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % 5);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const experts = [
+    { icon: <Coins size={24} />, name: "金融專家", color: "text-amber-400" },
+    { icon: <Stethoscope size={24} />, name: "醫療專家", color: "text-rose-400" },
+    { icon: <Scale size={24} />, name: "法律專家", color: "text-orange-500" },
+    { icon: <Factory size={24} />, name: "製造專家", color: "text-orange-500" }
+  ];
+
   return (
-    <div className="w-[1280px] h-[720px] bg-neutral-900 relative overflow-hidden flex flex-col justify-center border border-neutral-800 text-white">
-
-      {/* Info: (20260319 - Luphia) Dynamic Background */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/hexellence.png')] opacity-5 mix-blend-overlay"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-to-tr from-cyan-500/10 to-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-
-      <div className="relative z-10 px-24 h-full flex flex-col justify-center">
-
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-1 bg-amber-500 rounded-full"></div>
-          <span className="text-amber-400 font-bold tracking-[0.2em] uppercase text-sm">Vision & Next Steps</span>
-        </div>
-
-        <h2 className="text-6xl font-black text-white leading-tight mb-4">
-          驅動未來的 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">群集智能</span>
-        </h2>
-        <p className="text-xl text-slate-300 font-light mb-10 max-w-4xl border-l-4 border-cyan-500/50 pl-6 shadow-[-10px_0_20px_-10px_rgba(6,182,212,0.2)]">
-          我們致力於讓 AI 算力如同水電般普及，打造一個由無數專業「數位蜜蜂」共同構建的無限智能力量。
-        </p>
-
-        <div className="grid grid-cols-12 gap-8">
-
-          {/* Info: (20260319 - Luphia) Roadmap */}
-          <div className="col-span-12 md:col-span-7 flex flex-col">
-            <h3 className="text-xl font-bold flex items-center gap-2 mb-6 text-slate-200">
-              <Network size={20} className="text-cyan-400" /> Roadmap 發展路線 (9 Months)
-            </h3>
-
-            <div className="flex-1 bg-neutral-800/50 rounded-3xl p-6 border border-neutral-700 relative overflow-hidden flex flex-col justify-center">
-              <div className="absolute top-0 right-0 p-6 opacity-5">
-                <Target size={150} />
-              </div>
-
-              <div className="space-y-5 relative z-10">
-                <div className="flex items-center gap-4 group">
-                  <div className="w-16 text-right font-mono font-bold text-amber-500 text-sm">2026 Q2</div>
-                  <div className="w-3 h-3 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
-                  <div className="flex-1 text-slate-300 text-[15px] group-hover:text-white transition-colors">
-                    完成 <strong>5000 up</strong> 節點邊緣網格運算架構與測試。
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 group">
-                  <div className="w-16 text-right font-mono font-bold text-cyan-400 text-sm">2026 Q3</div>
-                  <div className="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
-                  <div className="flex-1 text-slate-300 text-[15px] group-hover:text-white transition-colors">
-                    深度整合 <strong>FAITH</strong>, <strong>Gemini</strong>, <strong>Claude</strong> LLM 模型，實現邊緣/雲端無縫動態調度。
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 group">
-                  <div className="w-16 text-right font-mono font-bold text-emerald-400 text-sm">2026 Q4</div>
-                  <div className="w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)]"></div>
-                  <div className="flex-1 text-slate-300 text-[15px] group-hover:text-white transition-colors">
-                    正式上線 <strong>Nectar Store</strong> 技能生態系，開放全球開發者上傳模型模組。
-                  </div>
-                </div>
-              </div>
-
-              {/* Info: (20260319 - Luphia) Connecting line */}
-              <div className="absolute left-[111px] top-10 bottom-10 w-0.5 bg-neutral-700 z-0"></div>
-            </div>
+    <div className="w-full h-full bg-slate-50 text-slate-800 flex items-center justify-center p-24 relative overflow-hidden">
+      <div className="max-w-6xl w-full grid grid-cols-2 gap-12 items-center relative z-10">
+        <div className="space-y-12">
+          <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-orange-600 font-black tracking-widest text-xs uppercase"
+            >
+              Expert Model Orchestration
+            </motion.div>
+            <h2 className="text-6xl font-bold tracking-tight">百工百業專家模型</h2>
+            <p className="text-xl text-slate-500 leading-relaxed">
+              智能分發與持續進化機制。系統會自動根據請求內容調度最合適的產業專家模型，並將所有回饋轉化為模型進化的養分。
+            </p>
           </div>
 
-          {/* Info: (20260319 - Luphia) Call to Action */}
-          <div className="col-span-12 md:col-span-5 flex flex-col">
-            <h3 className="text-xl font-bold flex items-center gap-2 mb-6 text-slate-200">
-              <Handshake size={20} className="text-amber-500" /> Invite to Collaborate
-            </h3>
-
-            <div className="flex-1 bg-gradient-to-tr from-amber-600 to-orange-500 rounded-3xl p-6 shadow-2xl shadow-orange-500/20 relative overflow-hidden group">
-              <div className="absolute -bottom-10 -right-10 opacity-10 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
-                <Globe2 size={240} />
-              </div>
-
-              <div className="relative z-10 h-full flex flex-col">
-                <h4 className="text-3xl font-black text-white leading-tight mb-3">
-                  Join the<br />Hive Network.
-                </h4>
-                <p className="text-orange-100 font-medium mb-auto leading-relaxed text-sm">
-                  我們正在尋求 <strong>種子輪 (Seed Round) 戰略投資</strong>，以及對於導入 AI 算力有龐大需求的 <strong>企業級 PoC 共創夥伴</strong>。
-                </p>
-
-                <div className="mt-5 flex items-center gap-3 text-white font-bold bg-black/20 w-fit px-5 py-2.5 rounded-xl border border-white/20 hover:bg-black/40 transition-colors cursor-pointer backdrop-blur-md">
-                  Let&apos;s Talk <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+          <div className="space-y-8">
+            {[
+              { step: 1, text: "內容感知識別，自動路由至合適專家" },
+              { step: 2, text: "全量回饋採集，打造持續進化的數據集" },
+              { step: 3, text: "同態加密傳輸，確保數據在訓練時絕對私有" },
+              { step: 4, text: "超級電腦集群迭代，本地模型即時升級" }
+            ].map((item, i) => (
+              <div 
+                key={i} 
+                className={`flex items-center gap-6 transition-all duration-500 ${activeStep === item.step ? 'opacity-100 translate-x-4' : 'opacity-30 translate-x-0'}`}
+              >
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs ${activeStep === item.step ? 'bg-orange-600 text-black' : 'bg-slate-100 text-slate-500'}`}>
+                  {item.step}
                 </div>
+                <span className={`text-lg font-bold ${activeStep === item.step ? 'text-slate-800' : 'text-slate-600'}`}>
+                  {item.text}
+                </span>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Visual Animation Area */}
+        <div className="relative aspect-square bg-white rounded-[4rem] border border-slate-100 overflow-hidden flex items-center justify-center">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/5 via-transparent to-transparent"></div>
+          
+          {/* Central Orchestrator */}
+          <motion.div 
+            className="relative z-30 w-32 h-32 rounded-3xl bg-orange-600/10 border border-orange-500/30 flex flex-col items-center justify-center text-orange-600 shadow-[0_0_50px_rgba(16,185,129,0.1)]"
+            animate={{ 
+              scale: activeStep === 1 ? [1, 1.1, 1] : 1,
+              borderColor: activeStep === 1 ? "rgba(16,185,129,0.8)" : "rgba(16,185,129,0.3)"
+            }}
+          >
+             <Cpu size={40} strokeWidth={1.5} />
+             <div className="text-[10px] font-black uppercase mt-2">Orchestrator</div>
+          </motion.div>
+
+          {/* Expert Models Grid */}
+          <div className="absolute inset-0 z-20 pointer-events-none">
+            {experts.map((e, i) => {
+              const angles = [45, 135, 225, 315];
+              const angle = angles[i] * (Math.PI / 180);
+              const x = Math.cos(angle) * 160;
+              const y = Math.sin(angle) * 160;
+
+              return (
+                <motion.div
+                  key={i}
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                  animate={{ 
+                    x, y,
+                    opacity: activeStep >= 1 ? 1 : 0.2,
+                    scale: activeStep === 1 ? [1, 1.2, 1] : 1
+                  }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className={`w-20 h-20 rounded-2xl bg-white border border-slate-200 flex flex-col items-center justify-center ${e.color} shadow-md shadow-slate-200/30`}>
+                    {e.icon}
+                    <div className="text-[8px] font-bold mt-1 text-slate-500">{e.name}</div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
 
-        </div>
+          {/* Routing Particles (Step 1) */}
+          <AnimatePresence>
+            {activeStep === 1 && (
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 z-10"
+              >
+                {particles.map((p, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute left-1/2 top-1/2 w-1.5 h-1.5 rounded-full bg-orange-500"
+                    animate={{ 
+                      x: [0, p.x],
+                      y: [0, p.y],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+                  />
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-      </div>
+          {/* Supercomputer & Encryption (Step 3) */}
+          <AnimatePresence>
+            {activeStep === 3 && (
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                className="absolute inset-0 z-40 bg-white/90 backdrop-blur-md flex flex-col items-center justify-center space-y-8"
+              >
+                <div className="relative">
+                   <div className="w-32 h-32 rounded-full border-2 border-dashed border-orange-500/30 flex items-center justify-center text-orange-500">
+                      <Lock size={48} />
+                   </div>
+                   <motion.div 
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                    className="absolute inset-0 border-t-2 border-orange-500 rounded-full"
+                   />
+                </div>
+                <div className="text-center space-y-2">
+                   <div className="text-lg font-bold text-orange-500 uppercase tracking-widest">同態加密傳輸</div>
+                   <div className="flex items-center justify-center gap-4 text-slate-500">
+                      <span>Local BOX</span>
+                      <ArrowRightLeft size={16} />
+                      <span className="text-orange-600 font-bold">H100 Supercomputer</span>
+                   </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-      {/* Info: (20260319 - Luphia) Footer */}
-      <div className="absolute bottom-8 left-20 right-20 flex justify-between items-center text-slate-500 text-xs font-bold tracking-widest uppercase">
-        <div className="flex items-center gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-          2026 iSunCloud Inc.
+          {/* Local Upgrade Pulse (Step 4) */}
+          <AnimatePresence>
+            {activeStep === 4 && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.5 }}
+                className="absolute inset-0 z-50 flex flex-col items-center justify-center"
+              >
+                <div className="w-full h-full absolute inset-0 bg-orange-600/10 pointer-events-none"></div>
+                <motion.div
+                  animate={{ scale: [1, 2], opacity: [0.3, 0] }}
+                  transition={{ duration: 1, repeat: Infinity }}
+                  className="w-64 h-64 border-4 border-orange-500 rounded-full"
+                />
+                <div className="relative z-10 flex flex-col items-center gap-4">
+                   <RefreshCw className="text-orange-600 animate-spin" size={64} />
+                   <div className="text-2xl font-black text-orange-600 uppercase tracking-tighter shadow-sm shadow-orange-100">Local Model Upgraded</div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Legend */}
+          <div className="absolute bottom-10 left-10 z-30">
+             <div className="flex items-center gap-2 text-[10px] font-mono text-slate-600 uppercase tracking-widest">
+                <div className="w-2 h-2 rounded-full bg-orange-600"></div>
+                <span>Orchestration Status: {activeStep === 0 ? 'IDLE' : activeStep === 1 ? 'ROUTING' : activeStep === 2 ? 'FEEDBACK' : activeStep === 3 ? 'ENCRYPTING' : 'UPGRADING'}</span>
+             </div>
+          </div>
         </div>
-        <div>iSunCloud Pitch Deck</div>
       </div>
     </div>
   );

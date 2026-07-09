@@ -1,98 +1,76 @@
-import { Crown, Eye, Wrench, CloudLightning, ShieldCheck } from 'lucide-react';
+'use client';
+import { motion } from 'framer-motion';
+import { Zap, Cpu, BarChart3, Cloud } from 'lucide-react';
 
-export default function CAFECASlide8() {
+export default function Slide8() {
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden flex flex-col justify-center border border-slate-200">
-
-      {/* Info: (20260319 - Luphia) Decorative */}
-      <div className="absolute top-10 right-10 flex opacity-10 pointer-events-none">
-        <div className="w-96 h-96 border-4 border-amber-500 rounded-full"></div>
-        <div className="w-96 h-96 border-4 border-cyan-500 rounded-full -ml-48 mt-12"></div>
-      </div>
-
-      <div className="relative z-10 px-24 h-full flex flex-col justify-center">
-
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-1 bg-amber-500 rounded-full"></div>
-          <span className="text-amber-600 font-bold tracking-[0.2em] uppercase text-sm">Core Technology 2</span>
-        </div>
-
-        <h2 className="text-4xl font-extrabold text-slate-800 leading-tight mb-12">
-          專業分工的蜂群網路 <span className="text-slate-400 font-light ml-2">Swarm Agents</span>
-        </h2>
-
-        <div className="grid grid-cols-12 gap-6 h-[400px]">
-
-          {/* Info: (20260319 - Luphia) Queen - Brain (Top/Left span) */}
-          <div className="col-span-12 md:col-span-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-slate-700 shadow-xl flex flex-col text-white relative overflow-hidden group">
-            <div className="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-500">
-              <Crown size={200} />
-            </div>
-            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 border border-white/20 backdrop-blur-sm">
-              <Crown size={32} className="text-amber-400" />
-            </div>
-            <h3 className="text-3xl font-black mb-1">Queen</h3>
-            <p className="text-amber-300 font-bold tracking-wider text-xs uppercase mb-6">女王節點 (大腦)</p>
-            <p className="text-slate-300 leading-relaxed font-light mt-auto">
-              系統的絕對核心中樞。不直接參與底層運算，專注於<strong className="text-amber-400 font-normal">全球任務編排、全網算力調度與蜂群狀態監控</strong>，確保集體智能的高效運作。
+    <div className="w-full h-full bg-slate-50 text-slate-800 flex items-center justify-center p-24 relative overflow-hidden">
+      <div className="max-w-6xl w-full grid grid-cols-2 gap-20 items-center relative z-10">
+        <div className="space-y-12">
+          <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="flex items-center gap-3 text-orange-500"
+            >
+              <Cloud size={20} />
+              <span className="text-xs font-bold tracking-widest uppercase text-orange-500/80">Strategic Partnership</span>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-6xl font-bold tracking-tight"
+            >
+              台智雲 TWS <br />
+              <span className="text-orange-600">H100 伺服器集群</span>
+            </motion.h2>
+            <p className="text-xl text-slate-500 leading-relaxed">
+              當需要進行大規模模型強化訓練時，iSunCloud 可即時連接至台智雲頂級 H100 GPU 叢集，提供近乎無限的運算動力。
             </p>
           </div>
 
-          <div className="col-span-12 md:col-span-8 grid grid-cols-2 gap-6">
-
-            {/* Info: (20260319 - Luphia) Scout */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-md flex flex-col hover:-translate-y-1 transition-transform group">
-              <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-4 border border-sky-100 group-hover:bg-sky-500 transition-colors">
-                <Eye size={24} className="text-sky-500 group-hover:text-white" />
+          <div className="space-y-6">
+            <div className="flex items-start gap-6 group">
+              <div className="w-12 h-12 rounded-xl bg-orange-600/10 flex items-center justify-center text-orange-500 shrink-0 group-hover:scale-110 transition-transform">
+                <Zap size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-1">Scout</h3>
-              <p className="text-sky-600 font-semibold text-xs tracking-wider uppercase mb-3">偵察蜂 (Edge)</p>
-              <p className="text-slate-500 text-sm leading-relaxed mt-auto">
-                分佈於端點的敏捷節點。負責<strong className="text-slate-700">即時採集外部環境數據、觸發事件告警</strong>，並將前線情資準確回傳給 Queen。
-              </p>
-            </div>
-
-            {/* Info: (20260319 - Luphia) Worker */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-md flex flex-col hover:-translate-y-1 transition-transform group">
-              <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-4 border border-amber-100 group-hover:bg-amber-500 transition-colors">
-                <Wrench size={24} className="text-amber-500 group-hover:text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-1">Worker</h3>
-              <p className="text-amber-600 font-semibold text-xs tracking-wider uppercase mb-3">工蜂 (Edge / GX10)</p>
-              <p className="text-slate-500 text-sm leading-relaxed mt-auto">
-                基於 DGX Spark 佈建的主力。接收 Queen 拆解後的碎片化任務，負責<strong className="text-slate-700">高強度持久的並行推論與資料清洗</strong>。
-              </p>
-            </div>
-
-            {/* Info: (20260319 - Luphia) Mercenary */}
-            <div className="col-span-2 bg-gradient-to-r from-cyan-50 to-white rounded-3xl p-6 border border-cyan-200 shadow-md flex items-center gap-6 hover:shadow-cyan-500/10 transition-shadow">
-              <div className="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center shrink-0 border border-cyan-200">
-                <CloudLightning size={32} className="text-cyan-600" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-slate-800 mb-1">Mercenary</h3>
-                <p className="text-cyan-600 font-semibold text-xs tracking-wider uppercase mb-2">傭兵蜂 (Cloud / TWAI)</p>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  只有在遇到<strong className="text-slate-800">極度算力飢渴或高度複雜任務</strong>時，才會在 TWAI 雲端中動態生成的臨時強效節點。任務一經解局，傭兵即刻解散退役。
-                </p>
+              <div className="space-y-1">
+                <h3 className="text-lg font-bold">極致強化訓練效能</h3>
+                <p className="text-sm text-slate-500">調用 H100 算力，讓原本需要數月的訓練任務縮短至數小時。</p>
               </div>
             </div>
 
+            <div className="flex items-start gap-6 group">
+              <div className="w-12 h-12 rounded-xl bg-orange-600/10 flex items-center justify-center text-orange-500 shrink-0 group-hover:scale-110 transition-transform">
+                <BarChart3 size={24} />
+              </div>
+              <div className="space-y-1">
+                <h3 className="text-lg font-bold">根據用量計費 (Usage-based)</h3>
+                <p className="text-sm text-slate-500">僅在進行模型強化時支付算力費用，最大化資源利用率。</p>
+              </div>
+            </div>
           </div>
-
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="relative bg-gradient-to-br from-orange-500/10 to-transparent p-1 border border-orange-200 rounded-[3.5rem] overflow-hidden"
+        >
+          <div className="bg-white rounded-[3.3rem] p-12 space-y-8 relative overflow-hidden">
+             <div className="w-full aspect-square bg-white rounded-3xl border border-slate-100 relative flex items-center justify-center group">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-500/5 via-transparent to-transparent"></div>
+                <div className="relative z-10 text-center space-y-6">
+                    <Cpu size={120} className="mx-auto text-orange-600/50 group-hover:text-orange-600 transition-colors duration-700" />
+                    <div className="space-y-2">
+                        <div className="text-2xl font-black tracking-tighter uppercase">NVIDIA H100</div>
+                        <div className="text-[10px] font-mono text-slate-600 uppercase tracking-[0.4em]">Cloud Training Active</div>
+                    </div>
+                </div>
+             </div>
+          </div>
+        </motion.div>
       </div>
-
-      {/* Info: (20260319 - Luphia) Footer */}
-      <div className="absolute bottom-8 left-24 right-24 flex justify-between items-center text-slate-400 text-xs font-bold tracking-widest uppercase">
-        <div className="flex items-center gap-2">
-          <ShieldCheck size={14} className="text-amber-500" />
-          Layer 2 Agents
-        </div>
-        <div>iSunCloud Pitch Deck</div>
-      </div>
-
     </div>
   );
 }

@@ -1,117 +1,78 @@
-import { ShoppingBag, Box, DownloadCloud, Coins, Hexagon } from 'lucide-react';
+'use client';
+import { motion } from 'framer-motion';
+import { Database, LineChart, ShieldCheck } from 'lucide-react';
 
-export default function CAFECASlide9() {
+export default function Slide9() {
   return (
-    <div className="w-[1280px] h-[720px] bg-neutral-900 relative overflow-hidden flex flex-col justify-center border border-neutral-800 text-white">
-
-      {/* Info: (20260319 - Luphia) Decorative Background */}
-      <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-amber-500/5 -skew-x-12 transform translate-x-20 pointer-events-none"></div>
-
-      <div className="relative z-10 px-24 h-full flex flex-col justify-center">
-
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-1 bg-amber-500 rounded-full"></div>
-          <span className="text-amber-400 font-bold tracking-[0.2em] uppercase text-sm">Ecosystem</span>
-        </div>
-
-        <h2 className="text-4xl font-extrabold text-white leading-tight mb-4">
-          技能生態系：Nectar Store
-          <span className="block text-xl text-amber-500/80 font-light mt-2">The App Store for AI Swarms</span>
-        </h2>
-
-        <div className="flex gap-12">
-
-          <div className="flex-1 space-y-4">
-
-            {/* Info: (20260319 - Luphia) Point 1 */}
-            <div className="bg-neutral-800/50 rounded-2xl p-5 border border-neutral-700 flex items-start gap-4 hover:border-amber-500/50 transition-colors group">
-              <div className="p-3 bg-amber-500/10 rounded-xl text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-colors shrink-0">
-                <Box size={20} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-1.5">動態擴充庫 (Dynamic Repository)</h3>
-                <p className="text-sm text-slate-400 leading-normal font-light">
-                  集中託管成千上萬的微調模型 (LoRA)、資料爬蟲腳本與 API 串接工具，涵蓋金融、醫療、製造等垂直領域知識。
-                </p>
-              </div>
-            </div>
-
-            {/* Info: (20260319 - Luphia) Point 2 */}
-            <div className="bg-neutral-800/50 rounded-2xl p-5 border border-neutral-700 flex items-start gap-4 hover:border-sky-500/50 transition-colors group">
-              <div className="p-3 bg-sky-500/10 rounded-xl text-sky-400 group-hover:bg-sky-500 group-hover:text-white transition-colors shrink-0">
-                <DownloadCloud size={20} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-1.5">隨插即用 (Plug & Play)</h3>
-                <p className="text-sm text-slate-400 leading-normal font-light">
-                  當蜂群遭遇未知任務時，Worker 節點可瞬間從 Nectar Store 下載並熱裝備新技能，賦予 AI 代理無限延展性。
-                </p>
-              </div>
-            </div>
-
-            {/* Info: (20260319 - Luphia) Point 3 */}
-            <div className="bg-neutral-800/50 rounded-2xl p-5 border border-neutral-700 flex items-start gap-4 hover:border-emerald-500/50 transition-colors group">
-              <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors shrink-0">
-                <Coins size={20} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-1.5">開發者共創分潤 (Creator Economy)</h3>
-                <p className="text-sm text-slate-400 leading-normal font-light">
-                  鼓勵全球開發者上架獨創的技能模組。每當模組被蜂群調用時，開發者將自動獲得按次計費的代幣分潤，形成正向循環。
-                </p>
-              </div>
-            </div>
-
+    <div className="w-full h-full bg-slate-50 text-slate-800 flex items-center justify-center p-24 relative overflow-hidden">
+      <div className="max-w-6xl w-full grid grid-cols-2 gap-24 items-center relative z-10">
+        <div className="space-y-12">
+          <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-orange-600 font-black tracking-widest text-xs uppercase"
+            >
+              Data Empowerment
+            </motion.div>
+            <h2 className="text-6xl font-bold tracking-tight">本地運行數據的價值</h2>
+            <p className="text-xl text-slate-500 leading-relaxed">
+              您的企業運作數據是 AI 成長最好的養分。iSunCloud 在確保隱私的前提下，採集本地運行數據，轉化為模型訓練的高品質資料集。
+            </p>
           </div>
 
-          <div className="w-[400px] flex items-center justify-center relative">
-            <div className="w-full aspect-square bg-gradient-to-tr from-amber-500/20 to-neutral-900 rounded-full blur-3xl absolute pointer-events-none"></div>
-            <div className="relative z-10 w-[300px] h-[450px] bg-neutral-950 border border-neutral-700 rounded-[2.5rem] shadow-2xl p-8 flex flex-col items-center">
-              <ShoppingBag size={56} className="text-amber-500 mb-6 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]" />
-              <div className="w-full text-center border-b border-neutral-800 pb-5 mb-5">
-                <h4 className="font-bold text-xl text-white mb-1">Nectar Store</h4>
-                <p className="text-xs text-slate-500">Available Skills</p>
-              </div>
-              <div className="w-full space-y-4">
-                <div className="h-14 bg-neutral-800 rounded-xl border border-neutral-700 flex items-center px-4 gap-4">
-                  <Hexagon size={18} className="text-sky-400" />
-                  <div className="flex-1">
-                    <div className="h-2 w-20 bg-slate-600 rounded"></div>
-                    <div className="h-1.5 w-12 bg-slate-700 rounded mt-1.5"></div>
-                  </div>
-                  <div className="text-[11px] text-amber-500 font-mono">+1.5c</div>
-                </div>
-                <div className="h-14 bg-neutral-800 rounded-xl border border-neutral-700 flex items-center px-4 gap-4">
-                  <Hexagon size={18} className="text-emerald-400" />
-                  <div className="flex-1">
-                    <div className="h-2 w-24 bg-slate-600 rounded"></div>
-                    <div className="h-1.5 w-16 bg-slate-700 rounded mt-1.5"></div>
-                  </div>
-                  <div className="text-[11px] text-amber-500 font-mono">+0.8c</div>
-                </div>
-                <div className="h-14 bg-neutral-800 rounded-xl border border-neutral-700 flex items-center px-4 gap-4">
-                  <Hexagon size={18} className="text-rose-400" />
-                  <div className="flex-1">
-                    <div className="h-2 w-16 bg-slate-600 rounded"></div>
-                    <div className="h-1.5 w-10 bg-slate-700 rounded mt-1.5"></div>
-                  </div>
-                  <div className="text-[11px] text-amber-500 font-mono">+2.1c</div>
-                </div>
-              </div>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="p-6 rounded-2xl bg-white border border-slate-100 space-y-4">
+              <ShieldCheck className="text-orange-600" size={24} />
+              <div className="text-sm font-bold">隱私脫敏技術</div>
+              <p className="text-xs text-slate-500">採集過程中自動過濾敏感資訊，確保僅上傳「訓練特徵」。</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-white border border-slate-100 space-y-4">
+              <LineChart className="text-orange-600" size={24} />
+              <div className="text-sm font-bold">品質自動標註</div>
+              <p className="text-xs text-slate-500">利用本地算力對採集數據進行初步標註與清洗。</p>
             </div>
           </div>
-
         </div>
 
-      </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="relative bg-[#111] rounded-[3rem] border border-slate-200 p-12 overflow-hidden group"
+        >
+          <div className="absolute inset-0 bg-orange-600/5 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className="relative z-10 space-y-8">
+             <div className="flex items-center gap-4">
+                <Database className="text-orange-600" size={32} />
+                <div className="text-xl font-bold uppercase tracking-tight">Local Intelligence Hub</div>
+             </div>
+             
+             <div className="space-y-4 font-mono text-[10px] text-slate-500">
+                <div className="flex justify-between items-center bg-white p-3 rounded-lg border border-slate-100">
+                   <span>Collected Interactions</span>
+                   <span className="text-orange-500">128,492 Units</span>
+                </div>
+                <div className="flex justify-between items-center bg-white p-3 rounded-lg border border-slate-100">
+                   <span>Privacy Score</span>
+                   <span className="text-orange-500">99.8% Optimized</span>
+                </div>
+                <div className="flex justify-between items-center bg-white p-3 rounded-lg border border-slate-100">
+                   <span>Training Readiness</span>
+                   <span className="text-orange-500">Ready for H100</span>
+                </div>
+             </div>
 
-      {/* Info: (20260319 - Luphia) Footer */}
-      <div className="absolute bottom-8 left-24 right-24 flex justify-between items-center text-slate-500 text-xs font-bold tracking-widest uppercase">
-        <div className="flex items-center gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-          AI App Store
-        </div>
-        <div>iSunCloud Pitch Deck</div>
+             <div className="pt-4 flex items-center justify-center">
+                <div className="w-full h-2 bg-white rounded-full overflow-hidden">
+                   <motion.div 
+                    animate={{ width: ["0%", "100%"] }}
+                    transition={{ duration: 4, repeat: Infinity }}
+                    className="h-full bg-orange-600"
+                   />
+                </div>
+             </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,79 +1,57 @@
-import { AlertTriangle, ServerCrash, ZapOff, BrainCircuit } from 'lucide-react';
+'use client';
+import { motion } from 'framer-motion';
+import { ShieldAlert, Database, Lock } from 'lucide-react';
 
-export default function CAFECASlide2() {
+export default function Slide2() {
+  const challenges = [
+    { 
+      title: "數據隱私洩漏", 
+      desc: "傳統雲端 AI 需要上傳敏感數據，面臨核心資產外流風險。", 
+      icon: <Lock size={28} /> 
+    },
+    { 
+      title: "算力成本高昂", 
+      desc: "長期租用高性能 GPU 集群，對企業而言是沉重的財務負擔。", 
+      icon: <Database size={28} /> 
+    },
+    { 
+      title: "模型通用化、不精準", 
+      desc: "市售模型難以理解特定業務場景，無法與企業內部知識庫深度融合。", 
+      icon: <ShieldAlert size={28} /> 
+    }
+  ];
+
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden flex flex-col justify-center border border-slate-200">
-
-      {/* Info: (20260319 - Luphia) Background Graphic */}
-      <div className="absolute right-[-10%] top-[-10%] opacity-5 text-slate-400 pointer-events-none">
-        <ServerCrash size={800} strokeWidth={0.5} />
-      </div>
-
-      <div className="relative z-10 px-24">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-1 bg-rose-500 rounded-full"></div>
-          <span className="text-rose-600 font-bold tracking-[0.2em] uppercase text-sm">The Problem</span>
+    <div className="w-full h-full bg-slate-50 text-slate-800 flex flex-col items-center justify-center p-24 relative overflow-hidden">
+      <div className="max-w-6xl w-full space-y-20 relative z-10">
+        <div className="space-y-4">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-orange-600 font-black tracking-widest text-xs uppercase"
+          >
+            Market Challenges
+          </motion.div>
+          <h2 className="text-6xl font-bold tracking-tight">企業 AI 導入的關鍵障礙</h2>
         </div>
-
-        <h2 className="text-5xl font-extrabold text-slate-800 leading-tight mb-16">
-          傳統 AI 基礎設施的
-          <span className="text-rose-500 mx-3">三大瓶頸</span>
-        </h2>
 
         <div className="grid grid-cols-3 gap-8">
-
-          {/* Info: (20260319 - Luphia) Box 1 */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 relative group overflow-hidden">
-            <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-              <ZapOff size={150} />
-            </div>
-            <div className="w-16 h-16 bg-rose-50 rounded-2xl flex items-center justify-center mb-6 border border-rose-100 group-hover:bg-rose-500 group-hover:text-white transition-colors">
-              <ZapOff size={32} className="text-rose-500 group-hover:text-white" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">算力集中與成本高昂</h3>
-            <p className="text-slate-600 leading-relaxed font-medium">
-              傳統大模型過度依賴單一巨型伺服器或昂貴的 GPU 叢集，導致算力成本呈現幾何級數增長，讓多數企業難以負擔。
-            </p>
-          </div>
-
-          {/* Info: (20260319 - Luphia) Box 2 */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 relative group overflow-hidden">
-            <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-              <AlertTriangle size={150} />
-            </div>
-            <div className="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 border border-orange-100 group-hover:bg-orange-500 group-hover:text-white transition-colors">
-              <AlertTriangle size={32} className="text-orange-500 group-hover:text-white" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">缺乏彈性與容錯 (SPOF)</h3>
-            <p className="text-slate-600 leading-relaxed font-medium">
-              面對突發運算高峰難以瞬間擴容；且只要核心節點發生單點故障，整個自動化流程就會瞬間停擺，穩定性大打折扣。
-            </p>
-          </div>
-
-          {/* Info: (20260319 - Luphia) Box 3 */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 relative group overflow-hidden">
-            <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-              <BrainCircuit size={150} />
-            </div>
-            <div className="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 border border-amber-100 group-hover:bg-amber-500 group-hover:text-white transition-colors">
-              <BrainCircuit size={32} className="text-amber-500 group-hover:text-white" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">能力固化與擴展受限</h3>
-            <p className="text-slate-600 leading-relaxed font-medium">
-              部署後的 AI 代理通常只能執行預設範疇內的單一任務，難以在運行中動態學習新技能或集體應對未知領域的挑戰。
-            </p>
-          </div>
-
+          {challenges.map((c, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              className="p-10 rounded-[3rem] bg-white border border-slate-200 hover:border-orange-500/30 transition-all group"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-orange-600 mb-8 group-hover:scale-110 group-hover:bg-orange-600/10 transition-all">
+                {c.icon}
+              </div>
+              <h3 className="text-2xl font-bold mb-4">{c.title}</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">{c.desc}</p>
+            </motion.div>
+          ))}
         </div>
-      </div>
-
-      {/* Info: (20260319 - Luphia) Footer */}
-      <div className="absolute bottom-8 left-24 right-24 flex justify-between items-center text-slate-400 text-xs font-bold tracking-widest uppercase">
-        <div className="flex items-center gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-rose-500"></div>
-          The Bottleneck
-        </div>
-        <div>iSunCloud Pitch Deck</div>
       </div>
     </div>
   );

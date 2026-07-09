@@ -1,28 +1,34 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { ChevronLeft, ChevronRight, MonitorPlay, Download, Grid, Maximize2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Download, Grid, Zap } from 'lucide-react';
 import Link from 'next/link';
-import CAFECASlide1 from '@/app/isuncloud/1/page';
-import CAFECASlide2 from '@/app/isuncloud/2/page';
-import CAFECASlide3 from '@/app/isuncloud/3/page';
-import CAFECASlide4 from '@/app/isuncloud/4/page';
-import CAFECASlide5 from '@/app/isuncloud/5/page';
-import CAFECASlide6 from '@/app/isuncloud/6/page';
-import CAFECASlide7 from '@/app/isuncloud/7/page';
-import CAFECASlide8 from '@/app/isuncloud/8/page';
-import CAFECASlide9 from '@/app/isuncloud/9/page';
-import CAFECASlide10 from '@/app/isuncloud/10/page';
-import CAFECASlide11 from '@/app/isuncloud/11/page';
-import CAFECASlide12 from '@/app/isuncloud/12/page';
-import CAFECASlide13 from '@/app/isuncloud/13/page';
 
-export default function CAFECASlideBrowser() {
+// Slide Components
+import Slide1 from '@/app/isuncloud/1/page';
+import Slide2 from '@/app/isuncloud/2/page';
+import Slide3 from '@/app/isuncloud/3/page';
+import Slide4 from '@/app/isuncloud/4/page';
+import Slide5 from '@/app/isuncloud/5/page';
+import Slide6 from '@/app/isuncloud/6/page';
+import Slide7 from '@/app/isuncloud/7/page';
+import Slide8 from '@/app/isuncloud/8/page';
+import Slide9 from '@/app/isuncloud/9/page';
+import Slide10 from '@/app/isuncloud/10/page';
+import Slide11 from '@/app/isuncloud/11/page';
+import Slide12 from '@/app/isuncloud/12/page';
+import Slide13 from '@/app/isuncloud/13/page';
+import Slide14 from '@/app/isuncloud/14/page';
+import Slide15 from '@/app/isuncloud/15/page';
+import Slide16 from '@/app/isuncloud/16/page';
+import Slide17 from '@/app/isuncloud/17/page';
+import Slide18 from '@/app/isuncloud/18/page';
+
+export default function IsunCloudSlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 13;
+  const totalSlides = 18;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
-  const [mobileScale, setMobileScale] = useState(0.3);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,53 +38,40 @@ export default function CAFECASlideBrowser() {
         const targetHeight = 720;
         const scaleX = width / targetWidth;
         const scaleY = height / targetHeight;
-        const newScale = Math.min(scaleX, scaleY);
-        setScale(newScale);
-      }
-      if (window.innerWidth < 768) {
-        const w = window.innerWidth;
-        const targetW = 1280;
-        setMobileScale(w / targetW);
+        setScale(Math.min(scaleX, scaleY));
       }
     };
-
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const SlideComponents: { [key: number]: React.ComponentType } = {
-    1: CAFECASlide1,
-    2: CAFECASlide2,
-    3: CAFECASlide3,
-    4: CAFECASlide4,
-    5: CAFECASlide5,
-    6: CAFECASlide6,
-    7: CAFECASlide7,
-    8: CAFECASlide8,
-    9: CAFECASlide9,
-    10: CAFECASlide10,
-    11: CAFECASlide11,
-    12: CAFECASlide12,
-    13: CAFECASlide13,
+    1: Slide1, 2: Slide2, 3: Slide3, 4: Slide4, 5: Slide5, 6: Slide6, 7: Slide7, 8: Slide8,
+    9: Slide9, 10: Slide10, 11: Slide11, 12: Slide12, 13: Slide13, 14: Slide14, 15: Slide15, 16: Slide16, 17: Slide17, 18: Slide18
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
 
   const slideTitles: { [key: number]: string } = {
-    1: 'Title: CAFECA',
-    2: 'The Problem',
-    3: 'The CAFECA Solution',
-    4: '個體節點架構',
-    5: 'Hybrid-Decentralized Architecture',
-    6: '串列全球的閒置算力實現各種可能',
-    7: '系統集群架構',
-    8: 'Swarm Agents',
-    9: 'Nectar Store',
-    10: 'Business Model - HaaS',
-    11: 'Key Use Cases',
-    12: 'Why CAFECA?',
-    13: 'Vision & Call to Action',
+    1: '封面：iSunCloud AI BOX',
+    2: '市場痛點：隱私與效能的矛盾',
+    3: '解決方案：Hybrid AI 混合雲平台',
+    4: '模型訂閱服務：SOTA 模型即時同步',
+    5: '混合雲架構：在地推理，遠端強化',
+    6: 'iSunCloud OS：安全與效能兼具',
+    7: '強大在地算力：x86/Arm 與 CUDA',
+    8: '遠端 H100 集群：無限算力擴充',
+    9: '數據賦能：本地運行數據的價值',
+    10: '週期性強化訓練：模型持續進化',
+    11: 'AI 實作模擬：智能碳盤查助手',
+    12: '個人化 AI：越用越懂您的業務',
+    13: '百工百業專家模型：智能調度與進化',
+    14: 'AIPP Store：AI Agent 商城',
+    15: 'AI 教練：引導模型訓練與部署',
+    16: '零信任安全：本地數據絕對私有',
+    17: '投資回報分析：定價與價值',
+    18: '行動呼籲：開啟 AI 轉型之旅',
   };
 
   const nextSlide = useCallback(() => {
@@ -89,13 +82,11 @@ export default function CAFECASlideBrowser() {
     setCurrentSlide(c => (c > 1 ? c - 1 : c));
   }, []);
 
-  const goToSlide = (id: number) => {
-    setCurrentSlide(id);
-  };
+  const goToSlide = (id: number) => setCurrentSlide(id);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') nextSlide();
       if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') prevSlide();
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -103,124 +94,94 @@ export default function CAFECASlideBrowser() {
   }, [nextSlide, prevSlide]);
 
   return (
-    <div className="flex flex-col h-screen bg-neutral-900 text-white overflow-hidden">
-      {/* Info: (20260319 - Luphia) Header */}
-      <div className="h-14 border-b border-neutral-800 flex items-center justify-between px-4 bg-neutral-900 z-20 flex-shrink-0">
-        <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div className="bg-amber-500 p-1.5 rounded-lg border border-amber-400/30">
-            <MonitorPlay size={20} className="text-amber-950" />
+    <div className="flex flex-col h-screen bg-slate-100 text-slate-800 overflow-hidden font-sans">
+      {/* Header */}
+      <div className="h-16 border-b border-slate-200 flex items-center justify-between px-6 bg-white/80 backdrop-blur-xl z-20 flex-shrink-0">
+        <div className="flex items-center gap-4">
+          <div className="bg-orange-600 p-2 rounded-xl shadow-lg shadow-orange-600/20">
+            <Zap size={20} className="text-white fill-current" />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-gray-200">iSunCloud Pitch Deck</h1>
-            <p className="text-xs text-gray-500">v1.0.0 • 2026 iSunCloud</p>
+            <h1 className="text-sm font-bold tracking-tight text-slate-800/90">iSunCloud AI BOX - Hybrid AI Platform</h1>
+            <p className="text-[10px] text-slate-800/40 uppercase tracking-widest font-bold">Sales Pitch Deck v1.3.0</p>
           </div>
-        </Link>
-        <div className="hidden md:flex items-center gap-2">
-          <span className="text-xs font-mono text-gray-500 mr-2">
-            {currentSlide} / {totalSlides}
-          </span>
-          <button
-            onClick={prevSlide}
-            disabled={currentSlide === 1}
-            className="p-2 hover:bg-neutral-800 rounded-full disabled:opacity-30 transition-colors hover:text-amber-400"
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button
-            onClick={nextSlide}
-            disabled={currentSlide === totalSlides}
-            className="p-2 hover:bg-neutral-800 rounded-full disabled:opacity-30 transition-colors hover:text-amber-400"
-          >
-            <ChevronRight size={20} />
-          </button>
         </div>
-        <div className="flex items-center gap-3">
-          <Link href="/isuncloud/print" target="_blank" className="hidden md:block" aria-label="Print or Export PDF">
-            <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700 text-gray-200 hover:text-amber-400 hover:border-amber-400/30">
-              <Download size={14} />
-              <span>PDF</span>
-            </button>
-          </Link>
-          <Link href={`/isuncloud/${currentSlide}`} target="_blank" className="hidden md:block" aria-label="Open slide in new tab">
-            <button className="p-2 hover:bg-neutral-800 rounded-md text-gray-400 hover:text-amber-400 transition-colors" aria-label="Maximize slide">
-              <Maximize2 size={18} />
-            </button>
-          </Link>
-        </div>
-      </div>
 
-      <div
-        className="md:hidden flex-1 overflow-y-auto bg-neutral-900 scroll-smooth"
-        onScroll={(e) => {
-          const target = e.currentTarget;
-          const paddingOffset = target.clientHeight * 0.35;
-          const slideHeight = (720 * mobileScale) + 16;
-          const scrollCenter = target.scrollTop + (target.clientHeight / 2);
-          const relativePosition = scrollCenter - paddingOffset;
-          const index = Math.floor(relativePosition / slideHeight) + 1;
-          const safeIndex = Math.max(1, Math.min(totalSlides, index));
-          if (safeIndex !== currentSlide) setCurrentSlide(safeIndex);
-        }}
-      >
-        <div className="flex flex-col items-center gap-4 py-[35vh] min-h-screen">
-          {Array.from({ length: totalSlides }, (_, i) => i + 1).map((id) => {
-            const distance = Math.abs(id - currentSlide);
-            const shouldRender = distance <= 1;
-            const opacityClass = distance === 0 ? 'opacity-100 scale-100' : 'opacity-40 scale-95 blur-[2px] grayscale';
-            const Component = SlideComponents[id];
-            return (
-              <div key={id} className={`w-full relative overflow-hidden transition-all duration-500 ease-out ${opacityClass}`} style={{ height: 720 * mobileScale }}>
-                <div style={{ transform: `scale(${mobileScale})`, transformOrigin: 'top left', width: 1280, height: 720 }} className="bg-white shadow-xl rounded-lg border border-neutral-800">
-                  <div className="w-full h-full [&>div]:!min-h-0 [&>div]:!h-full [&>div]:!p-0">
-                    {shouldRender ? <Component /> : <div className="w-full h-full bg-neutral-800/50 animate-pulse" />}
-                  </div>
-                </div>
-                <div className={`absolute top-2 right-2 px-2 py-1 rounded-full z-10 pointer-events-none transition-opacity duration-300 ${distance === 0 ? 'bg-amber-500 text-amber-950 shadow-lg font-bold' : 'bg-black/50 text-gray-400'}`}>
-                  <span className="text-[10px]">{id}</span>
-                  <span className="text-[8px] opacity-80">/{totalSlides}</span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="hidden md:flex flex-1 overflow-hidden">
-        <div className="flex-1 flex overflow-hidden">
-          <div className="flex-1 bg-neutral-950 flex items-center justify-center p-8 relative overflow-hidden" ref={containerRef}>
-            <div style={{ transform: `scale(${scale})`, width: 1280, height: 720, transformOrigin: 'center center' }} className="bg-white shadow-2xl flex-shrink-0 relative overflow-hidden ring-1 ring-neutral-800">
-              <div className="w-full h-full [&>div]:!min-h-0 [&>div]:!h-full [&>div]:!p-0">
-                <CurrentSlideComponent />
-              </div>
-            </div>
+        <div className="flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4 bg-slate-50 px-4 py-2 rounded-full border border-slate-200">
+            <button onClick={prevSlide} disabled={currentSlide === 1} aria-label="Previous Slide" className="hover:text-orange-600 text-slate-400 disabled:opacity-20 transition-colors">
+              <ChevronLeft size={20} />
+            </button>
+            <span className="text-xs font-mono w-12 text-center text-orange-600 font-bold">
+              {currentSlide.toString().padStart(2, '0')} / {totalSlides}
+            </span>
+            <button onClick={nextSlide} disabled={currentSlide === totalSlides} aria-label="Next Slide" className="hover:text-orange-600 text-slate-400 disabled:opacity-20 transition-colors">
+              <ChevronRight size={20} />
+            </button>
           </div>
-          <div className="w-64 border-l border-neutral-800 bg-neutral-900 flex flex-col flex-shrink-0">
-            <div className="px-4 py-3 text-xs text-gray-500 font-bold uppercase tracking-wider flex items-center gap-2 border-b border-neutral-800">
-              <Grid size={12} />
-              <span>Navigator</span>
-            </div>
-            <div className="flex-1 overflow-y-auto flex flex-col gap-4 p-4 scrollbar-hide">
-              {Array.from({ length: totalSlides }, (_, i) => i + 1).map((id) => (
-                <button
-                  key={id}
-                  onClick={() => goToSlide(id)}
-                  aria-label={`Go to slide ${id}`}
-                  className={`flex-shrink-0 w-full aspect-video rounded-lg border-2 transition-all duration-200 relative group overflow-hidden ${currentSlide === id ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-neutral-800 hover:border-neutral-700 opacity-60 hover:opacity-100'}`}
-                >
-                  <div className="absolute inset-0 bg-white">
-                    <div className="w-full h-full flex items-center justify-center bg-gray-50 text-gray-300 text-xs font-mono uppercase">
-                      CAFECA
-                    </div>
-                    <div className="absolute bottom-0 inset-x-0 bg-neutral-900/90 p-2 text-left">
-                      <div className="flex justify-between items-center mb-0.5">
-                        <span className="text-[10px] font-bold text-amber-500">#{id.toString().padStart(2, '0')}</span>
-                      </div>
-                      <div className="text-[10px] text-gray-300 font-medium truncate leading-tight">{slideTitles[id]}</div>
-                    </div>
-                  </div>
+          
+          <div className="flex items-center gap-2">
+             <Link href="/isuncloud/print" target="_blank" aria-label="Download PDF">
+                <button className="flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-full text-xs font-bold transition-all shadow-lg shadow-orange-600/20">
+                    <Download size={14} />
+                    <span>Download PDF</span>
                 </button>
-              ))}
-            </div>
+             </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex-1 flex overflow-hidden">
+        {/* Main Content Area */}
+        <div className="flex-1 bg-slate-50 flex items-center justify-center p-12 relative" ref={containerRef}>
+          <div
+            style={{
+              transform: `scale(${scale})`,
+              width: 1280,
+              height: 720,
+              transformOrigin: 'center center'
+            }}
+            className="bg-white shadow-[0_0_100px_rgba(0,0,0,0.05)] flex-shrink-0 relative overflow-hidden rounded-sm ring-1 ring-slate-200"
+          >
+            <CurrentSlideComponent />
+          </div>
+        </div>
+
+        {/* Side Navigator */}
+        <div className="w-72 border-l border-slate-200 bg-white/80 backdrop-blur-xl flex flex-col flex-shrink-0">
+          <div className="px-6 py-4 text-[10px] text-slate-800/40 font-bold uppercase tracking-[0.3em] flex items-center gap-2 border-b border-slate-200">
+            <Grid size={12} />
+            <span>Deck Navigator</span>
+          </div>
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-hide">
+            {Array.from({ length: totalSlides }, (_, i) => i + 1).map((id) => (
+              <button
+                key={id}
+                onClick={() => goToSlide(id)}
+                aria-label={`Go to slide ${id}: ${slideTitles[id]}`}
+                className={`w-full text-left rounded-2xl transition-all duration-300 group overflow-hidden border ${
+                  currentSlide === id 
+                    ? 'bg-orange-600/10 border-orange-500 shadow-[0_0_20px_rgba(234,88,12,0.08)]' 
+                    : 'bg-slate-50 border-slate-200 hover:border-slate-300'
+                }`}
+              >
+                <div className="aspect-video bg-slate-100 relative overflow-hidden">
+                   <div className="absolute inset-0 flex items-center justify-center text-[10px] font-black text-slate-800/5 uppercase tracking-widest group-hover:scale-110 transition-transform">
+                      Slide {id}
+                   </div>
+                   <div className="absolute bottom-0 inset-x-0 bg-white/95 backdrop-blur-sm p-3 border-t border-slate-200">
+                      <div className="flex justify-between items-center mb-1">
+                        <span className={`text-[10px] font-black ${currentSlide === id ? 'text-orange-600' : 'text-slate-800/20'}`}>
+                          #{id.toString().padStart(2, '0')}
+                        </span>
+                      </div>
+                      <div className="text-[10px] text-slate-800/60 font-bold truncate leading-tight">
+                        {slideTitles[id]}
+                      </div>
+                   </div>
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       </div>
