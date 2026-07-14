@@ -186,27 +186,7 @@ export default function CafecaIsunfaPrint() {
 
       <style dangerouslySetInnerHTML={{
         __html: `
-        @media print {
-          @page {
-            size: 1280px 720px;
-            margin: 0;
-          }
-          body {
-            margin: 0;
-            padding: 0;
-            -webkit-print-color-adjust: exact;
-          }
-          .slide-page {
-            break-after: page;
-            page-break-after: always;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
+        /* Info: (20260714 - Luphia) 螢幕預覽樣式 */
         .slide-page {
            margin-bottom: 2rem;
            border: 1px dashed #ccc;
@@ -214,12 +194,46 @@ export default function CafecaIsunfaPrint() {
            justify-content: center;
            padding: 1rem;
         }
+        /* Info: (20260714 - Luphia) 列印樣式放最後，確保覆蓋螢幕樣式，使 PDF 與畫面一致 */
         @media print {
-           .slide-page {
-               margin-bottom: 0;
-               border: none;
-               padding: 0;
-           }
+          @page {
+            size: 1280px 720px;
+            margin: 0;
+          }
+          html, body {
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
+          .print-container {
+            margin: 0;
+            padding: 0;
+            min-height: 0;
+          }
+          .slide-page {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            border: none;
+            padding: 0;
+            break-before: page;
+            page-break-before: always;
+          }
+          /* Info: (20260714 - Luphia) 第一張不加前置分頁，避免開頭多一頁空白 */
+          .slide-page:first-child {
+            break-before: auto;
+            page-break-before: auto;
+          }
+          /* Info: (20260714 - Luphia) 強制列印所有背景色與漸層，確保與畫面一致 */
+          .slide-page, .slide-page * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
         }
       `}} />
 
