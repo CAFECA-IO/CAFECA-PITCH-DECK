@@ -7,7 +7,7 @@ export default function CafecaFaithSlide4() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260612 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute right-1/4 bottom-0 w-[500px] h-[500px] bg-orange-100 rounded-full filter blur-[150px] animate-pulse"></div>
         <div className="absolute left-1/4 top-0 w-[400px] h-[400px] bg-red-50 rounded-full filter blur-[120px]"></div>
@@ -18,10 +18,10 @@ export default function CafecaFaithSlide4() {
         <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">Anomaly Detection</span>
       </div>
 
-      {/* Content Container (Left 2/3) */}
+      {/* Info: (20260612 - Luphia) Content Container (Left 2/3) */}
       <div className="z-10 w-2/3 h-full flex flex-col justify-center px-12 pt-16 relative">
         
-        {/* Header Text */}
+        {/* Info: (20260612 - Luphia) Header Text */}
         <div className="space-y-4 mb-6 mt-2">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100">
             <Search className="w-5 h-5 text-orange-500" />
@@ -34,10 +34,10 @@ export default function CafecaFaithSlide4() {
           </h2>
         </div>
 
-        {/* Dashboard & Insight Content */}
+        {/* Info: (20260612 - Luphia) Dashboard & Insight Content */}
         <div className="w-full flex gap-6">
           
-          {/* Main Dashboard Panel */}
+          {/* Info: (20260612 - Luphia) Main Dashboard Panel */}
           <div className="flex-[3] bg-white border border-slate-200 shadow-md rounded-3xl p-6 flex flex-col gap-4">
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-base font-bold text-slate-700 flex items-center gap-2">
@@ -50,7 +50,7 @@ export default function CafecaFaithSlide4() {
             </div>
 
             <div className="grid grid-cols-1 gap-3">
-              {/* Normal Meter */}
+              {/* Info: (20260612 - Luphia) Normal Meter */}
               <div className="bg-slate-50 rounded-xl p-3 flex items-center justify-between gap-4 border border-slate-100">
                 <div className="w-24 text-slate-500 text-xs font-bold">A 廠房空調系統</div>
                 <div className="flex-1 w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
@@ -59,7 +59,7 @@ export default function CafecaFaithSlide4() {
                 <div className="w-16 text-right text-sm font-mono text-green-600 font-bold">45.2 kW</div>
               </div>
 
-              {/* Normal Meter */}
+              {/* Info: (20260612 - Luphia) Normal Meter */}
               <div className="bg-slate-50 rounded-xl p-3 flex items-center justify-between gap-4 border border-slate-100">
                 <div className="w-24 text-slate-500 text-xs font-bold">B 線射出成型機</div>
                 <div className="flex-1 w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
@@ -68,7 +68,7 @@ export default function CafecaFaithSlide4() {
                 <div className="w-16 text-right text-sm font-mono text-blue-600 font-bold">120.5 kW</div>
               </div>
 
-              {/* Anomaly Meter */}
+              {/* Info: (20260612 - Luphia) Anomaly Meter */}
               <div className="relative bg-red-50 rounded-xl p-3 flex flex-col justify-center gap-2 border-2 border-red-200 shadow-sm transform scale-[1.02]">
                 <div className="absolute -top-2 -right-2 bg-red-500 text-white p-1 rounded-full animate-bounce shadow-md">
                   <AlertTriangle className="w-3 h-3" />
@@ -87,7 +87,7 @@ export default function CafecaFaithSlide4() {
             </div>
           </div>
 
-          {/* AI Insight Text Panel */}
+          {/* Info: (20260612 - Luphia) AI Insight Text Panel */}
           <div className="flex-[2] bg-white border border-slate-200 shadow-md rounded-3xl p-5 relative overflow-hidden flex flex-col">
             <div className="absolute top-0 left-0 w-1 h-full bg-orange-500"></div>
             <div className="flex items-center gap-2 mb-3">
@@ -112,7 +112,7 @@ export default function CafecaFaithSlide4() {
         </div>
       </div>
 
-      {/* Right 1/3 Image Area */}
+      {/* Info: (20260612 - Luphia) Right 1/3 Image Area */}
       <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
          <Image
            src="/cafeca_faith/robot_lasers.jpeg"

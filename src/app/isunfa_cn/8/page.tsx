@@ -7,13 +7,13 @@ export default function IsunfaCnSlide8() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Gradients */}
+      {/* Info: (20260610 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute left-1/4 top-1/4 w-[600px] h-[600px] bg-emerald-600 rounded-full filter blur-[150px] animate-pulse"></div>
         <div className="absolute right-10 bottom-10 w-[400px] h-[400px] bg-sky-500 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="px-16 pt-12 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -29,10 +29,10 @@ export default function IsunfaCnSlide8() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="flex-1 px-16 flex items-center justify-between relative z-10 gap-10">
 
-        {/* Left Column: The Edge AI Metric & Business Model */}
+        {/* Info: (20260610 - Luphia) Left Column: The Edge AI Metric & Business Model */}
         <div className="w-[45%] flex flex-col justify-center gap-4">
           <div className="bg-gradient-to-br from-emerald-950 to-slate-950 border border-emerald-500/30 p-6 rounded-[2rem] shadow-xl relative overflow-hidden">
             <div className="absolute -right-6 -bottom-6 text-emerald-500/5">
@@ -79,7 +79,7 @@ export default function IsunfaCnSlide8() {
           </div>
         </div>
 
-        {/* Right Card: Cost Comparisons with Bar Chart */}
+        {/* Info: (20260610 - Luphia) Right Card: Cost Comparisons with Bar Chart */}
         <div className="w-[55%] space-y-5">
           <div>
             <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2 mb-1">
@@ -91,7 +91,7 @@ export default function IsunfaCnSlide8() {
 
           <div className="bg-slate-950/60 border border-slate-800/80 p-6 rounded-[2rem] space-y-6">
 
-            {/* Bar 1: Custom LLM */}
+            {/* Info: (20260610 - Luphia) Bar 1: Custom LLM */}
             <div className="space-y-2">
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-slate-300 flex items-center gap-1.5">
@@ -106,7 +106,7 @@ export default function IsunfaCnSlide8() {
               <p className="text-[10px] text-slate-500">巨额研发前置资金，项目定制周期 6-12 个月，具高维护成本与项目失败风险。</p>
             </div>
 
-            {/* Bar 2: Gemini 3 Flash */}
+            {/* Info: (20260610 - Luphia) Bar 2: Gemini 3 Flash */}
             <div className="space-y-2">
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-slate-300 flex items-center gap-1.5">
@@ -121,7 +121,7 @@ export default function IsunfaCnSlide8() {
               <p className="text-[10px] text-slate-500">依 Token 数计费，累积呼叫成本随时間递增，且面临高敏感商业与技术数据外泄风险。</p>
             </div>
 
-            {/* Bar 3: FAITH */}
+            {/* Info: (20260610 - Luphia) Bar 3: FAITH */}
             <div className="space-y-2">
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-emerald-400 flex items-center gap-1.5">
@@ -138,7 +138,7 @@ export default function IsunfaCnSlide8() {
 
           </div>
 
-          {/* Secure Edge Highlight */}
+          {/* Info: (20260610 - Luphia) Secure Edge Highlight */}
           <div className="bg-emerald-950/30 border border-emerald-500/10 px-5 py-3.5 rounded-2xl flex items-start gap-4">
             <div className="p-2.5 bg-emerald-500 text-slate-950 rounded-xl">
               <ShieldAlert size={20} />
@@ -154,7 +154,7 @@ export default function IsunfaCnSlide8() {
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10">
         <div>Slide 08 / 11</div>
         <div className="flex gap-2 items-center">

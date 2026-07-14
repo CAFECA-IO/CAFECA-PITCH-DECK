@@ -1,6 +1,6 @@
 'use client';
 
-// No lucide-react imports needed
+// Info: (20260505 - Luphia) No lucide-react imports needed
 
 export default function iSunFASlide8() {
   return (
@@ -24,10 +24,10 @@ export default function iSunFASlide8() {
             <div className="h-1 w-32 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mx-auto mt-4" />
           </div>
 
-          {/* Comparison Table */}
+          {/* Info: (20260505 - Luphia) Comparison Table */}
           <div className="flex-1 w-full max-w-5xl mx-auto flex flex-col justify-center gap-2 mt-2">
             
-            {/* Headers */}
+            {/* Info: (20260505 - Luphia) Headers */}
             <div className="grid grid-cols-[1fr_2fr_2fr] gap-4 px-2 mb-1">
               <div className="text-neutral-500 font-bold text-center text-sm tracking-widest">評估維度</div>
               <div className="text-neutral-400 font-bold text-center text-lg">傳統人工盤查</div>
@@ -37,7 +37,7 @@ export default function iSunFASlide8() {
               </div>
             </div>
 
-            {/* Rows */}
+            {/* Info: (20260505 - Luphia) Rows */}
             {[
               { dim: '覆蓋比例', manual: '針對主要排放源進行抽樣調查', ai: '透過財務憑證實現 100% 全面覆蓋' },
               { dim: '查核頻率', manual: '年度定期盤查與事後追溯', ai: '24 小時全天候即時動態更新' },
@@ -46,17 +46,17 @@ export default function iSunFASlide8() {
               { dim: '戰略視野', manual: '以滿足法規與供應鏈基本要求為主', ai: '即時產出碳損益表，支援減碳決策與預測' },
             ].map((row, i) => (
               <div key={i} className="grid grid-cols-[1fr_2fr_2fr] gap-4 items-stretch">
-                {/* Dimension */}
+                {/* Info: (20260505 - Luphia) Dimension */}
                 <div className="bg-neutral-900/50 border border-neutral-800 rounded-2xl flex items-center justify-center py-3 px-4 backdrop-blur-sm">
                   <span className="text-white font-bold tracking-wider">{row.dim}</span>
                 </div>
                 
-                {/* Manual */}
+                {/* Info: (20260505 - Luphia) Manual */}
                 <div className="bg-neutral-900/30 border border-neutral-800/80 rounded-2xl flex items-center justify-center py-3 px-4 text-center backdrop-blur-sm transition-colors hover:bg-neutral-900/50">
                   <span className="text-neutral-400 leading-relaxed text-sm">{row.manual}</span>
                 </div>
                 
-                {/* AI */}
+                {/* Info: (20260505 - Luphia) AI */}
                 <div className="bg-orange-950/20 border border-orange-500/30 rounded-2xl flex items-center justify-center py-3 px-4 text-center shadow-[0_0_15px_rgba(249,115,22,0.05)] relative overflow-hidden group hover:border-orange-500/50 hover:bg-orange-950/40 transition-all backdrop-blur-sm">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/5 to-orange-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <span className="text-orange-200 font-medium z-10 leading-relaxed text-sm">{row.ai}</span>

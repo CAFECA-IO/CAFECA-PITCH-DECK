@@ -54,7 +54,7 @@ export default function Slide3() {
             </div>
 
             <div className="relative flex items-center justify-center">
-              {/* Abstract visualization of a locked chip node */}
+              {/* Info: (20260426 - Luphia) Abstract visualization of a locked chip node */}
               <div className="w-full aspect-square max-w-md relative">
                 <div className="absolute inset-0 border-2 border-slate-800 rounded-full animate-[spin_60s_linear_infinite]"></div>
                 <div className="absolute inset-4 border-2 border-red-900/50 rounded-full border-dashed animate-[spin_40s_linear_infinite_reverse]"></div>
@@ -69,7 +69,7 @@ export default function Slide3() {
                   </div>
                 </div>
 
-                {/* Nodes */}
+                {/* Info: (20260426 - Luphia) Nodes */}
                 {[...Array(6)].map((_, i) => (
                   <div key={i} className="absolute w-4 h-4 bg-slate-700 rounded-full"
                     style={{

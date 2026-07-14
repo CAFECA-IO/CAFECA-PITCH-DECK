@@ -66,7 +66,7 @@ export default function CafecaFaithSlide15() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-gray-100 text-gray-900 font-sans">
 
-      {/* Background Gradients from isunfa.com style */}
+      {/* Info: (20260629 - Luphia) Background Gradients from isunfa.com style */}
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none">
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff8c00] to-[#ffda44] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div>
       </div>
@@ -74,7 +74,7 @@ export default function CafecaFaithSlide15() {
         <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff8c00] to-[#ffda44] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260629 - Luphia) Header */}
       <div className="z-20 w-full px-16 flex justify-between items-end mb-10 mt-4 border-b border-orange-100 pb-6">
         <div>
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-orange-50 ring-1 ring-orange-200 mb-4 shadow-sm">
@@ -91,12 +91,12 @@ export default function CafecaFaithSlide15() {
         </div>
       </div>
 
-      {/* Grid Layout 4x2 */}
+      {/* Info: (20260629 - Luphia) Grid Layout 4x2 */}
       <div className="z-20 w-full grid grid-cols-4 gap-6 px-16 mb-4">
         {experiences.map((exp, index) => (
           <div key={index} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group relative overflow-hidden">
 
-            {/* Subtle highlight gradient on hover */}
+            {/* Info: (20260629 - Luphia) Subtle highlight gradient on hover */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-amber-300 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
             <div className="flex items-center justify-between mb-4">

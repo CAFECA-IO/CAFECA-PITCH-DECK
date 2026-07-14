@@ -27,7 +27,7 @@ export default function DPPSlide20() {
             </div>
             
             <div className="w-1/2 h-full flex items-center justify-center relative">
-              {/* Funnel Visualization Mock */}
+              {/* Info: (20260508 - Luphia) Funnel Visualization Mock */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent opacity-50" />
               <div className="flex flex-col items-center w-full max-w-md">
                 <div className="flex justify-between w-full mb-4">

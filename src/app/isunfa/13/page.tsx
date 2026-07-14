@@ -59,13 +59,13 @@ export default function CafecaFaithSlide13() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
       
-      {/* Background Accents */}
+      {/* Info: (20260701 - Luphia) Background Accents */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute -left-32 -top-32 w-[700px] h-[700px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute -right-32 -bottom-32 w-[700px] h-[700px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260701 - Luphia) Header */}
       <div className="z-20 text-center mb-6 mt-2">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-100 mb-3 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
@@ -75,7 +75,7 @@ export default function CafecaFaithSlide13() {
         <p className="text-sm text-slate-500 mt-1 font-medium">依據場域面積與年營業額範疇，提供三種不同級距的產品碳足跡計算服務，其服務內容均相同</p>
       </div>
 
-      {/* Plans Grid */}
+      {/* Info: (20260701 - Luphia) Plans Grid */}
       <div className="z-20 w-full max-w-6xl grid grid-cols-3 gap-6 px-8 relative">
         {tiers.map((tier, index) => (
           <div
@@ -86,7 +86,7 @@ export default function CafecaFaithSlide13() {
                 : 'border-slate-200 shadow-lg hover:shadow-xl hover:-translate-y-1'
             }`}
           >
-            {/* Highlight ribbon */}
+            {/* Info: (20260701 - Luphia) Highlight ribbon */}
             <div className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${tier.accentColor}`} />
 
             <div className="flex justify-between items-start mb-4">
@@ -105,14 +105,14 @@ export default function CafecaFaithSlide13() {
             <h3 className="text-xl font-bold text-slate-800 mb-1">{tier.name}</h3>
             <p className="text-[11px] text-slate-400 font-medium mb-3 leading-tight min-h-[32px]">{tier.description}</p>
 
-            {/* Price Section */}
+            {/* Info: (20260701 - Luphia) Price Section */}
             <div className="flex items-baseline gap-1 mb-4 border-b border-slate-100 pb-4">
               <span className="text-xs font-bold text-slate-400">NT$</span>
               <span className="text-3xl font-black text-slate-800 tracking-tight">{tier.price}</span>
               <span className="text-slate-400 text-xs font-medium">/ 案</span>
             </div>
 
-            {/* Criteria Section */}
+            {/* Info: (20260701 - Luphia) Criteria Section */}
             <div className="mb-4 bg-slate-50 rounded-xl p-3 border border-slate-100">
               <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-slate-400 animate-bounce" />
@@ -130,7 +130,7 @@ export default function CafecaFaithSlide13() {
               </div>
             </div>
 
-            {/* Features List */}
+            {/* Info: (20260701 - Luphia) Features List */}
             <div className="space-y-2 flex-1">
               {sharedFeatures.map((feature, fIdx) => (
                 <div key={fIdx} className="flex items-start gap-2">

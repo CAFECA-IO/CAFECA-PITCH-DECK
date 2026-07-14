@@ -7,7 +7,7 @@ export default function NetZeroFactorySlide4() {
     <div className="min-h-screen w-full bg-white flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-100 rounded-xl">
 
-        {/* Subtle Background Decor */}
+        {/* Info: (20260527 - Luphia) Subtle Background Decor */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-50/30 rounded-full blur-3xl pointer-events-none translate-y-1/2 -translate-x-1/3" />
 
@@ -18,7 +18,7 @@ export default function NetZeroFactorySlide4() {
             <h2 className="text-2xl md:text-3xl font-extrabold text-sky-950 mt-3 tracking-wide leading-tight">Process Identification: Deep Learning</h2>
           </div>
 
-          {/* Intro Card */}
+          {/* Info: (20260527 - Luphia) Intro Card */}
           <div className="bg-slate-50 p-3 rounded-2xl border border-slate-100 mb-1">
             <h4 className="text-base font-bold text-sky-950 mb-0.5 flex items-center gap-2">
               <span className="w-1.5 h-4 bg-sky-800 rounded-full inline-block"></span>
@@ -29,10 +29,10 @@ export default function NetZeroFactorySlide4() {
             </p>
           </div>
 
-          {/* Horizontal Process Diagram */}
+          {/* Info: (20260527 - Luphia) Horizontal Process Diagram */}
           <div className="flex-1 flex items-center justify-between my-2 relative">
             
-            {/* Step 1 */}
+            {/* Info: (20260527 - Luphia) Step 1 */}
             <div className="w-[230px] bg-white p-3.5 rounded-2xl border border-slate-150 shadow-sm relative group hover:border-emerald-200 transition-all flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-sky-50 text-sky-600 rounded-2xl flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform">
                 <Box size={22} className="stroke-[2.2]" />
@@ -44,7 +44,7 @@ export default function NetZeroFactorySlide4() {
               </p>
             </div>
 
-            {/* Connecting Line & Arrow 1 */}
+            {/* Info: (20260527 - Luphia) Connecting Line & Arrow 1 */}
             <div className="flex-1 flex items-center justify-center px-2">
               <div className="h-0.5 bg-gradient-to-r from-sky-400 to-emerald-400 flex-1 relative max-w-[60px]">
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 bg-emerald-400 rounded-full flex items-center justify-center">
@@ -53,7 +53,7 @@ export default function NetZeroFactorySlide4() {
               </div>
             </div>
 
-            {/* Step 2 */}
+            {/* Info: (20260527 - Luphia) Step 2 */}
             <div className="w-[230px] bg-white p-3.5 rounded-2xl border border-slate-150 shadow-sm relative group hover:border-emerald-200 transition-all flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform">
                 <Cpu size={22} className="stroke-[2.2]" />
@@ -65,7 +65,7 @@ export default function NetZeroFactorySlide4() {
               </p>
             </div>
 
-            {/* Connecting Line & Arrow 2 */}
+            {/* Info: (20260527 - Luphia) Connecting Line & Arrow 2 */}
             <div className="flex-1 flex items-center justify-center px-2">
               <div className="h-0.5 bg-gradient-to-r from-emerald-400 to-teal-400 flex-1 relative max-w-[60px]">
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 bg-teal-400 rounded-full flex items-center justify-center">
@@ -74,7 +74,7 @@ export default function NetZeroFactorySlide4() {
               </div>
             </div>
 
-            {/* Step 3 */}
+            {/* Info: (20260527 - Luphia) Step 3 */}
             <div className="w-[230px] bg-white p-3.5 rounded-2xl border border-slate-150 shadow-sm relative group hover:border-emerald-200 transition-all flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform">
                 <BarChart3 size={22} className="stroke-[2.2]" />
@@ -86,7 +86,7 @@ export default function NetZeroFactorySlide4() {
               </p>
             </div>
 
-            {/* Connecting Line & Arrow 3 */}
+            {/* Info: (20260527 - Luphia) Connecting Line & Arrow 3 */}
             <div className="flex-1 flex items-center justify-center px-2">
               <div className="h-0.5 bg-gradient-to-r from-teal-400 to-indigo-400 flex-1 relative max-w-[60px]">
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 w-4 h-4 bg-indigo-400 rounded-full flex items-center justify-center">
@@ -95,7 +95,7 @@ export default function NetZeroFactorySlide4() {
               </div>
             </div>
 
-            {/* Step 4 */}
+            {/* Info: (20260527 - Luphia) Step 4 */}
             <div className="w-[230px] bg-sky-950 p-3.5 rounded-2xl border border-sky-900 shadow-md relative group hover:shadow-lg transition-all flex flex-col items-center text-center text-white">
               <div className="w-12 h-12 bg-emerald-500 text-white rounded-2xl flex items-center justify-center mb-3 shadow-md group-hover:scale-110 transition-transform">
                 <Recycle size={22} className="stroke-[2.2]" />
@@ -109,7 +109,7 @@ export default function NetZeroFactorySlide4() {
 
           </div>
 
-          {/* Bottom Alert/Value */}
+          {/* Info: (20260527 - Luphia) Bottom Alert/Value */}
           <div className="bg-emerald-50 text-emerald-900 p-3 rounded-xl border border-emerald-250 flex items-center gap-3">
             <span className="text-xl shrink-0">💡</span>
             <div className="flex-1">

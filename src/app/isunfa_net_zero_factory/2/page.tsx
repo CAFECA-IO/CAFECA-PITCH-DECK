@@ -5,7 +5,7 @@ export default function NetZeroFactorySlide2() {
     <div className="min-h-screen w-full bg-white flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-100 rounded-xl">
 
-        {/* Subtle Background Decor */}
+        {/* Info: (20260527 - Luphia) Subtle Background Decor */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-50/30 rounded-full blur-3xl pointer-events-none translate-y-1/2 -translate-x-1/3" />
 

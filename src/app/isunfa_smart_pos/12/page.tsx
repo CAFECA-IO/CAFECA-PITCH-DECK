@@ -7,13 +7,13 @@ export default function Slide10() {
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-[#050505] relative overflow-hidden shadow-2xl flex border border-neutral-800">
         
-        {/* Dynamic Background */}
+        {/* Info: (20260527 - Luphia) Dynamic Background */}
         <div className="absolute inset-0 z-0 opacity-40">
           <div className="absolute top-1/2 right-0 w-[800px] h-[800px] bg-green-900/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-900/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4"></div>
         </div>
 
-        {/* Left Side: Text Content */}
+        {/* Info: (20260527 - Luphia) Left Side: Text Content */}
         <div className="w-[50%] pt-16 pl-20 pr-10 flex flex-col h-full relative z-10">
           <div className="inline-block px-4 py-1 rounded-full border border-green-500/30 text-green-400 text-sm tracking-widest mb-8 w-max bg-green-500/10 backdrop-blur-sm">
             03-1 | 一鍵生成產品護照
@@ -51,11 +51,11 @@ export default function Slide10() {
           </div>
         </div>
 
-        {/* Right Side: Visual Flow */}
+        {/* Info: (20260527 - Luphia) Right Side: Visual Flow */}
         <div className="w-[50%] p-16 flex flex-col justify-center relative z-10">
           <div className="bg-neutral-900/60 border border-neutral-800 rounded-3xl p-8 backdrop-blur-md shadow-2xl relative">
             
-            {/* Input Documents */}
+            {/* Info: (20260527 - Luphia) Input Documents */}
             <div className="flex justify-center gap-4 mb-8">
               <div className="bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col items-center">
                 <FileText className="text-neutral-400 mb-2" size={32} />
@@ -71,14 +71,14 @@ export default function Slide10() {
               </div>
             </div>
 
-            {/* AI Processing Arrow */}
+            {/* Info: (20260527 - Luphia) AI Processing Arrow */}
             <div className="flex justify-center items-center mb-8">
               <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center animate-pulse">
                 <ArrowRight className="text-green-400" size={24} />
               </div>
             </div>
 
-            {/* Output DPP */}
+            {/* Info: (20260527 - Luphia) Output DPP */}
             <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/10 border border-green-500/30 rounded-2xl p-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 p-4 opacity-10">
                 <Globe size={100} />
@@ -112,7 +112,7 @@ export default function Slide10() {
           </div>
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 left-20 text-neutral-600 text-xs tracking-[0.2em] uppercase z-20 pointer-events-none">
           卡菲卡金融科技股份有限公司 (52650861)
         </div>

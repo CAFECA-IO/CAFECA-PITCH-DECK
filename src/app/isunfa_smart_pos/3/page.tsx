@@ -15,10 +15,10 @@ export default function Slide3() {
 
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
 
-        {/* Content Container */}
+        {/* Info: (20260527 - Luphia) Content Container */}
         <div className="z-10 w-full h-full flex flex-row items-center justify-between px-20 pt-8 pb-12">
 
-          {/* Left: Header */}
+          {/* Info: (20260527 - Luphia) Left: Header */}
           <div className="w-[42%] flex flex-col justify-center pr-8">
             <div className="inline-block px-4 py-1.5 rounded-full border border-red-500/30 text-red-400 text-sm tracking-widest mb-8 bg-red-500/10 backdrop-blur-sm self-start">
               01 | 零售業痛點
@@ -32,7 +32,7 @@ export default function Slide3() {
             </p>
           </div>
 
-          {/* Right: List */}
+          {/* Info: (20260527 - Luphia) Right: List */}
           <div className="w-[58%] flex flex-col gap-4">
             {points.map((point, idx) => (
               <div
@@ -57,7 +57,7 @@ export default function Slide3() {
 
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-600 text-xs tracking-[0.2em] uppercase z-10 pointer-events-none">
           <div>卡菲卡金融科技股份有限公司 (52650861)</div>
           <div>contact@isunfa.com</div>

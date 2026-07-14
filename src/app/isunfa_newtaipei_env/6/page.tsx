@@ -18,7 +18,7 @@ export default function iSunFASlide6() {
 
         <div className="z-10 w-full max-w-6xl px-12 flex flex-col h-full py-16 justify-center">
 
-          {/* Title Section */}
+          {/* Info: (20260505 - Luphia) Title Section */}
           <div className="mb-16 text-center space-y-4">
             <h2 className="text-6xl font-extrabold tracking-tight text-white drop-shadow-md">
               財報即碳盤查報告
@@ -29,10 +29,10 @@ export default function iSunFASlide6() {
             </p>
           </div>
 
-          {/* Content Visualization */}
+          {/* Info: (20260505 - Luphia) Content Visualization */}
           <div className="flex items-center justify-center gap-8 flex-1 w-full max-w-4xl mx-auto">
             
-            {/* Step 1 */}
+            {/* Info: (20260505 - Luphia) Step 1 */}
             <div className="flex-1 bg-neutral-900/60 border border-neutral-700 p-8 rounded-3xl text-center shadow-lg relative">
               <div className="w-20 h-20 bg-neutral-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
                 <BarChart4 className="text-gray-300 w-10 h-10" />
@@ -41,7 +41,7 @@ export default function iSunFASlide6() {
               <p className="text-neutral-400 text-sm">既有單據、憑證、記帳資料</p>
             </div>
 
-            {/* Arrow & AI */}
+            {/* Info: (20260505 - Luphia) Arrow & AI */}
             <div className="flex flex-col items-center justify-center relative">
               <div className="absolute inset-0 bg-orange-500/20 blur-2xl rounded-full" />
               <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center z-10 shadow-[0_0_30px_rgba(249,115,22,0.4)] animate-pulse">
@@ -50,7 +50,7 @@ export default function iSunFASlide6() {
               <p className="text-orange-300 font-bold mt-4 z-10 bg-black/50 px-4 py-1 rounded-full text-sm">費思 AI 自動解析</p>
             </div>
 
-            {/* Step 2 */}
+            {/* Info: (20260505 - Luphia) Step 2 */}
             <div className="flex-1 bg-orange-950/30 border border-orange-500/50 p-8 rounded-3xl text-center shadow-[0_0_30px_rgba(249,115,22,0.1)] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 blur-2xl rounded-full" />
               <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner border border-orange-500/30">

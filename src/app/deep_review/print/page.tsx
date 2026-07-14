@@ -77,7 +77,7 @@ export default function DeepReviewPrint() {
 
         // Info: (20260131 - Luphia) Scroll into view to trigger lazy loading of images
         page.scrollIntoView({ behavior: 'instant', block: 'start' });
-        // Info: Wait a bit for images to load (Next/Image lazy loading)
+        // Info: (20260305 - Luphia) Wait a bit for images to load (Next/Image lazy loading)
         await new Promise(resolve => setTimeout(resolve, 500));
 
         // Info: (20260131 - Luphia) Try to find the 1280x720 container

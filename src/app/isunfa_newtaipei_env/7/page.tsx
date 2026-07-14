@@ -1,6 +1,6 @@
 'use client';
 
-// No lucide-react imports needed
+// Info: (20260505 - Luphia) No lucide-react imports needed
 
 export default function iSunFASlide7() {
   return (
@@ -23,24 +23,24 @@ export default function iSunFASlide7() {
             <div className="h-1 w-32 bg-orange-600 rounded-full mx-auto mt-6" />
           </div>
 
-          {/* 3 Columns for Results */}
+          {/* Info: (20260505 - Luphia) 3 Columns for Results */}
           <div className="grid grid-cols-3 gap-10 flex-1 w-full max-w-5xl mx-auto items-center">
             
-            {/* Metric 1 */}
+            {/* Info: (20260505 - Luphia) Metric 1 */}
             <div className="flex flex-col items-center bg-neutral-900/60 border border-orange-500/30 p-10 rounded-3xl backdrop-blur-xl shadow-[0_0_30px_rgba(249,115,22,0.1)] hover:scale-105 transition-transform duration-300">
               <span className="text-7xl font-black text-orange-400 drop-shadow-[0_0_20px_rgba(249,115,22,0.5)] mb-4">95%</span>
               <h3 className="text-2xl font-bold text-white mb-2">成本降幅</h3>
               <p className="text-neutral-400 text-center">大幅削減盤查顧問費與人力開銷</p>
             </div>
 
-            {/* Metric 2 */}
+            {/* Info: (20260505 - Luphia) Metric 2 */}
             <div className="flex flex-col items-center bg-neutral-900/60 border border-orange-500/30 p-10 rounded-3xl backdrop-blur-xl shadow-[0_0_30px_rgba(249,115,22,0.1)] hover:scale-105 transition-transform duration-300">
               <span className="text-7xl font-black text-orange-400 drop-shadow-[0_0_20px_rgba(249,115,22,0.5)] mb-4">100x</span>
               <h3 className="text-2xl font-bold text-white mb-2">查核速度提升</h3>
               <p className="text-neutral-400 text-center">從數月縮短至數小時產出報告</p>
             </div>
 
-            {/* Metric 3 */}
+            {/* Info: (20260505 - Luphia) Metric 3 */}
             <div className="flex flex-col items-center bg-neutral-900/60 border border-orange-500/30 p-10 rounded-3xl backdrop-blur-xl shadow-[0_0_30px_rgba(249,115,22,0.1)] hover:scale-105 transition-transform duration-300">
               <span className="text-7xl font-black text-orange-400 drop-shadow-[0_0_20px_rgba(249,115,22,0.5)] mb-4">0</span>
               <h3 className="text-2xl font-bold text-white mb-2">人工計算誤差</h3>

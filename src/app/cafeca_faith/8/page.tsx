@@ -6,7 +6,7 @@ export default function KinikCaseStudySlide() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-gray-100 text-gray-900 font-sans">
 
-      {/* Background Gradients from isunfa.com light theme */}
+      {/* Info: (20260615 - Luphia) Background Gradients from isunfa.com light theme */}
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none">
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff8c00] to-[#ffda44] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div>
       </div>
@@ -16,7 +16,7 @@ export default function KinikCaseStudySlide() {
 
       <div className="z-10 w-full flex-grow flex flex-col justify-center px-20 relative">
 
-        {/* Header Section */}
+        {/* Info: (20260615 - Luphia) Header Section */}
         <div className="flex justify-between items-end mb-12 border-b border-orange-100 pb-8 mt-2">
           <div className="space-y-5">
             <div className="flex flex-col items-start gap-3">
@@ -42,10 +42,10 @@ export default function KinikCaseStudySlide() {
           </div>
         </div>
 
-        {/* Metrics Grid */}
+        {/* Info: (20260615 - Luphia) Metrics Grid */}
         <div className="grid grid-cols-4 gap-6 w-full">
 
-          {/* Metric 1 */}
+          {/* Info: (20260615 - Luphia) Metric 1 */}
           <div className="bg-white rounded-3xl p-8 shadow-sm ring-1 ring-gray-200/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col">
             <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shrink-0">
               <Leaf className="w-6 h-6 text-green-600" />
@@ -60,7 +60,7 @@ export default function KinikCaseStudySlide() {
             </p>
           </div>
 
-          {/* Metric 2 */}
+          {/* Info: (20260615 - Luphia) Metric 2 */}
           <div className="bg-white rounded-3xl p-8 shadow-sm ring-1 ring-gray-200/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col">
             <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shrink-0">
               <Gem className="w-6 h-6 text-amber-600" />
@@ -75,7 +75,7 @@ export default function KinikCaseStudySlide() {
             </p>
           </div>
 
-          {/* Metric 3 */}
+          {/* Info: (20260615 - Luphia) Metric 3 */}
           <div className="bg-white rounded-3xl p-8 shadow-sm ring-1 ring-gray-200/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col">
             <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shrink-0">
               <Recycle className="w-6 h-6 text-blue-600" />
@@ -90,7 +90,7 @@ export default function KinikCaseStudySlide() {
             </p>
           </div>
 
-          {/* Metric 4 */}
+          {/* Info: (20260615 - Luphia) Metric 4 */}
           <div className="bg-white rounded-3xl p-8 shadow-sm ring-1 ring-gray-200/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col">
             <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shrink-0">
               <CircleDollarSign className="w-6 h-6 text-orange-600" />

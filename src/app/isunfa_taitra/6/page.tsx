@@ -7,7 +7,7 @@ export default function TaitraSlide5() {
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-100 rounded-xl">
 
-        {/* Background Accents */}
+        {/* Info: (20260527 - Luphia) Background Accents */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3" />
 
         <div className="flex-1 flex flex-col px-16 pt-8 pb-16 z-10 justify-between">
@@ -24,9 +24,9 @@ export default function TaitraSlide5() {
 
           <div className="flex-1 flex flex-col gap-4">
 
-            {/* Top Row: 3 Items */}
+            {/* Info: (20260527 - Luphia) Top Row: 3 Items */}
             <div className="flex gap-4 flex-1">
-              {/* Data Organization */}
+              {/* Info: (20260527 - Luphia) Data Organization */}
               <div className="flex-1 bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full blur-2xl group-hover:bg-blue-100 transition-colors" />
                 <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-3 border border-blue-200 relative z-10">
@@ -39,7 +39,7 @@ export default function TaitraSlide5() {
                 </p>
               </div>
 
-              {/* Data Entry */}
+              {/* Info: (20260527 - Luphia) Data Entry */}
               <div className="flex-1 bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-50 rounded-bl-full blur-2xl group-hover:bg-emerald-100 transition-colors" />
                 <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-3 border border-emerald-200 relative z-10">
@@ -52,7 +52,7 @@ export default function TaitraSlide5() {
                 </p>
               </div>
 
-              {/* Document Analysis */}
+              {/* Info: (20260527 - Luphia) Document Analysis */}
               <div className="flex-1 bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-purple-50 rounded-bl-full blur-2xl group-hover:bg-purple-100 transition-colors" />
                 <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-3 border border-purple-200 relative z-10">
@@ -66,9 +66,9 @@ export default function TaitraSlide5() {
               </div>
             </div>
 
-            {/* Bottom Row: 2 Items */}
+            {/* Info: (20260527 - Luphia) Bottom Row: 2 Items */}
             <div className="flex gap-4 flex-1">
-              {/* Quantitative Analysis */}
+              {/* Info: (20260527 - Luphia) Quantitative Analysis */}
               <div className="flex-[4] bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-lg relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 rounded-bl-full blur-2xl transition-colors" />
                 <div className="w-10 h-10 bg-sky-500/20 text-sky-400 rounded-lg flex items-center justify-center mb-3 border border-sky-500/30 relative z-10">
@@ -81,7 +81,7 @@ export default function TaitraSlide5() {
                 </p>
               </div>
 
-              {/* Qualitative Analysis */}
+              {/* Info: (20260527 - Luphia) Qualitative Analysis */}
               <div className="flex-[5] bg-amber-50 border border-amber-200 rounded-xl p-4 shadow-sm relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/40 rounded-bl-full blur-2xl transition-colors" />
                 <div className="flex items-start justify-between relative z-10">

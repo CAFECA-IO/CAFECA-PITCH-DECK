@@ -18,7 +18,7 @@ export default function Slide6() {
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl border border-neutral-800">
         
-        {/* Background Image */}
+        {/* Info: (20260527 - Luphia) Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/isunfa_chiayi/isunfa_chiayi_gourmet_food_1777801620297.png" 
@@ -29,7 +29,7 @@ export default function Slide6() {
           <div className="absolute inset-0 bg-gradient-to-l from-neutral-950/90 via-neutral-950/40 to-transparent"></div>
         </div>
 
-        {/* Right Side: Content */}
+        {/* Info: (20260527 - Luphia) Right Side: Content */}
         <div className="absolute right-0 top-0 bottom-0 w-[45%] p-16 flex flex-col justify-center z-10">
           <div className="inline-block px-4 py-1 rounded-full border border-green-500/50 text-green-400 text-sm tracking-widest mb-6 w-max bg-neutral-900/80 backdrop-blur-md">
             03 | 智能產品分析師
@@ -38,7 +38,7 @@ export default function Slide6() {
           <h2 className="text-5xl font-bold text-white mb-4 drop-shadow-md">智能產品分析師</h2>
           <h3 className="text-2xl font-light text-green-200 mb-12 drop-shadow-md">揭露碳足跡與 DPP 規範</h3>
 
-          {/* Nutrition Floating Labels */}
+          {/* Info: (20260527 - Luphia) Nutrition Floating Labels */}
           <div className="grid grid-cols-2 gap-4">
             {productFacts.map((fact, idx) => (
               <div 
@@ -55,7 +55,7 @@ export default function Slide6() {
           </div>
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 right-16 text-white/40 text-xs tracking-[0.2em] uppercase z-20">
           卡菲卡金融科技股份有限公司 (52650861)
         </div>

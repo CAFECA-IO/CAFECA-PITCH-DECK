@@ -5,7 +5,7 @@ export default function DPPSlide19() {
     <div className="min-h-screen w-full bg-neutral-950 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-neutral-900 relative overflow-hidden shadow-2xl flex flex-col border border-gray-800 rounded-xl">
         
-        {/* Subtle Background Glow */}
+        {/* Info: (20260508 - Luphia) Subtle Background Glow */}
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-emerald-900/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="flex-1 flex flex-col p-16 z-10">

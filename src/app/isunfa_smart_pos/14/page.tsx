@@ -7,7 +7,7 @@ export default function Slide7() {
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-black relative overflow-hidden shadow-2xl flex items-center justify-center border border-neutral-800">
 
-        {/* Background Image */}
+        {/* Info: (20260527 - Luphia) Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/isunfa_chiayi/isunfa_chiayi_music_vibe_1777801638705.png"
@@ -18,7 +18,7 @@ export default function Slide7() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
         </div>
 
-        {/* Content */}
+        {/* Info: (20260527 - Luphia) Content */}
         <div className="z-10 text-center px-12 animate-fade-in-up mt-20">
           <div className="inline-block px-6 py-2 rounded-full border border-purple-500/50 text-purple-300 text-sm tracking-widest mb-8 bg-purple-900/30 backdrop-blur-md">
             04 | 店內氛圍設計師
@@ -33,12 +33,12 @@ export default function Slide7() {
           </h3>
         </div>
 
-        {/* Huge Music Symbol */}
+        {/* Info: (20260527 - Luphia) Huge Music Symbol */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[400px] text-purple-500/10 pointer-events-none z-0 mix-blend-screen">
           ♪
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-purple-200/40 text-xs tracking-[0.2em] uppercase z-10">
           <div>卡菲卡金融科技股份有限公司 (52650861)</div>
           <div>contact@isunfa.com</div>

@@ -44,10 +44,10 @@ export default function Slide8() {
         
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
 
-        {/* Ambient Background Glow */}
+        {/* Info: (20260527 - Luphia) Ambient Background Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        {/* Header */}
+        {/* Info: (20260527 - Luphia) Header */}
         <div className="z-10 text-center mb-16 px-12 mt-4">
           <div className="inline-block px-6 py-2 rounded-full border border-blue-500/30 text-blue-300 text-sm tracking-widest mb-6 bg-blue-900/20 backdrop-blur-md">
             05 | 專屬智能會計師
@@ -63,7 +63,7 @@ export default function Slide8() {
           </h3>
         </div>
 
-        {/* Four Brains Grid */}
+        {/* Info: (20260527 - Luphia) Four Brains Grid */}
         <div className="z-10 grid grid-cols-4 gap-6 px-16 w-full max-w-[1200px]">
           {brains.map((brain, idx) => {
             const Icon = brain.icon;
@@ -72,10 +72,10 @@ export default function Slide8() {
                 key={idx} 
                 className={`group relative bg-neutral-900/80 backdrop-blur-sm border border-neutral-800/80 rounded-3xl p-8 flex flex-col items-center hover:border-neutral-700 transition-all duration-500 overflow-hidden ${brain.glow} hover:-translate-y-2 cursor-default`}
               >
-                {/* Background Hover Effect */}
+                {/* Info: (20260527 - Luphia) Background Hover Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${brain.color} opacity-0 group-hover:opacity-[0.08] transition-opacity duration-500`}></div>
                 
-                {/* Icon Circle */}
+                {/* Info: (20260527 - Luphia) Icon Circle */}
                 <div className="w-20 h-20 mb-8 rounded-full bg-neutral-950 border border-neutral-800 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-700 shadow-inner">
                   <div className={`absolute inset-0 bg-gradient-to-br ${brain.color} opacity-10 group-hover:opacity-30 transition-opacity duration-500`}></div>
                   <Icon size={36} className={`${brain.textColor} relative z-10 transition-transform duration-500 group-hover:scale-110 drop-shadow-md`} strokeWidth={1.5} />
@@ -83,7 +83,7 @@ export default function Slide8() {
                 
                 <h4 className="text-2xl font-bold text-neutral-100 mb-4 tracking-wider group-hover:text-white transition-colors">{brain.title}</h4>
                 
-                {/* Animated Divider */}
+                {/* Info: (20260527 - Luphia) Animated Divider */}
                 <div className="w-8 h-[2px] rounded-full bg-neutral-800 mb-5 group-hover:w-16 transition-all duration-500 relative overflow-hidden">
                    <div className={`absolute inset-0 bg-gradient-to-r ${brain.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                 </div>
@@ -94,7 +94,7 @@ export default function Slide8() {
           })}
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260503 - Luphia) Footer Info */}
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-600 text-xs tracking-[0.2em] uppercase z-10 pointer-events-none">
           <div>卡菲卡金融科技股份有限公司 (52650861)</div>
           <div>contact@isunfa.com</div>

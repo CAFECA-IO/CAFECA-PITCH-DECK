@@ -21,7 +21,7 @@ export default function TaitraSlide16() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-4 pb-12 items-center">
-          {/* Card 1: Physical Damage */}
+          {/* Info: (20260527 - Luphia) Card 1: Physical Damage */}
           <div className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 relative overflow-hidden h-[340px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-rose-500" />
             <div>
@@ -38,7 +38,7 @@ export default function TaitraSlide16() {
             </div>
           </div>
 
-          {/* Card 2: Layout Distortion */}
+          {/* Info: (20260527 - Luphia) Card 2: Layout Distortion */}
           <div className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 relative overflow-hidden h-[340px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-amber-500" />
             <div>
@@ -55,7 +55,7 @@ export default function TaitraSlide16() {
             </div>
           </div>
 
-          {/* Card 3: Context Loss */}
+          {/* Info: (20260527 - Luphia) Card 3: Context Loss */}
           <div className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 relative overflow-hidden h-[340px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-indigo-500" />
             <div>

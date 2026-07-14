@@ -3,7 +3,7 @@ export default function iSunFASlide12() {
     <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800 text-white">
 
-        {/* Background: Subtle Tech Glow */}
+        {/* Info: (20260505 - Luphia) Background: Subtle Tech Glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-[20%] left-[10%] w-[40%] h-[40%] bg-orange-900/10 blur-[100px] rounded-full" />
           <div className="absolute bottom-[20%] right-[10%] w-[40%] h-[40%] bg-orange-900/10 blur-[100px] rounded-full" />

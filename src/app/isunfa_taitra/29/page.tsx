@@ -25,9 +25,9 @@ export default function TaitraSlide27() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-12 gap-8 mt-4 pb-12 items-center">
-          {/* Left Block: ChatGPT Mockup (7 cols) */}
+          {/* Info: (20260527 - Luphia) Left Block: ChatGPT Mockup (7 cols) */}
           <div className="col-span-7 bg-[#171717] border border-neutral-800 rounded-xl overflow-hidden shadow-2xl flex flex-col h-[340px]">
-            {/* Header */}
+            {/* Info: (20260527 - Luphia) Header */}
             <div className="bg-[#202020] px-4 py-2 flex items-center justify-between border-b border-neutral-800">
               <div className="flex items-center gap-2">
                 <img 
@@ -50,9 +50,9 @@ export default function TaitraSlide27() {
               </div>
             </div>
 
-            {/* Chat Feed */}
+            {/* Info: (20260527 - Luphia) Chat Feed */}
             <div className="flex-1 p-4 overflow-y-auto space-y-4 text-xs scrollbar-hide text-left flex flex-col justify-start">
-              {/* User Prompt Bubble */}
+              {/* Info: (20260527 - Luphia) User Prompt Bubble */}
               <div className="self-end max-w-[85%] bg-[#2f2f2f] text-neutral-100 p-3 rounded-2xl rounded-tr-sm shadow-md font-sans">
                 <div className="text-[9px] text-neutral-400 font-bold uppercase tracking-wider mb-1">User Prompt (Audit Request)</div>
                 <p className="leading-relaxed">
@@ -62,7 +62,7 @@ export default function TaitraSlide27() {
                 </p>
               </div>
 
-              {/* Assistant Response Bubble */}
+              {/* Info: (20260527 - Luphia) Assistant Response Bubble */}
               <div className="self-start max-w-[85%] bg-[#202020] border border-neutral-800 text-neutral-200 p-3 rounded-2xl rounded-tl-sm shadow-md font-mono text-[10px]">
                 <div className="text-[9px] text-sky-400 font-bold uppercase tracking-wider mb-1 font-sans flex items-center gap-1.5">
                   <img 
@@ -79,7 +79,7 @@ export default function TaitraSlide27() {
             </div>
           </div>
 
-          {/* Right Block: Verification Criteria (5 cols) */}
+          {/* Info: (20260527 - Luphia) Right Block: Verification Criteria (5 cols) */}
           <div className="col-span-5 space-y-6">
             <h3 className="text-xl font-bold text-slate-800 flex items-center gap-2">
               <CheckSquare className="text-sky-600" /> 2. 5% 實質性偏差自評

@@ -14,7 +14,7 @@ export default function Slide5() {
         </div>
 
         <div className="flex items-center justify-between gap-12 relative h-80">
-          {/* Local BOX */}
+          {/* Info: (20260709 - Luphia) Local BOX */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -32,7 +32,7 @@ export default function Slide5() {
             </div>
           </motion.div>
 
-          {/* Connection Loop */}
+          {/* Info: (20260709 - Luphia) Connection Loop */}
           <div className="flex-1 h-full flex flex-col items-center justify-center relative">
              <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-full h-[1px] bg-gradient-to-r from-orange-500/30 via-slate-200/50 to-orange-400/30"></div>
@@ -59,7 +59,7 @@ export default function Slide5() {
              </div>
           </div>
 
-          {/* Cloud Cluster */}
+          {/* Info: (20260709 - Luphia) Cloud Cluster */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}

@@ -17,7 +17,7 @@ export default function CafecaFaithSlide9() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
 
-      {/* Background Stylings */}
+      {/* Info: (20260615 - Luphia) Background Stylings */}
       <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
         <div className="absolute right-0 top-0 w-[800px] h-[800px] bg-slate-200 rounded-full mix-blend-multiply filter blur-[150px]"></div>
       </div>
@@ -28,10 +28,10 @@ export default function CafecaFaithSlide9() {
         <span className="text-xs font-mono text-slate-600 uppercase tracking-widest">Market Size & Ecosystem</span>
       </div>
 
-      {/* Left Column - Content (w-2/5) */}
+      {/* Info: (20260615 - Luphia) Left Column - Content (w-2/5) */}
       <div className="z-10 w-[500px] h-full flex flex-col justify-center px-16 relative bg-white/80 backdrop-blur-xl border-r border-slate-200 shadow-xl">
 
-        {/* Section 1: Market Size */}
+        {/* Info: (20260615 - Luphia) Section 1: Market Size */}
         <div className="space-y-4 mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100">
             <Globe2 className="w-4 h-4 text-blue-600" />
@@ -52,7 +52,7 @@ export default function CafecaFaithSlide9() {
           </div>
         </div>
 
-        {/* Section 2: Ecosystem */}
+        {/* Info: (20260615 - Luphia) Section 2: Ecosystem */}
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-100">
             <Building2 className="w-4 h-4 text-orange-600" />
@@ -76,7 +76,7 @@ export default function CafecaFaithSlide9() {
         </div>
       </div>
 
-      {/* Right Column - Map Visualization (w-3/5) */}
+      {/* Info: (20260615 - Luphia) Right Column - Map Visualization (w-3/5) */}
       <div className="w-[780px] h-full relative z-10 flex items-center justify-center">
 
         <div className="w-full h-full relative overflow-hidden bg-black">
@@ -89,15 +89,15 @@ export default function CafecaFaithSlide9() {
             style={{ objectFit: 'cover' }}
           />
 
-          {/* Map Connectivity Lines (Decorative) */}
+          {/* Info: (20260615 - Luphia) Map Connectivity Lines (Decorative) */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30" style={{ zIndex: 1 }}>
-            {/* Just a few random connecting curves to suggest network */}
+            {/* Info: (20260615 - Luphia) Just a few random connecting curves to suggest network */}
             <path d="M 380 200 Q 420 300 400 350 T 150 450" fill="none" stroke="#64748b" strokeWidth="2" strokeDasharray="5,5" />
             <path d="M 580 120 Q 500 250 400 350 T 480 500" fill="none" stroke="#64748b" strokeWidth="2" strokeDasharray="5,5" />
             <path d="M 400 350 Q 300 500 280 650" fill="none" stroke="#64748b" strokeWidth="2" strokeDasharray="5,5" />
           </svg>
 
-          {/* Total Count Display */}
+          {/* Info: (20260615 - Luphia) Total Count Display */}
           <div className="absolute bottom-8 right-8 bg-slate-800 text-white p-5 rounded-2xl shadow-xl z-20">
             <div className="text-xs text-slate-400 font-bold tracking-wider mb-1">合計 (東亞製造業)</div>
             <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
@@ -105,7 +105,7 @@ export default function CafecaFaithSlide9() {
             </div>
           </div>
 
-          {/* Map Nodes */}
+          {/* Info: (20260615 - Luphia) Map Nodes */}
           <div className="relative w-full h-full z-10">
             {mapData.map((node, i) => (
               <div
@@ -113,14 +113,14 @@ export default function CafecaFaithSlide9() {
                 className="absolute flex items-center gap-3 transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-transform cursor-default group"
                 style={{ top: node.top, left: node.left }}
               >
-                {/* Pin Dot */}
+                {/* Info: (20260615 - Luphia) Pin Dot */}
                 <div className="relative">
                   <div className={`absolute inset-0 ${node.color} opacity-40 rounded-full animate-ping scale-150`}></div>
                   <div className={`relative w-3 h-3 ${node.color} rounded-full border border-slate-900 shadow-[0_0_15px_rgba(34,211,238,0.8)] z-10`}>
                   </div>
                 </div>
 
-                {/* Label */}
+                {/* Info: (20260615 - Luphia) Label */}
                 <div className="absolute top-4 left-4 bg-slate-900 border border-slate-700 shadow-xl px-3 py-1.5 rounded-lg whitespace-nowrap group-hover:border-cyan-500 transition-all pointer-events-none">
                   <div className="font-bold text-slate-100 text-sm leading-tight drop-shadow-md">{node.country}</div>
                   <div className="text-xs font-mono text-cyan-400 font-semibold mt-0.5 drop-shadow-sm">{node.count} 家</div>

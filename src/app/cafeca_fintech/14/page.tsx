@@ -6,7 +6,7 @@ export default function CafecaFintechSlide14() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden flex flex-col justify-center">
 
-      {/* Info: Background Elements */}
+      {/* Info: (20260510 - Luphia) Background Elements */}
       <div className="absolute -top-32 -right-32 w-96 h-96 bg-sky-400/20 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -37,7 +37,7 @@ export default function CafecaFintechSlide14() {
       <div className="relative z-10 flex-1 px-16 pb-12">
         <div className="grid grid-cols-2 gap-8 h-full">
 
-          {/* Info: Member 1: 張智崴 */}
+          {/* Info: (20260510 - Luphia) Member 1: 張智崴 */}
           <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="flex items-start justify-between mb-4 pb-4 border-b border-slate-100">
               <div>
@@ -53,7 +53,7 @@ export default function CafecaFintechSlide14() {
             </p>
           </div>
 
-          {/* Info: Member 2: 梁紫涵 */}
+          {/* Info: (20260510 - Luphia) Member 2: 梁紫涵 */}
           <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="flex items-start justify-between mb-4 pb-4 border-b border-slate-100">
               <div>
@@ -69,7 +69,7 @@ export default function CafecaFintechSlide14() {
             </p>
           </div>
 
-          {/* Info: Member 3: 張銀玲 */}
+          {/* Info: (20260510 - Luphia) Member 3: 張銀玲 */}
           <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="flex items-start justify-between mb-4 pb-4 border-b border-slate-100">
               <div>
@@ -85,7 +85,7 @@ export default function CafecaFintechSlide14() {
             </p>
           </div>
 
-          {/* Info: Member 4: 張智傑 */}
+          {/* Info: (20260510 - Luphia) Member 4: 張智傑 */}
           <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="flex items-start justify-between mb-4 pb-4 border-b border-slate-100">
               <div>
@@ -104,7 +104,7 @@ export default function CafecaFintechSlide14() {
         </div>
       </div>
 
-      {/* Info: Footer */}
+      {/* Info: (20260510 - Luphia) Footer */}
       <div className="absolute bottom-4 left-0 w-full px-16 flex justify-between text-slate-400 text-xs tracking-widest uppercase font-medium">
         <div>Confidential</div>
         <div className="flex gap-2 items-center">

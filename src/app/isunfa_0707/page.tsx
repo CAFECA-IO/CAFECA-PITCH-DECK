@@ -22,12 +22,12 @@ export default function CafecaFaithSlideBrowser() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
-  // Info: Dynamic scaling logic for mobile preview
+  // Info: (20260707 - Luphia) Dynamic scaling logic for mobile preview
   const [mobileScale, setMobileScale] = useState(0.3);
 
   useEffect(() => {
     const handleResize = () => {
-      // Info: Desktop Preview Scaling Calc
+      // Info: (20260707 - Luphia) Desktop Preview Scaling Calc
       if (containerRef.current) {
         const { width, height } = containerRef.current.getBoundingClientRect();
         const targetWidth = 1280;
@@ -38,7 +38,7 @@ export default function CafecaFaithSlideBrowser() {
         setScale(newScale);
       }
 
-      // Info: Mobile List Scaling Calc
+      // Info: (20260707 - Luphia) Mobile List Scaling Calc
       if (window.innerWidth < 768) {
         const w = window.innerWidth;
         const targetW = 1280;
@@ -51,7 +51,7 @@ export default function CafecaFaithSlideBrowser() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Info: Slide Components Mapping
+  // Info: (20260707 - Luphia) Slide Components Mapping
   const SlideComponents: { [key: number]: React.ComponentType } = {
     1: CafecaFaithSlide1,
     2: CafecaFaithSlide2,
@@ -96,7 +96,7 @@ export default function CafecaFaithSlideBrowser() {
     setCurrentSlide(id);
   };
 
-  // Info: Keyboard navigation
+  // Info: (20260707 - Luphia) Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') nextSlide();
@@ -109,7 +109,7 @@ export default function CafecaFaithSlideBrowser() {
   return (
     <div className="flex flex-col h-screen bg-slate-50 text-slate-800 overflow-hidden font-sans">
 
-      {/* Info: Universal Header */}
+      {/* Info: (20260707 - Luphia) Universal Header */}
       <div className="h-14 border-b border-slate-200 flex items-center justify-between px-4 bg-white/80 backdrop-blur-md z-20 flex-shrink-0">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <div className="bg-gradient-to-br from-orange-500 to-orange-400 p-1.5 rounded-lg shadow-sm">
@@ -121,7 +121,7 @@ export default function CafecaFaithSlideBrowser() {
           </div>
         </Link>
 
-        {/* Info: Desktop Controls */}
+        {/* Info: (20260707 - Luphia) Desktop Controls */}
         <div className="hidden md:flex items-center gap-2">
           <span className="text-xs font-mono text-slate-500 mr-2">
             {currentSlide} / {totalSlides}
@@ -142,7 +142,7 @@ export default function CafecaFaithSlideBrowser() {
           </button>
         </div>
 
-        {/* Info: Actions */}
+        {/* Info: (20260707 - Luphia) Actions */}
         <div className="flex items-center gap-3">
           <Link href="/isunfa_0707/print" target="_blank" className="hidden md:block">
             <button className="flex items-center gap-2 px-3 py-1.5 bg-white hover:bg-slate-50 rounded-md text-xs font-medium transition-colors border border-slate-200 text-slate-700 shadow-sm">
@@ -158,7 +158,7 @@ export default function CafecaFaithSlideBrowser() {
         </div>
       </div>
 
-      {/* Info: Mobile View */}
+      {/* Info: (20260707 - Luphia) Mobile View */}
       <div
         className="md:hidden flex-1 overflow-y-auto bg-slate-50 scroll-smooth"
         onScroll={(e) => {
@@ -208,10 +208,10 @@ export default function CafecaFaithSlideBrowser() {
         </div>
       </div>
 
-      {/* Info: Desktop Layout */}
+      {/* Info: (20260707 - Luphia) Desktop Layout */}
       <div className="hidden md:flex flex-1 overflow-hidden">
         <div className="flex-1 flex overflow-hidden">
-          {/* Preview Area */}
+          {/* Info: (20260707 - Luphia) Preview Area */}
           <div className="flex-1 bg-slate-50 flex items-center justify-center p-8 relative overflow-hidden" ref={containerRef}>
             <div
               style={{
@@ -228,7 +228,7 @@ export default function CafecaFaithSlideBrowser() {
             </div>
           </div>
 
-          {/* Side Navigator */}
+          {/* Info: (20260707 - Luphia) Side Navigator */}
           <div className="w-64 border-l border-slate-200 bg-white flex flex-col flex-shrink-0">
             <div className="px-4 py-3 text-xs text-slate-500 font-bold uppercase tracking-wider flex items-center gap-2 border-b border-slate-200">
               <Grid size={12} />

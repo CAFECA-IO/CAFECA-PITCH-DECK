@@ -7,7 +7,7 @@ export default function CafecaFaithSlide10() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
 
-      {/* Background Soft Accents */}
+      {/* Info: (20260629 - Luphia) Background Soft Accents */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none flex items-center justify-center">
         <div className="absolute -left-40 top-0 w-[800px] h-[800px] bg-orange-100/60 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute right-0 bottom-0 w-[600px] h-[600px] bg-emerald-50/60 rounded-full mix-blend-multiply filter blur-[150px]"></div>
@@ -15,7 +15,7 @@ export default function CafecaFaithSlide10() {
 
       <div className="z-10 w-full h-full flex items-center justify-between px-40 relative">
 
-        {/* Left Side: Text and Logo */}
+        {/* Info: (20260629 - Luphia) Left Side: Text and Logo */}
         <div className="flex flex-col items-start justify-center">
           <div className="mb-10">
             <Image
@@ -35,7 +35,7 @@ export default function CafecaFaithSlide10() {
           </p>
         </div>
 
-        {/* Right Side: QR Code Section */}
+        {/* Info: (20260629 - Luphia) Right Side: QR Code Section */}
         <div className="flex flex-col items-center gap-6 bg-white p-10 rounded-3xl shadow-xl border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
           <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-inner">
             <QRCodeSVG

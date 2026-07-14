@@ -20,7 +20,7 @@ export default function TaitraSlide13() {
 
         <div className="flex-1 px-16 z-10 mt-12 flex gap-6 pb-16">
           
-          {/* Step 1 */}
+          {/* Info: (20260527 - Luphia) Step 1 */}
           <div className="flex-1 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col hover:shadow-md transition-shadow relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-2 bg-sky-500" />
             <div className="flex items-center gap-3 mb-6">
@@ -51,7 +51,7 @@ export default function TaitraSlide13() {
             </div>
           </div>
 
-          {/* Step 2 */}
+          {/* Info: (20260527 - Luphia) Step 2 */}
           <div className="flex-1 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col hover:shadow-md transition-shadow relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-2 bg-emerald-500" />
             <div className="flex items-center gap-3 mb-6">
@@ -82,7 +82,7 @@ export default function TaitraSlide13() {
             </div>
           </div>
 
-          {/* Step 3 */}
+          {/* Info: (20260527 - Luphia) Step 3 */}
           <div className="flex-1 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col hover:shadow-md transition-shadow relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-2 bg-indigo-500" />
             <div className="flex items-center gap-3 mb-6">

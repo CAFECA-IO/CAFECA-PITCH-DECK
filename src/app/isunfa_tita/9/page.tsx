@@ -22,7 +22,7 @@ export default function TITASlide9() {
         <div className="flex-1 px-16 z-10 mt-8 flex flex-col gap-6">
           
           <div className="flex gap-6 h-full pb-12">
-            {/* Knowledge Injection */}
+            {/* Info: (20260519 - Luphia) Knowledge Injection */}
             <div className="w-1/3 bg-slate-900 rounded-2xl p-6 text-white shadow-lg relative flex flex-col">
               <div className="flex items-center gap-3 mb-4 text-emerald-400">
                 <Database size={24} />
@@ -42,7 +42,7 @@ export default function TITASlide9() {
               </div>
             </div>
 
-            {/* AI Auto Inspection & Confidence */}
+            {/* Info: (20260519 - Luphia) AI Auto Inspection & Confidence */}
             <div className="w-2/3 flex flex-col gap-6">
               
               <div className="flex gap-6 h-1/2">

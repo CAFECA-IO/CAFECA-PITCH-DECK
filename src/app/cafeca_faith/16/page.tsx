@@ -53,16 +53,16 @@ export default function CafecaFaithSlide12() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
       
-      {/* Light Background Gradients */}
+      {/* Info: (20260629 - Luphia) Light Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute -left-32 -top-32 w-[600px] h-[600px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute -right-32 -bottom-32 w-[600px] h-[600px] bg-emerald-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
       </div>
 
-      {/* Grid Pattern */}
+      {/* Info: (20260629 - Luphia) Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.1)_1px,transparent_1px)] bg-[size:64px_64px] opacity-50"></div>
 
-      {/* Header */}
+      {/* Info: (20260629 - Luphia) Header */}
       <div className="z-20 text-center mb-16 mt-4">
         <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-slate-200 mb-6 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
@@ -72,12 +72,12 @@ export default function CafecaFaithSlide12() {
         <p className="text-lg text-slate-500 mt-4 font-medium max-w-2xl mx-auto">融合密碼學、區塊鏈與人工智慧，打造零信任架構下的安全永續生態系</p>
       </div>
 
-      {/* 4 Pillars Layout */}
+      {/* Info: (20260629 - Luphia) 4 Pillars Layout */}
       <div className="z-20 w-full max-w-6xl grid grid-cols-4 gap-6 px-12 relative">
         {technologies.map((tech) => (
           <div key={tech.id} className="relative group">
             
-            {/* Card Content */}
+            {/* Info: (20260629 - Luphia) Card Content */}
             <div className={`relative h-[320px] bg-white rounded-3xl p-8 border border-slate-200 shadow-xl flex flex-col transition-all duration-300 hover:-translate-y-2 ${tech.shadowColor}`}>
               
               <div className={`w-16 h-16 ${tech.bgColor} ${tech.color} rounded-2xl flex items-center justify-center mb-6 shadow-inner border ${tech.borderColor}`}>
@@ -90,7 +90,7 @@ export default function CafecaFaithSlide12() {
                 {tech.description}
               </p>
 
-              {/* Decorative line at bottom */}
+              {/* Info: (20260629 - Luphia) Decorative line at bottom */}
               <div className={`w-8 h-1 rounded-full bg-gradient-to-r ${tech.gradient} mt-4 opacity-50 group-hover:w-full group-hover:opacity-100 transition-all duration-500`}></div>
             </div>
           </div>

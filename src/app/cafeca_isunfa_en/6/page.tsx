@@ -7,13 +7,13 @@ export default function CafecaIsunfaSlide6() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260609 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute right-10 top-10 w-[500px] h-[500px] bg-amber-500 rounded-full filter blur-[130px]"></div>
         <div className="absolute left-10 bottom-10 w-[500px] h-[500px] bg-emerald-500 rounded-full filter blur-[130px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260609 - Luphia) Header */}
       <div className="px-16 pt-12 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -29,10 +29,10 @@ export default function CafecaIsunfaSlide6() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260609 - Luphia) Content */}
       <div className="flex-1 px-16 flex items-center justify-between relative z-10 gap-10">
         
-        {/* Left Side: Summary Callout */}
+        {/* Info: (20260609 - Luphia) Left Side: Summary Callout */}
         <div className="w-1/2 flex flex-col justify-center space-y-6">
           <div className="bg-slate-950/60 backdrop-blur-md border border-amber-500/20 p-8 rounded-3xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 p-4 opacity-5 text-amber-500">
@@ -48,7 +48,7 @@ export default function CafecaIsunfaSlide6() {
           </div>
         </div>
 
-        {/* Right Side: Features Cards */}
+        {/* Info: (20260609 - Luphia) Right Side: Features Cards */}
         <div className="w-1/2 space-y-4">
           
           <div className="bg-slate-950/40 backdrop-blur-md border border-slate-800 p-5 rounded-2xl flex gap-4 items-center">
@@ -91,7 +91,7 @@ export default function CafecaIsunfaSlide6() {
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260609 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10">
         <div>Slide 06 / 13</div>
         <div className="flex gap-2 items-center">

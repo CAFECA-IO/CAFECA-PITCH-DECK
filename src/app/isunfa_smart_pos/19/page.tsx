@@ -7,7 +7,7 @@ export default function Slide10() {
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-amber-500 relative overflow-hidden shadow-2xl flex border border-amber-600">
         
-        {/* Left Side: Solid Dark Block */}
+        {/* Info: (20260527 - Luphia) Left Side: Solid Dark Block */}
         <div className="w-[45%] bg-neutral-950 p-20 flex flex-col justify-center text-white relative z-10">
           <div className="absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-16 bg-neutral-950 transform rotate-45"></div>
           
@@ -21,7 +21,7 @@ export default function Slide10() {
           </p>
         </div>
 
-        {/* Right Side: QR Code Area */}
+        {/* Info: (20260527 - Luphia) Right Side: QR Code Area */}
         <div className="flex-1 flex flex-col items-center justify-center relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-400 via-amber-500 to-amber-600"></div>
           
@@ -41,7 +41,7 @@ export default function Slide10() {
           </p>
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 left-16 text-neutral-500 text-xs tracking-[0.2em] uppercase z-20">
           卡菲卡金融科技股份有限公司 (52650861)
         </div>

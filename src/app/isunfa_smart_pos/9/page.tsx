@@ -7,13 +7,13 @@ export default function Slide8() {
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex border border-neutral-800">
         
-        {/* Dynamic Background */}
+        {/* Info: (20260527 - Luphia) Dynamic Background */}
         <div className="absolute inset-0 z-0 opacity-40">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
           <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-amber-900/10 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/4"></div>
         </div>
 
-        {/* Content Container */}
+        {/* Info: (20260527 - Luphia) Content Container */}
         <div className="w-full pt-16 pb-20 px-20 flex flex-col h-full relative z-10">
           <div className="inline-block px-4 py-1 rounded-full border border-amber-500/30 text-amber-500 text-sm tracking-widest mb-6 w-max bg-amber-500/10 backdrop-blur-sm">
             02-1 | 虛實融合體驗
@@ -32,7 +32,7 @@ export default function Slide8() {
 
           <div className="flex gap-8 flex-1 min-h-0">
             
-            {/* Feature 1 */}
+            {/* Info: (20260527 - Luphia) Feature 1 */}
             <div className="w-1/2 bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 rounded-2xl p-8 border border-neutral-800/80 backdrop-blur-sm flex flex-col relative group hover:border-amber-500/30 transition-colors">
               <div className="absolute top-0 right-0 opacity-5 text-neutral-400 group-hover:text-amber-500 transition-colors translate-x-4 -translate-y-4">
                 <UserCheck size={160} />
@@ -46,7 +46,7 @@ export default function Slide8() {
               </p>
             </div>
 
-            {/* Feature 2 */}
+            {/* Info: (20260527 - Luphia) Feature 2 */}
             <div className="w-1/2 bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 rounded-2xl p-8 border border-neutral-800/80 backdrop-blur-sm flex flex-col relative group hover:border-amber-500/30 transition-colors">
               <div className="absolute top-0 right-0 opacity-5 text-neutral-400 group-hover:text-amber-500 transition-colors translate-x-4 -translate-y-4">
                 <MapPin size={160} />
@@ -64,7 +64,7 @@ export default function Slide8() {
 
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 left-20 text-neutral-600 text-xs tracking-[0.2em] uppercase z-20 pointer-events-none">
           卡菲卡金融科技股份有限公司 (52650861)
         </div>

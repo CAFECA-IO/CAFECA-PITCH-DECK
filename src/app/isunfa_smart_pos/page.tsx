@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MonitorPlay, Grid, Maximize2, Download } from 'lucide-react';
 import Link from 'next/link';
 
-// Import all 12 slides
+// Info: (20260527 - Luphia) Import all 12 slides
 import ISunFASlide1 from '@/app/isunfa_smart_pos/1/page';
 import ISunFASlide2 from '@/app/isunfa_smart_pos/2/page';
 import ISunFASlide3 from '@/app/isunfa_smart_pos/3/page';
@@ -35,7 +35,7 @@ export default function ISunFAPOSSlideBrowser() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Desktop Preview Calc
+      // Info: (20260527 - Luphia) Desktop Preview Calc
       if (containerRef.current) {
         const { width, height } = containerRef.current.getBoundingClientRect();
         const targetWidth = 1280;
@@ -46,7 +46,7 @@ export default function ISunFAPOSSlideBrowser() {
         setScale(newScale);
       }
 
-      // Mobile List Calc
+      // Info: (20260527 - Luphia) Mobile List Calc
       if (window.innerWidth < 768) {
         const w = window.innerWidth;
         const targetW = 1280;
@@ -131,7 +131,7 @@ export default function ISunFAPOSSlideBrowser() {
   return (
     <div className="flex flex-col h-screen bg-neutral-900 text-white overflow-hidden">
 
-      {/* Universal Header */}
+      {/* Info: (20260527 - Luphia) Universal Header */}
       <div className="h-14 border-b border-neutral-800 flex items-center justify-between px-4 bg-neutral-900 z-20 flex-shrink-0">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <div className="bg-amber-600 p-1.5 rounded-lg">
@@ -143,7 +143,7 @@ export default function ISunFAPOSSlideBrowser() {
           </div>
         </Link>
 
-        {/* Desktop Controls - Hidden on Mobile */}
+        {/* Info: (20260527 - Luphia) Desktop Controls - Hidden on Mobile */}
         <div className="hidden md:flex items-center gap-2">
           <span className="text-xs font-mono text-gray-500 mr-2">
             {currentSlide} / {totalSlides}
@@ -164,7 +164,7 @@ export default function ISunFAPOSSlideBrowser() {
           </button>
         </div>
 
-        {/* Right Side Actions */}
+        {/* Info: (20260527 - Luphia) Right Side Actions */}
         <div className="flex items-center gap-3">
           <Link href="/isunfa_smart_pos/print" target="_blank" className="hidden md:block">
             <button className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-md text-xs font-medium transition-colors border border-neutral-700">
@@ -180,7 +180,7 @@ export default function ISunFAPOSSlideBrowser() {
         </div>
       </div>
 
-      {/* Mobile Vertical Scroll View */}
+      {/* Info: (20260527 - Luphia) Mobile Vertical Scroll View */}
       <div
         className="md:hidden flex-1 overflow-y-auto bg-neutral-900 scroll-smooth"
         onScroll={(e) => {
@@ -212,7 +212,7 @@ export default function ISunFAPOSSlideBrowser() {
               <div key={id} className={`w-full relative overflow-hidden transition-all duration-500 ease-out ${opacityClass}`}
                 style={{ height: 720 * mobileScale }}>
 
-                {/* Scale Wrapper */}
+                {/* Info: (20260527 - Luphia) Scale Wrapper */}
                 <div
                   style={{
                     transform: `scale(${mobileScale})`,
@@ -227,7 +227,7 @@ export default function ISunFAPOSSlideBrowser() {
                   </div>
                 </div>
 
-                {/* Overlay Page Number for Mobile */}
+                {/* Info: (20260527 - Luphia) Overlay Page Number for Mobile */}
                 <div className={`absolute top-2 right-2 px-2 py-1 rounded-full z-10 pointer-events-none transition-opacity duration-300 ${distance === 0 ? 'bg-amber-600 text-white shadow-lg' : 'bg-black/50 text-gray-400'}`}>
                   <span className="text-[10px] font-bold">{id}</span>
                   <span className="text-[8px] opacity-80">/{totalSlides}</span>
@@ -238,14 +238,14 @@ export default function ISunFAPOSSlideBrowser() {
         </div>
       </div>
 
-      {/* Desktop Layout */}
+      {/* Info: (20260527 - Luphia) Desktop Layout */}
       <div className="hidden md:flex flex-1 overflow-hidden">
 
-        {/* Main Layout: Content (Left) + Navigator (Right) */}
+        {/* Info: (20260527 - Luphia) Main Layout: Content (Left) + Navigator (Right) */}
         <div className="flex-1 flex overflow-hidden">
-          {/* Preview Area */}
+          {/* Info: (20260527 - Luphia) Preview Area */}
           <div className="flex-1 bg-[#050505] flex items-center justify-center p-8 relative overflow-hidden" ref={containerRef}>
-            {/* Scaled Content Wrapper */}
+            {/* Info: (20260527 - Luphia) Scaled Content Wrapper */}
             <div
               style={{
                 transform: `scale(${scale})`,
@@ -261,7 +261,7 @@ export default function ISunFAPOSSlideBrowser() {
             </div>
           </div>
 
-          {/* Side Navigator */}
+          {/* Info: (20260527 - Luphia) Side Navigator */}
           <div className="w-64 border-l border-neutral-800 bg-neutral-900 flex flex-col flex-shrink-0">
             <div className="px-4 py-3 text-xs text-gray-500 font-bold uppercase tracking-wider flex items-center gap-2 border-b border-neutral-800">
               <Grid size={12} />
@@ -277,12 +277,12 @@ export default function ISunFAPOSSlideBrowser() {
                     : 'border-neutral-800 hover:border-neutral-700 opacity-60 hover:opacity-100'
                     }`}
                 >
-                  {/* Mini Preview Mock */}
+                  {/* Info: (20260527 - Luphia) Mini Preview Mock */}
                   <div className="absolute inset-0 bg-neutral-950">
                     <div className="w-full h-full flex items-center justify-center bg-neutral-900 text-neutral-600 text-xs font-mono">
                       SLIDE {id}
                     </div>
-                    {/* Overlay Title */}
+                    {/* Info: (20260527 - Luphia) Overlay Title */}
                     <div className="absolute bottom-0 inset-x-0 bg-neutral-900/90 p-2 text-left">
                       <div className="flex justify-between items-center mb-0.5">
                         <span className="text-[10px] font-bold text-amber-500">#{id.toString().padStart(2, '0')}</span>

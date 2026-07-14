@@ -7,12 +7,12 @@ export default function Slide4() {
 
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
 
-        {/* Dynamic Background */}
+        {/* Info: (20260527 - Luphia) Dynamic Background */}
         <div className="absolute inset-0 z-0 opacity-40">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-900/30 via-neutral-950 to-neutral-950"></div>
         </div>
 
-        {/* Content Container */}
+        {/* Info: (20260527 - Luphia) Content Container */}
         <div className="z-10 text-center animate-fade-in-up flex flex-col items-center">
           <div className="inline-block px-6 py-2 rounded-full border border-amber-500/30 text-amber-400 text-sm tracking-widest mb-12 bg-amber-500/10 backdrop-blur-sm">
             01-2 | 核心理念
@@ -29,7 +29,7 @@ export default function Slide4() {
           </p>
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-600 text-xs tracking-[0.2em] uppercase z-10 pointer-events-none">
           <div>卡菲卡金融科技股份有限公司 (52650861)</div>
           <div>contact@isunfa.com</div>

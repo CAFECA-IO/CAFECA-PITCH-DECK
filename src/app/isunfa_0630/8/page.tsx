@@ -6,7 +6,7 @@ export default function CafecaFaithSlide8() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260629 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute -left-1/4 -top-1/4 w-[800px] h-[800px] bg-emerald-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute -right-1/4 -bottom-1/4 w-[800px] h-[800px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
@@ -17,10 +17,10 @@ export default function CafecaFaithSlide8() {
         <span className="text-xs font-mono text-emerald-600 uppercase tracking-widest">AI Audit Readiness</span>
       </div>
 
-      {/* Content Container */}
+      {/* Info: (20260629 - Luphia) Content Container */}
       <div className="z-10 w-full max-w-6xl flex flex-col px-8 relative">
         
-        {/* Top Header Area */}
+        {/* Info: (20260629 - Luphia) Top Header Area */}
         <div className="text-center space-y-2 mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-emerald-200 shadow-sm mx-auto">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
@@ -36,17 +36,17 @@ export default function CafecaFaithSlide8() {
           </p>
         </div>
 
-        {/* Two Column Layout */}
+        {/* Info: (20260629 - Luphia) Two Column Layout */}
         <div className="grid grid-cols-12 gap-6 items-start w-full">
           
-          {/* Left Column: AI Mechanism (5/12 width) */}
+          {/* Info: (20260629 - Luphia) Left Column: AI Mechanism (5/12 width) */}
           <div className="col-span-5 space-y-3">
             <h3 className="text-base font-bold text-slate-800 flex items-center gap-2 mb-1">
               <Brain className="w-4.5 h-4.5 text-emerald-600" />
               AI 智慧查證與持續審計流程
             </h3>
 
-            {/* Step 1 Card */}
+            {/* Info: (20260629 - Luphia) Step 1 Card */}
             <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
               <div className="absolute top-3 right-4 bg-orange-50 text-orange-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
                 Step 1
@@ -57,7 +57,7 @@ export default function CafecaFaithSlide8() {
               </p>
             </div>
 
-            {/* Step 2 Card */}
+            {/* Info: (20260629 - Luphia) Step 2 Card */}
             <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
               <div className="absolute top-3 right-4 bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
                 Step 2
@@ -68,7 +68,7 @@ export default function CafecaFaithSlide8() {
               </p>
             </div>
 
-            {/* Step 3 Card */}
+            {/* Info: (20260629 - Luphia) Step 3 Card */}
             <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
               <div className="absolute top-3 right-4 bg-green-50 text-green-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
                 Step 3
@@ -79,7 +79,7 @@ export default function CafecaFaithSlide8() {
               </p>
             </div>
 
-            {/* Step 4 Card */}
+            {/* Info: (20260629 - Luphia) Step 4 Card */}
             <div className="bg-white border border-slate-200 shadow-sm p-3 rounded-xl relative hover:shadow-md transition-shadow">
               <div className="absolute top-3 right-4 bg-indigo-50 text-indigo-600 text-[10px] font-bold px-2 py-0.5 rounded-full">
                 Step 4
@@ -91,7 +91,7 @@ export default function CafecaFaithSlide8() {
             </div>
           </div>
 
-          {/* Right Column: AI vs Manual Comparison Table (7/12 width) */}
+          {/* Info: (20260629 - Luphia) Right Column: AI vs Manual Comparison Table (7/12 width) */}
           <div className="col-span-7 bg-white border border-slate-200 shadow-md rounded-2xl p-5">
             <h3 className="text-base font-bold text-slate-800 flex items-center gap-2 mb-3">
               <Sparkles className="w-4.5 h-4.5 text-emerald-600" />

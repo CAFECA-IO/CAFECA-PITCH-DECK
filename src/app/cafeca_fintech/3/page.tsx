@@ -4,7 +4,7 @@ export default function CafecaFintechSlide3() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl flex flex-col border border-gray-800 text-white font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260326 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute right-0 top-0 w-1/2 h-1/2 bg-blue-600 rounded-full mix-blend-multiply filter blur-[120px] opacity-70 animate-blob"></div>
         <div className="absolute left-0 bottom-0 w-1/2 h-1/2 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[120px] opacity-70 animate-blob" style={{ animationDelay: '2s' }}></div>
@@ -26,7 +26,7 @@ export default function CafecaFintechSlide3() {
 
       <div className="flex-1 px-16 flex flex-col justify-center relative z-10 w-full max-w-5xl mx-auto pb-4 gap-4 mt-2">
         
-        {/* Top Layer: Interaction & Processing */}
+        {/* Info: (20260326 - Luphia) Top Layer: Interaction & Processing */}
         <div className="flex gap-4 w-full h-32">
           <div className="flex-1 bg-slate-800/60 backdrop-blur-md rounded-xl border border-slate-700/50 p-5 flex flex-col justify-between hover:bg-slate-800/80 transition-colors shadow-lg group relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent"></div>
@@ -47,7 +47,7 @@ export default function CafecaFintechSlide3() {
           </div>
         </div>
 
-        {/* Middle Layer: RAG DB */}
+        {/* Info: (20260326 - Luphia) Middle Layer: RAG DB */}
         <div className="w-full bg-slate-800/60 backdrop-blur-md rounded-xl border border-slate-700/50 p-6 shadow-lg relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent"></div>
           <div className="flex items-center gap-3 mb-4 relative z-10">
@@ -67,7 +67,7 @@ export default function CafecaFintechSlide3() {
           </div>
         </div>
 
-        {/* Bottom Layer: Base Model */}
+        {/* Info: (20260326 - Luphia) Bottom Layer: Base Model */}
         <div className="w-full bg-gradient-to-r from-blue-900/80 via-indigo-900/80 to-blue-900/80 backdrop-blur-md rounded-xl border border-blue-500/30 py-5 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col items-center justify-center relative overflow-hidden group">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-50"></div>
           <h3 className="text-xs text-blue-300/80 font-medium mb-1.5 tracking-[0.2em] uppercase">Foundation Model</h3>

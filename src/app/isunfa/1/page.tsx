@@ -6,16 +6,16 @@ export default function CafecaFaithSlide1() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
 
-      {/* Background Gradients */}
+      {/* Info: (20260701 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute -left-20 -top-20 w-[600px] h-[600px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[100px] animate-pulse"></div>
         <div className="absolute left-1/3 bottom-0 w-[500px] h-[500px] bg-yellow-50 rounded-full mix-blend-multiply filter blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      {/* Content Container (Left 2/3) */}
+      {/* Info: (20260701 - Luphia) Content Container (Left 2/3) */}
       <div className="z-10 w-2/3 h-full flex flex-col justify-center px-20 relative">
 
-        {/* Brand Area */}
+        {/* Info: (20260701 - Luphia) Brand Area */}
         <div className="mb-12">
           <Image
             src="/isunfa_logo_color.svg"
@@ -26,7 +26,7 @@ export default function CafecaFaithSlide1() {
           />
         </div>
 
-        {/* Main Title Area */}
+        {/* Info: (20260701 - Luphia) Main Title Area */}
         <div className="space-y-6 text-left">
           <h1 className="text-7xl font-black tracking-tight leading-tight text-slate-800">
             陽光智能<br />
@@ -41,7 +41,7 @@ export default function CafecaFaithSlide1() {
         </div>
       </div>
 
-      {/* Right 1/3 Image Area */}
+      {/* Info: (20260701 - Luphia) Right 1/3 Image Area */}
       <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
         <Image
           src="/cafeca_faith/cover.jpeg"

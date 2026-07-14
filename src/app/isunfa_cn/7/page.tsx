@@ -7,13 +7,13 @@ export default function IsunfaCnSlide7() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Gradients */}
+      {/* Info: (20260610 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute right-1/4 bottom-10 w-[500px] h-[500px] bg-emerald-600 rounded-full filter blur-[140px]"></div>
         <div className="absolute left-10 top-10 w-[400px] h-[400px] bg-sky-500 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="px-16 pt-12 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -32,11 +32,11 @@ export default function IsunfaCnSlide7() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="flex-1 px-16 flex items-center justify-center relative z-10 py-4">
         <div className="grid grid-cols-5 gap-6 w-full max-w-6xl">
 
-          {/* Card 1: 组织碳盘查 */}
+          {/* Info: (20260610 - Luphia) Card 1: 组织碳盘查 */}
           <div className="bg-slate-950/60 backdrop-blur-md border border-slate-800 p-6 rounded-3xl flex flex-col justify-between h-[320px] hover:border-emerald-500/30 hover:bg-slate-950 transition-all group">
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
@@ -52,7 +52,7 @@ export default function IsunfaCnSlide7() {
             </div>
           </div>
 
-          {/* Card 2: 产品碳足迹 */}
+          {/* Info: (20260610 - Luphia) Card 2: 产品碳足迹 */}
           <div className="bg-slate-950/60 backdrop-blur-md border border-slate-800 p-6 rounded-3xl flex flex-col justify-between h-[320px] hover:border-emerald-500/30 hover:bg-slate-950 transition-all group">
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
@@ -68,7 +68,7 @@ export default function IsunfaCnSlide7() {
             </div>
           </div>
 
-          {/* Card 3: 数字产品护照 */}
+          {/* Info: (20260610 - Luphia) Card 3: 数字产品护照 */}
           <div className="bg-slate-950/60 backdrop-blur-md border border-slate-800 p-6 rounded-3xl flex flex-col justify-between h-[320px] hover:border-emerald-500/30 hover:bg-slate-950 transition-all group">
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
@@ -84,7 +84,7 @@ export default function IsunfaCnSlide7() {
             </div>
           </div>
 
-          {/* Card 4: 绿色供应链 */}
+          {/* Info: (20260610 - Luphia) Card 4: 绿色供应链 */}
           <div className="bg-slate-950/60 backdrop-blur-md border border-slate-800 p-6 rounded-3xl flex flex-col justify-between h-[320px] hover:border-emerald-500/30 hover:bg-slate-950 transition-all group">
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
@@ -100,7 +100,7 @@ export default function IsunfaCnSlide7() {
             </div>
           </div>
 
-          {/* Card 5: 净零碳排规划 */}
+          {/* Info: (20260610 - Luphia) Card 5: 净零碳排规划 */}
           <div className="bg-slate-950/60 backdrop-blur-md border border-slate-800 p-6 rounded-3xl flex flex-col justify-between h-[320px] hover:border-emerald-500/30 hover:bg-slate-950 transition-all group">
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
@@ -119,7 +119,7 @@ export default function IsunfaCnSlide7() {
         </div>
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10 pointer-events-none">
         <div>Slide 07 / 11</div>
         <div className="flex gap-2 items-center">

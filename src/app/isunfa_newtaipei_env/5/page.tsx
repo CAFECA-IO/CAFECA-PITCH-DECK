@@ -7,7 +7,7 @@ export default function iSunFASlide5() {
     <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800 text-white">
 
-        {/* Background Effects */}
+        {/* Info: (20260505 - Luphia) Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-orange-900/10 blur-[120px] rounded-full" />
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none"></div>
@@ -15,7 +15,7 @@ export default function iSunFASlide5() {
 
         <div className="z-10 w-full max-w-6xl px-12 flex flex-col h-full py-16">
 
-          {/* Title Section */}
+          {/* Info: (20260505 - Luphia) Title Section */}
           <div className="mb-12 text-center space-y-4">
             <h2 className="text-6xl font-extrabold tracking-tight text-white drop-shadow-md">
               極速合規：20 分鐘產出報告
@@ -25,7 +25,7 @@ export default function iSunFASlide5() {
 
           <div className="flex-1 w-full max-w-5xl mx-auto flex gap-12 items-center justify-center mt-4">
 
-            {/* Speed Comparison Block */}
+            {/* Info: (20260505 - Luphia) Speed Comparison Block */}
             <div className="flex-1 bg-neutral-900/40 border border-neutral-800 rounded-3xl p-8 backdrop-blur-xl flex flex-col items-center justify-center relative overflow-hidden group hover:border-orange-500/50 transition-all">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 blur-2xl rounded-full pointer-events-none" />
 
@@ -45,7 +45,7 @@ export default function iSunFASlide5() {
                 <p className="text-neutral-400 text-lg tracking-widest">從報告生成到驗證產出</p>
               </div>
 
-              {/* Comparison Line */}
+              {/* Info: (20260505 - Luphia) Comparison Line */}
               <div className="w-full bg-neutral-950/50 rounded-2xl p-4 flex justify-between items-center border border-neutral-800/50">
                 <div className="text-center flex-1 border-r border-neutral-800/50">
                   <p className="text-neutral-500 text-xs mb-1">傳統人工盤查</p>
@@ -58,7 +58,7 @@ export default function iSunFASlide5() {
               </div>
             </div>
 
-            {/* Key Outcomes */}
+            {/* Info: (20260505 - Luphia) Key Outcomes */}
             <div className="flex-1 flex flex-col justify-center gap-6">
               {[
                 {
@@ -94,7 +94,7 @@ export default function iSunFASlide5() {
           </div>
         </div>
 
-        {/* Footer */}
+        {/* Info: (20260505 - Luphia) Footer */}
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-500 text-[10px] tracking-[0.2em] uppercase font-medium">
           <div>領航淨零，智算未來</div>
           <div className="flex gap-2 items-center">

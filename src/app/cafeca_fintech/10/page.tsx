@@ -177,7 +177,7 @@ export default function CafecaFintechSlide3() {
             </div>
           </div>
 
-          {/* Info: (20260509 - added) Timeline Item */}
+          {/* Info: (20260509 - Luphia) Timeline Item */}
           <div className="flex gap-4 group">
             <div className="flex flex-col items-center">
               <div className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 ring-4 ring-white shadow-sm"></div>

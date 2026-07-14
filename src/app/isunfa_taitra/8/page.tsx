@@ -21,7 +21,7 @@ export default function TaitraSlide6() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-2 gap-12 mt-4 pb-12 items-center">
-          {/* Left Column: Supply Chain Passport */}
+          {/* Info: (20260527 - Luphia) Left Column: Supply Chain Passport */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
               <Handshake className="text-sky-500" /> 國際大廠的剛性綠色招標
@@ -37,7 +37,7 @@ export default function TaitraSlide6() {
             </div>
           </div>
 
-          {/* Right Column: Commercial Advantages */}
+          {/* Info: (20260527 - Luphia) Right Column: Commercial Advantages */}
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4 items-start hover:shadow-md transition-shadow">
               <div className="p-3 bg-emerald-50 text-emerald-600 rounded-lg h-fit">

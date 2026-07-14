@@ -7,7 +7,7 @@ export default function CafecaFaithSlide3() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260612 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-orange-100/50 rounded-full mix-blend-multiply filter blur-[150px] animate-pulse"></div>
         <div className="absolute left-1/4 top-1/4 w-[400px] h-[400px] bg-yellow-50/80 rounded-full mix-blend-multiply filter blur-[120px]"></div>
@@ -18,10 +18,10 @@ export default function CafecaFaithSlide3() {
         <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">Digital Twin Simulation</span>
       </div>
 
-      {/* Content Container (Left 2/3) */}
+      {/* Info: (20260612 - Luphia) Content Container (Left 2/3) */}
       <div className="z-10 w-2/3 h-full flex flex-col justify-center px-16 pt-16 relative">
         
-        {/* Header Text */}
+        {/* Info: (20260612 - Luphia) Header Text */}
         <div className="space-y-4 mb-8 mt-2 text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100">
             <Layers className="w-5 h-5 text-orange-500" />
@@ -34,10 +34,10 @@ export default function CafecaFaithSlide3() {
           </h2>
         </div>
 
-        {/* Central Visualization within Left 2/3 */}
+        {/* Info: (20260612 - Luphia) Central Visualization within Left 2/3 */}
         <div className="relative w-full max-w-3xl h-[320px] bg-white border border-slate-200 shadow-md rounded-3xl p-8 flex items-center justify-between">
           
-          {/* Left: Input Data stream */}
+          {/* Info: (20260612 - Luphia) Left: Input Data stream */}
           <div className="flex flex-col gap-5 z-10 w-40">
             <div className="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
               <Activity className="w-5 h-5 text-blue-500" />
@@ -53,9 +53,9 @@ export default function CafecaFaithSlide3() {
             </div>
           </div>
 
-          {/* Center: AI Simulation Engine */}
+          {/* Info: (20260612 - Luphia) Center: AI Simulation Engine */}
           <div className="relative flex-1 h-full flex items-center justify-center">
-            {/* Animated Data Lines */}
+            {/* Info: (20260612 - Luphia) Animated Data Lines */}
             <div className="absolute inset-0 flex items-center justify-center opacity-40">
                <svg className="w-full h-24" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <path d="M0 50 Q 75 0, 150 50 T 300 50" stroke="url(#paint0_linear)" strokeWidth="3" strokeDasharray="6 6" className="animate-[dashMove_2s_linear_infinite]" />
@@ -83,7 +83,7 @@ export default function CafecaFaithSlide3() {
             </div>
           </div>
 
-          {/* Right: Output/Simulation Indicator */}
+          {/* Info: (20260612 - Luphia) Right: Output/Simulation Indicator */}
           <div className="flex flex-col gap-4 z-10 relative items-center w-32">
              <div className="w-16 h-16 rounded-2xl bg-orange-50 border border-orange-200 flex items-center justify-center shadow-sm">
                 <PlayCircle className="w-8 h-8 text-orange-500" />
@@ -100,7 +100,7 @@ export default function CafecaFaithSlide3() {
         </div>
       </div>
 
-      {/* Right 1/3 Image Area */}
+      {/* Info: (20260612 - Luphia) Right 1/3 Image Area */}
       <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
          <Image
            src="/cafeca_faith/robot_vision.jpeg"

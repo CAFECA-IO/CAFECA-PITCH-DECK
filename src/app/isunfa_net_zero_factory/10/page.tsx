@@ -7,7 +7,7 @@ export default function NetZeroFactorySlide10() {
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl flex flex-col border border-slate-800 rounded-xl text-white">
 
-        {/* Background Decor */}
+        {/* Info: (20260527 - Luphia) Background Decor */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-900/20 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-900/20 rounded-full blur-3xl pointer-events-none translate-y-1/2 -translate-x-1/3" />
 
@@ -24,7 +24,7 @@ export default function NetZeroFactorySlide10() {
 
           <div className="flex-1 flex gap-5 mt-2 relative z-10">
             
-            {/* HSP */}
+            {/* Info: (20260527 - Luphia) HSP */}
             <div className="flex-1 bg-slate-800/60 border border-slate-700/80 p-5 rounded-2xl flex flex-col relative overflow-hidden group hover:bg-slate-800 transition-colors shadow-lg">
               <div className="absolute top-0 right-0 w-24 h-24 bg-sky-500/10 rounded-bl-full blur-2xl group-hover:bg-sky-500/20 transition-colors" />
               <div className="flex items-center gap-3 mb-4">
@@ -52,7 +52,7 @@ export default function NetZeroFactorySlide10() {
               </div>
             </div>
 
-            {/* CTSP */}
+            {/* Info: (20260527 - Luphia) CTSP */}
             <div className="flex-1 bg-slate-800/60 border border-slate-700/80 p-5 rounded-2xl flex flex-col relative overflow-hidden group hover:bg-slate-800 transition-colors shadow-lg">
               <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/10 rounded-bl-full blur-2xl group-hover:bg-emerald-500/20 transition-colors" />
               <div className="flex items-center gap-3 mb-4">
@@ -80,7 +80,7 @@ export default function NetZeroFactorySlide10() {
               </div>
             </div>
 
-            {/* STSP */}
+            {/* Info: (20260527 - Luphia) STSP */}
             <div className="flex-1 bg-slate-800/60 border border-slate-700/80 p-5 rounded-2xl flex flex-col relative overflow-hidden group hover:bg-slate-800 transition-colors shadow-lg">
               <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/10 rounded-bl-full blur-2xl group-hover:bg-amber-500/20 transition-colors" />
               <div className="flex items-center gap-3 mb-4">

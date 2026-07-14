@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Slide1() {
   return (
     <div className="w-full h-full bg-slate-50 text-slate-800 flex items-center justify-center relative overflow-hidden p-24">
-      {/* Background Decor */}
+      {/* Info: (20260709 - Luphia) Background Decor */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-600/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
       

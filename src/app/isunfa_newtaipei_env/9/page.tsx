@@ -1,6 +1,6 @@
 'use client';
 
-// No lucide-react imports needed
+// Info: (20260505 - Luphia) No lucide-react imports needed
 
 export default function iSunFASlide9() {
   return (
@@ -24,10 +24,10 @@ export default function iSunFASlide9() {
             <div className="h-1 w-32 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mx-auto mt-6" />
           </div>
 
-          {/* Implementation Phases Grid */}
+          {/* Info: (20260505 - Luphia) Implementation Phases Grid */}
           <div className="grid grid-cols-4 gap-6 flex-1 items-stretch w-full">
             
-            {/* Phase 1 */}
+            {/* Info: (20260505 - Luphia) Phase 1 */}
             <div className="group relative bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 p-8 rounded-3xl backdrop-blur-xl flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2">
               <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6 text-orange-400 font-black text-2xl border border-orange-500/30 group-hover:scale-110 transition-transform">
                 01
@@ -39,7 +39,7 @@ export default function iSunFASlide9() {
               </p>
             </div>
 
-            {/* Phase 2 */}
+            {/* Info: (20260505 - Luphia) Phase 2 */}
             <div className="group relative bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 p-8 rounded-3xl backdrop-blur-xl flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2">
               <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6 text-orange-400 font-black text-2xl border border-orange-500/30 group-hover:scale-110 transition-transform">
                 02
@@ -51,7 +51,7 @@ export default function iSunFASlide9() {
               </p>
             </div>
 
-            {/* Phase 3 */}
+            {/* Info: (20260505 - Luphia) Phase 3 */}
             <div className="group relative bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 p-8 rounded-3xl backdrop-blur-xl flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2">
               <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6 text-orange-400 font-black text-2xl border border-orange-500/30 group-hover:scale-110 transition-transform">
                 03
@@ -63,7 +63,7 @@ export default function iSunFASlide9() {
               </p>
             </div>
 
-            {/* Phase 4 */}
+            {/* Info: (20260505 - Luphia) Phase 4 */}
             <div className="group relative bg-orange-950/30 border border-orange-500/50 p-8 rounded-3xl backdrop-blur-xl shadow-[0_0_20px_rgba(249,115,22,0.15)] flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 blur-2xl rounded-full" />
               <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mb-6 text-orange-400 font-black text-2xl border border-orange-500/50 group-hover:scale-110 transition-transform z-10">

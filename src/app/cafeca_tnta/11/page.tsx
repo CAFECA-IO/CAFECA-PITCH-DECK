@@ -7,13 +7,13 @@ export default function CafecaIsunfaSlide11() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Elements */}
+      {/* Info: (20260609 - Luphia) Background Elements */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-emerald-500 rounded-full filter blur-[150px]"></div>
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-sky-500 rounded-full filter blur-[150px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260609 - Luphia) Header */}
       <div className="relative z-10 w-full px-16 pt-10 pb-2 flex justify-between items-center">
         <div>
           <div className="flex items-center gap-4 mb-2">
@@ -31,13 +31,13 @@ export default function CafecaIsunfaSlide11() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260609 - Luphia) Content */}
       <div className="relative z-10 flex-1 px-16 pb-12 flex items-center justify-center">
         <div className="grid grid-cols-2 gap-8 w-full max-w-5xl">
 
-          {/* Award 1: 2025 AI 新創地圖年度之星 */}
+          {/* Info: (20260609 - Luphia) Award 1: 2025 AI 新創地圖年度之星 */}
           <div className="bg-slate-950/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-800/80 flex flex-col justify-between hover:border-emerald-500/30 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.4)] relative group overflow-hidden min-h-[320px]">
-            {/* Ambient Glow */}
+            {/* Info: (20260609 - Luphia) Ambient Glow */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full filter blur-xl group-hover:bg-emerald-500/10 transition-all duration-300"></div>
             
             <div className="flex items-start justify-between mb-6">
@@ -60,9 +60,9 @@ export default function CafecaIsunfaSlide11() {
             </div>
           </div>
 
-          {/* Award 2: 2018 ICBC 區塊鏈最佳論文首獎 */}
+          {/* Info: (20260609 - Luphia) Award 2: 2018 ICBC 區塊鏈最佳論文首獎 */}
           <div className="bg-slate-950/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-800/80 flex flex-col justify-between hover:border-sky-500/30 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.4)] relative group overflow-hidden min-h-[320px]">
-            {/* Ambient Glow */}
+            {/* Info: (20260609 - Luphia) Ambient Glow */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-sky-500/5 rounded-full filter blur-xl group-hover:bg-sky-500/10 transition-all duration-300"></div>
 
             <div className="flex items-start justify-between mb-6">
@@ -88,7 +88,7 @@ export default function CafecaIsunfaSlide11() {
         </div>
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260609 - Luphia) Footer */}
       <div className="absolute bottom-4 left-0 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium">
         <div>Slide 11 / 12</div>
         <div className="flex gap-2 items-center">

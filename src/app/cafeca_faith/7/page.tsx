@@ -7,7 +7,7 @@ export default function CafecaFaithSlide7() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
 
-      {/* Background Gradients */}
+      {/* Info: (20260612 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute left-1/4 top-10 w-[600px] h-[600px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute left-10 bottom-10 w-[400px] h-[400px] bg-orange-50 rounded-full filter blur-[120px]"></div>
@@ -18,10 +18,10 @@ export default function CafecaFaithSlide7() {
         <span className="text-xs font-mono text-blue-600 uppercase tracking-widest">Actionable Impact & ROI</span>
       </div>
 
-      {/* Content Container (Left 2/3) */}
+      {/* Info: (20260612 - Luphia) Content Container (Left 2/3) */}
       <div className="z-10 w-2/3 h-full flex flex-col justify-center px-16 relative">
 
-        {/* Top Header Area */}
+        {/* Info: (20260612 - Luphia) Top Header Area */}
         <div className="space-y-4 mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100">
             <Target className="w-5 h-5 text-blue-600" />
@@ -35,10 +35,10 @@ export default function CafecaFaithSlide7() {
           <p className="text-sm text-slate-400 font-mono mt-2">* 數據依製造產業類型與工廠實際狀況而有所不同</p>
         </div>
 
-        {/* 3 Pillars */}
+        {/* Info: (20260612 - Luphia) 3 Pillars */}
         <div className="flex flex-col gap-6 w-full pr-8">
 
-          {/* Pillar 1 */}
+          {/* Info: (20260612 - Luphia) Pillar 1 */}
           <div className="bg-white border border-slate-200 shadow-sm p-6 rounded-2xl flex items-center gap-6 hover:shadow-md transition-shadow group relative overflow-hidden">
             <div className="absolute left-0 top-0 w-1 h-full bg-orange-400"></div>
             <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-orange-500 transition-colors">
@@ -52,7 +52,7 @@ export default function CafecaFaithSlide7() {
             </div>
           </div>
 
-          {/* Pillar 2 */}
+          {/* Info: (20260612 - Luphia) Pillar 2 */}
           <div className="bg-white border border-slate-200 shadow-sm p-6 rounded-2xl flex items-center gap-6 hover:shadow-md transition-shadow group relative overflow-hidden">
             <div className="absolute left-0 top-0 w-1 h-full bg-blue-400"></div>
             <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-500 transition-colors">
@@ -66,7 +66,7 @@ export default function CafecaFaithSlide7() {
             </div>
           </div>
 
-          {/* Pillar 3 */}
+          {/* Info: (20260612 - Luphia) Pillar 3 */}
           <div className="bg-white border border-slate-200 shadow-sm p-6 rounded-2xl flex items-center gap-6 hover:shadow-md transition-shadow group relative overflow-hidden">
             <div className="absolute left-0 top-0 w-1 h-full bg-green-400"></div>
             <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-green-500 transition-colors">
@@ -84,7 +84,7 @@ export default function CafecaFaithSlide7() {
 
       </div>
 
-      {/* Right 1/3 Image Area */}
+      {/* Info: (20260612 - Luphia) Right 1/3 Image Area */}
       <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
         <Image
           src="/cafeca_faith/robot_impact.jpeg"

@@ -7,13 +7,13 @@ export default function Slide14() {
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col border border-neutral-800">
         
-        {/* Dynamic Background */}
+        {/* Info: (20260527 - Luphia) Dynamic Background */}
         <div className="absolute inset-0 z-0 opacity-40">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/4"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cyan-900/10 rounded-full blur-[100px] translate-y-1/4 -translate-x-1/4"></div>
         </div>
 
-        {/* Header Section */}
+        {/* Info: (20260527 - Luphia) Header Section */}
         <div className="w-full pt-16 px-20 relative z-10 flex justify-between items-end">
           <div>
             <div className="inline-block px-4 py-1 rounded-full border border-blue-500/30 text-blue-400 text-sm tracking-widest mb-6 w-max bg-blue-500/10 backdrop-blur-sm">
@@ -31,10 +31,10 @@ export default function Slide14() {
           </div>
         </div>
 
-        {/* Content Container */}
+        {/* Info: (20260527 - Luphia) Content Container */}
         <div className="flex-1 w-full px-20 pb-16 pt-12 relative z-10 flex gap-8">
           
-          {/* Left Column: Descriptions */}
+          {/* Info: (20260527 - Luphia) Left Column: Descriptions */}
           <div className="w-[45%] flex flex-col justify-center space-y-8">
             <div className="bg-neutral-900/60 border border-neutral-800 p-6 rounded-2xl backdrop-blur-sm hover:border-blue-500/40 transition-colors group">
               <div className="flex items-center gap-4 mb-3">
@@ -61,7 +61,7 @@ export default function Slide14() {
             </div>
           </div>
 
-          {/* Right Column: Dashboard Visual */}
+          {/* Info: (20260527 - Luphia) Right Column: Dashboard Visual */}
           <div className="w-[55%] bg-black/40 border border-blue-900/30 rounded-3xl p-8 relative flex flex-col justify-center">
             <div className="absolute top-4 right-6 flex gap-2">
               <div className="w-2 h-2 rounded-full bg-neutral-700"></div>
@@ -118,7 +118,7 @@ export default function Slide14() {
 
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 right-20 text-neutral-600 text-xs tracking-[0.2em] uppercase z-20 pointer-events-none">
           卡菲卡金融科技股份有限公司 (52650861)
         </div>

@@ -26,7 +26,7 @@ export default function TaitraSlide17() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-2 gap-12 mt-4 pb-12 items-center">
-          {/* Left Column: The Hallucination */}
+          {/* Info: (20260527 - Luphia) Left Column: The Hallucination */}
           <div className="bg-rose-950/20 border border-rose-900/50 p-8 rounded-2xl relative h-[360px] flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-bold text-rose-300 flex items-center gap-2 mb-4">
@@ -42,7 +42,7 @@ export default function TaitraSlide17() {
             </div>
           </div>
 
-          {/* Right Column: The Defense */}
+          {/* Info: (20260527 - Luphia) Right Column: The Defense */}
           <div className="bg-slate-800/40 border border-slate-700/50 p-8 rounded-2xl relative h-[360px] flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-bold text-indigo-300 flex items-center gap-2 mb-4">

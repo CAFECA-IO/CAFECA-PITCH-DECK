@@ -7,13 +7,13 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Gradients */}
+      {/* Info: (20260610 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute left-1/4 top-1/4 w-[600px] h-[600px] bg-emerald-600 rounded-full filter blur-[150px] animate-pulse"></div>
         <div className="absolute right-10 bottom-10 w-[400px] h-[400px] bg-sky-500 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="px-16 pt-12 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -29,10 +29,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="flex-1 px-16 flex items-center justify-between relative z-10 gap-10">
 
-        {/* Left Column: The Edge AI Metric & Business Model */}
+        {/* Info: (20260610 - Luphia) Left Column: The Edge AI Metric & Business Model */}
         <div className="w-[45%] flex flex-col justify-center gap-4">
           <div className="bg-gradient-to-br from-emerald-950 to-slate-950 border border-emerald-500/30 p-6 rounded-[2rem] shadow-xl relative overflow-hidden">
             <div className="absolute -right-6 -bottom-6 text-emerald-500/5">
@@ -79,7 +79,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
           </div>
         </div>
 
-        {/* Right Card: Cost Comparisons with Gantt Chart */}
+        {/* Info: (20260610 - Luphia) Right Card: Cost Comparisons with Gantt Chart */}
         <div className="w-[55%] space-y-4">
           <div>
             <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2 mb-1">
@@ -90,7 +90,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
           </div>
 
           <div className="bg-slate-950/60 border border-slate-800/80 p-6 rounded-[2rem] overflow-hidden relative">
-            {/* Grid Lines Background */}
+            {/* Info: (20260610 - Luphia) Grid Lines Background */}
             <div className="absolute top-14 bottom-6 left-[30%] right-6 flex">
               <div className="flex-1 border-l border-slate-800/50"></div>
               <div className="flex-1 border-l border-slate-800/50"></div>
@@ -98,7 +98,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
               <div className="border-l border-slate-800/50"></div>
             </div>
 
-            {/* Header */}
+            {/* Info: (20260610 - Luphia) Header */}
             <div className="flex text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-5 border-b border-slate-800 pb-2 relative z-10">
               <div className="w-[30%]">執行階段 (Phases)</div>
               <div className="flex-1 flex text-center">
@@ -108,10 +108,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
               </div>
             </div>
 
-            {/* Rows */}
+            {/* Info: (20260610 - Luphia) Rows */}
             <div className="space-y-6 relative z-10">
               
-              {/* Row 1 */}
+              {/* Info: (20260610 - Luphia) Row 1 */}
               <div className="flex items-center">
                 <div className="w-[30%] pr-4">
                   <h4 className="text-[11px] font-bold text-slate-200">數據對接與清洗</h4>
@@ -124,7 +124,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
                 </div>
               </div>
 
-              {/* Row 2 */}
+              {/* Info: (20260610 - Luphia) Row 2 */}
               <div className="flex items-center">
                 <div className="w-[30%] pr-4">
                   <h4 className="text-[11px] font-bold text-slate-200">AI 模型訓練微調</h4>
@@ -137,7 +137,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
                 </div>
               </div>
 
-              {/* Row 3 */}
+              {/* Info: (20260610 - Luphia) Row 3 */}
               <div className="flex items-center">
                 <div className="w-[30%] pr-4">
                   <h4 className="text-[11px] font-bold text-slate-200">系統上線與驗證</h4>
@@ -152,7 +152,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
             </div>
           </div>
 
-          {/* Secure Edge Highlight */}
+          {/* Info: (20260610 - Luphia) Secure Edge Highlight */}
           <div className="bg-emerald-950/30 border border-emerald-500/10 px-5 py-3.5 rounded-2xl flex items-start gap-4">
             <div className="p-2.5 bg-emerald-500 text-slate-950 rounded-xl">
               <ShieldAlert size={20} />
@@ -168,7 +168,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide12() {
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10">
         <div>Slide 12 / 17</div>
         <div className="flex gap-2 items-center">

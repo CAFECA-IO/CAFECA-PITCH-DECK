@@ -14,7 +14,7 @@ export default function TITASlide6() {
         </div>
 
         <div className="flex-1 px-16 z-10 flex mt-12 gap-12 pb-16">
-          {/* Left: The Ideal State */}
+          {/* Info: (20260519 - Luphia) Left: The Ideal State */}
           <div className="w-1/2 flex flex-col">
             <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 flex-1">
               <div className="flex items-center gap-4 mb-6">
@@ -40,7 +40,7 @@ export default function TITASlide6() {
             </div>
           </div>
 
-          {/* Right: The Hallucination Problem */}
+          {/* Info: (20260519 - Luphia) Right: The Hallucination Problem */}
           <div className="w-1/2 flex flex-col">
             <div className="bg-rose-950/30 border border-rose-900/50 rounded-2xl p-8 flex-1 relative overflow-hidden">
               <div className="absolute top-0 right-0 p-4 opacity-10">

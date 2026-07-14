@@ -22,7 +22,7 @@ export default function Slide12() {
              </div>
           </div>
           
-          {/* Animated rings */}
+          {/* Info: (20260709 - Luphia) Animated rings */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
              <motion.div 
                animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}

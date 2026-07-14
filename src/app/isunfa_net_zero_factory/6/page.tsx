@@ -104,7 +104,7 @@ export default function NetZeroFactorySlide6() {
     <div className="min-h-screen w-full bg-white flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-100 rounded-xl">
 
-        {/* Subtle Background Decor */}
+        {/* Info: (20260527 - Luphia) Subtle Background Decor */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-50/30 rounded-full blur-3xl pointer-events-none translate-y-1/2 -translate-x-1/3" />
 
@@ -142,12 +142,12 @@ export default function NetZeroFactorySlide6() {
                   </marker>
                 </defs>
 
-                {/* CT Lines */}
+                {/* Info: (20260527 - Luphia) CT Lines */}
                 <CTLine end={nodes.R1} />
                 <CTLine end={nodes.R2} />
                 <CTLine end={nodes.R3} />
 
-                {/* Perimeter Flow Lines */}
+                {/* Info: (20260527 - Luphia) Perimeter Flow Lines */}
                 <FlowLine start={nodes.F1} end={nodes.R1} type="waste" />
                 <FlowLine start={nodes.R1} end={nodes.F2} type="material" />
                 <FlowLine start={nodes.F2} end={nodes.R2} type="waste" />
@@ -157,7 +157,7 @@ export default function NetZeroFactorySlide6() {
                 <FlowLine start={nodes.R3} end={nodes.F5} type="material" />
               </svg>
 
-              {/* Central CT Node */}
+              {/* Info: (20260527 - Luphia) Central CT Node */}
               <div className="absolute group z-30" style={{ left: nodes.CT.x - 40, top: nodes.CT.y - 40, width: 80, height: 80 }}>
                 <div className="w-full h-full bg-amber-500 text-white rounded-full flex items-center justify-center shadow-xl border-4 border-amber-100 group-hover:scale-105 transition-transform relative z-10">
                   <ShieldCheck size={36} className="stroke-[2]" />
@@ -169,7 +169,7 @@ export default function NetZeroFactorySlide6() {
                 </div>
               </div>
 
-              {/* Render Nodes */}
+              {/* Info: (20260527 - Luphia) Render Nodes */}
               {renderFactory(nodes.F1)}
               {renderRefinery(nodes.R1)}
               {renderFactory(nodes.F2)}
@@ -183,7 +183,7 @@ export default function NetZeroFactorySlide6() {
 
           </div>
 
-          {/* Bottom Trust Note */}
+          {/* Info: (20260527 - Luphia) Bottom Trust Note */}
           <div className="bg-emerald-50 text-emerald-900 p-3 rounded-xl border border-emerald-250 flex items-center gap-3 z-20">
             <span className="text-xl shrink-0">🛡️</span>
             <div className="flex-1">

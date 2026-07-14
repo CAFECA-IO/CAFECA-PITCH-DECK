@@ -6,10 +6,10 @@ export default function TaitraSlide2() {
   return (
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
-        {/* Background gradient blob */}
+        {/* Info: (20260527 - Luphia) Background gradient blob */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
 
-        {/* Slide Header */}
+        {/* Info: (20260527 - Luphia) Slide Header */}
         <div className="px-16 pt-16 z-10">
           <span className="text-emerald-600 font-bold tracking-[0.2em] text-sm uppercase bg-emerald-50 px-4 py-1.5 rounded-full border border-emerald-100">
             What You Will Learn
@@ -22,10 +22,10 @@ export default function TaitraSlide2() {
           </p>
         </div>
 
-        {/* Content Body: 3-column learning outcomes */}
+        {/* Info: (20260527 - Luphia) Content Body: 3-column learning outcomes */}
         <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-6 pb-12 items-center">
 
-          {/* Card 1: ISO 14067 Compliance */}
+          {/* Info: (20260527 - Luphia) Card 1: ISO 14067 Compliance */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden h-[380px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-emerald-500" />
             <div>
@@ -62,7 +62,7 @@ export default function TaitraSlide2() {
             </div>
           </div>
 
-          {/* Card 2: Autonomous AI Agents */}
+          {/* Info: (20260527 - Luphia) Card 2: Autonomous AI Agents */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden h-[380px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-indigo-500" />
             <div>
@@ -99,7 +99,7 @@ export default function TaitraSlide2() {
             </div>
           </div>
 
-          {/* Card 3: AI Hallucination Defense */}
+          {/* Info: (20260527 - Luphia) Card 3: AI Hallucination Defense */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden h-[380px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-sky-500" />
             <div>
@@ -138,7 +138,7 @@ export default function TaitraSlide2() {
 
         </div>
 
-        {/* Footer */}
+        {/* Info: (20260527 - Luphia) Footer */}
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium z-10">
           <div>TAITRA</div>
           <div className="font-mono">#02</div>

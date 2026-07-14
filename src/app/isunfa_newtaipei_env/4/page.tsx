@@ -26,7 +26,7 @@ export default function iSunFASlide4() {
           {/* Info: (20260212 - Luphia) 3 Columns Grid */}
           <div className="grid grid-cols-3 gap-8 flex-1">
 
-            {/* Feature 1 */}
+            {/* Info: (20260505 - Luphia) Feature 1 */}
             <div className="group relative bg-neutral-900/40 border border-white/10 p-8 rounded-3xl backdrop-blur-md hover:border-orange-500/50 transition-all duration-500 flex flex-col items-center text-center">
               <div className="w-20 h-20 bg-orange-500/10 rounded-2xl flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform mb-6">
                 <Database className="text-orange-400 w-10 h-10" />
@@ -37,7 +37,7 @@ export default function iSunFASlide4() {
               </p>
             </div>
 
-            {/* Feature 2 */}
+            {/* Info: (20260505 - Luphia) Feature 2 */}
             <div className="group relative bg-neutral-900/40 border border-white/10 p-8 rounded-3xl backdrop-blur-md hover:border-orange-500/50 transition-all duration-500 flex flex-col items-center text-center">
               <div className="w-20 h-20 bg-orange-500/10 rounded-2xl flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform mb-6">
                 <Users className="text-orange-400 w-10 h-10" />
@@ -48,7 +48,7 @@ export default function iSunFASlide4() {
               </p>
             </div>
 
-            {/* Feature 3 */}
+            {/* Info: (20260505 - Luphia) Feature 3 */}
             <div className="group relative bg-neutral-900/40 border border-white/10 p-8 rounded-3xl backdrop-blur-md hover:border-orange-500/50 transition-all duration-500 flex flex-col items-center text-center">
               <div className="w-20 h-20 bg-orange-500/10 rounded-2xl flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform mb-6">
                 <Coins className="text-orange-400 w-10 h-10" />

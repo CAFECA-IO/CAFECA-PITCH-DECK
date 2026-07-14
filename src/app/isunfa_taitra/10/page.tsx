@@ -21,7 +21,7 @@ export default function TaitraSlide8() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-4 pb-12 items-center">
-          {/* Card 1: Functional Unit */}
+          {/* Info: (20260527 - Luphia) Card 1: Functional Unit */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-sky-500" />
             <div>
@@ -38,7 +38,7 @@ export default function TaitraSlide8() {
             </div>
           </div>
 
-          {/* Card 2: System Boundary */}
+          {/* Info: (20260527 - Luphia) Card 2: System Boundary */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-emerald-500" />
             <div>
@@ -58,7 +58,7 @@ export default function TaitraSlide8() {
             </div>
           </div>
 
-          {/* Card 3: Cut-off Criteria */}
+          {/* Info: (20260527 - Luphia) Card 3: Cut-off Criteria */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-rose-500" />
             <div>

@@ -8,7 +8,7 @@ export default function iSunFASlide10() {
     <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800 text-white">
 
-        {/* Background: Subtle Tech Glow & Grid */}
+        {/* Info: (20260505 - Luphia) Background: Subtle Tech Glow & Grid */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full" />
           <div className="absolute bottom-1/4 right-1/4 w-[40%] h-[40%] bg-orange-900/10 blur-[120px] rounded-full" />
@@ -17,7 +17,7 @@ export default function iSunFASlide10() {
 
         <div className="z-10 w-full max-w-6xl px-12 flex flex-col h-full pt-10 pb-20">
 
-          {/* Title Section */}
+          {/* Info: (20260505 - Luphia) Title Section */}
           <div className="mb-6 text-center space-y-2">
             <h2 className="text-5xl font-extrabold tracking-tight text-white drop-shadow-md">
               新北城市級智能治理儀表板
@@ -27,7 +27,7 @@ export default function iSunFASlide10() {
 
           <div className="flex-1 w-full max-w-5xl mx-auto flex gap-10 items-stretch mt-2">
             
-            {/* Left Column: QR Code Display */}
+            {/* Info: (20260505 - Luphia) Left Column: QR Code Display */}
             <div className="flex-1 bg-neutral-900/40 border border-neutral-800 rounded-3xl p-6 backdrop-blur-xl flex flex-col relative overflow-hidden items-center justify-center group hover:border-orange-500/50 transition-colors">
               <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-3xl rounded-full pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full pointer-events-none" />
@@ -59,7 +59,7 @@ export default function iSunFASlide10() {
               </div>
             </div>
 
-            {/* Right Column: Key Features */}
+            {/* Info: (20260505 - Luphia) Right Column: Key Features */}
             <div className="flex-1 flex flex-col justify-center gap-4">
               {[
                 {
@@ -95,7 +95,7 @@ export default function iSunFASlide10() {
           </div>
         </div>
 
-        {/* Footer */}
+        {/* Info: (20260505 - Luphia) Footer */}
         <div className="absolute bottom-6 w-full px-16 flex justify-between text-neutral-500 text-[10px] tracking-[0.2em] uppercase font-medium">
           <div>領航淨零，智算未來</div>
           <div className="flex gap-2 items-center">

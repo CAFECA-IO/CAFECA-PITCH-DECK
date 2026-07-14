@@ -54,7 +54,7 @@ export default function iSunFASlide5() {
 
             {/* Info: (20260212 - Luphia) Feature 2: All-in-One */}
             <div className="group relative bg-neutral-900/40 border border-white/10 rounded-3xl h-[400px] backdrop-blur-xl hover:border-orange-500/50 transition-all duration-500 overflow-hidden">
-              {/* Full Background Image */}
+              {/* Info: (20260701 - Luphia) Full Background Image */}
               <div className="absolute inset-0 z-0">
                 <Image
                   src="/images/hardware_lease.png"

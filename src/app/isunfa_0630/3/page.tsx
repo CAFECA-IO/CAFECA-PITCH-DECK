@@ -6,7 +6,7 @@ export default function CafecaFaithSlide3() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260629 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute -left-1/4 -bottom-1/4 w-[800px] h-[800px] bg-green-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute -right-1/4 -top-1/4 w-[800px] h-[800px] bg-orange-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
@@ -17,10 +17,10 @@ export default function CafecaFaithSlide3() {
         <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">AI Implementation SOP</span>
       </div>
 
-      {/* Content Container */}
+      {/* Info: (20260629 - Luphia) Content Container */}
       <div className="z-10 w-full max-w-6xl flex flex-col items-center px-8 relative">
         
-        {/* Top Header Area */}
+        {/* Info: (20260629 - Luphia) Top Header Area */}
         <div className="text-center space-y-4 mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-orange-200 shadow-sm mx-auto">
             <Layers className="w-5 h-5 text-orange-500" />
@@ -37,13 +37,13 @@ export default function CafecaFaithSlide3() {
           </p>
         </div>
 
-        {/* 5 Steps Stepper Container */}
+        {/* Info: (20260629 - Luphia) 5 Steps Stepper Container */}
         <div className="flex justify-between items-stretch w-full relative px-4">
           
-          {/* Connecting Line behind the icons */}
+          {/* Info: (20260629 - Luphia) Connecting Line behind the icons */}
           <div className="absolute top-[34px] left-[10%] right-[10%] h-[3px] bg-gradient-to-r from-orange-300 via-green-300 to-blue-300 rounded-full z-0 opacity-60"></div>
           
-          {/* Step 1 */}
+          {/* Info: (20260629 - Luphia) Step 1 */}
           <div className="z-10 flex flex-col items-center text-center w-[200px] group">
             <div className="w-16 h-16 rounded-full bg-white border-2 border-orange-400 flex items-center justify-center shadow-md relative group-hover:scale-105 transition-transform duration-300">
               <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center shadow">1</span>
@@ -56,7 +56,7 @@ export default function CafecaFaithSlide3() {
             </div>
           </div>
 
-          {/* Step 2 */}
+          {/* Info: (20260629 - Luphia) Step 2 */}
           <div className="z-10 flex flex-col items-center text-center w-[200px] group">
             <div className="w-16 h-16 rounded-full bg-white border-2 border-green-400 flex items-center justify-center shadow-md relative group-hover:scale-105 transition-transform duration-300">
               <span className="absolute -top-1 -right-1 bg-green-500 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center shadow">2</span>
@@ -69,7 +69,7 @@ export default function CafecaFaithSlide3() {
             </div>
           </div>
 
-          {/* Step 3 */}
+          {/* Info: (20260629 - Luphia) Step 3 */}
           <div className="z-10 flex flex-col items-center text-center w-[200px] group">
             <div className="w-16 h-16 rounded-full bg-white border-2 border-blue-400 flex items-center justify-center shadow-md relative group-hover:scale-105 transition-transform duration-300">
               <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center shadow">3</span>
@@ -82,7 +82,7 @@ export default function CafecaFaithSlide3() {
             </div>
           </div>
 
-          {/* Step 4 */}
+          {/* Info: (20260629 - Luphia) Step 4 */}
           <div className="z-10 flex flex-col items-center text-center w-[200px] group">
             <div className="w-16 h-16 rounded-full bg-white border-2 border-indigo-400 flex items-center justify-center shadow-md relative group-hover:scale-105 transition-transform duration-300">
               <span className="absolute -top-1 -right-1 bg-indigo-500 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center shadow">4</span>
@@ -95,7 +95,7 @@ export default function CafecaFaithSlide3() {
             </div>
           </div>
 
-          {/* Step 5 */}
+          {/* Info: (20260629 - Luphia) Step 5 */}
           <div className="z-10 flex flex-col items-center text-center w-[200px] group">
             <div className="w-16 h-16 rounded-full bg-white border-2 border-emerald-400 flex items-center justify-center shadow-md relative group-hover:scale-105 transition-transform duration-300">
               <span className="absolute -top-1 -right-1 bg-emerald-500 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center shadow">5</span>

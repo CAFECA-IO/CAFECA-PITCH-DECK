@@ -14,7 +14,7 @@ export default function TITASlide2() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-2 gap-12 pb-12">
-          {/* Left Column: The Context */}
+          {/* Info: (20260519 - Luphia) Left Column: The Context */}
           <div className="flex flex-col justify-center">
             <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
               <Factory className="text-slate-400" /> 企業面臨的生存危機
@@ -30,7 +30,7 @@ export default function TITASlide2() {
             </div>
           </div>
 
-          {/* Right Column: Pain Points */}
+          {/* Info: (20260519 - Luphia) Right Column: Pain Points */}
           <div className="flex flex-col justify-center space-y-6">
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4 items-start hover:shadow-md transition-shadow">
               <div className="p-3 bg-amber-100 rounded-lg text-amber-600">

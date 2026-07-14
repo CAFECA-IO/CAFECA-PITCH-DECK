@@ -7,7 +7,7 @@ export default function NetZeroFactorySlide11() {
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-slate-950 relative overflow-hidden shadow-2xl flex flex-col border border-slate-800 rounded-xl text-white">
 
-        {/* Dynamic Background */}
+        {/* Info: (20260527 - Luphia) Dynamic Background */}
         <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#34d399 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-emerald-500/20 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-500/10 rounded-full blur-[100px] pointer-events-none" />
@@ -34,7 +34,7 @@ export default function NetZeroFactorySlide11() {
           </p>
 
           <div className="flex gap-6 w-full max-w-4xl">
-            {/* Pillar 1 */}
+            {/* Info: (20260527 - Luphia) Pillar 1 */}
             <div className="flex-1 bg-slate-900/50 backdrop-blur-md border border-emerald-500/20 p-5 rounded-2xl flex flex-col items-center hover:bg-slate-800/80 transition-colors shadow-lg">
               <div className="w-10 h-10 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mb-3 border border-emerald-500/20">
                 <Globe2 size={20} />
@@ -43,7 +43,7 @@ export default function NetZeroFactorySlide11() {
               <p className="text-xs text-slate-400 text-center leading-relaxed">Closing the loop on manufacturing by entirely eliminating physical waste through infinite recycling chains.</p>
             </div>
 
-            {/* Pillar 2 */}
+            {/* Info: (20260527 - Luphia) Pillar 2 */}
             <div className="flex-1 bg-slate-900/50 backdrop-blur-md border border-teal-500/20 p-5 rounded-2xl flex flex-col items-center hover:bg-slate-800/80 transition-colors shadow-lg">
               <div className="w-10 h-10 bg-teal-500/10 text-teal-400 rounded-full flex items-center justify-center mb-3 border border-teal-500/20">
                 <Sparkles size={20} />
@@ -52,7 +52,7 @@ export default function NetZeroFactorySlide11() {
               <p className="text-xs text-slate-400 text-center leading-relaxed">Empowering nations and enterprises with a self-sufficient secondary raw material supply chain.</p>
             </div>
 
-            {/* Pillar 3 */}
+            {/* Info: (20260527 - Luphia) Pillar 3 */}
             <div className="flex-1 bg-slate-900/50 backdrop-blur-md border border-sky-500/20 p-5 rounded-2xl flex flex-col items-center hover:bg-slate-800/80 transition-colors shadow-lg">
               <div className="w-10 h-10 bg-sky-500/10 text-sky-400 rounded-full flex items-center justify-center mb-3 border border-sky-500/20">
                 <Cpu size={20} />

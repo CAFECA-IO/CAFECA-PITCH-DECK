@@ -26,7 +26,7 @@ export default function TaitraSlide19() {
         <div className="flex-1 px-16 z-10 mt-8 flex flex-col gap-6">
           <div className="flex gap-6 h-full pb-12 items-center">
             
-            {/* Left Column: List of Checks */}
+            {/* Info: (20260527 - Luphia) Left Column: List of Checks */}
             <div className="w-1/2 space-y-4">
               <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex gap-3 items-start">
                 <CheckSquare className="text-emerald-500 flex-shrink-0 mt-1" size={20} />
@@ -49,7 +49,7 @@ export default function TaitraSlide19() {
               </div>
             </div>
 
-            {/* Right Column: Retry Loop */}
+            {/* Info: (20260527 - Luphia) Right Column: Retry Loop */}
             <div className="w-1/2 bg-slate-900 border border-slate-800 rounded-2xl p-8 text-white shadow-xl h-[340px] flex flex-col justify-between">
               <div className="flex items-center gap-3 text-amber-400">
                 <RotateCcw className="animate-spin-slow" size={24} />

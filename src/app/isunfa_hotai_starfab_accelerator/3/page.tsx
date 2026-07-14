@@ -7,13 +7,13 @@ export default function IsunfaHotaiStarfabAcceleratorSlide3() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
-      {/* Background Emerald Glowing Effect */}
+      {/* Info: (20260610 - Luphia) Background Emerald Glowing Effect */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute right-1/4 bottom-1/4 w-[600px] h-[600px] bg-emerald-600 rounded-full filter blur-[150px] animate-pulse"></div>
         <div className="absolute left-10 top-10 w-[400px] h-[400px] bg-sky-500 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="px-16 pt-12 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -29,10 +29,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide3() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="flex-1 px-16 flex items-center justify-between relative z-10 gap-10">
         
-        {/* Left Side: Formula Card */}
+        {/* Info: (20260610 - Luphia) Left Side: Formula Card */}
         <div className="w-1/2 flex flex-col justify-center">
           <div className="bg-slate-950/60 backdrop-blur-md border border-emerald-500/20 p-10 rounded-[2rem] text-center relative overflow-hidden group">
             <div className="absolute -left-10 -bottom-10 text-emerald-500/5 group-hover:scale-110 transition-transform duration-500">
@@ -43,7 +43,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide3() {
               數位產品護照增值模型
             </div>
             
-            {/* The Big Equation */}
+            {/* Info: (20260610 - Luphia) The Big Equation */}
             <div className="space-y-4">
               <div className="text-6xl font-black text-emerald-400 font-mono tracking-tight">
                 -30% 折舊誤差
@@ -60,7 +60,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide3() {
           </div>
         </div>
 
-        {/* Right Side: What this means for Industry */}
+        {/* Info: (20260610 - Luphia) Right Side: What this means for Industry */}
         <div className="w-1/2 space-y-6">
           <div className="bg-slate-950/40 backdrop-blur-md border border-slate-800 p-6 rounded-2xl flex gap-4 items-start">
             <div className="p-3 bg-emerald-950/50 border border-emerald-500/20 text-emerald-400 rounded-xl">
@@ -89,7 +89,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide3() {
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10">
         <div>Slide 03 / 17</div>
         <div className="flex gap-2 items-center">

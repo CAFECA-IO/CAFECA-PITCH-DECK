@@ -7,7 +7,7 @@ export default function CafecaFintechSlide4() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-gray-200">
 
-      {/* Info: Background Gradients */}
+      {/* Info: (20260510 - Luphia) Background Gradients */}
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl pointer-events-none"
         aria-hidden="true"
@@ -114,7 +114,7 @@ export default function CafecaFintechSlide4() {
 
       </div>
 
-      {/* Info: Footer */}
+      {/* Info: (20260510 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-gray-400 text-xs tracking-widest uppercase font-medium">
         <div>Confidential</div>
         <div className="flex gap-2 items-center">

@@ -7,20 +7,20 @@ export default function IsunfaCnSlide1() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-900 text-white font-sans">
 
-      {/* Background Gradients representing Sunshine (Gold/Amber) and Green (Emerald) */}
+      {/* Info: (20260610 - Luphia) Background Gradients representing Sunshine (Gold/Amber) and Green (Emerald) */}
       <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
         <div className="absolute -left-10 -top-10 w-96 h-96 bg-amber-500 rounded-full mix-blend-screen filter blur-[120px] animate-pulse"></div>
         <div className="absolute -right-10 -bottom-10 w-96 h-96 bg-orange-500 rounded-full mix-blend-screen filter blur-[120px] animate-pulse"></div>
         <div className="absolute left-1/3 top-1/4 w-[500px] h-[500px] bg-orange-600/10 rounded-full filter blur-[100px]"></div>
       </div>
 
-      {/* Grid Pattern Overlay */}
+      {/* Info: (20260610 - Luphia) Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#022c22_1px,transparent_1px),linear-gradient(to_bottom,#022c22_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 z-0" />
 
-      {/* Content Container */}
+      {/* Info: (20260610 - Luphia) Content Container */}
       <div className="z-10 text-center space-y-8 max-w-4xl px-8">
 
-        {/* Brand Area with Official Logo */}
+        {/* Info: (20260610 - Luphia) Brand Area with Official Logo */}
         <div className="flex flex-col items-center justify-center gap-4">
           <Image
             src="/isunfa_logo.svg"
@@ -35,7 +35,7 @@ export default function IsunfaCnSlide1() {
           </span>
         </div>
 
-        {/* Main Title */}
+        {/* Info: (20260610 - Luphia) Main Title */}
         <div className="space-y-4">
           <h1 className="text-7xl font-black tracking-tight leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-orange-500 drop-shadow-md">
@@ -47,7 +47,7 @@ export default function IsunfaCnSlide1() {
           </p>
         </div>
 
-        {/* Divider Deco */}
+        {/* Info: (20260610 - Luphia) Divider Deco */}
         <div className="flex items-center justify-center gap-4 py-4">
           <div className="h-px w-24 bg-gradient-to-r from-transparent to-emerald-500/50" />
           <Leaf className="w-5 h-5 text-emerald-400 animate-bounce" />
@@ -58,7 +58,7 @@ export default function IsunfaCnSlide1() {
 
       </div>
 
-      {/* Footer / Deco */}
+      {/* Info: (20260610 - Luphia) Footer / Deco */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10">
         <div>Confidential Presentation</div>
         <div className="flex gap-2 items-center">

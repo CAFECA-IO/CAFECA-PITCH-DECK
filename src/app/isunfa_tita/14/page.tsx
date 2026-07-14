@@ -8,13 +8,13 @@ export default function TITASlide14() {
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans text-slate-800">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 rounded-xl">
 
-        {/* Decorative Background Elements */}
+        {/* Info: (20260519 - Luphia) Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-emerald-100 to-transparent rounded-full blur-3xl pointer-events-none -translate-y-1/4 translate-x-1/4" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-sky-100 to-transparent rounded-full blur-3xl pointer-events-none translate-y-1/4 -translate-x-1/4" />
 
         <div className="flex-1 flex px-24 z-10 items-center justify-between pb-12">
 
-          {/* Left Content Area */}
+          {/* Info: (20260519 - Luphia) Left Content Area */}
           <div className="w-1/2 flex flex-col gap-8">
             <div>
               <span className="text-emerald-600 font-bold tracking-[0.2em] text-sm uppercase bg-emerald-50 px-6 py-2 rounded-full border border-emerald-100 shadow-sm inline-block mb-8">
@@ -47,10 +47,10 @@ export default function TITASlide14() {
             </div>
           </div>
 
-          {/* Right Content Area (QR Code) */}
+          {/* Info: (20260519 - Luphia) Right Content Area (QR Code) */}
           <div className="w-1/2 flex justify-center items-center">
             <div className="relative group">
-              {/* Animated glow effect */}
+              {/* Info: (20260519 - Luphia) Animated glow effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-sky-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
 
               <div className="relative bg-white p-12 rounded-[2rem] shadow-2xl border border-slate-100 flex flex-col items-center transform transition-transform hover:-translate-y-2 duration-300">
@@ -87,7 +87,7 @@ export default function TITASlide14() {
           <div className="font-mono">#14</div>
         </div>
 
-        {/* Add custom keyframes for the horizontal bounce animation */}
+        {/* Info: (20260519 - Luphia) Add custom keyframes for the horizontal bounce animation */}
         <style dangerouslySetInnerHTML={{
           __html: `
           @keyframes bounce-x {

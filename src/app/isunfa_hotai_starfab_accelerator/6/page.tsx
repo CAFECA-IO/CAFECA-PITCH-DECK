@@ -7,13 +7,13 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Elements */}
+      {/* Info: (20260610 - Luphia) Background Elements */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-emerald-500 rounded-full filter blur-[150px]"></div>
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-sky-500 rounded-full filter blur-[150px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="relative z-10 w-full px-16 pt-10 pb-2 flex justify-between items-center">
         <div>
           <div className="flex items-center gap-4 mb-2">
@@ -40,10 +40,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="relative z-10 flex-1 px-16 pb-10 flex items-center justify-between gap-12">
         
-        {/* Left Side: Product Details */}
+        {/* Info: (20260610 - Luphia) Left Side: Product Details */}
         <div className="w-[50%] flex flex-col gap-6">
           <div className="space-y-2">
             <h2 className="text-2xl font-bold text-slate-100">零負擔的無紙化第一步</h2>
@@ -53,7 +53,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
           </div>
 
           <div className="space-y-4">
-            {/* Feature 1 */}
+            {/* Info: (20260610 - Luphia) Feature 1 */}
             <div className="flex gap-4 items-start">
               <div className="bg-emerald-950/50 p-2 rounded-xl text-emerald-400 border border-emerald-500/10 mt-0.5">
                 <Scan size={18} />
@@ -66,7 +66,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
               </div>
             </div>
 
-            {/* Feature 2 */}
+            {/* Info: (20260610 - Luphia) Feature 2 */}
             <div className="flex gap-4 items-start">
               <div className="bg-sky-950/50 p-2 rounded-xl text-sky-400 border border-sky-500/10 mt-0.5">
                 <CheckCircle size={18} />
@@ -79,7 +79,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
               </div>
             </div>
 
-            {/* Feature 3 */}
+            {/* Info: (20260610 - Luphia) Feature 3 */}
             <div className="flex gap-4 items-start">
               <div className="bg-indigo-950/50 p-2 rounded-xl text-indigo-400 border border-indigo-500/10 mt-0.5">
                 <RefreshCw size={18} />
@@ -94,19 +94,19 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
           </div>
         </div>
 
-        {/* Right Side: Phone Viewfinder Mockup */}
+        {/* Info: (20260610 - Luphia) Right Side: Phone Viewfinder Mockup */}
         <div className="w-[50%] flex justify-center items-center relative scale-[0.85] transform-gpu">
           
-          {/* Phone Body */}
+          {/* Info: (20260610 - Luphia) Phone Body */}
           <div className="w-[300px] h-[600px] bg-slate-900 rounded-[48px] border-[12px] border-slate-800 relative shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8),_inset_0_0_0_2px_rgba(255,255,255,0.1)] overflow-visible flex flex-col ring-2 ring-slate-900 z-10">
             
-            {/* Side Buttons */}
+            {/* Info: (20260610 - Luphia) Side Buttons */}
             <div className="absolute -left-[14px] top-[120px] w-[2px] h-[24px] bg-slate-700 rounded-l-sm"></div>
             <div className="absolute -left-[14px] top-[160px] w-[2px] h-[48px] bg-slate-700 rounded-l-sm"></div>
             <div className="absolute -left-[14px] top-[220px] w-[2px] h-[48px] bg-slate-700 rounded-l-sm"></div>
             <div className="absolute -right-[14px] top-[170px] w-[2px] h-[72px] bg-slate-700 rounded-r-sm"></div>
 
-            {/* Dynamic Island / Notch */}
+            {/* Info: (20260610 - Luphia) Dynamic Island / Notch */}
             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-30 flex items-center justify-between px-2 shadow-sm">
               <div className="w-2.5 h-2.5 bg-[#1a1a2e] rounded-full flex items-center justify-center shadow-inner">
                  <div className="w-1 h-1 bg-blue-900/60 rounded-full"></div>
@@ -114,7 +114,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
               <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse opacity-80"></div>
             </div>
 
-            {/* Status bar */}
+            {/* Info: (20260610 - Luphia) Status bar */}
             <div className="flex justify-between items-center px-6 pt-3 pb-2 text-[11px] text-white font-medium z-20 absolute top-0 w-full bg-gradient-to-b from-black/60 to-transparent">
               <span>10:09</span>
               <div className="flex gap-1.5 items-center">
@@ -132,16 +132,16 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
               </div>
             </div>
 
-            {/* Camera Viewfinder Area */}
+            {/* Info: (20260610 - Luphia) Camera Viewfinder Area */}
             <div className="flex-1 bg-slate-800 rounded-[36px] relative overflow-hidden flex flex-col justify-between">
               
-              {/* Blurred Background to simulate camera feed */}
+              {/* Info: (20260610 - Luphia) Blurred Background to simulate camera feed */}
               <div className="absolute inset-0 z-0 bg-slate-700">
-                 {/* Desk background */}
+                 {/* Info: (20260610 - Luphia) Desk background */}
                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at center, #ffffff 0%, transparent 100%)' }}></div>
-                 {/* Document on desk */}
+                 {/* Info: (20260610 - Luphia) Document on desk */}
                  <div className="absolute top-[15%] left-[5%] right-[5%] bottom-[15%] bg-slate-100 rounded-sm shadow-2xl rotate-2 transform-gpu">
-                    {/* Mock document content */}
+                    {/* Info: (20260610 - Luphia) Mock document content */}
                     <div className="p-4 flex flex-col gap-3">
                       <div className="flex justify-between items-end border-b-2 border-slate-300 pb-2">
                          <div className="w-24 h-4 bg-slate-300 rounded"></div>
@@ -165,14 +165,14 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
                       </div>
                     </div>
                  </div>
-                 {/* Dark overlay for UI contrast */}
+                 {/* Info: (20260610 - Luphia) Dark overlay for UI contrast */}
                  <div className="absolute inset-0 bg-black/20"></div>
               </div>
 
-              {/* Viewfinder UI */}
+              {/* Info: (20260610 - Luphia) Viewfinder UI */}
               <div className="relative z-10 w-full h-full flex flex-col justify-between pb-8 pt-16">
                 
-                {/* Top Controls */}
+                {/* Info: (20260610 - Luphia) Top Controls */}
                 <div className="flex justify-between px-6 text-white">
                   <div className="p-2.5 bg-black/60 rounded-full">
                     <RefreshCw size={18} />
@@ -182,24 +182,24 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
                   </div>
                 </div>
 
-                {/* Focus Box */}
+                {/* Info: (20260610 - Luphia) Focus Box */}
                 <div className="flex-1 my-6 mx-6 relative">
-                  {/* Scanner Corners */}
+                  {/* Info: (20260610 - Luphia) Scanner Corners */}
                   <div className="absolute top-0 left-0 w-10 h-10 border-t-[4px] border-l-[4px] border-emerald-400 rounded-tl-[12px] shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
                   <div className="absolute top-0 right-0 w-10 h-10 border-t-[4px] border-r-[4px] border-emerald-400 rounded-tr-[12px] shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
                   <div className="absolute bottom-0 left-0 w-10 h-10 border-b-[4px] border-l-[4px] border-emerald-400 rounded-bl-[12px] shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
                   <div className="absolute bottom-0 right-0 w-10 h-10 border-b-[4px] border-r-[4px] border-emerald-400 rounded-br-[12px] shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
 
-                  {/* Scanning Line */}
+                  {/* Info: (20260610 - Luphia) Scanning Line */}
                   <div className="absolute left-2 right-2 h-[2px] bg-emerald-400 top-1/2 -translate-y-1/2 shadow-[0_0_15px_#10b981] animate-[pulse_2s_ease-in-out_infinite]"></div>
                   
-                  {/* Tooltip */}
+                  {/* Info: (20260610 - Luphia) Tooltip */}
                   <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-black/90 text-white text-[11px] py-2 px-4 rounded-full whitespace-nowrap font-medium shadow-lg border border-white/10">
                     對齊工單邊緣以自動擷取
                   </div>
                 </div>
 
-                {/* Overlay Card / Result */}
+                {/* Info: (20260610 - Luphia) Overlay Card / Result */}
                 <div className="mx-4 mb-6 bg-white p-3.5 rounded-2xl border border-white/50 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.3)] transform transition-transform hover:scale-[1.02]">
                   <div className="flex justify-between items-start mb-2.5 border-b border-slate-200 pb-2">
                     <div>
@@ -223,12 +223,12 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
                   </div>
                 </div>
 
-                {/* Bottom Camera Controls */}
+                {/* Info: (20260610 - Luphia) Bottom Camera Controls */}
                 <div className="flex justify-around items-center px-6 mt-auto pb-4">
                   <div className="w-12 h-12 rounded-xl bg-slate-800 overflow-hidden border-2 border-slate-600 shadow-inner flex items-center justify-center p-0.5">
                     <div className="w-full h-full bg-slate-700 rounded-lg"></div>
                   </div>
-                  {/* Capture Button */}
+                  {/* Info: (20260610 - Luphia) Capture Button */}
                   <div className="w-20 h-20 rounded-full border-[4px] border-white flex items-center justify-center cursor-pointer shadow-[0_0_15px_rgba(0,0,0,0.5)] bg-white/30">
                     <div className="w-[66px] h-[66px] bg-white rounded-full transition-transform hover:scale-95 active:scale-90 shadow-inner"></div>
                   </div>
@@ -240,18 +240,18 @@ export default function IsunfaHotaiStarfabAcceleratorSlide6() {
               </div>
             </div>
 
-            {/* Home Indicator */}
+            {/* Info: (20260610 - Luphia) Home Indicator */}
             <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/60 rounded-full z-30"></div>
 
           </div>
 
-          {/* Decorative glows behind phone */}
+          {/* Info: (20260610 - Luphia) Decorative glows behind phone */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[650px] bg-emerald-500/10 rounded-full blur-[80px] z-0 pointer-events-none"></div>
         </div>
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 left-0 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-50">
         <div>Slide 06 / 17</div>
         <div className="flex gap-2 items-center">

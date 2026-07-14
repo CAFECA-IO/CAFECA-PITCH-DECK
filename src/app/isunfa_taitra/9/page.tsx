@@ -21,7 +21,7 @@ export default function TaitraSlide7() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-12 gap-8 mt-4 pb-12 items-center">
-          {/* Left Block: LCA Hotspots (7 cols) */}
+          {/* Info: (20260527 - Luphia) Left Block: LCA Hotspots (7 cols) */}
           <div className="col-span-7 bg-slate-900 text-white p-8 rounded-2xl shadow-lg relative overflow-hidden h-fit">
             <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-indigo-500/20 rounded-full blur-2xl pointer-events-none" />
             <h3 className="text-2xl font-bold flex items-center gap-3 text-indigo-400 mb-6">
@@ -48,7 +48,7 @@ export default function TaitraSlide7() {
             </div>
           </div>
 
-          {/* Right Block: Practical Value (5 cols) */}
+          {/* Info: (20260527 - Luphia) Right Block: Practical Value (5 cols) */}
           <div className="col-span-5 space-y-6">
             <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
               <Activity className="text-indigo-600" /> 轉化為實質的管理效益

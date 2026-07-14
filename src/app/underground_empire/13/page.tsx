@@ -22,15 +22,15 @@ export default function Slide5() {
             
             <div className="relative h-full flex flex-col justify-center">
               <div className="absolute inset-0 bg-slate-950/50 rounded-2xl border border-slate-800 flex items-center justify-center overflow-hidden">
-                {/* Abstract Map Graphic */}
+                {/* Info: (20260426 - Luphia) Abstract Map Graphic */}
                 <Map size={400} className="text-slate-800 absolute opacity-30" />
                 
-                {/* Cable Lines */}
+                {/* Info: (20260426 - Luphia) Cable Lines */}
                 <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
                   <path d="M 50 300 Q 150 100 300 200 T 550 250" fill="transparent" stroke="#0891b2" strokeWidth="4" className="animate-pulse" />
                   <path d="M 50 150 Q 200 300 350 150 T 550 100" fill="transparent" stroke="#164e63" strokeWidth="2" strokeDasharray="5,5" />
                   
-                  {/* Choke Point */}
+                  {/* Info: (20260426 - Luphia) Choke Point */}
                   <circle cx="300" cy="200" r="10" fill="#ef4444" className="animate-ping" />
                   <circle cx="300" cy="200" r="6" fill="#ef4444" />
                 </svg>

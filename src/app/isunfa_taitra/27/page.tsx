@@ -21,7 +21,7 @@ export default function TaitraSlide25() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-4 pb-12 items-center">
-          {/* Card 1: Account Context Drift */}
+          {/* Info: (20260527 - Luphia) Card 1: Account Context Drift */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[340px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-indigo-500" />
             <div>
@@ -38,7 +38,7 @@ export default function TaitraSlide25() {
             </div>
           </div>
 
-          {/* Card 2: Layout Break */}
+          {/* Info: (20260527 - Luphia) Card 2: Layout Break */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[340px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-sky-500" />
             <div>
@@ -55,7 +55,7 @@ export default function TaitraSlide25() {
             </div>
           </div>
 
-          {/* Card 3: Data Omission */}
+          {/* Info: (20260527 - Luphia) Card 3: Data Omission */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[340px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-emerald-500" />
             <div>

@@ -15,13 +15,13 @@ import { useState, useEffect } from 'react';
 export default function Slide13() {
   const [activeStep, setActiveStep] = useState(0);
 
-  // Hardcoded particle positions to avoid impurity and effect-based state setting errors
+  // Info: (20260709 - Luphia) Hardcoded particle positions to avoid impurity and effect-based state setting errors
   const particles = [
     { x: 120, y: -80 }, { x: -150, y: 120 }, { x: 80, y: 180 }, { x: -180, y: -90 },
     { x: 200, y: 40 }, { x: -50, y: -190 }, { x: 160, y: 140 }, { x: -120, y: 50 }
   ];
 
-  // Animation sequence: 0: Initial, 1: Routing, 2: Feedback, 3: Encryption & Supercomputer, 4: Local Upgrade
+  // Info: (20260709 - Luphia) Animation sequence: 0: Initial, 1: Routing, 2: Feedback, 3: Encryption & Supercomputer, 4: Local Upgrade
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % 5);
@@ -76,11 +76,11 @@ export default function Slide13() {
           </div>
         </div>
 
-        {/* Visual Animation Area */}
+        {/* Info: (20260709 - Luphia) Visual Animation Area */}
         <div className="relative aspect-square bg-white rounded-[4rem] border border-slate-100 overflow-hidden flex items-center justify-center">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/5 via-transparent to-transparent"></div>
           
-          {/* Central Orchestrator */}
+          {/* Info: (20260709 - Luphia) Central Orchestrator */}
           <motion.div 
             className="relative z-30 w-32 h-32 rounded-3xl bg-orange-600/10 border border-orange-500/30 flex flex-col items-center justify-center text-orange-600 shadow-[0_0_50px_rgba(16,185,129,0.1)]"
             animate={{ 
@@ -92,7 +92,7 @@ export default function Slide13() {
              <div className="text-[10px] font-black uppercase mt-2">Orchestrator</div>
           </motion.div>
 
-          {/* Expert Models Grid */}
+          {/* Info: (20260709 - Luphia) Expert Models Grid */}
           <div className="absolute inset-0 z-20 pointer-events-none">
             {experts.map((e, i) => {
               const angles = [45, 135, 225, 315];
@@ -120,7 +120,7 @@ export default function Slide13() {
             })}
           </div>
 
-          {/* Routing Particles (Step 1) */}
+          {/* Info: (20260709 - Luphia) Routing Particles (Step 1) */}
           <AnimatePresence>
             {activeStep === 1 && (
               <motion.div 
@@ -145,7 +145,7 @@ export default function Slide13() {
             )}
           </AnimatePresence>
 
-          {/* Supercomputer & Encryption (Step 3) */}
+          {/* Info: (20260709 - Luphia) Supercomputer & Encryption (Step 3) */}
           <AnimatePresence>
             {activeStep === 3 && (
               <motion.div
@@ -176,7 +176,7 @@ export default function Slide13() {
             )}
           </AnimatePresence>
 
-          {/* Local Upgrade Pulse (Step 4) */}
+          {/* Info: (20260709 - Luphia) Local Upgrade Pulse (Step 4) */}
           <AnimatePresence>
             {activeStep === 4 && (
               <motion.div
@@ -199,7 +199,7 @@ export default function Slide13() {
             )}
           </AnimatePresence>
 
-          {/* Legend */}
+          {/* Info: (20260709 - Luphia) Legend */}
           <div className="absolute bottom-10 left-10 z-30">
              <div className="flex items-center gap-2 text-[10px] font-mono text-slate-600 uppercase tracking-widest">
                 <div className="w-2 h-2 rounded-full bg-orange-600"></div>

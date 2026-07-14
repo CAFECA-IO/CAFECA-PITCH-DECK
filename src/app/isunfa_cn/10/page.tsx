@@ -7,13 +7,13 @@ export default function IsunfaCnSlide10() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Gradients */}
+      {/* Info: (20260610 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute right-1/4 top-1/4 w-[600px] h-[600px] bg-emerald-600 rounded-full filter blur-[150px] animate-pulse"></div>
         <div className="absolute left-10 bottom-10 w-[400px] h-[400px] bg-sky-500 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="px-16 pt-10 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-2">
@@ -34,10 +34,10 @@ export default function IsunfaCnSlide10() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="flex-1 px-16 flex flex-col justify-center relative z-10 w-full max-w-5xl mx-auto pb-4 gap-4 mt-2">
 
-        {/* Top: Description Banner */}
+        {/* Info: (20260610 - Luphia) Top: Description Banner */}
         <div className="bg-slate-950/60 border border-slate-800 p-5 rounded-2xl flex items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="p-3 bg-emerald-500 text-slate-950 rounded-xl">
@@ -56,10 +56,10 @@ export default function IsunfaCnSlide10() {
           </div>
         </div>
 
-        {/* Stacked Architecture */}
+        {/* Info: (20260610 - Luphia) Stacked Architecture */}
         <div className="space-y-4">
 
-          {/* Layer 1: Specialist Modules */}
+          {/* Info: (20260610 - Luphia) Layer 1: Specialist Modules */}
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-slate-950/40 border border-slate-800 p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/30 transition-colors">
               <div className="flex items-center gap-3">
@@ -77,7 +77,7 @@ export default function IsunfaCnSlide10() {
             </div>
           </div>
 
-          {/* Layer 2: RAG DB */}
+          {/* Info: (20260610 - Luphia) Layer 2: RAG DB */}
           <div className="bg-slate-950/60 border border-slate-800 p-5 rounded-xl">
             <div className="flex items-center gap-3 mb-3">
               <Database className="text-emerald-400" size={16} />
@@ -102,7 +102,7 @@ export default function IsunfaCnSlide10() {
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10 pointer-events-none">
         <div>Slide 10 / 11</div>
         <div className="flex gap-2 items-center">

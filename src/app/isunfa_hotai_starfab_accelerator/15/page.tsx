@@ -7,13 +7,13 @@ export default function IsunfaHotaiStarfabAcceleratorSlide15() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Elements */}
+      {/* Info: (20260610 - Luphia) Background Elements */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-emerald-500 rounded-full filter blur-[150px]"></div>
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-sky-500 rounded-full filter blur-[150px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="relative z-10 w-full px-16 pt-10 pb-2 flex justify-between items-center">
         <div>
           <div className="flex items-center gap-4 mb-2">
@@ -40,11 +40,11 @@ export default function IsunfaHotaiStarfabAcceleratorSlide15() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="relative z-10 flex-1 px-16 pb-10 flex items-center">
         <div className="grid grid-cols-2 gap-6 w-full">
 
-          {/* Member 1: 張智崴 */}
+          {/* Info: (20260610 - Luphia) Member 1: 張智崴 */}
           <div className="bg-slate-950/60 backdrop-blur-sm rounded-2xl p-5 border border-slate-800 flex flex-col justify-between hover:border-emerald-500/20 transition-all duration-300">
             <div className="flex items-start justify-between mb-3 pb-3 border-b border-slate-800">
               <div>
@@ -64,7 +64,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide15() {
             </p>
           </div>
 
-          {/* Member 2: 梁紫涵 */}
+          {/* Info: (20260610 - Luphia) Member 2: 梁紫涵 */}
           <div className="bg-slate-950/60 backdrop-blur-sm rounded-2xl p-5 border border-slate-800 flex flex-col justify-between hover:border-emerald-500/20 transition-all duration-300">
             <div className="flex items-start justify-between mb-3 pb-3 border-b border-slate-800">
               <div>
@@ -84,7 +84,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide15() {
             </p>
           </div>
 
-          {/* Member 3: 張銀玲 */}
+          {/* Info: (20260610 - Luphia) Member 3: 張銀玲 */}
           <div className="bg-slate-950/60 backdrop-blur-sm rounded-2xl p-5 border border-slate-800 flex flex-col justify-between hover:border-emerald-500/20 transition-all duration-300">
             <div className="flex items-start justify-between mb-3 pb-3 border-b border-slate-800">
               <div>
@@ -104,7 +104,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide15() {
             </p>
           </div>
 
-          {/* Member 4: 張智傑 */}
+          {/* Info: (20260610 - Luphia) Member 4: 張智傑 */}
           <div className="bg-slate-950/60 backdrop-blur-sm rounded-2xl p-5 border border-slate-800 flex flex-col justify-between hover:border-emerald-500/20 transition-all duration-300">
             <div className="flex items-start justify-between mb-3 pb-3 border-b border-slate-800">
               <div>
@@ -127,7 +127,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide15() {
         </div>
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 left-0 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium">
         <div>Slide 15 / 17</div>
         <div className="flex gap-2 items-center">

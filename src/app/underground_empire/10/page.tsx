@@ -7,43 +7,43 @@ export default function Slide10() {
     <div className="min-h-screen w-full bg-slate-950 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl border border-slate-800 p-16 flex flex-col items-center justify-center">
         
-        {/* Background Gradients */}
+        {/* Info: (20260426 - Luphia) Background Gradients */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05] pointer-events-none"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-900/10 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div className="z-10 flex flex-col items-center text-center space-y-12 animate-fade-in-up">
           
-          {/* SVG Illustration - The Master Plan (Sanctions) */}
+          {/* Info: (20260426 - Luphia) SVG Illustration - The Master Plan (Sanctions) */}
           <div className="relative w-full max-w-2xl flex justify-center items-center">
             
-            {/* Center Idea */}
+            {/* Info: (20260426 - Luphia) Center Idea */}
             <div className="relative z-20">
               <div className="absolute inset-0 bg-yellow-500/20 blur-xl rounded-full"></div>
               <Lightbulb size={100} strokeWidth={1.5} className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.6)] animate-pulse" />
             </div>
 
-            {/* Three Sanctions */}
+            {/* Info: (20260426 - Luphia) Three Sanctions */}
             <div className="absolute inset-0 flex justify-between items-center px-12 z-10">
-              {/* Ban Gym */}
+              {/* Info: (20260426 - Luphia) Ban Gym */}
               <div className="relative group">
                 <Dumbbell size={60} className="text-indigo-400" />
                 <Ban size={80} strokeWidth={2} className="text-red-500 absolute -top-2 -left-2 opacity-80" />
               </div>
               
-              {/* Ban Lunch */}
+              {/* Info: (20260426 - Luphia) Ban Lunch */}
               <div className="relative group -mt-32">
                 <UtensilsCrossed size={60} className="text-amber-600" />
                 <Ban size={80} strokeWidth={2} className="text-red-500 absolute -top-2 -left-2 opacity-80" />
               </div>
 
-              {/* Ban Tutoring */}
+              {/* Info: (20260426 - Luphia) Ban Tutoring */}
               <div className="relative group">
                 <BookOpen size={60} className="text-emerald-500" />
                 <Ban size={80} strokeWidth={2} className="text-red-500 absolute -top-2 -left-2 opacity-80" />
               </div>
             </div>
             
-            {/* Isolation Group */}
+            {/* Info: (20260426 - Luphia) Isolation Group */}
             <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 text-slate-500 flex items-center gap-2">
               <Users size={40} />
               <span className="font-bold text-red-500">ISOLATION</span>

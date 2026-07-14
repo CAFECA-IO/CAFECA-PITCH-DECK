@@ -7,13 +7,13 @@ export default function IsunfaHotaiStarfabAcceleratorSlide4() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260610 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <div className="absolute right-10 top-10 w-[500px] h-[500px] bg-amber-500 rounded-full filter blur-[150px] animate-pulse"></div>
         <div className="absolute left-1/4 bottom-10 w-[400px] h-[400px] bg-red-600 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="px-16 pt-12 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -29,10 +29,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide4() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="flex-1 px-16 flex items-center justify-between relative z-10 gap-10">
         
-        {/* Left: The Question */}
+        {/* Info: (20260610 - Luphia) Left: The Question */}
         <div className="w-2/5 space-y-6">
           <div className="bg-gradient-to-br from-amber-950/60 to-red-950/40 border border-amber-500/30 p-8 rounded-3xl shadow-lg relative overflow-hidden">
             <h2 className="text-3xl font-black text-white leading-snug mb-4">
@@ -46,7 +46,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide4() {
           </div>
         </div>
 
-        {/* Right: The Grid of Complexity */}
+        {/* Info: (20260610 - Luphia) Right: The Grid of Complexity */}
         <div className="w-3/5 grid grid-cols-2 gap-4">
           
           <div className="bg-slate-950/50 border border-slate-800 p-5 rounded-2xl flex gap-4 items-center">
@@ -93,7 +93,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide4() {
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10">
         <div>Slide 04 / 17</div>
         <div className="flex gap-2 items-center">

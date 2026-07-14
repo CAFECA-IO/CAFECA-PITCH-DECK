@@ -7,7 +7,7 @@ export default function Slide4() {
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex border border-neutral-800">
         
-        {/* Left Side: Content */}
+        {/* Info: (20260527 - Luphia) Left Side: Content */}
         <div className="w-1/2 p-20 flex flex-col justify-center relative z-10">
           <div className="inline-block px-4 py-1 rounded-full border border-amber-500/30 text-amber-500 text-sm tracking-widest mb-8 w-max">
             01 | 全能數位店長
@@ -29,7 +29,7 @@ export default function Slide4() {
           </div>
         </div>
 
-        {/* Right Side: Image */}
+        {/* Info: (20260527 - Luphia) Right Side: Image */}
         <div className="w-1/2 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-transparent z-10 w-24"></div>
           <Image 
@@ -40,7 +40,7 @@ export default function Slide4() {
           />
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260527 - Luphia) Footer Info */}
         <div className="absolute bottom-6 left-16 text-neutral-600 text-xs tracking-[0.2em] uppercase z-20">
           卡菲卡金融科技股份有限公司 (52650861)
         </div>

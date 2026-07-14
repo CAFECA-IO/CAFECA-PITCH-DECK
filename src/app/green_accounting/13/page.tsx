@@ -6,7 +6,7 @@ export default function GreenAccountingSlide13() {
     <div className="min-h-screen w-full bg-slate-50 flex items-center justify-center p-4 font-sans">
       <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col items-center border border-slate-200 text-slate-900">
 
-        {/* Background Effects */}
+        {/* Info: (20260425 - Luphia) Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-[20%] left-[20%] w-[40%] h-[40%] bg-emerald-100 blur-[100px] rounded-full opacity-60" />
           <div className="absolute bottom-[20%] right-[20%] w-[50%] h-[50%] bg-blue-50 blur-[120px] rounded-full opacity-60" />
@@ -14,7 +14,7 @@ export default function GreenAccountingSlide13() {
 
         <div className="z-10 w-full max-w-6xl px-12 flex flex-col h-full py-12">
 
-          {/* Title Section */}
+          {/* Info: (20260425 - Luphia) Title Section */}
           <div className="mb-8 text-center bg-white/50 backdrop-blur-sm py-4 rounded-3xl">
             <div className="flex items-center justify-center gap-3 text-emerald-600 mb-2">
               <div className="px-3 py-1 border border-emerald-200 rounded-full text-[10px] font-bold tracking-[0.2em] bg-emerald-50 uppercase">Success Story</div>
@@ -27,10 +27,10 @@ export default function GreenAccountingSlide13() {
             </p>
           </div>
 
-          {/* Content Grid */}
+          {/* Info: (20260425 - Luphia) Content Grid */}
           <div className="grid grid-cols-3 gap-6 flex-1 drop-shadow-sm">
 
-            {/* Column 1: Challenges */}
+            {/* Info: (20260425 - Luphia) Column 1: Challenges */}
             <div className="bg-white border border-red-100 p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col relative z-20">
               <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center mb-4 border border-red-100">
                 <Target className="text-red-500 w-5 h-5" />
@@ -63,7 +63,7 @@ export default function GreenAccountingSlide13() {
               </ul>
             </div>
 
-            {/* Column 2: Solutions */}
+            {/* Info: (20260425 - Luphia) Column 2: Solutions */}
             <div className="bg-white border border-blue-100 p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col relative z-20">
               <div className="absolute -left-4 top-1/2 -translate-y-1/2 text-slate-300 z-30">
                 <ChevronRight size={28} />
@@ -102,7 +102,7 @@ export default function GreenAccountingSlide13() {
               </ul>
             </div>
 
-            {/* Column 3: Values */}
+            {/* Info: (20260425 - Luphia) Column 3: Values */}
             <div className="bg-white border border-emerald-100 p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col group hover:border-emerald-300 hover:shadow-[0_8px_30px_rgb(16,185,129,0.1)] transition-all z-20">
               <div className="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 border border-emerald-100">
                 <TrendingUp className="text-emerald-600 w-5 h-5" />

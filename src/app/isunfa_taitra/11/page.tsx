@@ -21,7 +21,7 @@ export default function TaitraSlide9() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-4 pb-12 items-center">
-          {/* Primary Data */}
+          {/* Info: (20260527 - Luphia) Primary Data */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-emerald-500" />
             <div>
@@ -38,7 +38,7 @@ export default function TaitraSlide9() {
             </div>
           </div>
 
-          {/* Secondary Data */}
+          {/* Info: (20260527 - Luphia) Secondary Data */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-sky-500" />
             <div>
@@ -57,7 +57,7 @@ export default function TaitraSlide9() {
             </div>
           </div>
 
-          {/* Allocation */}
+          {/* Info: (20260527 - Luphia) Allocation */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-indigo-500" />
             <div>

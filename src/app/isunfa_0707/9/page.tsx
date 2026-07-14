@@ -4,7 +4,7 @@ import { Send, User, Bot, FileText, CheckCircle2, Layout, Settings, Activity, Da
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-// Typewriter component for streaming text effect
+// Info: (20260707 - Luphia) Typewriter component for streaming text effect
 const Typewriter = ({ text, speed = 20, delay = 0, onComplete }: { text: string, speed?: number, delay?: number, onComplete?: () => void }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [started, setStarted] = useState(false);
@@ -40,25 +40,25 @@ export default function CafecaFaithSlide9() {
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Scroll to bottom when messages update
+    // Info: (20260707 - Luphia) Scroll to bottom when messages update
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
   }, [step]);
 
   useEffect(() => {
-    // Animation Sequence
+    // Info: (20260707 - Luphia) Animation Sequence
     const sequence = [
-      { step: 1, delay: 2000 },  // User replies
-      { step: 2, delay: 4000, action: () => setVisibleSections(prev => [...prev, 'header']) }, // AI acknowledge & Gen Header
-      { step: 3, delay: 6500 },  // AI asks for Base Year
-      { step: 4, delay: 8500 },  // User replies
-      { step: 5, delay: 10500, action: () => setVisibleSections(prev => [...prev, 'baseYear']) }, // AI confirms & Gen Base Year
-      { step: 6, delay: 13000 }, // AI asks for Boundaries
-      { step: 7, delay: 15000, action: () => setVisibleSections(prev => [...prev, 'boundaries']) }, // User replies & Gen Boundaries
-      { step: 8, delay: 18000 }, // AI asks for Scope 1 & 2
-      { step: 9, delay: 20000, action: () => setVisibleSections(prev => [...prev, 'emissions']) }, // User replies & Gen Emissions
-      { step: 10, delay: 23000, action: () => setVisibleSections(prev => [...prev, 'summary']) }, // Final
+      { step: 1, delay: 2000 },  // Info: (20260707 - Luphia) User replies
+      { step: 2, delay: 4000, action: () => setVisibleSections(prev => [...prev, 'header']) }, // Info: (20260707 - Luphia) AI acknowledge & Gen Header
+      { step: 3, delay: 6500 },  // Info: (20260707 - Luphia) AI asks for Base Year
+      { step: 4, delay: 8500 },  // Info: (20260707 - Luphia) User replies
+      { step: 5, delay: 10500, action: () => setVisibleSections(prev => [...prev, 'baseYear']) }, // Info: (20260707 - Luphia) AI confirms & Gen Base Year
+      { step: 6, delay: 13000 }, // Info: (20260707 - Luphia) AI asks for Boundaries
+      { step: 7, delay: 15000, action: () => setVisibleSections(prev => [...prev, 'boundaries']) }, // Info: (20260707 - Luphia) User replies & Gen Boundaries
+      { step: 8, delay: 18000 }, // Info: (20260707 - Luphia) AI asks for Scope 1 & 2
+      { step: 9, delay: 20000, action: () => setVisibleSections(prev => [...prev, 'emissions']) }, // Info: (20260707 - Luphia) User replies & Gen Emissions
+      { step: 10, delay: 23000, action: () => setVisibleSections(prev => [...prev, 'summary']) }, // Info: (20260707 - Luphia) Final
     ];
 
     const timers = sequence.map(s => setTimeout(() => {
@@ -266,7 +266,7 @@ export default function CafecaFaithSlide9() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-[700px] mx-auto bg-white shadow-2xl rounded-sm min-h-[1000px] p-16 relative border border-slate-200 flex flex-col space-y-16"
             >
-              {/* 0. Report Header - Hidden until Step 2 */}
+              {/* Info: (20260707 - Luphia) 0. Report Header - Hidden until Step 2 */}
               {isVisible('header') ? (
                 <div className="flex justify-between items-start mb-12 border-b border-slate-100 pb-10 animate-in fade-in slide-in-from-top-8 duration-1000">
                   <div className="space-y-6">
@@ -434,12 +434,12 @@ export default function CafecaFaithSlide9() {
                 )}
               </section>
 
-              {/* Padding bottom */}
+              {/* Info: (20260707 - Luphia) Padding bottom */}
               <div className="h-32"></div>
             </motion.div>
           </div>
 
-          {/* Floating Action Button for Report Status */}
+          {/* Info: (20260707 - Luphia) Floating Action Button for Report Status */}
           <div className="absolute right-10 bottom-10 z-20">
             <div className="bg-slate-900/90 backdrop-blur-xl border border-slate-700/50 p-4 rounded-2xl shadow-2xl flex items-center gap-5 group hover:border-orange-500/50 transition-all">
               <div className="relative">
@@ -484,7 +484,7 @@ export default function CafecaFaithSlide9() {
         }
       ` }} />
 
-      {/* Ambient background glow */}
+      {/* Info: (20260707 - Luphia) Ambient background glow */}
       <div className="absolute -left-48 -top-48 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute -right-48 -bottom-48 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"></div>
     </div>

@@ -129,9 +129,9 @@ export default function ISO14067Page() {
   return (
     <div className="min-h-screen w-full bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500/30">
       
-      {/* Premium Header Grid */}
+      {/* Info: (20260527 - Luphia) Premium Header Grid */}
       <div className="relative overflow-hidden border-b border-slate-800 bg-slate-900/40 backdrop-blur-md">
-        {/* Glow Elements */}
+        {/* Info: (20260527 - Luphia) Glow Elements */}
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl" />
         <div className="absolute top-20 right-0 w-[600px] h-[300px] bg-emerald-500/5 rounded-full blur-3xl" />
 
@@ -174,7 +174,7 @@ export default function ISO14067Page() {
             </div>
           </div>
 
-          {/* Interactive Navigation Tabs */}
+          {/* Info: (20260527 - Luphia) Interactive Navigation Tabs */}
           <div className="flex border-b border-slate-800 mt-16 gap-8">
             <button 
               onClick={() => setActiveTab('compile')}
@@ -201,10 +201,10 @@ export default function ISO14067Page() {
         </div>
       </div>
 
-      {/* Main Content Area */}
+      {/* Info: (20260527 - Luphia) Main Content Area */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         
-        {/* Tab 1: Compile Guide */}
+        {/* Info: (20260527 - Luphia) Tab 1: Compile Guide */}
         {activeTab === 'compile' && (
           <div className="space-y-12">
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-8 backdrop-blur-sm">
@@ -251,7 +251,7 @@ export default function ISO14067Page() {
               })}
             </div>
 
-            {/* Note box */}
+            {/* Info: (20260527 - Luphia) Note box */}
             <div className="bg-indigo-950/20 border border-indigo-500/20 rounded-2xl p-6 flex gap-4 items-start">
               <AlertCircle className="text-indigo-400 flex-shrink-0 mt-1" size={24} />
               <div>
@@ -264,7 +264,7 @@ export default function ISO14067Page() {
           </div>
         )}
 
-        {/* Tab 2: Verify Guide */}
+        {/* Info: (20260527 - Luphia) Tab 2: Verify Guide */}
         {activeTab === 'verify' && (
           <div className="space-y-12">
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-8 backdrop-blur-sm">
@@ -316,7 +316,7 @@ export default function ISO14067Page() {
               })}
             </div>
 
-            {/* Note box */}
+            {/* Info: (20260527 - Luphia) Note box */}
             <div className="bg-emerald-950/20 border border-emerald-500/20 rounded-2xl p-6 flex gap-4 items-start">
               <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={24} />
               <div>
@@ -329,7 +329,7 @@ export default function ISO14067Page() {
           </div>
         )}
 
-        {/* Tab 3: Matrix */}
+        {/* Info: (20260527 - Luphia) Tab 3: Matrix */}
         {activeTab === 'matrix' && (
           <div className="space-y-8">
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-8 backdrop-blur-sm">
@@ -390,7 +390,7 @@ export default function ISO14067Page() {
 
       </div>
 
-      {/* Footer copyright */}
+      {/* Info: (20260527 - Luphia) Footer copyright */}
       <footer className="border-t border-slate-800 bg-slate-950 py-12 mt-20">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs tracking-wider">
           <div className="uppercase">

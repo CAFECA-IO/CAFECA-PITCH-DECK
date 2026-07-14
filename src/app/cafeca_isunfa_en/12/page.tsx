@@ -7,13 +7,13 @@ export default function CafecaIsunfaSlide12() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260609 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute right-10 top-1/4 w-[500px] h-[500px] bg-amber-500 rounded-full filter blur-[150px]"></div>
         <div className="absolute left-10 bottom-10 w-[500px] h-[500px] bg-emerald-500 rounded-full filter blur-[150px] animate-pulse"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260609 - Luphia) Header */}
       <div className="px-16 pt-12 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -40,10 +40,10 @@ export default function CafecaIsunfaSlide12() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260609 - Luphia) Content */}
       <div className="flex-1 px-16 flex items-center justify-between relative z-10 gap-8">
         
-        {/* Left Side: Fund Details Card */}
+        {/* Info: (20260609 - Luphia) Left Side: Fund Details Card */}
         <div className="w-1/3 flex flex-col justify-center">
           <div className="bg-slate-950/60 border border-slate-800 p-8 rounded-3xl relative overflow-hidden">
             <div className="text-xs text-slate-500 uppercase font-bold tracking-widest mb-2">Execution Period</div>
@@ -66,12 +66,12 @@ export default function CafecaIsunfaSlide12() {
           </div>
         </div>
 
-        {/* Right Side: Allocation Cards with Progress Bar Style */}
+        {/* Info: (20260609 - Luphia) Right Side: Allocation Cards with Progress Bar Style */}
         <div className="w-2/3 space-y-4">
           
-          {/* Item 1: R&D (50%) */}
+          {/* Info: (20260609 - Luphia) Item 1: R&D (50%) */}
           <div className="bg-slate-950/40 border border-slate-800 p-5 rounded-2xl relative overflow-hidden group hover:border-emerald-500/20 transition-all">
-            {/* Visual Indicator */}
+            {/* Info: (20260609 - Luphia) Visual Indicator */}
             <div className="absolute top-0 left-0 h-1 bg-emerald-500 w-[50%]"></div>
             
             <div className="flex justify-between items-start mb-2">
@@ -86,9 +86,9 @@ export default function CafecaIsunfaSlide12() {
             </p>
           </div>
 
-          {/* Item 2: Market Expansion (30%) */}
+          {/* Info: (20260609 - Luphia) Item 2: Market Expansion (30%) */}
           <div className="bg-slate-950/40 border border-slate-800 p-5 rounded-2xl relative overflow-hidden group hover:border-sky-500/20 transition-all">
-            {/* Visual Indicator */}
+            {/* Info: (20260609 - Luphia) Visual Indicator */}
             <div className="absolute top-0 left-0 h-1 bg-sky-500 w-[30%]"></div>
             
             <div className="flex justify-between items-start mb-2">
@@ -103,9 +103,9 @@ export default function CafecaIsunfaSlide12() {
             </p>
           </div>
 
-          {/* Item 3: Nodes (20%) */}
+          {/* Info: (20260609 - Luphia) Item 3: Nodes (20%) */}
           <div className="bg-slate-950/40 border border-slate-800 p-5 rounded-2xl relative overflow-hidden group hover:border-amber-500/20 transition-all">
-            {/* Visual Indicator */}
+            {/* Info: (20260609 - Luphia) Visual Indicator */}
             <div className="absolute top-0 left-0 h-1 bg-amber-500 w-[20%]"></div>
             
             <div className="flex justify-between items-start mb-2">
@@ -124,7 +124,7 @@ export default function CafecaIsunfaSlide12() {
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260609 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10 pointer-events-none">
         <div>Slide 12 / 13</div>
         <div className="flex gap-2 items-center">

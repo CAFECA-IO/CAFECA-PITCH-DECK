@@ -21,7 +21,7 @@ export default function TaitraSlide4() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-2 gap-12 mt-4 pb-12 items-center">
-          {/* Left Column: Context */}
+          {/* Info: (20260527 - Luphia) Left Column: Context */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
               <Coins className="text-amber-500" /> 國內碳費正式開徵
@@ -37,7 +37,7 @@ export default function TaitraSlide4() {
             </div>
           </div>
 
-          {/* Right Column: Pain Points */}
+          {/* Info: (20260527 - Luphia) Right Column: Pain Points */}
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4 items-start hover:shadow-md transition-shadow">
               <div className="p-3 bg-blue-50 text-blue-600 rounded-lg h-fit">

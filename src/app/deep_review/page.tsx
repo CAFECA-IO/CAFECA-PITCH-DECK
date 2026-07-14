@@ -213,7 +213,7 @@ export default function DeepReviewSlideBrowser() {
 
             if (dist < minDistance) {
               minDistance = dist;
-              closestSlideIndex = index + 1; // 1-based index
+              closestSlideIndex = index + 1; // Info: (20260305 - Luphia) 1-based index
             }
           });
 

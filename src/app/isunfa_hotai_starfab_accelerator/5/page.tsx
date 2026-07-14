@@ -7,13 +7,13 @@ export default function IsunfaHotaiStarfabAcceleratorSlide5() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Gradients */}
+      {/* Info: (20260610 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute left-10 top-1/4 w-[500px] h-[500px] bg-emerald-500 rounded-full filter blur-[130px]"></div>
         <div className="absolute right-10 bottom-10 w-[500px] h-[500px] bg-sky-500 rounded-full filter blur-[130px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="px-16 pt-12 relative z-10 flex justify-between items-start">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -29,7 +29,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide5() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="flex-1 px-16 flex flex-col justify-center relative z-10 w-full max-w-5xl mx-auto py-4">
 
         <div className="bg-slate-950/60 backdrop-blur-md border border-slate-800 p-8 rounded-3xl mb-8">
@@ -38,10 +38,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide5() {
           </p>
         </div>
 
-        {/* Process Flow Diagram */}
+        {/* Info: (20260610 - Luphia) Process Flow Diagram */}
         <div className="flex items-center justify-between gap-4 w-full">
 
-          {/* Step 1: Inputs */}
+          {/* Info: (20260610 - Luphia) Step 1: Inputs */}
           <div className="flex-1 bg-slate-900/80 border border-slate-800 p-5 rounded-2xl flex flex-col items-center text-center relative group hover:border-slate-700 transition-colors">
             <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 mb-3">
               <FileText size={24} />
@@ -54,7 +54,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide5() {
 
           <ArrowRight className="text-slate-600 flex-shrink-0" size={20} />
 
-          {/* Step 2: AI Processor */}
+          {/* Info: (20260610 - Luphia) Step 2: AI Processor */}
           <div className="flex-1 bg-gradient-to-br from-emerald-950 to-emerald-900 border border-emerald-500/30 p-5 rounded-2xl flex flex-col items-center text-center relative group hover:border-emerald-500/50 transition-colors shadow-lg">
             <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center text-slate-950 mb-3 shadow-[0_0_15px_rgba(16,185,129,0.4)]">
               <Cpu size={24} />
@@ -67,7 +67,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide5() {
 
           <ArrowRight className="text-slate-600 flex-shrink-0" size={20} />
 
-          {/* Step 3: Outputs */}
+          {/* Info: (20260610 - Luphia) Step 3: Outputs */}
           <div className="flex-1 bg-slate-900/80 border border-slate-800 p-5 rounded-2xl flex flex-col items-center text-center relative group hover:border-slate-700 transition-colors">
             <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-sky-400 mb-3">
               <Eye size={24} />
@@ -82,7 +82,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide5() {
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-10">
         <div>Slide 05 / 17</div>
         <div className="flex gap-2 items-center">

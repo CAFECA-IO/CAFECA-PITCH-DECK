@@ -6,13 +6,13 @@ export default function CafecaFaithSlide11() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
 
-      {/* Background Accents (Matching Screenshot Style) */}
+      {/* Info: (20260615 - Luphia) Background Accents (Matching Screenshot Style) */}
       <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
         <div className="absolute -left-32 -top-32 w-[600px] h-[600px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute -right-32 -bottom-32 w-[600px] h-[600px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260612 - Luphia) Header */}
       <div className="z-20 text-center mb-8 mt-4">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100 mb-4 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
@@ -22,10 +22,10 @@ export default function CafecaFaithSlide11() {
         <p className="text-base text-slate-500 mt-2 font-medium">針對不同規模企業，提供最適合的數位綠色轉型方案</p>
       </div>
 
-      {/* Pricing Cards Container */}
+      {/* Info: (20260615 - Luphia) Pricing Cards Container */}
       <div className="z-20 w-full max-w-4xl grid grid-cols-2 gap-8 px-12 relative">
 
-        {/* Card 1: Cloud Subscription */}
+        {/* Info: (20260615 - Luphia) Card 1: Cloud Subscription */}
         <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
             <Cloud className="w-40 h-40 text-orange-500" />
@@ -60,7 +60,7 @@ export default function CafecaFaithSlide11() {
           </div>
         </div>
 
-        {/* Card 2: On-Premise Buyout */}
+        {/* Info: (20260615 - Luphia) Card 2: On-Premise Buyout */}
         <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 border border-orange-400 shadow-2xl hover:shadow-[0_20px_50px_rgba(249,115,22,0.3)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
             <Server className="w-40 h-40 text-white" />

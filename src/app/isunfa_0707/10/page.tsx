@@ -49,19 +49,19 @@ export default function MOEADigitalTransformationSlide() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden flex flex-col font-sans text-slate-900">
       
-      {/* Top Border Indicator */}
+      {/* Info: (20260707 - Luphia) Top Border Indicator */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-slate-100 z-20">
         <div className="h-full bg-orange-500 w-1/4" />
       </div>
 
-      {/* Background Decor */}
+      {/* Info: (20260707 - Luphia) Background Decor */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-orange-500/[0.03] blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-emerald-500/[0.03] blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" />
 
-      {/* Content Wrapper with Padding */}
+      {/* Info: (20260707 - Luphia) Content Wrapper with Padding */}
       <div className="flex-1 flex flex-col p-12 relative z-10">
         
-        {/* Header Section */}
+        {/* Info: (20260707 - Luphia) Header Section */}
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function MOEADigitalTransformationSlide() {
           </p>
         </motion.div>
 
-        {/* Steps Grid */}
+        {/* Info: (20260707 - Luphia) Steps Grid */}
         <div className="grid grid-cols-3 gap-6">
           {steps.map((step, index) => (
             <motion.div
@@ -89,7 +89,7 @@ export default function MOEADigitalTransformationSlide() {
               transition={{ delay: index * 0.1 }}
               className="flex flex-col bg-white border border-slate-100 rounded-[24px] p-6 hover:shadow-xl hover:shadow-slate-200/50 transition-all group relative overflow-hidden shadow-sm"
             >
-              {/* Step Number Badge */}
+              {/* Info: (20260707 - Luphia) Step Number Badge */}
               <div className="absolute top-6 right-6 text-6xl font-black text-slate-100 italic group-hover:text-slate-200 transition-colors pointer-events-none">
                 0{index + 1}
               </div>
@@ -114,7 +114,7 @@ export default function MOEADigitalTransformationSlide() {
                 ))}
               </ul>
 
-              {/* Price/Subsidy Tag */}
+              {/* Info: (20260707 - Luphia) Price/Subsidy Tag */}
               <div className="mt-4 pt-4 border-t border-slate-50 flex items-center justify-between">
                  <div className="flex items-center gap-2">
                    <div className="w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center">
@@ -130,7 +130,7 @@ export default function MOEADigitalTransformationSlide() {
           ))}
         </div>
 
-        {/* Footer Info */}
+        {/* Info: (20260707 - Luphia) Footer Info */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

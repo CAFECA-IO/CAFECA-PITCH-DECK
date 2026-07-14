@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Download, Grid, Zap } from 'lucide-react';
 import Link from 'next/link';
 
-// Slide Components
+// Info: (20260709 - Luphia) Slide Components
 import Slide1 from '@/app/isuncloud/1/page';
 import Slide2 from '@/app/isuncloud/2/page';
 import Slide3 from '@/app/isuncloud/3/page';
@@ -95,7 +95,7 @@ export default function IsunCloudSlideBrowser() {
 
   return (
     <div className="flex flex-col h-screen bg-slate-100 text-slate-800 overflow-hidden font-sans">
-      {/* Header */}
+      {/* Info: (20260709 - Luphia) Header */}
       <div className="h-16 border-b border-slate-200 flex items-center justify-between px-6 bg-white/80 backdrop-blur-xl z-20 flex-shrink-0">
         <div className="flex items-center gap-4">
           <div className="bg-orange-600 p-2 rounded-xl shadow-lg shadow-orange-600/20">
@@ -132,7 +132,7 @@ export default function IsunCloudSlideBrowser() {
       </div>
 
       <div className="flex-1 flex overflow-hidden">
-        {/* Main Content Area */}
+        {/* Info: (20260709 - Luphia) Main Content Area */}
         <div className="flex-1 bg-slate-50 flex items-center justify-center p-12 relative" ref={containerRef}>
           <div
             style={{
@@ -147,7 +147,7 @@ export default function IsunCloudSlideBrowser() {
           </div>
         </div>
 
-        {/* Side Navigator */}
+        {/* Info: (20260709 - Luphia) Side Navigator */}
         <div className="w-72 border-l border-slate-200 bg-white/80 backdrop-blur-xl flex flex-col flex-shrink-0">
           <div className="px-6 py-4 text-[10px] text-slate-800/40 font-bold uppercase tracking-[0.3em] flex items-center gap-2 border-b border-slate-200">
             <Grid size={12} />

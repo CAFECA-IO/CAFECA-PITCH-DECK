@@ -6,7 +6,7 @@ export default function TITASlide12() {
   return (
     <div className="min-h-screen w-full bg-slate-900 flex items-center justify-center p-4 font-sans text-slate-100">
       <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl flex flex-col border border-slate-800 rounded-xl">
-        {/* Background Maps/Globes concept */}
+        {/* Info: (20260519 - Luphia) Background Maps/Globes concept */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none" />
         
         <div className="px-16 pt-16 z-10 text-center">
@@ -21,7 +21,7 @@ export default function TITASlide12() {
 
         <div className="flex-1 px-16 z-10 flex items-center gap-12 mt-8 pb-12">
           
-          {/* Mobile Phone Mockup for DPP */}
+          {/* Info: (20260519 - Luphia) Mobile Phone Mockup for DPP */}
           <div className="w-1/3 flex justify-center">
             <div className="w-[280px] h-[540px] bg-white rounded-[2.5rem] border-[8px] border-slate-800 shadow-2xl flex flex-col overflow-hidden relative">
               <div className="absolute top-0 w-full h-6 bg-slate-800 rounded-b-2xl" />

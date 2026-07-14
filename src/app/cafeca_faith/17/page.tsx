@@ -45,7 +45,7 @@ export default function CafecaFaithSlide13() {
   return (
     <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
 
-      {/* Background Gradients */}
+      {/* Info: (20260629 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute -left-32 -top-32 w-[600px] h-[600px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute -right-32 -bottom-32 w-[600px] h-[600px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
@@ -56,7 +56,7 @@ export default function CafecaFaithSlide13() {
         <span className="text-xs font-mono text-slate-600 uppercase tracking-widest">Core Team</span>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260629 - Luphia) Header */}
       <div className="z-20 w-full px-16 mb-8 mt-6">
         <h2 className="text-4xl font-black text-slate-800 tracking-tight flex items-center gap-3">
           <Users className="w-8 h-8 text-orange-500" />
@@ -65,12 +65,12 @@ export default function CafecaFaithSlide13() {
         <p className="text-base text-slate-500 mt-2 font-medium">跨領域工程與數據專家，致力於推動綠色產業生態技術</p>
       </div>
 
-      {/* Grid Layout */}
+      {/* Info: (20260629 - Luphia) Grid Layout */}
       <div className="z-20 w-full px-16 grid grid-cols-2 gap-6 relative">
         {team.map((member) => (
           <div key={member.id} className="bg-white rounded-3xl p-6 border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col relative overflow-hidden">
 
-            {/* Header Section */}
+            {/* Info: (20260629 - Luphia) Header Section */}
             <div className="flex items-center gap-4 mb-4">
               <div>
                 <div className="flex items-baseline gap-3">
@@ -84,7 +84,7 @@ export default function CafecaFaithSlide13() {
               </div>
             </div>
 
-            {/* Description */}
+            {/* Info: (20260629 - Luphia) Description */}
             <p className="text-slate-600 text-sm leading-relaxed flex-1 text-justify pr-2">
               {member.description}
             </p>

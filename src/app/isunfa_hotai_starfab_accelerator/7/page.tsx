@@ -7,13 +7,13 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
   return (
     <div className="w-[1280px] h-[720px] bg-gradient-to-br from-[#060c15] via-[#0b1424] to-[#04080f] relative overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-900/80 text-white font-sans">
 
-      {/* Background Elements */}
+      {/* Info: (20260610 - Luphia) Background Elements */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-sky-500 rounded-full filter blur-[150px]"></div>
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-emerald-500 rounded-full filter blur-[150px]"></div>
       </div>
 
-      {/* Header */}
+      {/* Info: (20260610 - Luphia) Header */}
       <div className="relative z-10 w-full px-16 pt-10 pb-2 flex justify-between items-center">
         <div>
           <div className="flex items-center gap-4 mb-2">
@@ -40,10 +40,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Info: (20260610 - Luphia) Content */}
       <div className="relative z-10 flex-1 px-16 pb-10 flex items-center justify-between gap-12">
         
-        {/* Left Side: Text Description */}
+        {/* Info: (20260610 - Luphia) Left Side: Text Description */}
         <div className="w-[50%] flex flex-col gap-6">
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-slate-100">完全符合歐盟 DPP 數據架構</h2>
@@ -91,19 +91,19 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
           </div>
         </div>
 
-        {/* Right Side: Phone Mockup */}
+        {/* Info: (20260610 - Luphia) Right Side: Phone Mockup */}
         <div className="w-[50%] flex justify-center items-center relative scale-[0.85] transform-gpu">
           
-          {/* Phone Body */}
+          {/* Info: (20260610 - Luphia) Phone Body */}
           <div className="w-[300px] h-[600px] bg-slate-900 rounded-[48px] border-[12px] border-slate-800 relative shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8),_inset_0_0_0_2px_rgba(255,255,255,0.1)] overflow-hidden flex flex-col ring-2 ring-slate-900 z-10">
             
-            {/* Side Buttons */}
+            {/* Info: (20260610 - Luphia) Side Buttons */}
             <div className="absolute -left-[14px] top-[120px] w-[2px] h-[24px] bg-slate-700 rounded-l-sm"></div>
             <div className="absolute -left-[14px] top-[160px] w-[2px] h-[48px] bg-slate-700 rounded-l-sm"></div>
             <div className="absolute -left-[14px] top-[220px] w-[2px] h-[48px] bg-slate-700 rounded-l-sm"></div>
             <div className="absolute -right-[14px] top-[170px] w-[2px] h-[72px] bg-slate-700 rounded-r-sm"></div>
 
-            {/* Dynamic Island / Notch */}
+            {/* Info: (20260610 - Luphia) Dynamic Island / Notch */}
             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-30 flex items-center justify-between px-2 shadow-sm">
               <div className="w-2.5 h-2.5 bg-[#1a1a2e] rounded-full flex items-center justify-center shadow-inner">
                  <div className="w-1 h-1 bg-blue-900/60 rounded-full"></div>
@@ -111,7 +111,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
               <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full opacity-80"></div>
             </div>
 
-            {/* Status bar */}
+            {/* Info: (20260610 - Luphia) Status bar */}
             <div className="flex justify-between items-center px-6 pt-3 pb-2 text-[11px] text-white font-medium z-20 absolute top-0 w-full bg-gradient-to-b from-black/60 to-transparent">
               <span>10:09</span>
               <div className="flex gap-1.5 items-center">
@@ -129,10 +129,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
               </div>
             </div>
 
-            {/* App Content */}
+            {/* Info: (20260610 - Luphia) App Content */}
             <div className="flex-1 bg-slate-950 relative overflow-y-auto scrollbar-hide flex flex-col pb-8 pt-12 text-slate-200">
               
-              {/* Header / ID */}
+              {/* Info: (20260610 - Luphia) Header / ID */}
               <div className="px-5 py-3 border-b border-slate-800 bg-slate-900">
                 <h3 className="text-sm font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
                   <ShieldCheck size={14} /> 數位產品護照
@@ -142,7 +142,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
                 </div>
               </div>
 
-              {/* Vehicle Identity */}
+              {/* Info: (20260610 - Luphia) Vehicle Identity */}
               <div className="px-5 py-4 flex items-center gap-4 bg-gradient-to-b from-slate-900 to-slate-950">
                 <div className="w-12 h-12 bg-slate-800 rounded-full border border-slate-700 flex items-center justify-center text-slate-300">
                   <Image src="/isunfa_logo.svg" alt="Toyota Logo" width={24} height={24} className="opacity-50" />
@@ -153,10 +153,10 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
                 </div>
               </div>
 
-              {/* DPP Cards Grid */}
+              {/* Info: (20260610 - Luphia) DPP Cards Grid */}
               <div className="p-4 grid grid-cols-2 gap-3">
                 
-                {/* Battery Passport */}
+                {/* Info: (20260610 - Luphia) Battery Passport */}
                 <div className="bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col gap-2 shadow-sm">
                   <div className="text-sky-400">
                     <Battery size={16} />
@@ -170,7 +170,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
                   </div>
                 </div>
 
-                {/* Carbon Footprint */}
+                {/* Info: (20260610 - Luphia) Carbon Footprint */}
                 <div className="bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col gap-2 shadow-sm">
                   <div className="text-emerald-400">
                     <Leaf size={16} />
@@ -184,7 +184,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
                   </div>
                 </div>
 
-                {/* Material Composition */}
+                {/* Info: (20260610 - Luphia) Material Composition */}
                 <div className="bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col gap-2 shadow-sm col-span-2">
                   <div className="flex justify-between items-center mb-1">
                     <div className="text-indigo-400 flex items-center gap-1.5">
@@ -194,7 +194,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
                     <span className="text-[8px] font-mono text-emerald-400 border border-emerald-500/20 bg-emerald-950/50 px-1 rounded">EU Compliant</span>
                   </div>
                   
-                  {/* Material Bars */}
+                  {/* Info: (20260610 - Luphia) Material Bars */}
                   <div className="mt-1 space-y-2">
                     <div>
                       <div className="flex justify-between text-[7px] text-slate-400 mb-1 font-bold">
@@ -226,7 +226,7 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
                   </div>
                 </div>
 
-                {/* Origin */}
+                {/* Info: (20260610 - Luphia) Origin */}
                 <div className="bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col gap-2 shadow-sm col-span-2 flex-row items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 border border-slate-700">
@@ -245,18 +245,18 @@ export default function IsunfaHotaiStarfabAcceleratorSlide7() {
               </div>
             </div>
 
-            {/* Home Indicator */}
+            {/* Info: (20260610 - Luphia) Home Indicator */}
             <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/40 rounded-full z-30"></div>
 
           </div>
 
-          {/* Decorative glows behind phone */}
+          {/* Info: (20260610 - Luphia) Decorative glows behind phone */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[650px] bg-emerald-500/10 rounded-full blur-[80px] z-0 pointer-events-none"></div>
         </div>
 
       </div>
 
-      {/* Footer */}
+      {/* Info: (20260610 - Luphia) Footer */}
       <div className="absolute bottom-4 left-0 w-full px-16 flex justify-between text-slate-500 text-xs tracking-widest uppercase font-medium z-50">
         <div>Slide 07 / 17</div>
         <div className="flex gap-2 items-center">

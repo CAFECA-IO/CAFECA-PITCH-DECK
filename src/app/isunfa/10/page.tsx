@@ -7,7 +7,7 @@ export default function CafecaFaithSlide10() {
   return (
     <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
       
-      {/* Background Gradients */}
+      {/* Info: (20260701 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute left-1/4 top-10 w-[600px] h-[600px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
         <div className="absolute left-10 bottom-10 w-[400px] h-[400px] bg-orange-50 rounded-full filter blur-[120px]"></div>
@@ -18,10 +18,10 @@ export default function CafecaFaithSlide10() {
         <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">AI Core Knowledge Base</span>
       </div>
 
-      {/* Content Container (Left 2/3) */}
+      {/* Info: (20260701 - Luphia) Content Container (Left 2/3) */}
       <div className="z-10 w-2/3 h-full flex flex-col justify-center px-16 relative">
         
-        {/* Header Text */}
+        {/* Info: (20260701 - Luphia) Header Text */}
         <div className="space-y-6 mb-12 mt-4 text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100">
             <Cpu className="w-5 h-5 text-orange-500" />
@@ -34,7 +34,7 @@ export default function CafecaFaithSlide10() {
           </h2>
         </div>
 
-        {/* Core Model Visualization Layout */}
+        {/* Info: (20260701 - Luphia) Core Model Visualization Layout */}
         <div className="w-full flex gap-10 items-center">
            <div className="grid grid-cols-2 gap-4 flex-1">
              <div className="bg-white/80 p-5 rounded-2xl border border-orange-100 shadow-sm flex items-start gap-4">
@@ -70,7 +70,7 @@ export default function CafecaFaithSlide10() {
 
       </div>
 
-      {/* Right 1/3 Image Area */}
+      {/* Info: (20260701 - Luphia) Right 1/3 Image Area */}
       <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
         <Image
           src="/cafeca_faith/robot_core.jpeg"

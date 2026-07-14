@@ -21,7 +21,7 @@ export default function TaitraSlide10() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-3 gap-8 mt-4 pb-12 items-center">
-          {/* GWP 100 */}
+          {/* Info: (20260527 - Luphia) GWP 100 */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-indigo-500" />
             <div>
@@ -41,7 +41,7 @@ export default function TaitraSlide10() {
             </div>
           </div>
 
-          {/* Fossil vs Biogenic */}
+          {/* Info: (20260527 - Luphia) Fossil vs Biogenic */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-rose-500" />
             <div>
@@ -61,7 +61,7 @@ export default function TaitraSlide10() {
             </div>
           </div>
 
-          {/* Sensitivity & Uncertainty */}
+          {/* Info: (20260527 - Luphia) Sensitivity & Uncertainty */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden h-[360px] flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-amber-500" />
             <div>

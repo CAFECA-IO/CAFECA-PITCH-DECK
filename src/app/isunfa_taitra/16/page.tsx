@@ -20,7 +20,7 @@ export default function TaitraSlide14() {
 
         <div className="flex-1 px-16 z-10 flex gap-12 mt-12 items-stretch pb-16">
           
-          {/* Left: The Problem */}
+          {/* Info: (20260527 - Luphia) Left: The Problem */}
           <div className="w-1/3 flex flex-col gap-6">
             <div className="bg-rose-950/20 border border-rose-900/50 p-6 rounded-2xl h-full relative">
               <div className="absolute -top-5 left-6 bg-rose-500/20 p-2 rounded-xl border border-rose-500/30">
@@ -49,7 +49,7 @@ export default function TaitraSlide14() {
             </div>
           </div>
 
-          {/* Right: The Solution */}
+          {/* Info: (20260527 - Luphia) Right: The Solution */}
           <div className="w-2/3 bg-slate-800/80 border border-slate-700 p-8 rounded-2xl relative">
             <div className="absolute -top-5 left-8 bg-indigo-500 p-2 rounded-xl shadow-lg">
               <BrainCircuit className="text-white w-6 h-6" />

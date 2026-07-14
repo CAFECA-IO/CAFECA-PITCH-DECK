@@ -21,7 +21,7 @@ export default function TaitraSlide5() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-12 gap-8 mt-4 pb-12 items-center">
-          {/* Left Block: Definition Card (7 cols) */}
+          {/* Info: (20260527 - Luphia) Left Block: Definition Card (7 cols) */}
           <div className="col-span-7 bg-slate-900 text-white p-8 rounded-2xl shadow-lg relative overflow-hidden h-fit">
             <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-emerald-500/20 rounded-full blur-2xl pointer-events-none" />
             <h3 className="text-2xl font-bold flex items-center gap-3 text-emerald-400 mb-6">
@@ -48,7 +48,7 @@ export default function TaitraSlide5() {
             </div>
           </div>
 
-          {/* Right Block: Boundaries (5 cols) */}
+          {/* Info: (20260527 - Luphia) Right Block: Boundaries (5 cols) */}
           <div className="col-span-5 space-y-6">
             <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
               <ArrowRightLeft className="text-emerald-600" /> 常見系統邊界劃分

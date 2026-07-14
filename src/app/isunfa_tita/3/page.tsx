@@ -16,10 +16,10 @@ export default function TITASlide3() {
 
         <div className="flex-1 px-16 z-10 flex flex-col justify-center mt-8 pb-12">
 
-          {/* Pipeline Diagram */}
+          {/* Info: (20260519 - Luphia) Pipeline Diagram */}
           <div className="flex items-center justify-between gap-4">
 
-            {/* Step 1 */}
+            {/* Info: (20260519 - Luphia) Step 1 */}
             <div className="flex-1 bg-white border-2 border-slate-200 rounded-2xl p-6 text-center shadow-sm relative">
               <div className="w-16 h-16 mx-auto bg-slate-100 rounded-full flex items-center justify-center text-slate-600 mb-4">
                 <ScanLine size={32} />
@@ -30,7 +30,7 @@ export default function TITASlide3() {
 
             <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
 
-            {/* Step 2 */}
+            {/* Info: (20260519 - Luphia) Step 2 */}
             <div className="flex-1 bg-sky-50 border-2 border-sky-200 rounded-2xl p-6 text-center shadow-sm relative transform scale-105">
               <div className="w-16 h-16 mx-auto bg-sky-100 rounded-full flex items-center justify-center text-sky-600 mb-4">
                 <Database size={32} />
@@ -41,7 +41,7 @@ export default function TITASlide3() {
 
             <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
 
-            {/* Step 3 */}
+            {/* Info: (20260519 - Luphia) Step 3 */}
             <div className="flex-1 bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-6 text-center shadow-sm relative">
               <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-4">
                 <Calculator size={32} />
@@ -52,7 +52,7 @@ export default function TITASlide3() {
 
             <ArrowRight className="text-slate-300 w-8 h-8 flex-shrink-0" />
 
-            {/* Step 4 */}
+            {/* Info: (20260519 - Luphia) Step 4 */}
             <div className="flex-1 bg-indigo-50 border-2 border-indigo-200 rounded-2xl p-6 text-center shadow-sm relative">
               <div className="w-16 h-16 mx-auto bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mb-4">
                 <FileCheck2 size={32} />

@@ -7,13 +7,13 @@ export default function Slide5() {
     <div className="min-h-screen w-full bg-slate-950 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-slate-900 relative overflow-hidden shadow-2xl border border-slate-800 p-16 flex flex-col items-center justify-center">
         
-        {/* Background */}
+        {/* Info: (20260426 - Luphia) Background */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05] pointer-events-none"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-amber-900/10 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div className="z-10 flex flex-col items-center text-center space-y-10 animate-fade-in-up">
           
-          {/* SVG Illustration - Spirited Little Prince */}
+          {/* Info: (20260426 - Luphia) SVG Illustration - Spirited Little Prince */}
           <div className="relative">
             <div className="absolute inset-0 bg-amber-500/20 blur-3xl rounded-full"></div>
             <div className="relative flex flex-col items-center text-slate-400">

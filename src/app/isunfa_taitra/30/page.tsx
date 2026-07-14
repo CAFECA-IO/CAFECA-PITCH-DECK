@@ -26,7 +26,7 @@ export default function TaitraSlide28() {
         </div>
 
         <div className="flex-1 px-16 z-10 grid grid-cols-12 gap-8 mt-4 pb-12 items-center">
-          {/* Left Block: Hash Chain Visualizer (7 cols) */}
+          {/* Info: (20260527 - Luphia) Left Block: Hash Chain Visualizer (7 cols) */}
           <div className="col-span-7 bg-slate-950 border border-slate-800 rounded-2xl p-6 shadow-2xl flex flex-col h-[340px] justify-between relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.08),rgba(255,255,255,0))]" />
 
@@ -40,9 +40,9 @@ export default function TaitraSlide28() {
               </span>
             </div>
 
-            {/* Hash flow nodes */}
+            {/* Info: (20260527 - Luphia) Hash flow nodes */}
             <div className="flex items-center justify-between gap-2 z-10 my-4">
-              {/* Node 1 */}
+              {/* Info: (20260527 - Luphia) Node 1 */}
               <div className="flex-1 bg-slate-900 border border-slate-800 rounded-lg p-3 text-center">
                 <span className="text-[9px] text-slate-500 block mb-1 uppercase font-bold">Raw Receipt File</span>
                 <div className="bg-slate-950 rounded py-1 px-1.5 text-[9px] font-mono text-emerald-400 truncate mb-1">
@@ -55,7 +55,7 @@ export default function TaitraSlide28() {
 
               <Link2 className="text-emerald-500/40 w-4 h-4 flex-shrink-0 animate-pulse" />
 
-              {/* Node 2 */}
+              {/* Info: (20260527 - Luphia) Node 2 */}
               <div className="flex-1 bg-slate-900 border border-slate-800 rounded-lg p-3 text-center relative">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 text-[7px] font-black px-1 py-0.5 rounded uppercase">
                   SHA-256
@@ -71,7 +71,7 @@ export default function TaitraSlide28() {
 
               <Link2 className="text-emerald-500/40 w-4 h-4 flex-shrink-0 animate-pulse" />
 
-              {/* Node 3 */}
+              {/* Info: (20260527 - Luphia) Node 3 */}
               <div className="flex-1 bg-emerald-950/20 border border-emerald-800/50 rounded-lg p-3 text-center">
                 <span className="text-[9px] text-emerald-400 block mb-1 uppercase font-bold">Ledger Block</span>
                 <div className="bg-slate-950 rounded py-1 px-1.5 text-[9px] font-mono text-emerald-300 truncate mb-1">
@@ -91,7 +91,7 @@ export default function TaitraSlide28() {
             </div>
           </div>
 
-          {/* Right Block: Audit Trail Value (5 cols) */}
+          {/* Info: (20260527 - Luphia) Right Block: Audit Trail Value (5 cols) */}
           <div className="col-span-5 space-y-6">
             <h3 className="text-xl font-bold text-slate-800 flex items-center gap-2">
               <ShieldCheck className="text-emerald-600" /> 3. 區塊鏈溯源與不可篡改性

@@ -5,7 +5,7 @@ export default function Slide12() {
     <div className="min-h-screen w-full bg-neutral-900 flex items-center justify-center p-4">
       <div className="w-[1280px] h-[720px] bg-neutral-950 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-neutral-800">
         
-        {/* Dynamic Background */}
+        {/* Info: (20260527 - Luphia) Dynamic Background */}
         <div className="absolute inset-0 z-0 opacity-50">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-900/30 via-neutral-950 to-neutral-950"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-neutral-950 to-neutral-950"></div>
@@ -39,7 +39,7 @@ export default function Slide12() {
 
         </div>
 
-        {/* Full Company Info Footer */}
+        {/* Info: (20260527 - Luphia) Full Company Info Footer */}
         <div className="absolute bottom-12 w-full text-center text-neutral-500 text-sm tracking-[0.3em]">
           <p className="font-bold text-neutral-400 mb-2">卡菲卡金融科技股份有限公司</p>
           <p>統一編號: 52650861</p>
