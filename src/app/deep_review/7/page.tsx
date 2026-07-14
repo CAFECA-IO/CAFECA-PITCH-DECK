@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
 import { Cpu, Sparkles, MessageSquare, Zap } from 'lucide-react';
@@ -126,11 +126,12 @@ const MEMBERS = [
 export default function DeepReviewSlide7() {
   const [selectedMemberId, setSelectedMemberId] = useState('system');
   const selectedMember = MEMBERS.find(m => m.id === selectedMemberId) || MEMBERS[0];
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setIsMounted(true);
-  }, []);
+  // Info: (20260714 - Luphia) Client-mount gate for SSR-safe chart rendering (false on server, true after hydration)
+  const isMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   return (
     <div className="min-h-screen w-full bg-slate-100 flex items-center justify-center p-4">

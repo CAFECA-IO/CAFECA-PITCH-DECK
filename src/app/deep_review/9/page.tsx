@@ -22,7 +22,7 @@ import {
   Trophy,
   TrendingUp
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useSyncExternalStore } from 'react';
 
 // Info: (20260131 - Luphia) Mock Data for Fund Flows (Subscription vs Redemption)
 const FLOW_DATA = [
@@ -53,11 +53,12 @@ const COMPETITORS = [
 ];
 
 export default function DeepReviewSlide9() {
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setIsMounted(true);
-  }, []);
+  // Info: (20260714 - Luphia) Client-mount gate for SSR-safe chart rendering (false on server, true after hydration)
+  const isMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   return (
     <div className="min-h-screen w-full bg-slate-100 flex items-center justify-center p-4">

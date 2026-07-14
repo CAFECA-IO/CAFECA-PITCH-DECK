@@ -212,12 +212,12 @@ export interface ILariaMetadata {
 }
 
 // Info: (20251028 - Luphia) Type guard for Laria Metadata
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isLariaMetadata(obj: any): obj is ILariaMetadata {
-  return obj
-    && typeof obj.filename === 'string'
-    && typeof obj.originalFileSize === 'number'
-    && Array.isArray(obj.shards);
+function isLariaMetadata(obj: unknown): obj is ILariaMetadata {
+  if (typeof obj !== 'object' || obj === null) return false;
+  const meta = obj as Record<string, unknown>;
+  return typeof meta.filename === 'string'
+    && typeof meta.originalFileSize === 'number'
+    && Array.isArray(meta.shards);
 }
 
 /**

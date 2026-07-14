@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useCallback, useSyncExternalStore, ReactNode } from 'react';
 import { en } from '@/i18n/en';
 import { zhTw } from '@/i18n/zh_tw';
 import { zhCn } from '@/i18n/zh_cn';
@@ -39,24 +39,35 @@ const dictionaries: Record<Language, Dictionary> = {
   ja,
 };
 
-export function I18nProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('zh-TW'); // Default to zh-TW
-  const [dictionary, setDictionary] = useState<Dictionary>(zhTw);
+const LANGUAGE_STORAGE_KEY = 'isunfa_lang';
 
-  useEffect(() => {
-    // Info: (20260120 - Luphia) Load persisted language
-    const savedLang = localStorage.getItem('isunfa_lang') as Language;
-    if (savedLang && Object.keys(dictionaries).includes(savedLang) && savedLang !== language) {
-      setLanguage(savedLang);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+// Info: (20260714 - Luphia) 以 localStorage 作為語言設定的外部資料來源，供 useSyncExternalStore 訂閱
+const languageListeners = new Set<() => void>();
 
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    setDictionary(dictionaries[lang]);
-    localStorage.setItem('isunfa_lang', lang);
+function subscribeLanguage(callback: () => void) {
+  languageListeners.add(callback);
+  window.addEventListener('storage', callback);
+  return () => {
+    languageListeners.delete(callback);
+    window.removeEventListener('storage', callback);
   };
+}
+
+function readStoredLanguage(): Language {
+  const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language;
+  return saved && Object.keys(dictionaries).includes(saved) ? saved : 'zh-TW';
+}
+
+export function I18nProvider({ children }: { children: ReactNode }) {
+  // Info: (20260714 - Luphia) 從 localStorage 讀取語言，SSR 期間回退為預設 zh-TW 以避免 hydration 不一致
+  const language = useSyncExternalStore<Language>(subscribeLanguage, readStoredLanguage, () => 'zh-TW');
+  const dictionary = dictionaries[language];
+
+  const setLanguage = useCallback((lang: Language) => {
+    // Info: (20260714 - Luphia) 寫入 localStorage 後通知所有訂閱者重新讀取
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+    languageListeners.forEach((listener) => listener());
+  }, []);
 
   const t = <T = string>(key: string, options?: Record<string, string | number>): T => {
     const text: unknown = getNestedValue<unknown>(dictionary, key);

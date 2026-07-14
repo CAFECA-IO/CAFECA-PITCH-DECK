@@ -12,6 +12,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import nextPlugin from '@next/eslint-plugin-next';
 import checkFile from 'eslint-plugin-check-file';
+import eslintComments from '@eslint-community/eslint-plugin-eslint-comments';
 import prettierConfig from 'eslint-config-prettier';
 
 // Info: (20251113 - Tzuhan)  --- 抽離出的共用規則 (同時適用於 Next.js 和 Hardhat) ---
@@ -50,6 +51,7 @@ const tslintConfigs = [
       '.next',
       'dist',
       'build',
+      'src/generated', // Info: (20260714 - Luphia) 自動產生的 Prisma 程式碼，不套用團隊規範
       'eslint.config.mjs',
       'tailwind.config.ts',
       'postcss.config.mjs',
@@ -145,6 +147,12 @@ const tslintConfigs = [
       'no-restricted-imports': 'off', // Info: (20251113 - Tzuhan) 關閉 '@/' 路徑限制
       'import/no-extraneous-dependencies': 'off',
     },
+  },
+
+  // Info: (20260714 - Luphia) 禁止使用 eslint-disable 等註解指令，違規一律報錯
+  {
+    plugins: { '@eslint-community/eslint-comments': eslintComments },
+    rules: { '@eslint-community/eslint-comments/no-use': 'error' },
   },
 
   // Info: (20250918 - Luphia) Prettier 必須放在最後

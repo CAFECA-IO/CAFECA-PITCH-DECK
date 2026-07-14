@@ -1,6 +1,6 @@
 'use client';
-/* eslint-disable @next/next/no-img-element */
 
+import Image from 'next/image';
 import { BookOpen, ShieldCheck } from 'lucide-react';
 
 export default function TaitraSlide18() {
@@ -30,11 +30,7 @@ export default function TaitraSlide18() {
             {/* Info: (20260527 - Luphia) Header */}
             <div className="bg-[#202020] px-4 py-2 flex items-center justify-between border-b border-neutral-800">
               <div className="flex items-center gap-2">
-                <img 
-                  src="/images/twai_logo_color.png" 
-                  alt="TWAI Logo" 
-                  className="w-32 h-16 object-contain object-left"
-                />
+                <Image src="/images/twai_logo_color.png" alt="TWAI Logo" width={128} height={64} className="w-32 h-16 object-contain object-left" />
                 <div className="text-left">
                   <span className="text-xs font-semibold text-neutral-200 block leading-tight">CFV AI AGENT</span>
                   <span className="text-[9px] text-sky-400 font-mono flex items-center gap-1">
@@ -63,11 +59,7 @@ export default function TaitraSlide18() {
               {/* Info: (20260527 - Luphia) Assistant Response Bubble */}
               <div className="self-start max-w-[85%] bg-[#202020] border border-neutral-800 text-neutral-200 p-3 rounded-2xl rounded-tl-sm shadow-md font-mono text-[10px]">
                 <div className="text-[9px] text-sky-400 font-bold uppercase tracking-wider mb-1 font-sans flex items-center gap-1.5">
-                  <img 
-                    src="/images/twai_logo_color.png" 
-                    alt="TWAI Logo" 
-                    className="w-14 h-7 object-contain object-left inline-block mr-1.5"
-                  />
+                  <Image src="/images/twai_logo_color.png" alt="TWAI Logo" width={56} height={28} className="w-14 h-7 object-contain object-left inline-block mr-1.5" />
                   Structured Assistant Response (GAAP)
                 </div>
                 <pre className="whitespace-pre-wrap leading-normal font-mono">
