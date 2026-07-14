@@ -1,85 +1,142 @@
 'use client';
 
-import { Cpu, Award, Globe2, MapPin, Sparkles } from 'lucide-react';
+import { ActivitySquare, FileSearch, ShieldCheck, Link2, Leaf } from 'lucide-react';
+import Image from 'next/image';
 
 export default function CafecaIsunfaSlide2() {
-  // Info: (20260714 - Luphia) Differentiators that make CAFECA the strongest pick for Taipei's GISA recommendation
-  const highlights = [
-    {
-      icon: Cpu,
-      color: 'orange',
-      title: '自主底層技術 × 國家級算力',
-      desc: '自研同態加密、區塊鏈存證與 FAITH 專家模型；團隊參與臺灣杉二號、獲選經濟部 × NVIDIA Taipei-1 算力執行單位，硬實力領先同業。',
-    },
-    {
-      icon: Award,
-      color: 'emerald',
-      title: '已具企業級實證成果',
-      desc: '完成台積電運輸碳盤查、中國砂輪 (KINIK) 全自動碳盤查，單案減碳 2,500 噸 CO₂e、循環經濟創造 4,000 萬元以上價值，非紙上談兵。',
-    },
-    {
-      icon: Globe2,
-      color: 'blue',
-      title: '剛性且龐大的市場需求',
-      desc: 'CBAM 碳關稅與 IFRS S1/S2 為法規強制；僅東亞精密製造業每年碳盤查商機逾 312.7 億元、涵蓋 75,500 家企業，成長確定性高。',
-    },
-    {
-      icon: MapPin,
-      color: 'purple',
-      title: '深厚在地連結與跨域團隊',
-      desc: '曾建置新北市全市溫室氣體追蹤、通過金管會金融監理沙盒、獲成大育成與蔡俊鴻教授號召；團隊橫跨金融合規、環境工程與 AI。',
-    },
-  ];
-
-  const colorMap: { [key: string]: { bg: string; text: string; ring: string } } = {
-    orange: { bg: 'bg-orange-50', text: 'text-orange-500', ring: 'group-hover:ring-orange-200' },
-    emerald: { bg: 'bg-emerald-50', text: 'text-emerald-500', ring: 'group-hover:ring-emerald-200' },
-    blue: { bg: 'bg-blue-50', text: 'text-blue-500', ring: 'group-hover:ring-blue-200' },
-    purple: { bg: 'bg-purple-50', text: 'text-purple-500', ring: 'group-hover:ring-purple-200' },
-  };
-
   return (
-    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 text-slate-800 font-sans">
+    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
 
-      {/* Info: (20260714 - Luphia) Background Gradients */}
+      {/* Info: (20260701 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
-        <div className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[110px]"></div>
-        <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[120px]"></div>
+        <div className="absolute left-1/4 top-10 w-[600px] h-[600px] bg-emerald-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute left-10 bottom-10 w-[400px] h-[400px] bg-blue-50 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Info: (20260714 - Luphia) Header */}
-      <div className="z-10 px-20 pt-16 pb-6 text-center">
-        <div className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-orange-50 border border-orange-200 text-orange-600 text-sm font-bold tracking-wider">
-          <Sparkles size={15} />
-          八家競逐，卡菲卡的推薦亮點
+      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
+        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span className="text-xs font-mono text-emerald-600 uppercase tracking-widest">Comprehensive ESG Analysis</span>
+      </div>
+
+      {/* Info: (20260701 - Luphia) Content Container (Left 2/3) */}
+      <div className="z-10 w-2/3 h-full flex flex-col justify-center px-12 relative pt-16">
+
+        {/* Info: (20260701 - Luphia) Top Header Area */}
+        <div className="space-y-4 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100">
+            <ShieldCheck className="w-5 h-5 text-emerald-600" />
+            <span className="text-sm font-semibold text-emerald-700">一氣呵成完成所有企業所需分析</span>
+          </div>
+
+          <h2 className="text-4xl font-black leading-tight text-slate-800">
+            從廠區到產品，<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-400">完整涵蓋全球永續合規標準。</span>
+          </h2>
         </div>
-        <h2 className="text-5xl font-black tracking-tight text-slate-800 leading-tight">
-          為何卡菲卡是臺北市<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">創櫃板推薦的最佳選擇</span>
-        </h2>
-        <p className="text-lg text-slate-500 font-medium mt-4 max-w-4xl mx-auto leading-relaxed">
-          技術硬實力、企業級實證、確定性市場與在地連結，四大支柱讓推薦卡菲卡的效益最大化。
-        </p>
+
+        {/* Info: (20260701 - Luphia) 5 Analysis Items Grid */}
+        <div className="grid grid-cols-2 gap-4 w-full pr-8">
+
+          {/* Info: (20260701 - Luphia) Item 1 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute left-0 top-0 w-1 h-full bg-blue-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-blue-50 rounded-lg group-hover:bg-blue-500 transition-colors">
+                  <ActivitySquare className="w-5 h-5 text-blue-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">組織碳盤查</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">ISO 14064-1</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              自動整合多個廠區的排放源數據，產出符合國際標準的組織溫室氣體申報報告。
+            </p>
+          </div>
+
+          {/* Info: (20260701 - Luphia) Item 2 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute left-0 top-0 w-1 h-full bg-emerald-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-emerald-50 rounded-lg group-hover:bg-emerald-500 transition-colors">
+                  <FileSearch className="w-5 h-5 text-emerald-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">產品碳足跡</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">ISO 14067</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              以製程反向推理技術，計算出單一產品在生命週期內的碳排放，符合查證規範。
+            </p>
+          </div>
+
+          {/* Info: (20260701 - Luphia) Item 3 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute left-0 top-0 w-1 h-full bg-indigo-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-indigo-50 rounded-lg group-hover:bg-indigo-500 transition-colors">
+                  <ShieldCheck className="w-5 h-5 text-indigo-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">數位產品護照</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">EU DPP Compliant</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              產出符合歐盟規範的數位產品護照 (DPP)，即時回報產品碳履歷，保障產品順利通過邊境關稅審查。
+            </p>
+          </div>
+
+          {/* Info: (20260701 - Luphia) Item 4 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute left-0 top-0 w-1 h-full bg-orange-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-orange-50 rounded-lg group-hover:bg-orange-500 transition-colors">
+                  <Link2 className="w-5 h-5 text-orange-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">綠色供應鏈管理</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">Scope 3 Management</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              動態追蹤並稽核下游供應商的實質碳排數據，降低企業的範疇三 (Scope 3) 供應鏈碳風險。
+            </p>
+          </div>
+
+          {/* Info: (20260701 - Luphia) Item 5 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-5 rounded-2xl hover:shadow-md transition-shadow group relative overflow-hidden flex flex-col justify-between col-span-2 w-1/2">
+            <div className="absolute left-0 top-0 w-1 h-full bg-teal-400"></div>
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-teal-50 rounded-lg group-hover:bg-teal-500 transition-colors">
+                  <Leaf className="w-5 h-5 text-teal-500 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-bold text-slate-800">淨零碳排規劃</h3>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-full">Net-Zero Path</span>
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+              結合多維數據分析與綠色路徑規劃，動態模擬最佳設備升級與減量投資路徑。
+            </p>
+          </div>
+
+        </div>
+
       </div>
 
-      {/* Info: (20260714 - Luphia) Highlight Cards */}
-      <div className="z-10 flex-1 px-20 pb-16 grid grid-cols-4 gap-6">
-        {highlights.map((h) => {
-          const c = colorMap[h.color];
-          const Icon = h.icon;
-          return (
-            <div
-              key={h.title}
-              className={`group bg-white rounded-2xl border border-slate-200 shadow-sm p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ring-1 ring-transparent ${c.ring}`}
-            >
-              <div className={`w-14 h-14 rounded-xl ${c.bg} flex items-center justify-center mb-5`}>
-                <Icon className={c.text} size={28} />
-              </div>
-              <h3 className="text-lg font-black text-slate-800 leading-snug mb-3">{h.title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{h.desc}</p>
-            </div>
-          );
-        })}
+      {/* Info: (20260701 - Luphia) Right 1/3 Image Area */}
+      <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
+        <Image
+          src="/cafeca_faith/robot_impact.jpeg"
+          alt="Impact and ROI Robot"
+          fill
+          className="object-cover"
+          style={{ objectFit: 'cover' }}
+        />
       </div>
+
     </div>
   );
 }

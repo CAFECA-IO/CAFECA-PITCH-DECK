@@ -18,7 +18,7 @@ export default function CafecaIsunfaSlide1() {
         {/* Info: (20260714 - Luphia) Context Pill */}
         <div className="inline-flex items-center gap-2 self-start mb-8 px-4 py-2 rounded-full bg-orange-50 border border-orange-200 text-orange-600 text-sm font-bold tracking-wider">
           <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-          臺北市創櫃板推薦遴選簡報
+          臺北市創櫃板推薦申請
         </div>
 
         {/* Info: (20260714 - Luphia) Company Brand Area */}
@@ -34,12 +34,9 @@ export default function CafecaIsunfaSlide1() {
 
         {/* Info: (20260714 - Luphia) Main Title Area */}
         <div className="space-y-5 text-left">
-          <h1 className="text-6xl font-black tracking-tight leading-tight text-slate-800">
-            卡菲卡<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">金融科技</span>
+          <h1 className="text-5xl font-black tracking-tight leading-tight text-slate-800">
+            卡菲卡<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">金融科技股份有限公司</span>
           </h1>
-          <p className="text-xl text-slate-500 font-semibold tracking-wide">
-            卡菲卡金融科技股份有限公司 · CAFECA Fintech Co., Ltd.
-          </p>
 
           {/* Info: (20260714 - Luphia) Core Product Callout */}
           <div className="flex items-center gap-4 pt-4 mt-2 border-l-4 border-orange-500 pl-6">

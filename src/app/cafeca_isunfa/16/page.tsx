@@ -1,98 +1,85 @@
 'use client';
 
-import { Users, GraduationCap } from 'lucide-react';
+import { Cpu, Award, Globe2, MapPin, Sparkles } from 'lucide-react';
 
 export default function CafecaIsunfaSlide16() {
-  const team = [
+  // Info: (20260714 - Luphia) Differentiators that make CAFECA the strongest pick for Taipei's GISA recommendation
+  const highlights = [
     {
-      id: 'chiwei',
-      name: '張智崴',
-      role: 'Co-founder & CEO',
-      background: '環境工程 / 資訊科技',
-      avatarColor: 'bg-orange-100 text-orange-600 border-orange-200',
-      tagColor: 'bg-orange-50 text-orange-600 border-orange-200',
-      description: '將金融合規與物理碳排程式化的系統架構師，參與臺灣、阿曼、中國國家級大型運算平台建設。受成功大學環境工程學系前系主任蔡俊鴻教授指導與號召，致力於推動綠色產業生態技術。超過十年以上的開源社群深耕，致力於以有趣的方式揭露政府資料，促進民眾與政府的溝通。',
+      icon: Cpu,
+      color: 'orange',
+      title: '自主底層技術 × 國家級算力',
+      desc: '自研同態加密、區塊鏈存證與 FAITH 專家模型；團隊參與臺灣杉二號、獲選經濟部 × NVIDIA Taipei-1 算力執行單位，硬實力領先同業。',
     },
     {
-      id: 'tzuhan',
-      name: '梁紫涵',
-      role: 'Co-founder & PE',
-      background: '化學工程',
-      avatarColor: 'bg-emerald-100 text-emerald-600 border-emerald-200',
-      tagColor: 'bg-emerald-50 text-emerald-600 border-emerald-200',
-      description: '參與臺灣杉二號開發，提出關鍵區塊鏈技術架構規劃，專長於數據分析。專注於系統底層邏輯與架構設計，並致力於將複雜技術落地應用。期望透過資訊科技打造具備信任與韌性的數位基礎設施，解決真實世界的挑戰，讓社會運作更加透明與永續。',
+      icon: Award,
+      color: 'emerald',
+      title: '已具企業級實證成果',
+      desc: '完成台積電運輸碳盤查、中國砂輪 (KINIK) 全自動碳盤查，單案減碳 2,500 噸 CO₂e、循環經濟創造 4,000 萬元以上價值，非紙上談兵。',
     },
     {
-      id: 'yifang',
-      name: '謝宜芳',
-      role: 'Growth Marketing',
-      background: '視覺傳達與行銷',
-      avatarColor: 'bg-blue-100 text-blue-600 border-blue-200',
-      tagColor: 'bg-blue-50 text-blue-600 border-blue-200',
-      description: '專長於品牌溝通、內容策略與視覺設計。擅長將碳管理、數據應用與永續轉型等複雜議題，轉化為具理解度、說服力與市場溝通性的內容形式。負責協助團隊建立清晰的品牌敘事，讓技術價值能被企業、合作夥伴與使用者更快速理解，並提升產品在市場中的信任感與辨識度。',
+      icon: Globe2,
+      color: 'blue',
+      title: '剛性且龐大的市場需求',
+      desc: 'CBAM 碳關稅與 IFRS S1/S2 為法規強制；僅東亞精密製造業每年碳盤查商機逾 312.7 億元、涵蓋 75,500 家企業，成長確定性高。',
     },
     {
-      id: 'lien',
-      name: '許瓈恩',
-      role: 'Software Engineer',
-      background: '資訊管理',
-      avatarColor: 'bg-violet-100 text-violet-600 border-violet-200',
-      tagColor: 'bg-violet-50 text-violet-600 border-violet-200',
-      description: '專長於系統開發與 AI 駕馭工程，致力於將複雜的底層技術化繁為簡，讓強大的人工智慧卸下高門檻，成為人人都能輕鬆對話的日常夥伴。',
+      icon: MapPin,
+      color: 'purple',
+      title: '深厚在地連結與跨域團隊',
+      desc: '曾建置新北市全市溫室氣體追蹤、通過金管會金融監理沙盒、獲成大育成與蔡俊鴻教授號召；團隊橫跨金融合規、環境工程與 AI。',
     },
   ];
 
+  const colorMap: { [key: string]: { bg: string; text: string; ring: string } } = {
+    orange: { bg: 'bg-orange-50', text: 'text-orange-500', ring: 'group-hover:ring-orange-200' },
+    emerald: { bg: 'bg-emerald-50', text: 'text-emerald-500', ring: 'group-hover:ring-emerald-200' },
+    blue: { bg: 'bg-blue-50', text: 'text-blue-500', ring: 'group-hover:ring-blue-200' },
+    purple: { bg: 'bg-purple-50', text: 'text-purple-500', ring: 'group-hover:ring-purple-200' },
+  };
+
   return (
-    <div className="w-[1280px] h-[720px] bg-slate-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center border border-slate-200 text-slate-800 font-sans">
+    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 text-slate-800 font-sans">
 
-      {/* Info: (20260629 - Luphia) Background Gradients */}
+      {/* Info: (20260714 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
-        <div className="absolute -left-32 -top-32 w-[600px] h-[600px] bg-amber-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
-        <div className="absolute -right-32 -bottom-32 w-[600px] h-[600px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-orange-100 rounded-full mix-blend-multiply filter blur-[110px]"></div>
+        <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[120px]"></div>
       </div>
 
-      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
-        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-        <span className="text-xs font-mono text-slate-600 uppercase tracking-widest">Core Team</span>
-      </div>
-
-      {/* Info: (20260629 - Luphia) Header */}
-      <div className="z-20 w-full px-16 mb-8 mt-6">
-        <h2 className="text-4xl font-black text-slate-800 tracking-tight flex items-center gap-3">
-          <Users className="w-8 h-8 text-orange-500" />
-          核心團隊
+      {/* Info: (20260714 - Luphia) Header */}
+      <div className="z-10 px-20 pt-16 pb-6 text-center">
+        <div className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-orange-50 border border-orange-200 text-orange-600 text-sm font-bold tracking-wider">
+          <Sparkles size={15} />
+          卡菲卡的推薦亮點
+        </div>
+        <h2 className="text-5xl font-black tracking-tight text-slate-800 leading-tight">
+          為何卡菲卡是<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">最佳選擇</span>
         </h2>
-        <p className="text-base text-slate-500 mt-2 font-medium">跨領域工程與數據專家，致力於推動綠色產業生態技術</p>
+        <p className="text-lg text-slate-500 font-medium mt-4 max-w-4xl mx-auto leading-relaxed">
+          技術硬實力、企業級實證、確定性市場與在地連結。
+        </p>
       </div>
 
-      {/* Info: (20260629 - Luphia) Grid Layout */}
-      <div className="z-20 w-full px-16 grid grid-cols-2 gap-6 relative">
-        {team.map((member) => (
-          <div key={member.id} className="bg-white rounded-3xl p-6 border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col relative overflow-hidden">
-
-            {/* Info: (20260629 - Luphia) Header Section */}
-            <div className="flex items-center gap-4 mb-4">
-              <div>
-                <div className="flex items-baseline gap-3">
-                  <h3 className="text-xl font-bold text-slate-800">{member.name}</h3>
-                  <span className="text-sm font-bold text-slate-400">{member.role}</span>
-                </div>
-                <div className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border mt-1.5 ${member.tagColor}`}>
-                  <GraduationCap className="w-3.5 h-3.5" />
-                  <span className="text-xs font-bold">{member.background}</span>
-                </div>
+      {/* Info: (20260714 - Luphia) Highlight Cards */}
+      <div className="z-10 flex-1 px-20 pb-16 grid grid-cols-4 gap-6">
+        {highlights.map((h) => {
+          const c = colorMap[h.color];
+          const Icon = h.icon;
+          return (
+            <div
+              key={h.title}
+              className={`group bg-white rounded-2xl border border-slate-200 shadow-sm p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ring-1 ring-transparent ${c.ring}`}
+            >
+              <div className={`w-14 h-14 rounded-xl ${c.bg} flex items-center justify-center mb-5`}>
+                <Icon className={c.text} size={28} />
               </div>
+              <h3 className="text-lg font-black text-slate-800 leading-snug mb-3">{h.title}</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">{h.desc}</p>
             </div>
-
-            {/* Info: (20260629 - Luphia) Description */}
-            <p className="text-slate-600 text-sm leading-relaxed flex-1 text-justify pr-2">
-              {member.description}
-            </p>
-
-          </div>
-        ))}
+          );
+        })}
       </div>
-
     </div>
   );
 }

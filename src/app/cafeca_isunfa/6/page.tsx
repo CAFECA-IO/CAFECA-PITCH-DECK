@@ -1,114 +1,100 @@
 'use client';
 
-import { Building, Layers, Award, CheckCircle2, Cloud, Server, Sparkles } from 'lucide-react';
+import { AlertTriangle, Lightbulb, Recycle, Target } from 'lucide-react';
+import Image from 'next/image';
 
 export default function CafecaIsunfaSlide6() {
-  // Info: (20260714 - Luphia) Three certifiable carbon service lines offered by iSunFA
-  const solutions = [
-    {
-      icon: Building,
-      accent: 'from-emerald-500 to-teal-500',
-      tint: 'text-emerald-600',
-      badge: 'ISO 14064-1',
-      title: '組織碳盤查方案',
-      features: [
-        '雲端 AI 碳盤查數據自動分類導入',
-        '國際 / 國內標準排放係數自動比對',
-        '一鍵生成合規溫室氣體排放清冊',
-      ],
-    },
-    {
-      icon: Layers,
-      accent: 'from-orange-500 to-amber-500',
-      tint: 'text-orange-600',
-      badge: 'ISO 14067',
-      title: '產品碳足跡方案',
-      features: [
-        '產品生命週期 (Cradle-to-Gate) 碳排放計算',
-        '物料清單 (BOM) 配比與製程係數對接',
-        '自動生成第三方查證數據稽核佐證包',
-      ],
-    },
-    {
-      icon: Award,
-      accent: 'from-blue-500 to-indigo-500',
-      tint: 'text-blue-600',
-      badge: '環境部申請',
-      title: '碳足跡標章方案',
-      features: [
-        '碳標章 / 減碳標章申請書件全程輔導',
-        '對接第三方公正查驗機構與現場稽核',
-        'AI 專家模型推演製程，最佳化減碳路徑',
-      ],
-    },
-  ];
-
   return (
-    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex flex-col border border-slate-200 text-slate-800 font-sans">
+    <div className="w-[1280px] h-[720px] bg-white relative overflow-hidden shadow-2xl flex border border-slate-200 text-slate-800 font-sans">
 
-      {/* Info: (20260714 - Luphia) Background Gradients */}
+      {/* Info: (20260612 - Luphia) Background Gradients */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
-        <div className="absolute -left-20 -top-20 w-[500px] h-[500px] bg-emerald-50 rounded-full mix-blend-multiply filter blur-[110px]"></div>
-        <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-orange-50 rounded-full mix-blend-multiply filter blur-[120px]"></div>
+        <div className="absolute left-1/4 top-10 w-[600px] h-[600px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[150px]"></div>
+        <div className="absolute left-10 bottom-10 w-[400px] h-[400px] bg-orange-50 rounded-full filter blur-[120px]"></div>
       </div>
 
-      {/* Info: (20260714 - Luphia) Header */}
-      <div className="z-10 px-20 pt-14 pb-5 text-center">
-        <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-orange-50 border border-orange-200 text-orange-600 text-sm font-bold tracking-wider">
-          <Sparkles size={15} />
-          Solutions &amp; Coverage
+      <div className="absolute top-10 left-12 flex items-center gap-2 z-20">
+        <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        <span className="text-xs font-mono text-blue-600 uppercase tracking-widest">Actionable Impact & ROI</span>
+      </div>
+
+      {/* Info: (20260612 - Luphia) Content Container (Left 2/3) */}
+      <div className="z-10 w-2/3 h-full flex flex-col justify-center px-16 relative">
+
+        {/* Info: (20260612 - Luphia) Top Header Area */}
+        <div className="space-y-4 mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100">
+            <Target className="w-5 h-5 text-blue-600" />
+            <span className="text-sm font-semibold text-blue-700">具體效益與回報</span>
+          </div>
+
+          <h2 className="text-4xl font-black leading-tight text-slate-800">
+            為製造業每年減少 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-400">15%</span> 碳排放當量，<br />
+            增加 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-400">5%</span> 淨收入。
+          </h2>
+          <p className="text-sm text-slate-400 font-mono mt-2">* 數據依製造產業類型與工廠實際狀況而有所不同</p>
         </div>
-        <h2 className="text-5xl font-black tracking-tight text-slate-800 leading-tight">
-          三大碳盤查服務方案，<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">一站式合規</span>
-        </h2>
-        <p className="text-lg text-slate-500 font-medium mt-3 max-w-4xl mx-auto">
-          從組織、產品到官方標章，涵蓋企業因應 CBAM 與 IFRS 的完整合規需求。
-        </p>
-      </div>
 
-      {/* Info: (20260714 - Luphia) Solution Cards */}
-      <div className="z-10 flex-1 px-20 grid grid-cols-3 gap-6">
-        {solutions.map((s) => {
-          const Icon = s.icon;
-          return (
-            <div key={s.title} className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-              <div className={`h-1.5 w-full bg-gradient-to-r ${s.accent}`}></div>
-              <div className="p-7 flex flex-col flex-1">
-                <div className="flex items-center justify-between mb-5">
-                  <div className={`w-14 h-14 rounded-xl bg-slate-50 flex items-center justify-center ${s.tint}`}>
-                    <Icon size={28} />
-                  </div>
-                  <span className="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">{s.badge}</span>
-                </div>
-                <h3 className="text-2xl font-black text-slate-800 mb-5">{s.title}</h3>
-                <ul className="space-y-3">
-                  {s.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2.5 text-sm text-slate-600 leading-relaxed">
-                      <CheckCircle2 className="text-emerald-500 flex-shrink-0 mt-0.5" size={17} />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* Info: (20260612 - Luphia) 3 Pillars */}
+        <div className="flex flex-col gap-6 w-full pr-8">
+
+          {/* Info: (20260612 - Luphia) Pillar 1 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-6 rounded-2xl flex items-center gap-6 hover:shadow-md transition-shadow group relative overflow-hidden">
+            <div className="absolute left-0 top-0 w-1 h-full bg-orange-400"></div>
+            <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-orange-500 transition-colors">
+              <AlertTriangle className="w-6 h-6 text-orange-500 group-hover:text-white transition-colors" />
             </div>
-          );
-        })}
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-1">汰換異常設備</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                找出隱形的吃電怪獸與無效耗能設備，從源頭降低不必要的電力浪費與碳排放。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260612 - Luphia) Pillar 2 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-6 rounded-2xl flex items-center gap-6 hover:shadow-md transition-shadow group relative overflow-hidden">
+            <div className="absolute left-0 top-0 w-1 h-full bg-blue-400"></div>
+            <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-500 transition-colors">
+              <Lightbulb className="w-6 h-6 text-blue-500 group-hover:text-white transition-colors" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-1">導入典範製程</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                對標全球頂尖企業的綠色製程標準，引進最新減碳技術，提升整體生產效率。
+              </p>
+            </div>
+          </div>
+
+          {/* Info: (20260612 - Luphia) Pillar 3 */}
+          <div className="bg-white border border-slate-200 shadow-sm p-6 rounded-2xl flex items-center gap-6 hover:shadow-md transition-shadow group relative overflow-hidden">
+            <div className="absolute left-0 top-0 w-1 h-full bg-green-400"></div>
+            <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-green-500 transition-colors">
+              <Recycle className="w-6 h-6 text-green-500 group-hover:text-white transition-colors" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 mb-1">加入循環經濟供應鏈</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                將廢棄物轉化為再生資源，對接下游應用廠商，化廢為寶，創造額外的商業價值。
+              </p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
-      {/* Info: (20260714 - Luphia) Deployment Model Footer */}
-      <div className="z-10 px-20 py-6 flex items-center justify-center gap-8 text-sm">
-        <div className="flex items-center gap-2 text-slate-600">
-          <Cloud size={18} className="text-orange-500" />
-          <span className="font-bold">雲端訂閱</span>
-          <span className="text-slate-400">NT$ 29,400 / 年</span>
-        </div>
-        <div className="w-px h-6 bg-slate-200"></div>
-        <div className="flex items-center gap-2 text-slate-600">
-          <Server size={18} className="text-orange-500" />
-          <span className="font-bold">地端買斷（高資安）</span>
-          <span className="text-slate-400">NT$ 303,660 起</span>
-        </div>
+      {/* Info: (20260612 - Luphia) Right 1/3 Image Area */}
+      <div className="w-1/3 h-full relative z-10 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] bg-slate-100 border-l border-slate-200">
+        <Image
+          src="/cafeca_faith/robot_impact.jpeg"
+          alt="Impact and ROI Robot"
+          fill
+          className="object-cover"
+          style={{ objectFit: 'cover' }}
+        />
       </div>
+
     </div>
   );
 }
