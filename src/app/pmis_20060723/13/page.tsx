@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { Globe, ArrowUpRight, HardHat } from 'lucide-react';
+import { QRCodeSVG } from 'qrcode.react';
+import { Globe, ArrowUpRight, HardHat, ScanLine } from 'lucide-react';
 
 export default function Pmis20060723Slide13() {
   return (
