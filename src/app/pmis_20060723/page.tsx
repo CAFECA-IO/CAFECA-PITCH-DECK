@@ -15,10 +15,11 @@ import Pmis20060723Slide9 from '@/app/pmis_20060723/9/page';
 import Pmis20060723Slide10 from '@/app/pmis_20060723/10/page';
 import Pmis20060723Slide11 from '@/app/pmis_20060723/11/page';
 import Pmis20060723Slide12 from '@/app/pmis_20060723/12/page';
+import Pmis20060723Slide13 from '@/app/pmis_20060723/13/page';
 
 export default function Pmis20060723SlideBrowser() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 12;
+  const totalSlides = 13;
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [mobileScale, setMobileScale] = useState(0.3);
@@ -58,6 +59,7 @@ export default function Pmis20060723SlideBrowser() {
     10: Pmis20060723Slide10,
     11: Pmis20060723Slide11,
     12: Pmis20060723Slide12,
+    13: Pmis20060723Slide13,
   };
 
   const CurrentSlideComponent = SlideComponents[currentSlide];
@@ -72,9 +74,10 @@ export default function Pmis20060723SlideBrowser() {
     7: '核心亮點：費思 AI 助理',
     8: '核心亮點：權限與統一操作',
     9: '費用方案',
-    10: '服務流程',
-    11: '企業實績',
-    12: '致謝與 Demo',
+    10: '政府補助資源',
+    11: '服務流程',
+    12: '企業實績',
+    13: '致謝與 QR Code',
   };
 
   const nextSlide = useCallback(() => {

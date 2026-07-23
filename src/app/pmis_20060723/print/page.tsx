@@ -12,6 +12,7 @@ import Pmis20060723Slide9 from '@/app/pmis_20060723/9/page';
 import Pmis20060723Slide10 from '@/app/pmis_20060723/10/page';
 import Pmis20060723Slide11 from '@/app/pmis_20060723/11/page';
 import Pmis20060723Slide12 from '@/app/pmis_20060723/12/page';
+import Pmis20060723Slide13 from '@/app/pmis_20060723/13/page';
 import { toPng } from 'html-to-image';
 import JSZip from 'jszip';
 import { useState } from 'react';
@@ -232,6 +233,7 @@ export default function Pmis20060723Print() {
       <div className="slide-page"><Pmis20060723Slide10 /></div>
       <div className="slide-page"><Pmis20060723Slide11 /></div>
       <div className="slide-page"><Pmis20060723Slide12 /></div>
+      <div className="slide-page"><Pmis20060723Slide13 /></div>
     </div>
   );
 }

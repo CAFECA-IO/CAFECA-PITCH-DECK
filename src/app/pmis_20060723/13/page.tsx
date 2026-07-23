@@ -15,35 +15,57 @@ export default function Pmis20060723Slide13() {
       </div>
       <div className="absolute inset-0 opacity-10 z-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '48px 48px' }}></div>
 
-      <div className="z-10 flex flex-col items-center text-center px-16">
-        <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-400 flex items-center justify-center shadow-2xl shadow-orange-500/30 mb-8">
-          <HardHat size={42} className="text-white" />
+      <div className="z-10 flex items-center gap-16 px-20">
+
+        {/* Info: (20260723 - Luphia) Left: message + demo link */}
+        <div className="flex flex-col items-start text-left max-w-xl">
+          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-400 flex items-center justify-center shadow-2xl shadow-orange-500/30 mb-8">
+            <HardHat size={42} className="text-white" />
+          </div>
+
+          <h1 className="text-6xl font-black tracking-tight leading-tight">
+            感謝<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">聆聽</span>
+          </h1>
+          <p className="text-xl text-slate-300 font-medium mt-5 leading-relaxed">
+            PMIS AI 智慧監造專案管理資訊系統<br />
+            期待與您攜手，讓每一個公共工程都被精準管理。
+          </p>
+
+          {/* Info: (20260723 - Luphia) Demo link */}
+          <a
+            href="https://pmis.isunfa.com"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-10 inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white text-slate-800 shadow-2xl hover:shadow-orange-500/20 transition-shadow group"
+          >
+            <span className="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center text-orange-500">
+              <Globe size={24} />
+            </span>
+            <span className="text-left">
+              <span className="block text-xs font-bold text-slate-400 uppercase tracking-widest">Live Demo</span>
+              <span className="block text-2xl font-black text-slate-800">pmis.isunfa.com</span>
+            </span>
+            <ArrowUpRight size={26} className="text-orange-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
         </div>
 
-        <h1 className="text-6xl font-black tracking-tight leading-tight">
-          感謝<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">聆聽</span>
-        </h1>
-        <p className="text-xl text-slate-300 font-medium mt-5 max-w-2xl leading-relaxed">
-          PMIS AI 智慧監造專案管理資訊系統<br />
-          期待與您攜手，讓每一個公共工程都被精準管理。
-        </p>
-
-        {/* Info: (20260723 - Luphia) Demo link */}
-        <a
-          href="https://pmis.isunfa.com"
-          target="_blank"
-          rel="noreferrer"
-          className="mt-10 inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white text-slate-800 shadow-2xl hover:shadow-orange-500/20 transition-shadow group"
-        >
-          <span className="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center text-orange-500">
-            <Globe size={24} />
-          </span>
-          <span className="text-left">
-            <span className="block text-xs font-bold text-slate-400 uppercase tracking-widest">Live Demo</span>
-            <span className="block text-2xl font-black text-slate-800">pmis.isunfa.com</span>
-          </span>
-          <ArrowUpRight size={26} className="text-orange-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-        </a>
+        {/* Info: (20260723 - Luphia) Right: QR code to live demo */}
+        <div className="flex flex-col items-center">
+          <div className="bg-white rounded-3xl p-6 shadow-2xl shadow-orange-500/10">
+            <QRCodeSVG
+              value="https://pmis.isunfa.com"
+              size={220}
+              level="M"
+              bgColor="#ffffff"
+              fgColor="#1e293b"
+              marginSize={0}
+            />
+          </div>
+          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-slate-200 text-sm font-bold">
+            <ScanLine size={16} className="text-orange-400" />
+            掃描立即體驗展示系統
+          </div>
+        </div>
       </div>
 
       <div className="absolute bottom-8 z-10 flex items-center gap-4">
