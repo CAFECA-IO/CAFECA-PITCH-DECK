@@ -21,6 +21,7 @@
 /build
 /src/generated
 /reports
+/job_result
 
 # misc
 .DS_Store

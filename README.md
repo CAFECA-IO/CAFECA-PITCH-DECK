@@ -27,10 +27,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 ```
 > 安裝完成並依照提示設定 shell 後，請重新載入終端機。
 
-接著使用 nvm 安裝並切換至最新穩定版 Node.js：
+接著使用 nvm 安裝並切換至專案指定的 Node.js 版本（24.22.1）：
 ```bash
-nvm install node
-nvm use node
+nvm install 24.22.1
+nvm use 24.22.1
 ```
 > 確認各項工具是否順利運作：`node -v`、`npm -v` 與 `git -v`。
 

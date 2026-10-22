@@ -19,8 +19,34 @@
   --text-10xl: 10rem;
   --text-line-height-10xl: 1;
 
-  --text-30xl: 30rem; 
+  --text-30xl: 30rem;
   --text-line-height-30xl: 1;
+
+  /* Info: (20260923 - Luphia) 全盈+PAY 品牌色：主色橘 #FF4600（plus）、配角淺藍（bird）、文字灰 #505050（ink） */
+  --color-plus-50: #FFF4EF;
+  --color-plus-100: #FFE6DA;
+  --color-plus-200: #FFCBB3;
+  --color-plus-300: #FFA47F;
+  --color-plus-400: #FF7440;
+  --color-plus-500: #FF4600;
+  --color-plus-600: #E63F00;
+  --color-plus-700: #B83200;
+  --color-plus-800: #8A2600;
+  --color-bird-50: #EDF8FC;
+  --color-bird-100: #D2EFF8;
+  --color-bird-200: #A8E0F1;
+  --color-bird-300: #74CBE7;
+  --color-bird-500: #2FAFD8;
+  --color-bird-600: #1F93BB;
+  --color-bird-700: #19759A;
+  --color-ink-900: #212529;
+  --color-ink-700: #3A3A3A;
+  --color-ink-500: #505050;
+  --color-ink-400: #7A7A7A;
+  --color-ink-300: #B5B5B5;
+  --color-ink-200: #E3E3E3;
+  --color-ink-100: #F2F2F2;
+  --color-ink-50: #FAFAFA;
 }
 
 @media (prefers-color-scheme: dark) {

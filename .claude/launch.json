@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pitch-deck-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["next", "dev", "-p", "3210"],
+      "port": 3210
+    },
+    {
+      "name": "redink-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/luphia/Documents/GitHub/redink", "run", "dev", "--", "-p", "3310"],
+      "port": 3310
+    }
+  ]
+}
